@@ -1,0 +1,72 @@
+- id: vuelta-abajo
+  name: Vuelta Abajo
+  country: Cuba
+  lat: 22.4
+  lng: -83.7
+  note: Considerada a melhor zona de tabaco do mundo; terra de origem dos charutos cubanos de topo.
+- id: esteli
+  name: Estelí
+  country: Nicarágua
+  lat: 13.09
+  lng: -86.35
+  note: Capital do charuto nicaraguense; solo vulcânico, perfis ricos e picantes.
+- id: jalapa
+  name: Jalapa
+  country: Nicarágua
+  lat: 13.92
+  lng: -86.12
+  note: Vale mais fresco e húmido; tabaco tendencialmente mais suave e elegante.
+- id: condega
+  name: Condega
+  country: Nicarágua
+  lat: 13.35
+  lng: -86.4
+  note: Região vizinha de Estelí, conhecida por tabaco com doçura e especiaria.
+- id: ometepe
+  name: Ilha de Ometepe
+  country: Nicarágua
+  lat: 11.51
+  lng: -85.58
+  note: Solo vulcânico numa ilha do Lago Nicarágua; tabaco intenso e terroso.
+- id: cibao
+  name: Vale do Cibao (Santiago)
+  country: República Dominicana
+  lat: 19.45
+  lng: -70.69
+  note: Coração da produção dominicana; blends equilibrados, cremosos e consistentes.
+- id: danli
+  name: Danlí
+  country: Honduras
+  lat: 14.03
+  lng: -86.58
+  note: Vale do Jamastrán; tabaco de corpo médio a forte, com muitas fábricas.
+- id: san-andres
+  name: San Andrés Tuxtla
+  country: México
+  lat: 18.45
+  lng: -95.21
+  note: Origem de capas escuras (Maduro e Sumatra), com doçura e notas de cacau.
+- id: bahia
+  name: Recôncavo Baiano
+  country: Brasil
+  lat: -12.6
+  lng: -39.1
+  note: Cruz das Almas e arredores; tabaco Mata Fina, doce e terroso, muito usado em capas Maduro.
+- id: ecuador
+  name: Vale de Quevedo / Los Ríos
+  country: Equador
+  lat: -1.02
+  lng: -79.46
+  note: 'Famoso pelas capas Connecticut cultivadas sob pano (shade-grown): suaves e cremosas.'
+- id: connecticut
+  name: Vale do Connecticut
+  country: Estados Unidos
+  lat: 41.85
+  lng: -72.65
+  note: Origem histórica das capas Connecticut Shade e Broadleaf.
+- id: cameroon
+  name: Camarões
+  country: Camarões
+  lat: 4.05
+  lng: 9.7
+  note: 'Capas Cameroon: textura fina, notas de especiarias e doçura subtil.'

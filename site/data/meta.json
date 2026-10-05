@@ -1,0 +1,23 @@
+{
+ "built_at": "2026-10-05T22:07:12+00:00",
+ "version": "0.1.0",
+ "mode": "cache",
+ "sources": {
+  "seed": "ok",
+  "wikidata": "PARCIAL",
+  "open_meteo": "PARCIAL"
+ },
+ "counts": {
+  "cigars": 28,
+  "regions": 12
+ },
+ "quality": {
+  "verified_share": 0.107,
+  "cigars_with_verified_fields": 3
+ },
+ "attribution": [
+  "Dados de marcas: Wikidata (CC0)",
+  "Clima: Open-Meteo (CC BY 4.0)",
+  "Mapa: © OpenStreetMap contributors"
+ ]
+}

@@ -1,0 +1,678 @@
+- id: cohiba-siglo-vi
+  brand: Cohiba
+  line: Siglo VI
+  country: Cuba
+  region: vuelta-abajo
+  strength: 4
+  vitola: Gran Corona 5 5/8 x 52
+  wrapper: Cubano
+  flavors:
+  - cedro
+  - café
+  - creme
+  - especiarias
+  pairings:
+    drinks:
+    - Rum añejo
+    - Porto Tawny 20 anos
+    - Espresso
+    food:
+    - Chocolate negro 70%
+    - Amêndoas torradas
+  notes: Uma das linhas cubanas mais prestigiadas, com fermentação extra de uma das folhas do blend.
+  verified_fields: []
+  sources: []
+- id: montecristo-no-2
+  brand: Montecristo
+  line: No. 2
+  country: Cuba
+  region: vuelta-abajo
+  strength: 4
+  vitola: Torpedo 6 1/8 x 52
+  wrapper: Cubano
+  flavors:
+  - madeira
+  - terra
+  - pimenta
+  - cacau
+  pairings:
+    drinks:
+    - Rum agrícola
+    - Whisky de malte (turfoso suave)
+    - Espresso
+    food:
+    - Queijo curado
+    - Chocolate negro
+  notes: O torpedo cubano de referência; muito procurado em todo o mundo.
+  verified_fields: []
+  sources: []
+- id: partagas-serie-d-no-4
+  brand: Partagás
+  line: Serie D No. 4
+  country: Cuba
+  region: vuelta-abajo
+  strength: 5
+  vitola: Robusto 4 7/8 x 50
+  wrapper: Cubano
+  flavors:
+  - terra
+  - pimenta
+  - couro
+  - especiarias
+  pairings:
+    drinks:
+    - Rum escuro
+    - Bourbon
+    - Whisky de malte
+    food:
+    - Carne grelhada
+    - Queijo azul
+  notes: Robusto cubano muito popular, conhecido pelo carácter forte e terroso.
+  verified_fields: []
+  sources: []
+- id: romeo-churchill
+  brand: Romeo y Julieta
+  line: Churchill
+  country: Cuba
+  region: vuelta-abajo
+  strength: 3
+  vitola: Churchill 7 x 47
+  wrapper: Cubano
+  flavors:
+  - cedro
+  - nozes
+  - mel
+  - madeira
+  pairings:
+    drinks:
+    - Porto Tawny 10 anos
+    - Madeira Malmsey
+    - Cognac VSOP
+    food:
+    - Frutos secos
+    - Queijo de pasta semidura
+  notes: Clássico de corpo médio, elegante e fácil de apreciar.
+  verified_fields: []
+  sources: []
+- id: h-upmann-magnum-50
+  brand: H. Upmann
+  line: Magnum 50
+  country: Cuba
+  region: vuelta-abajo
+  strength: 3
+  vitola: Robusto Extra 5 x 50
+  wrapper: Cubano
+  flavors:
+  - cedro
+  - especiarias doces
+  - amêndoa
+  pairings:
+    drinks:
+    - Rum añejo
+    - Café filtrado
+    - Porto Tawny
+    food:
+    - Pastel de nata
+    - Frutos secos
+  notes: Corpo médio, suave e aveludado; boa porta de entrada para os cubanos.
+  verified_fields: []
+  sources: []
+- id: padron-1964-anniversary
+  brand: Padrón
+  line: 1964 Anniversary Series
+  country: Nicarágua
+  region: esteli
+  strength: 4
+  vitola: Exclusivo 5 3/8 x 50
+  wrapper: Nicaraguense (Natural ou Maduro)
+  flavors:
+  - cacau
+  - café
+  - nozes
+  - especiarias
+  pairings:
+    drinks:
+    - Rum añejo
+    - Bourbon
+    - Espresso
+    food:
+    - Chocolate negro
+    - Café com sobremesa
+  notes: Tabaco envelhecido em fábrica; muito equilibrado para a força que tem.
+  verified_fields: []
+  sources: []
+- id: padron-1926-no-9
+  brand: Padrón
+  line: 1926 Serie No. 9
+  country: Nicarágua
+  region: esteli
+  strength: 4
+  vitola: Belicoso 5 1/2 x 52
+  wrapper: Nicaraguense (Natural ou Maduro)
+  flavors:
+  - café
+  - terra
+  - cacau
+  - pimenta
+  pairings:
+    drinks:
+    - Whisky de malte
+    - Rum escuro
+    - Stout
+    food:
+    - Chocolate negro intenso
+    - Queijo curado
+  notes: Linha de topo da casa Padrón, com complexidade e persistência notáveis.
+  verified_fields: []
+  sources: []
+- id: fuente-hemingway-short-story
+  brand: Arturo Fuente
+  line: Hemingway Short Story
+  country: República Dominicana
+  region: cibao
+  strength: 3
+  vitola: Perfecto 4 x 48
+  wrapper: Cameroon
+  flavors:
+  - especiarias
+  - madeira
+  - creme
+  - mel
+  pairings:
+    drinks:
+    - Madeira Malmsey
+    - Porto Tawny 10 anos
+    - Cognac
+    food:
+    - Doces de ovos
+    - Amêndoas
+  notes: Perfecto curto de fumada suave e doce; ideal para uma pausa de cerca de 45 minutos.
+  verified_fields: []
+  sources: []
+- id: fuente-opus-x
+  brand: Arturo Fuente
+  line: OpusX
+  country: República Dominicana
+  region: cibao
+  strength: 4
+  vitola: Robusto 5 1/4 x 50
+  wrapper: Rosado dominicano
+  flavors:
+  - cedro
+  - pimenta
+  - frutos secos
+  - especiarias doces
+  pairings:
+    drinks:
+    - Cognac XO
+    - Rum añejo
+    - Porto Vintage
+    food:
+    - Chocolate negro
+    - Queijo de cabra curado
+  notes: Raro e muito procurado; pioneiro em capas dominicanas de alta qualidade.
+  verified_fields: []
+  sources: []
+- id: davidoff-signature-2000
+  brand: Davidoff
+  line: Signature 2000
+  country: República Dominicana
+  region: cibao
+  strength: 2
+  vitola: Petit Corona 5 x 43
+  wrapper: Connecticut (Equador)
+  flavors:
+  - creme
+  - nozes
+  - madeira clara
+  - mel
+  pairings:
+    drinks:
+    - Café
+    - Champanhe
+    - Porto branco
+    food:
+    - Pastelaria
+    - Queijo fresco
+  notes: Elegante e suave; excelente para manhãs ou depois de uma refeição leve.
+  verified_fields: []
+  sources: []
+- id: davidoff-primeros
+  brand: Davidoff
+  line: Primeros Classic
+  country: República Dominicana
+  region: cibao
+  strength: 1
+  vitola: Petit Panatela 4 1/8 x 34
+  wrapper: Connecticut (Equador)
+  flavors:
+  - creme
+  - madeira clara
+  - nozes
+  pairings:
+    drinks:
+    - Café
+    - Chá verde
+    - Porto branco
+    food:
+    - Biscoitos
+    - Fruta
+  notes: Fumada de cerca de 15 minutos; ideal para iniciantes e pausas curtas.
+  verified_fields:
+  - vitola
+  sources:
+  - title: Neptune Cigar — Davidoff Dominican Primeros 4 1/8 x 34
+    url: https://www.neptunecigar.com/cigars/davidoff-dominican-primeros
+- id: my-father-le-bijou-1922
+  brand: My Father
+  line: Le Bijou 1922
+  country: Nicarágua
+  region: esteli
+  strength: 5
+  vitola: Torpedo 6 1/8 x 52
+  wrapper: Habano Oscuro
+  flavors:
+  - café
+  - pimenta
+  - cacau
+  - terra
+  pairings:
+    drinks:
+    - Bourbon
+    - Whisky de malte intenso
+    - Rum escuro
+    food:
+    - Carne grelhada
+    - Chocolate 85%
+  notes: Linha intensa e rica, para fumadores com experiência.
+  verified_fields: []
+  sources: []
+- id: oliva-serie-v-melanio
+  brand: Oliva
+  line: Serie V Melanio
+  country: Nicarágua
+  region: esteli
+  strength: 4
+  vitola: Robusto 5 x 50
+  wrapper: Sumatra (Equador)
+  flavors:
+  - cacau
+  - café
+  - pimenta
+  - especiarias
+  pairings:
+    drinks:
+    - Rum añejo
+    - Bourbon
+    - Espresso
+    food:
+    - Chocolate negro
+    - Frutos secos
+  notes: Muito bem pontuada pela imprensa especializada; força média-alta com bom equilíbrio.
+  verified_fields: []
+  sources: []
+- id: oliva-nub-connecticut
+  brand: Oliva
+  line: Nub Connecticut
+  country: Nicarágua
+  region: esteli
+  strength: 2
+  vitola: Gordo 4 x 60
+  wrapper: Connecticut
+  flavors:
+  - creme
+  - nozes
+  - amêndoa
+  pairings:
+    drinks:
+    - Café com leite
+    - Cerveja lager
+    - Porto branco
+    food:
+    - Pastelaria
+    - Queijo fresco
+  notes: Formato curto e grosso, concebido para fumada consistente do início ao fim.
+  verified_fields: []
+  sources: []
+- id: drew-estate-liga-privada-no-9
+  brand: Drew Estate
+  line: Liga Privada No. 9
+  country: Nicarágua
+  region: esteli
+  strength: 4
+  vitola: Robusto 5 x 52
+  wrapper: Connecticut Broadleaf
+  flavors:
+  - cacau
+  - terra
+  - café
+  - especiarias
+  pairings:
+    drinks:
+    - Stout
+    - Bourbon
+    - Rum escuro
+    food:
+    - Brownie
+    - Churrasco
+  notes: Capa Broadleaf escura e brilhante; textura rica e muita fumaça.
+  verified_fields: []
+  sources: []
+- id: don-pepin-blue
+  brand: Don Pepín García
+  line: Blue Label (Original)
+  country: Nicarágua
+  region: esteli
+  strength: 5
+  vitola: Várias vitolas
+  wrapper: Corojo Oscuro (Nicarágua)
+  flavors:
+  - pimenta
+  - madeira
+  - especiarias
+  - terra
+  pairings:
+    drinks:
+    - Rum añejo
+    - Whisky de malte
+    food:
+    - Queijo curado
+    - Frutos secos
+  notes: 'Puro nicaraguense: capa Corojo Oscuro, capote Criollo, tripa Criollo/Corojo. Classificado como
+    força plena numa análise consultada.'
+  verified_fields:
+  - wrapper
+  - strength
+  - country
+  sources:
+  - title: Cigar Coop — Don Pepin Garcia Original Invictos (Blue Label)
+    url: https://cigar-coop.com/2013/10/cigar-review-don-pepin-garcia-origina.html
+- id: macanudo-cafe
+  brand: Macanudo
+  line: Café
+  country: República Dominicana
+  region: cibao
+  strength: 1
+  vitola: Robusto 5 1/2 x 49
+  wrapper: Connecticut Shade
+  flavors:
+  - creme
+  - madeira clara
+  - nozes
+  pairings:
+    drinks:
+    - Café
+    - Cerveja lager
+    - Chá
+    food:
+    - Pastelaria
+    - Fruta
+  notes: 'Uma das melhores portas de entrada: fácil, suave e acessível.'
+  verified_fields: []
+  sources: []
+- id: rocky-patel-decade
+  brand: Rocky Patel
+  line: Decade
+  country: Honduras
+  region: danli
+  strength: 3
+  vitola: Toro 6 x 52
+  wrapper: Sumatra
+  flavors:
+  - cedro
+  - especiarias
+  - cacau
+  - couro
+  pairings:
+    drinks:
+    - Bourbon
+    - Rum añejo
+    - Cognac
+    food:
+    - Chocolate
+    - Frutos secos
+  notes: Binder e tripa não são divulgados pela marca. A origem do tabaco (Honduras/Nicarágua) está por
+    confirmar.
+  verified_fields:
+  - wrapper
+  sources:
+  - title: JR Cigars — Rocky Patel Decade
+    url: https://www.jrcigars.com/cigars/handmade-cigars/rocky-patel-cigars/rocky-patel-decade/
+- id: camacho-connecticut
+  brand: Camacho
+  line: Connecticut
+  country: Honduras
+  region: danli
+  strength: 2
+  vitola: Robusto 5 x 50
+  wrapper: Connecticut
+  flavors:
+  - creme
+  - madeira
+  - nozes
+  pairings:
+    drinks:
+    - Café
+    - Porto branco
+    - Cerveja clara
+    food:
+    - Pastelaria
+    - Queijo suave
+  notes: Alternativa suave com tabaco hondurenho.
+  verified_fields: []
+  sources: []
+- id: te-amo-maduro
+  brand: Te-Amo
+  line: Maduro
+  country: México
+  region: san-andres
+  strength: 2
+  vitola: Toro 6 x 50
+  wrapper: Maduro mexicano
+  flavors:
+  - cacau
+  - doçura
+  - café
+  - terra suave
+  pairings:
+    drinks:
+    - Rum
+    - Café
+    - Stout
+    food:
+    - Chocolate
+    - Tarte de chocolate
+  notes: Capa Maduro de San Andrés, doce e acessível.
+  verified_fields: []
+  sources: []
+- id: dannemann-moods
+  brand: Dannemann
+  line: Moods
+  country: Brasil
+  region: bahia
+  strength: 1
+  vitola: Petit Corona
+  wrapper: Brasileira
+  flavors:
+  - terra
+  - doçura
+  - cacau
+  pairings:
+    drinks:
+    - Cachaça envelhecida
+    - Café
+    - Rum
+    food:
+    - Doces com café
+    - Frutos secos
+  notes: Representa a tradição de tabaco da Bahia, com notas doces e terrosas.
+  verified_fields: []
+  sources: []
+- id: cohiba-robusto
+  brand: Cohiba
+  line: Robusto
+  country: Cuba
+  region: vuelta-abajo
+  strength: 4
+  vitola: Robusto 4 7/8 x 50
+  wrapper: Cubano
+  flavors:
+  - cedro
+  - café
+  - creme
+  - ervas
+  pairings:
+    drinks:
+    - Rum añejo
+    - Porto Tawny 20 anos
+    - Espresso
+    food:
+    - Chocolate negro
+    - Amêndoas
+  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  verified_fields: []
+  sources: []
+- id: bolivar-royal-coronas
+  brand: Bolívar
+  line: Royal Coronas
+  country: Cuba
+  region: vuelta-abajo
+  strength: 5
+  vitola: Robusto 4 7/8 x 50
+  wrapper: Cubano
+  flavors:
+  - terra
+  - pimenta
+  - couro
+  - cacau
+  pairings:
+    drinks:
+    - Rum escuro
+    - Bourbon
+    - Whisky de malte
+    food:
+    - Carne grelhada
+    - Chocolate amargo
+  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  verified_fields: []
+  sources: []
+- id: hoyo-epicure-no-2
+  brand: Hoyo de Monterrey
+  line: Epicure No. 2
+  country: Cuba
+  region: vuelta-abajo
+  strength: 3
+  vitola: Robusto 4 7/8 x 50
+  wrapper: Cubano
+  flavors:
+  - terra
+  - cacau
+  - creme
+  - madeira
+  pairings:
+    drinks:
+    - Porto Tawny 10 anos
+    - Café
+    - Cognac
+    food:
+    - Queijo semicurado
+    - Frutos secos
+  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  verified_fields: []
+  sources: []
+- id: trinidad-fundadores
+  brand: Trinidad
+  line: Fundadores
+  country: Cuba
+  region: vuelta-abajo
+  strength: 3
+  vitola: Laguito No. 1 7 1/2 x 40
+  wrapper: Cubano
+  flavors:
+  - creme
+  - cedro
+  - nozes
+  - especiarias doces
+  pairings:
+    drinks:
+    - Madeira Malmsey
+    - Porto Tawny 20 anos
+    - Champanhe
+    food:
+    - Pastelaria
+    - Frutos secos
+  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  verified_fields: []
+  sources: []
+- id: ramon-allones-specially-selected
+  brand: Ramón Allones
+  line: Specially Selected
+  country: Cuba
+  region: vuelta-abajo
+  strength: 4
+  vitola: Robusto 4 7/8 x 50
+  wrapper: Cubano
+  flavors:
+  - especiarias
+  - cedro
+  - terra
+  - couro
+  pairings:
+    drinks:
+    - Rum añejo
+    - Whisky de malte
+    - Espresso
+    food:
+    - Queijo curado
+    - Chocolate negro
+  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  verified_fields: []
+  sources: []
+- id: diplomaticos-no-2
+  brand: Diplomáticos
+  line: No. 2
+  country: Cuba
+  region: vuelta-abajo
+  strength: 3
+  vitola: Pirámide 6 1/8 x 52
+  wrapper: Cubano
+  flavors:
+  - cedro
+  - creme
+  - nozes
+  - especiarias doces
+  pairings:
+    drinks:
+    - Porto Tawny
+    - Cognac VSOP
+    - Café
+    food:
+    - Frutos secos
+    - Queijo suave
+  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  verified_fields: []
+  sources: []
+- id: sancho-panza-belicosos
+  brand: Sancho Panza
+  line: Belicosos
+  country: Cuba
+  region: vuelta-abajo
+  strength: 3
+  vitola: Campana 5 1/2 x 52
+  wrapper: Cubano
+  flavors:
+  - madeira
+  - terra
+  - especiarias
+  - creme
+  pairings:
+    drinks:
+    - Rum añejo
+    - Café
+    - Madeira
+    food:
+    - Frutos secos
+    - Chocolate
+  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  verified_fields: []
+  sources: []

@@ -1,0 +1,94 @@
+{
+ "cigars": 28,
+ "regions": 12,
+ "verified_share": 0.107,
+ "cigars_with_verified_fields": 3,
+ "strength_distribution": {
+  "1": 3,
+  "2": 4,
+  "3": 8,
+  "4": 9,
+  "5": 4
+ },
+ "regions_without_cigars": [
+  "cameroon",
+  "condega",
+  "connecticut",
+  "ecuador",
+  "jalapa",
+  "ometepe"
+ ],
+ "regions_without_climate": [
+  "condega",
+  "ecuador",
+  "esteli"
+ ],
+ "brands_without_wikidata": [
+  "Bolívar",
+  "Camacho",
+  "Diplomáticos",
+  "Don Pepín García",
+  "Drew Estate",
+  "H. Upmann",
+  "Hoyo de Monterrey",
+  "Oliva",
+  "Padrón",
+  "Partagás",
+  "Ramón Allones",
+  "Rocky Patel",
+  "Sancho Panza",
+  "Te-Amo",
+  "Trinidad"
+ ],
+ "cigars_with_fewer_than_3_flavors": [],
+ "country_mismatch_vs_wikidata": [
+  {
+   "id": "davidoff-signature-2000",
+   "seed": "República Dominicana",
+   "wikidata": [
+    "Suíça"
+   ]
+  },
+  {
+   "id": "davidoff-primeros",
+   "seed": "República Dominicana",
+   "wikidata": [
+    "Suíça"
+   ]
+  },
+  {
+   "id": "dannemann-moods",
+   "seed": "Brasil",
+   "wikidata": [
+    "Alemanha"
+   ]
+  }
+ ],
+ "unverified_cigars": [
+  "bolivar-royal-coronas",
+  "camacho-connecticut",
+  "cohiba-robusto",
+  "cohiba-siglo-vi",
+  "dannemann-moods",
+  "davidoff-signature-2000",
+  "diplomaticos-no-2",
+  "drew-estate-liga-privada-no-9",
+  "fuente-hemingway-short-story",
+  "fuente-opus-x",
+  "h-upmann-magnum-50",
+  "hoyo-epicure-no-2",
+  "macanudo-cafe",
+  "montecristo-no-2",
+  "my-father-le-bijou-1922",
+  "oliva-nub-connecticut",
+  "oliva-serie-v-melanio",
+  "padron-1926-no-9",
+  "padron-1964-anniversary",
+  "partagas-serie-d-no-4",
+  "ramon-allones-specially-selected",
+  "romeo-churchill",
+  "sancho-panza-belicosos",
+  "te-amo-maduro",
+  "trinidad-fundadores"
+ ]
+}

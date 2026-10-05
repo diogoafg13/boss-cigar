@@ -1,0 +1,66 @@
+name: build-and-deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * 1"   # segundas-feiras ~07:17 (Lisboa)
+  workflow_dispatch:
+
+permissions:
+  contents: write     # commit do cache e dos dados limpos
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar
+        run: pip install -e ".[dev]"
+
+      - name: Testes
+        run: pytest -q
+
+      - name: Validar seed
+        run: python -m bosscigar validate
+
+      - name: Construir dados (Wikidata + Open-Meteo, com fallback para cache)
+        run: python -m bosscigar build
+
+      - name: Guardar cache e dados limpos no repositório
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name  "boss-cigar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/cache data/clean
+          git diff --cached --quiet || git commit -m "chore(data): atualiza cache e dados limpos [skip ci]"
+          git pull --rebase origin main
+          git push
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

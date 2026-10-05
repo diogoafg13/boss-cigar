@@ -1,0 +1,1368 @@
+{
+ "meta": {
+  "built_at": "2026-10-05T22:07:12+00:00",
+  "version": "0.1.0",
+  "mode": "cache",
+  "sources": {
+   "seed": "ok",
+   "wikidata": "PARCIAL",
+   "open_meteo": "PARCIAL"
+  },
+  "counts": {
+   "cigars": 28,
+   "regions": 12
+  },
+  "quality": {
+   "verified_share": 0.107,
+   "cigars_with_verified_fields": 3
+  },
+  "attribution": [
+   "Dados de marcas: Wikidata (CC0)",
+   "Clima: Open-Meteo (CC BY 4.0)",
+   "Mapa: © OpenStreetMap contributors"
+  ]
+ },
+ "regions": [
+  {
+   "id": "vuelta-abajo",
+   "name": "Vuelta Abajo",
+   "country": "Cuba",
+   "lat": 22.4,
+   "lng": -83.7,
+   "note": "Considerada a melhor zona de tabaco do mundo; terra de origem dos charutos cubanos de topo.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 1015.0,
+    "rain_mm_monthly": [
+     38.6,
+     29.4,
+     26.1,
+     37.1,
+     126.3,
+     178.9,
+     80.0,
+     142.3,
+     160.8,
+     120.0,
+     38.3,
+     37.3
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 25.4,
+    "temp_c_monthly": [
+     22.0,
+     22.6,
+     24.1,
+     25.9,
+     26.6,
+     27.1,
+     28.0,
+     27.9,
+     27.1,
+     26.0,
+     24.5,
+     23.0
+    ]
+   }
+  },
+  {
+   "id": "esteli",
+   "name": "Estelí",
+   "country": "Nicarágua",
+   "lat": 13.09,
+   "lng": -86.35,
+   "note": "Capital do charuto nicaraguense; solo vulcânico, perfis ricos e picantes.",
+   "climate": null
+  },
+  {
+   "id": "jalapa",
+   "name": "Jalapa",
+   "country": "Nicarágua",
+   "lat": 13.92,
+   "lng": -86.12,
+   "note": "Vale mais fresco e húmido; tabaco tendencialmente mais suave e elegante.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 1291.0,
+    "rain_mm_monthly": [
+     33.5,
+     25.9,
+     31.2,
+     41.9,
+     152.7,
+     212.7,
+     124.7,
+     121.8,
+     170.6,
+     197.3,
+     121.7,
+     56.7
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 23.2,
+    "temp_c_monthly": [
+     21.6,
+     22.1,
+     23.3,
+     25.0,
+     25.0,
+     23.4,
+     23.3,
+     23.7,
+     23.8,
+     23.1,
+     22.4,
+     21.8
+    ]
+   }
+  },
+  {
+   "id": "condega",
+   "name": "Condega",
+   "country": "Nicarágua",
+   "lat": 13.35,
+   "lng": -86.4,
+   "note": "Região vizinha de Estelí, conhecida por tabaco com doçura e especiaria.",
+   "climate": null
+  },
+  {
+   "id": "ometepe",
+   "name": "Ilha de Ometepe",
+   "country": "Nicarágua",
+   "lat": 11.51,
+   "lng": -85.58,
+   "note": "Solo vulcânico numa ilha do Lago Nicarágua; tabaco intenso e terroso.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 2574.0,
+    "rain_mm_monthly": [
+     37.8,
+     28.3,
+     32.7,
+     56.8,
+     317.9,
+     387.4,
+     245.7,
+     285.2,
+     369.0,
+     467.0,
+     263.6,
+     82.9
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 26.1,
+    "temp_c_monthly": [
+     25.3,
+     25.6,
+     26.4,
+     27.3,
+     27.0,
+     26.2,
+     26.1,
+     26.2,
+     26.3,
+     25.9,
+     25.7,
+     25.5
+    ]
+   }
+  },
+  {
+   "id": "cibao",
+   "name": "Vale do Cibao (Santiago)",
+   "country": "República Dominicana",
+   "lat": 19.45,
+   "lng": -70.69,
+   "note": "Coração da produção dominicana; blends equilibrados, cremosos e consistentes.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 790.0,
+    "rain_mm_monthly": [
+     52.7,
+     46.2,
+     70.5,
+     67.4,
+     75.3,
+     40.1,
+     35.1,
+     69.8,
+     93.1,
+     90.5,
+     87.1,
+     62.0
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 25.0,
+    "temp_c_monthly": [
+     22.7,
+     22.7,
+     23.4,
+     24.5,
+     25.6,
+     26.9,
+     27.0,
+     27.1,
+     26.7,
+     25.8,
+     24.4,
+     23.3
+    ]
+   }
+  },
+  {
+   "id": "danli",
+   "name": "Danlí",
+   "country": "Honduras",
+   "lat": 14.03,
+   "lng": -86.58,
+   "note": "Vale do Jamastrán; tabaco de corpo médio a forte, com muitas fábricas.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 1291.0,
+    "rain_mm_monthly": [
+     29.8,
+     20.3,
+     29.4,
+     45.3,
+     147.1,
+     213.2,
+     113.2,
+     130.2,
+     174.0,
+     211.2,
+     129.4,
+     47.8
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 23.0,
+    "temp_c_monthly": [
+     21.3,
+     22.2,
+     23.5,
+     25.1,
+     24.9,
+     23.2,
+     23.2,
+     23.5,
+     23.5,
+     22.7,
+     22.0,
+     21.4
+    ]
+   }
+  },
+  {
+   "id": "san-andres",
+   "name": "San Andrés Tuxtla",
+   "country": "México",
+   "lat": 18.45,
+   "lng": -95.21,
+   "note": "Origem de capas escuras (Maduro e Sumatra), com doçura e notas de cacau.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 1243.0,
+    "rain_mm_monthly": [
+     72.7,
+     41.4,
+     27.9,
+     20.4,
+     38.7,
+     179.8,
+     118.1,
+     147.7,
+     176.8,
+     224.2,
+     134.0,
+     61.5
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 24.5,
+    "temp_c_monthly": [
+     20.7,
+     21.6,
+     24.0,
+     26.5,
+     28.0,
+     26.5,
+     26.1,
+     26.1,
+     25.6,
+     24.4,
+     22.7,
+     21.5
+    ]
+   }
+  },
+  {
+   "id": "bahia",
+   "name": "Recôncavo Baiano",
+   "country": "Brasil",
+   "lat": -12.6,
+   "lng": -39.1,
+   "note": "Cruz das Almas e arredores; tabaco Mata Fina, doce e terroso, muito usado em capas Maduro.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 935.0,
+    "rain_mm_monthly": [
+     82.3,
+     52.4,
+     72.1,
+     105.8,
+     96.1,
+     90.8,
+     85.1,
+     79.9,
+     55.0,
+     49.9,
+     93.7,
+     72.2
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 23.9,
+    "temp_c_monthly": [
+     25.3,
+     25.7,
+     25.5,
+     24.7,
+     23.4,
+     22.2,
+     21.4,
+     21.5,
+     22.5,
+     24.1,
+     24.8,
+     25.4
+    ]
+   }
+  },
+  {
+   "id": "ecuador",
+   "name": "Vale de Quevedo / Los Ríos",
+   "country": "Equador",
+   "lat": -1.02,
+   "lng": -79.46,
+   "note": "Famoso pelas capas Connecticut cultivadas sob pano (shade-grown): suaves e cremosas.",
+   "climate": null
+  },
+  {
+   "id": "connecticut",
+   "name": "Vale do Connecticut",
+   "country": "Estados Unidos",
+   "lat": 41.85,
+   "lng": -72.65,
+   "note": "Origem histórica das capas Connecticut Shade e Broadleaf.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 1230.0,
+    "rain_mm_monthly": [
+     104.9,
+     84.3,
+     106.0,
+     114.1,
+     92.2,
+     85.2,
+     127.1,
+     91.1,
+     125.6,
+     110.2,
+     76.1,
+     113.5
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 11.0,
+    "temp_c_monthly": [
+     -1.3,
+     -0.7,
+     3.2,
+     9.0,
+     15.3,
+     20.2,
+     23.8,
+     22.9,
+     19.0,
+     12.9,
+     6.2,
+     1.6
+    ]
+   }
+  },
+  {
+   "id": "cameroon",
+   "name": "Camarões",
+   "country": "Camarões",
+   "lat": 4.05,
+   "lng": 9.7,
+   "note": "Capas Cameroon: textura fina, notas de especiarias e doçura subtil.",
+   "climate": {
+    "period": "2015-2024",
+    "rain_mm_annual": 2312.0,
+    "rain_mm_monthly": [
+     33.6,
+     50.7,
+     157.9,
+     179.7,
+     237.1,
+     283.1,
+     292.2,
+     287.7,
+     269.6,
+     281.5,
+     184.9,
+     54.0
+    ],
+    "source": "Open-Meteo (CC BY 4.0)",
+    "temp_c_annual": 26.2,
+    "temp_c_monthly": [
+     27.0,
+     27.5,
+     27.1,
+     27.0,
+     26.6,
+     25.5,
+     24.9,
+     24.8,
+     25.1,
+     25.6,
+     26.1,
+     26.9
+    ]
+   }
+  }
+ ],
+ "cigars": [
+  {
+   "id": "cohiba-siglo-vi",
+   "brand": "Cohiba",
+   "line": "Siglo VI",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 4,
+   "vitola": "Gran Corona 5 5/8 x 52",
+   "wrapper": "Cubano",
+   "flavors": [
+    "cedro",
+    "café",
+    "creme",
+    "especiarias"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Porto Tawny 20 anos",
+     "Espresso"
+    ],
+    "food": [
+     "Chocolate negro 70%",
+     "Amêndoas torradas"
+    ]
+   },
+   "notes": "Uma das linhas cubanas mais prestigiadas, com fermentação extra de uma das folhas do blend.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q513070",
+    "url": "https://www.wikidata.org/wiki/Q513070",
+    "inception_year": 1966,
+    "countries": [
+     "Cuba"
+    ]
+   }
+  },
+  {
+   "id": "montecristo-no-2",
+   "brand": "Montecristo",
+   "line": "No. 2",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 4,
+   "vitola": "Torpedo 6 1/8 x 52",
+   "wrapper": "Cubano",
+   "flavors": [
+    "madeira",
+    "terra",
+    "pimenta",
+    "cacau"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum agrícola",
+     "Whisky de malte (turfoso suave)",
+     "Espresso"
+    ],
+    "food": [
+     "Queijo curado",
+     "Chocolate negro"
+    ]
+   },
+   "notes": "O torpedo cubano de referência; muito procurado em todo o mundo.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q1516396",
+    "url": "https://www.wikidata.org/wiki/Q1516396",
+    "inception_year": 1935,
+    "countries": [
+     "Cuba"
+    ]
+   }
+  },
+  {
+   "id": "partagas-serie-d-no-4",
+   "brand": "Partagás",
+   "line": "Serie D No. 4",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 5,
+   "vitola": "Robusto 4 7/8 x 50",
+   "wrapper": "Cubano",
+   "flavors": [
+    "terra",
+    "pimenta",
+    "couro",
+    "especiarias"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte"
+    ],
+    "food": [
+     "Carne grelhada",
+     "Queijo azul"
+    ]
+   },
+   "notes": "Robusto cubano muito popular, conhecido pelo carácter forte e terroso.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "romeo-churchill",
+   "brand": "Romeo y Julieta",
+   "line": "Churchill",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 3,
+   "vitola": "Churchill 7 x 47",
+   "wrapper": "Cubano",
+   "flavors": [
+    "cedro",
+    "nozes",
+    "mel",
+    "madeira"
+   ],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny 10 anos",
+     "Madeira Malmsey",
+     "Cognac VSOP"
+    ],
+    "food": [
+     "Frutos secos",
+     "Queijo de pasta semidura"
+    ]
+   },
+   "notes": "Clássico de corpo médio, elegante e fácil de apreciar.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q7363144",
+    "url": "https://www.wikidata.org/wiki/Q7363144",
+    "inception_year": null,
+    "countries": []
+   }
+  },
+  {
+   "id": "h-upmann-magnum-50",
+   "brand": "H. Upmann",
+   "line": "Magnum 50",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 3,
+   "vitola": "Robusto Extra 5 x 50",
+   "wrapper": "Cubano",
+   "flavors": [
+    "cedro",
+    "especiarias doces",
+    "amêndoa"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Café filtrado",
+     "Porto Tawny"
+    ],
+    "food": [
+     "Pastel de nata",
+     "Frutos secos"
+    ]
+   },
+   "notes": "Corpo médio, suave e aveludado; boa porta de entrada para os cubanos.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "padron-1964-anniversary",
+   "brand": "Padrón",
+   "line": "1964 Anniversary Series",
+   "country": "Nicarágua",
+   "region": "esteli",
+   "strength": 4,
+   "vitola": "Exclusivo 5 3/8 x 50",
+   "wrapper": "Nicaraguense (Natural ou Maduro)",
+   "flavors": [
+    "cacau",
+    "café",
+    "nozes",
+    "especiarias"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Bourbon",
+     "Espresso"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Café com sobremesa"
+    ]
+   },
+   "notes": "Tabaco envelhecido em fábrica; muito equilibrado para a força que tem.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "padron-1926-no-9",
+   "brand": "Padrón",
+   "line": "1926 Serie No. 9",
+   "country": "Nicarágua",
+   "region": "esteli",
+   "strength": 4,
+   "vitola": "Belicoso 5 1/2 x 52",
+   "wrapper": "Nicaraguense (Natural ou Maduro)",
+   "flavors": [
+    "café",
+    "terra",
+    "cacau",
+    "pimenta"
+   ],
+   "pairings": {
+    "drinks": [
+     "Whisky de malte",
+     "Rum escuro",
+     "Stout"
+    ],
+    "food": [
+     "Chocolate negro intenso",
+     "Queijo curado"
+    ]
+   },
+   "notes": "Linha de topo da casa Padrón, com complexidade e persistência notáveis.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "fuente-hemingway-short-story",
+   "brand": "Arturo Fuente",
+   "line": "Hemingway Short Story",
+   "country": "República Dominicana",
+   "region": "cibao",
+   "strength": 3,
+   "vitola": "Perfecto 4 x 48",
+   "wrapper": "Cameroon",
+   "flavors": [
+    "especiarias",
+    "madeira",
+    "creme",
+    "mel"
+   ],
+   "pairings": {
+    "drinks": [
+     "Madeira Malmsey",
+     "Porto Tawny 10 anos",
+     "Cognac"
+    ],
+    "food": [
+     "Doces de ovos",
+     "Amêndoas"
+    ]
+   },
+   "notes": "Perfecto curto de fumada suave e doce; ideal para uma pausa de cerca de 45 minutos.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q4801736",
+    "url": "https://www.wikidata.org/wiki/Q4801736",
+    "inception_year": null,
+    "countries": []
+   }
+  },
+  {
+   "id": "fuente-opus-x",
+   "brand": "Arturo Fuente",
+   "line": "OpusX",
+   "country": "República Dominicana",
+   "region": "cibao",
+   "strength": 4,
+   "vitola": "Robusto 5 1/4 x 50",
+   "wrapper": "Rosado dominicano",
+   "flavors": [
+    "cedro",
+    "pimenta",
+    "frutos secos",
+    "especiarias doces"
+   ],
+   "pairings": {
+    "drinks": [
+     "Cognac XO",
+     "Rum añejo",
+     "Porto Vintage"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Queijo de cabra curado"
+    ]
+   },
+   "notes": "Raro e muito procurado; pioneiro em capas dominicanas de alta qualidade.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q4801736",
+    "url": "https://www.wikidata.org/wiki/Q4801736",
+    "inception_year": null,
+    "countries": []
+   }
+  },
+  {
+   "id": "davidoff-signature-2000",
+   "brand": "Davidoff",
+   "line": "Signature 2000",
+   "country": "República Dominicana",
+   "region": "cibao",
+   "strength": 2,
+   "vitola": "Petit Corona 5 x 43",
+   "wrapper": "Connecticut (Equador)",
+   "flavors": [
+    "creme",
+    "nozes",
+    "madeira clara",
+    "mel"
+   ],
+   "pairings": {
+    "drinks": [
+     "Café",
+     "Champanhe",
+     "Porto branco"
+    ],
+    "food": [
+     "Pastelaria",
+     "Queijo fresco"
+    ]
+   },
+   "notes": "Elegante e suave; excelente para manhãs ou depois de uma refeição leve.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q501422",
+    "url": "https://www.wikidata.org/wiki/Q501422",
+    "inception_year": 1875,
+    "countries": [
+     "Suíça"
+    ]
+   }
+  },
+  {
+   "id": "davidoff-primeros",
+   "brand": "Davidoff",
+   "line": "Primeros Classic",
+   "country": "República Dominicana",
+   "region": "cibao",
+   "strength": 1,
+   "vitola": "Petit Panatela 4 1/8 x 34",
+   "wrapper": "Connecticut (Equador)",
+   "flavors": [
+    "creme",
+    "madeira clara",
+    "nozes"
+   ],
+   "pairings": {
+    "drinks": [
+     "Café",
+     "Chá verde",
+     "Porto branco"
+    ],
+    "food": [
+     "Biscoitos",
+     "Fruta"
+    ]
+   },
+   "notes": "Fumada de cerca de 15 minutos; ideal para iniciantes e pausas curtas.",
+   "sources": [
+    {
+     "title": "Neptune Cigar — Davidoff Dominican Primeros 4 1/8 x 34",
+     "url": "https://www.neptunecigar.com/cigars/davidoff-dominican-primeros"
+    }
+   ],
+   "verifiedFields": [
+    "vitola"
+   ],
+   "brandFacts": {
+    "qid": "Q501422",
+    "url": "https://www.wikidata.org/wiki/Q501422",
+    "inception_year": 1875,
+    "countries": [
+     "Suíça"
+    ]
+   }
+  },
+  {
+   "id": "my-father-le-bijou-1922",
+   "brand": "My Father",
+   "line": "Le Bijou 1922",
+   "country": "Nicarágua",
+   "region": "esteli",
+   "strength": 5,
+   "vitola": "Torpedo 6 1/8 x 52",
+   "wrapper": "Habano Oscuro",
+   "flavors": [
+    "café",
+    "pimenta",
+    "cacau",
+    "terra"
+   ],
+   "pairings": {
+    "drinks": [
+     "Bourbon",
+     "Whisky de malte intenso",
+     "Rum escuro"
+    ],
+    "food": [
+     "Carne grelhada",
+     "Chocolate 85%"
+    ]
+   },
+   "notes": "Linha intensa e rica, para fumadores com experiência.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q136651409",
+    "url": "https://www.wikidata.org/wiki/Q136651409",
+    "inception_year": 2008,
+    "countries": []
+   }
+  },
+  {
+   "id": "oliva-serie-v-melanio",
+   "brand": "Oliva",
+   "line": "Serie V Melanio",
+   "country": "Nicarágua",
+   "region": "esteli",
+   "strength": 4,
+   "vitola": "Robusto 5 x 50",
+   "wrapper": "Sumatra (Equador)",
+   "flavors": [
+    "cacau",
+    "café",
+    "pimenta",
+    "especiarias"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Bourbon",
+     "Espresso"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Frutos secos"
+    ]
+   },
+   "notes": "Muito bem pontuada pela imprensa especializada; força média-alta com bom equilíbrio.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "oliva-nub-connecticut",
+   "brand": "Oliva",
+   "line": "Nub Connecticut",
+   "country": "Nicarágua",
+   "region": "esteli",
+   "strength": 2,
+   "vitola": "Gordo 4 x 60",
+   "wrapper": "Connecticut",
+   "flavors": [
+    "creme",
+    "nozes",
+    "amêndoa"
+   ],
+   "pairings": {
+    "drinks": [
+     "Café com leite",
+     "Cerveja lager",
+     "Porto branco"
+    ],
+    "food": [
+     "Pastelaria",
+     "Queijo fresco"
+    ]
+   },
+   "notes": "Formato curto e grosso, concebido para fumada consistente do início ao fim.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "drew-estate-liga-privada-no-9",
+   "brand": "Drew Estate",
+   "line": "Liga Privada No. 9",
+   "country": "Nicarágua",
+   "region": "esteli",
+   "strength": 4,
+   "vitola": "Robusto 5 x 52",
+   "wrapper": "Connecticut Broadleaf",
+   "flavors": [
+    "cacau",
+    "terra",
+    "café",
+    "especiarias"
+   ],
+   "pairings": {
+    "drinks": [
+     "Stout",
+     "Bourbon",
+     "Rum escuro"
+    ],
+    "food": [
+     "Brownie",
+     "Churrasco"
+    ]
+   },
+   "notes": "Capa Broadleaf escura e brilhante; textura rica e muita fumaça.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "don-pepin-blue",
+   "brand": "Don Pepín García",
+   "line": "Blue Label (Original)",
+   "country": "Nicarágua",
+   "region": "esteli",
+   "strength": 5,
+   "vitola": "Várias vitolas",
+   "wrapper": "Corojo Oscuro (Nicarágua)",
+   "flavors": [
+    "pimenta",
+    "madeira",
+    "especiarias",
+    "terra"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Whisky de malte"
+    ],
+    "food": [
+     "Queijo curado",
+     "Frutos secos"
+    ]
+   },
+   "notes": "Puro nicaraguense: capa Corojo Oscuro, capote Criollo, tripa Criollo/Corojo. Classificado como força plena numa análise consultada.",
+   "sources": [
+    {
+     "title": "Cigar Coop — Don Pepin Garcia Original Invictos (Blue Label)",
+     "url": "https://cigar-coop.com/2013/10/cigar-review-don-pepin-garcia-origina.html"
+    }
+   ],
+   "verifiedFields": [
+    "wrapper",
+    "strength",
+    "country"
+   ]
+  },
+  {
+   "id": "macanudo-cafe",
+   "brand": "Macanudo",
+   "line": "Café",
+   "country": "República Dominicana",
+   "region": "cibao",
+   "strength": 1,
+   "vitola": "Robusto 5 1/2 x 49",
+   "wrapper": "Connecticut Shade",
+   "flavors": [
+    "creme",
+    "madeira clara",
+    "nozes"
+   ],
+   "pairings": {
+    "drinks": [
+     "Café",
+     "Cerveja lager",
+     "Chá"
+    ],
+    "food": [
+     "Pastelaria",
+     "Fruta"
+    ]
+   },
+   "notes": "Uma das melhores portas de entrada: fácil, suave e acessível.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q6722519",
+    "url": "https://www.wikidata.org/wiki/Q6722519",
+    "inception_year": null,
+    "countries": []
+   }
+  },
+  {
+   "id": "rocky-patel-decade",
+   "brand": "Rocky Patel",
+   "line": "Decade",
+   "country": "Honduras",
+   "region": "danli",
+   "strength": 3,
+   "vitola": "Toro 6 x 52",
+   "wrapper": "Sumatra",
+   "flavors": [
+    "cedro",
+    "especiarias",
+    "cacau",
+    "couro"
+   ],
+   "pairings": {
+    "drinks": [
+     "Bourbon",
+     "Rum añejo",
+     "Cognac"
+    ],
+    "food": [
+     "Chocolate",
+     "Frutos secos"
+    ]
+   },
+   "notes": "Binder e tripa não são divulgados pela marca. A origem do tabaco (Honduras/Nicarágua) está por confirmar.",
+   "sources": [
+    {
+     "title": "JR Cigars — Rocky Patel Decade",
+     "url": "https://www.jrcigars.com/cigars/handmade-cigars/rocky-patel-cigars/rocky-patel-decade/"
+    }
+   ],
+   "verifiedFields": [
+    "wrapper"
+   ]
+  },
+  {
+   "id": "camacho-connecticut",
+   "brand": "Camacho",
+   "line": "Connecticut",
+   "country": "Honduras",
+   "region": "danli",
+   "strength": 2,
+   "vitola": "Robusto 5 x 50",
+   "wrapper": "Connecticut",
+   "flavors": [
+    "creme",
+    "madeira",
+    "nozes"
+   ],
+   "pairings": {
+    "drinks": [
+     "Café",
+     "Porto branco",
+     "Cerveja clara"
+    ],
+    "food": [
+     "Pastelaria",
+     "Queijo suave"
+    ]
+   },
+   "notes": "Alternativa suave com tabaco hondurenho.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "te-amo-maduro",
+   "brand": "Te-Amo",
+   "line": "Maduro",
+   "country": "México",
+   "region": "san-andres",
+   "strength": 2,
+   "vitola": "Toro 6 x 50",
+   "wrapper": "Maduro mexicano",
+   "flavors": [
+    "cacau",
+    "doçura",
+    "café",
+    "terra suave"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum",
+     "Café",
+     "Stout"
+    ],
+    "food": [
+     "Chocolate",
+     "Tarte de chocolate"
+    ]
+   },
+   "notes": "Capa Maduro de San Andrés, doce e acessível.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "dannemann-moods",
+   "brand": "Dannemann",
+   "line": "Moods",
+   "country": "Brasil",
+   "region": "bahia",
+   "strength": 1,
+   "vitola": "Petit Corona",
+   "wrapper": "Brasileira",
+   "flavors": [
+    "terra",
+    "doçura",
+    "cacau"
+   ],
+   "pairings": {
+    "drinks": [
+     "Cachaça envelhecida",
+     "Café",
+     "Rum"
+    ],
+    "food": [
+     "Doces com café",
+     "Frutos secos"
+    ]
+   },
+   "notes": "Representa a tradição de tabaco da Bahia, com notas doces e terrosas.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q12043680",
+    "url": "https://www.wikidata.org/wiki/Q12043680",
+    "inception_year": 1873,
+    "countries": [
+     "Alemanha"
+    ]
+   }
+  },
+  {
+   "id": "cohiba-robusto",
+   "brand": "Cohiba",
+   "line": "Robusto",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 4,
+   "vitola": "Robusto 4 7/8 x 50",
+   "wrapper": "Cubano",
+   "flavors": [
+    "cedro",
+    "café",
+    "creme",
+    "ervas"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Porto Tawny 20 anos",
+     "Espresso"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Amêndoas"
+    ]
+   },
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": [],
+   "brandFacts": {
+    "qid": "Q513070",
+    "url": "https://www.wikidata.org/wiki/Q513070",
+    "inception_year": 1966,
+    "countries": [
+     "Cuba"
+    ]
+   }
+  },
+  {
+   "id": "bolivar-royal-coronas",
+   "brand": "Bolívar",
+   "line": "Royal Coronas",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 5,
+   "vitola": "Robusto 4 7/8 x 50",
+   "wrapper": "Cubano",
+   "flavors": [
+    "terra",
+    "pimenta",
+    "couro",
+    "cacau"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte"
+    ],
+    "food": [
+     "Carne grelhada",
+     "Chocolate amargo"
+    ]
+   },
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "hoyo-epicure-no-2",
+   "brand": "Hoyo de Monterrey",
+   "line": "Epicure No. 2",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 3,
+   "vitola": "Robusto 4 7/8 x 50",
+   "wrapper": "Cubano",
+   "flavors": [
+    "terra",
+    "cacau",
+    "creme",
+    "madeira"
+   ],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny 10 anos",
+     "Café",
+     "Cognac"
+    ],
+    "food": [
+     "Queijo semicurado",
+     "Frutos secos"
+    ]
+   },
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "trinidad-fundadores",
+   "brand": "Trinidad",
+   "line": "Fundadores",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 3,
+   "vitola": "Laguito No. 1 7 1/2 x 40",
+   "wrapper": "Cubano",
+   "flavors": [
+    "creme",
+    "cedro",
+    "nozes",
+    "especiarias doces"
+   ],
+   "pairings": {
+    "drinks": [
+     "Madeira Malmsey",
+     "Porto Tawny 20 anos",
+     "Champanhe"
+    ],
+    "food": [
+     "Pastelaria",
+     "Frutos secos"
+    ]
+   },
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "ramon-allones-specially-selected",
+   "brand": "Ramón Allones",
+   "line": "Specially Selected",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 4,
+   "vitola": "Robusto 4 7/8 x 50",
+   "wrapper": "Cubano",
+   "flavors": [
+    "especiarias",
+    "cedro",
+    "terra",
+    "couro"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Whisky de malte",
+     "Espresso"
+    ],
+    "food": [
+     "Queijo curado",
+     "Chocolate negro"
+    ]
+   },
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "diplomaticos-no-2",
+   "brand": "Diplomáticos",
+   "line": "No. 2",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 3,
+   "vitola": "Pirámide 6 1/8 x 52",
+   "wrapper": "Cubano",
+   "flavors": [
+    "cedro",
+    "creme",
+    "nozes",
+    "especiarias doces"
+   ],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny",
+     "Cognac VSOP",
+     "Café"
+    ],
+    "food": [
+     "Frutos secos",
+     "Queijo suave"
+    ]
+   },
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": []
+  },
+  {
+   "id": "sancho-panza-belicosos",
+   "brand": "Sancho Panza",
+   "line": "Belicosos",
+   "country": "Cuba",
+   "region": "vuelta-abajo",
+   "strength": 3,
+   "vitola": "Campana 5 1/2 x 52",
+   "wrapper": "Cubano",
+   "flavors": [
+    "madeira",
+    "terra",
+    "especiarias",
+    "creme"
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum añejo",
+     "Café",
+     "Madeira"
+    ],
+    "food": [
+     "Frutos secos",
+     "Chocolate"
+    ]
+   },
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": []
+  }
+ ]
+}

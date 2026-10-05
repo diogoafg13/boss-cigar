@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boss Cigar — Base de dados de charutos</title>
+<meta name="description" content="Base de dados de charutos com mapa de origens, clima por terroir, harmonizações, comparador, humidor, diário de provas e guia em PDF.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root { --bg:#1b120d; --panel:#26180f; --panel2:#31200f; --line:#4a3321; --text:#f1e6d6; --muted:#b5a089; --gold:#d4a85a; --ember:#e0703a; --ok:#7fb069; --warn:#d9a441; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:Georgia,"Times New Roman",serif; line-height:1.5; }
+  a { color:var(--gold); }
+  header { padding:26px 16px 16px; text-align:center; background:linear-gradient(180deg,#2c1a0f,var(--bg)); border-bottom:1px solid var(--line); }
+  header h1 { margin:0; font-size:2rem; letter-spacing:.05em; color:var(--gold); }
+  header p { margin:6px 0 0; color:var(--muted); }
+  nav { display:flex; gap:6px; justify-content:center; flex-wrap:wrap; padding:10px 12px; position:sticky; top:0; background:rgba(27,18,13,.96); z-index:1000; border-bottom:1px solid var(--line); }
+  nav button { background:var(--panel); color:var(--text); border:1px solid var(--line); padding:7px 12px; border-radius:999px; cursor:pointer; font:inherit; font-size:.92rem; }
+  nav button.active { background:var(--gold); color:#2a1a0b; border-color:var(--gold); }
+  main { max-width:1100px; margin:0 auto; padding:16px; }
+  section { display:none; } section.active { display:block; }
+  .filters { display:grid; gap:8px; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); margin-bottom:12px; }
+  input,select,textarea { width:100%; background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:9px 10px; font:inherit; }
+  .grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+  .card { position:relative; background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; cursor:pointer; }
+  .card:hover { border-color:var(--gold); }
+  .card h3 { margin:0 0 2px; font-size:1.05rem; padding-right:28px; }
+  .sub { color:var(--muted); font-size:.9rem; }
+  .fav { position:absolute; top:8px; right:10px; background:none; border:0; color:var(--muted); font-size:1.3rem; cursor:pointer; }
+  .fav.on { color:var(--ember); }
+  .meter { display:inline-flex; gap:3px; margin:8px 0; }
+  .meter i { width:18px; height:6px; border-radius:3px; background:var(--line); } .meter i.on { background:var(--ember); }
+  .tag { display:inline-block; font-size:.78rem; padding:2px 8px; margin:2px 4px 2px 0; border:1px solid var(--line); border-radius:999px; color:var(--muted); }
+  .badge { font-size:.74rem; padding:2px 8px; border-radius:999px; }
+  .badge.ok { background:rgba(127,176,105,.18); color:var(--ok); } .badge.warn { background:rgba(217,164,65,.15); color:var(--warn); }
+  #map { height:540px; border-radius:12px; border:1px solid var(--line); }
+  .leaflet-popup-content-wrapper,.leaflet-popup-tip { background:var(--panel); color:var(--text); } .leaflet-popup-content a { color:var(--gold); }
+  dialog { background:var(--panel2); color:var(--text); border:1px solid var(--gold); border-radius:14px; max-width:580px; width:calc(100% - 28px); padding:20px; max-height:90vh; overflow:auto; }
+  dialog::backdrop { background:rgba(0,0,0,.65); }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .btn { background:var(--gold); color:#2a1a0b; border:0; padding:9px 16px; border-radius:8px; cursor:pointer; font:inherit; text-decoration:none; display:inline-block; }
+  .btn.ghost { background:transparent; color:var(--gold); border:1px solid var(--gold); } .btn.sm { padding:5px 10px; font-size:.85rem; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:14px; }
+  .muted { color:var(--muted); } .warn { font-size:.82rem; color:var(--muted); }
+  table { width:100%; border-collapse:collapse; } th,td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; } th { color:var(--gold); font-weight:normal; }
+  .item { border-bottom:1px solid var(--line); padding:10px 0; }
+  .timer { font-size:2.6rem; letter-spacing:.06em; color:var(--gold); font-variant-numeric:tabular-nums; }
+  .vit svg { display:block; max-width:100%; } .vit-row { display:flex; align-items:center; gap:12px; padding:8px 0; border-bottom:1px solid var(--line); }
+  .vit-row .lbl { width:210px; flex:none; font-size:.9rem; }
+  footer { text-align:center; color:var(--muted); padding:24px 16px 40px; font-size:.85rem; }
+  @media (max-width:560px){ .vit-row{flex-direction:column;align-items:flex-start;} .vit-row .lbl{width:auto;} }
+</style>
+</head>
+<body>
+<header>
+  <h1>🚬 Boss Cigar</h1>
+  <p>Base de dados de charutos · mapa e terroir · harmonizações · humidor · diário de provas</p>
+</header>
+
+<nav id="tabs">
+  <button data-tab="catalog" class="active">Catálogo</button>
+  <button data-tab="mapview">Mapa</button>
+  <button data-tab="pairing">Harmonizador</button>
+  <button data-tab="compare">Comparador</button>
+  <button data-tab="vitolas">Vitolas</button>
+  <button data-tab="humidor">Humidor</button>
+  <button data-tab="tools">Ferramentas</button>
+  <button data-tab="journal">Diário</button>
+  <button data-tab="guide">Guia PDF</button>
+  <button data-tab="sources">Fontes</button>
+</nav>
+
+<main>
+  <section id="catalog" class="active">
+    <div class="filters">
+      <input id="q" type="search" placeholder="Pesquisar marca, sabor, bebida…">
+      <select id="fCountry"><option value="">Todos os países</option></select>
+      <select id="fStrength"><option value="">Qualquer força</option>
+        <option value="1">1 · Suave</option><option value="2">2 · Suave-média</option><option value="3">3 · Média</option><option value="4">4 · Média-forte</option><option value="5">5 · Forte</option></select>
+      <select id="fSort"><option value="brand">Ordenar: marca</option><option value="strength">Ordenar: força</option><option value="country">Ordenar: país</option></select>
+      <select id="fOnly"><option value="">Todos</option><option value="fav">Só favoritos</option><option value="ver">Só com dados verificados</option></select>
+    </div>
+    <p class="muted" id="count"></p>
+    <div class="grid" id="cards"></div>
+  </section>
+
+  <section id="mapview">
+    <p class="muted">Cada ponto é uma zona de cultivo, com clima médio 2015–2024 quando disponível. Clica para ver os charutos.</p>
+    <div id="map"></div>
+  </section>
+
+  <section id="pairing">
+    <div class="panel"><h2 style="margin-top:0">Harmonizador</h2>
+      <p class="muted">Escolhe uma bebida, um alimento ou um sabor.</p>
+      <div class="filters"><select id="pDrink"><option value="">Bebida</option></select><select id="pFood"><option value="">Alimento</option></select><select id="pFlavor"><option value="">Sabor</option></select></div>
+    </div>
+    <div class="grid" id="pairResults"></div>
+  </section>
+
+  <section id="compare">
+    <div class="panel"><div class="filters"><select id="cmpA"></select><select id="cmpB"></select></div></div>
+    <div id="cmpOut"></div>
+  </section>
+
+  <section id="vitolas">
+    <div class="panel"><h2 style="margin-top:0">Guia de vitolas à escala</h2>
+      <p class="warn">Comprimento (polegadas) × ring gauge (1/64"). Desenhos à mesma escala. Medidas de referência típicas; variam de marca para marca.</p>
+      <div id="vitRef" class="vit"></div></div>
+    <div class="panel"><h3 style="margin-top:0">Charutos da base de dados</h3><div id="vitDb" class="vit"></div></div>
+  </section>
+
+  <section id="humidor">
+    <div class="panel"><h2 style="margin-top:0">O meu humidor</h2>
+      <p class="warn">Guardado apenas neste browser. Exporta o JSON para fazer cópia de segurança.</p>
+      <div class="filters"><select id="hCigar"></select><input id="hQty" type="number" min="1" value="1" aria-label="Quantidade"><input id="hDate" type="date" aria-label="Data de compra"><input id="hNote" placeholder="Nota (loja, caixa…)"></div>
+      <div class="row"><button class="btn" id="hAdd">Adicionar ao humidor</button><button class="btn ghost" id="hExport">Exportar JSON</button></div>
+    </div>
+    <div id="hList"></div>
+    <div class="panel"><h3 style="margin-top:0">Humidor 101</h3>
+      <ul><li>Humidade relativa: 65–72% · temperatura: 18–21 °C, estável.</li>
+          <li>Teste do sal: um pires com sal húmido num recipiente fechado deve marcar cerca de 75% HR; assim calibras o higrómetro.</li>
+          <li>Alterna a posição dos charutos de vez em quando e verifica bolor ou escaravelho.</li>
+          <li>Os charutos recém-comprados descansam algumas semanas antes de fumar; envelhecer melhora alguns blends.</li></ul>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="panel"><h2 style="margin-top:0">Cronómetro de fumada</h2>
+      <div class="timer" id="tClock">00:00</div>
+      <div class="row" style="margin:8px 0"><button class="btn" id="tStart">Iniciar</button><button class="btn ghost" id="tMark">Marcar terço</button><button class="btn ghost" id="tReset">Repor</button></div>
+      <div id="tMarks" class="muted"></div></div>
+    <div class="panel"><h2 style="margin-top:0">Quiz de palato e origem</h2>
+      <div id="quiz"></div></div>
+  </section>
+
+  <section id="journal">
+    <div class="panel"><h2 style="margin-top:0">Diário de provas</h2>
+      <p class="warn">Guardado apenas neste browser. Exportável em JSON.</p>
+      <div class="filters"><select id="jCigar"></select><input id="jDrink" placeholder="Bebida / acompanhamento"><select id="jRating"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3" selected>★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select></div>
+      <textarea id="jNotes" rows="3" placeholder="Primeiro terço, segundo terço, final, retrohale…"></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn" id="jSave">Guardar nota</button><button class="btn ghost" id="jExport">Exportar JSON</button></div></div>
+    <div id="jList"></div>
+  </section>
+
+  <section id="guide">
+    <div class="panel"><h2 style="margin-top:0">Do Zero ao Expert — O Livro do Charuto</h2>
+      <p>Guia em português: história, produção, identificação, degustação, harmonizações e armazenamento.</p>
+      <div class="row"><a class="btn" href="docs/do-zero-ao-expert-livro-do-charuto.pdf" download>⬇ Descarregar PDF</a>
+        <a class="btn ghost" href="docs/do-zero-ao-expert-livro-do-charuto.pdf" target="_blank" rel="noopener">Abrir no browser</a></div>
+      <p class="warn">Se der erro 404, o PDF ainda não foi adicionado à pasta <code>site/docs/</code>.</p></div>
+  </section>
+
+  <section id="sources">
+    <div class="panel"><h2 style="margin-top:0">Origem e rigor dos dados</h2>
+      <p>A base é um <b>seed curado à mão</b> (YAML no repositório) validado por um pipeline Python. Só os campos listados como <i>verificados</i> foram confirmados numa fonte; o resto é indicativo e está marcado como tal.</p>
+      <p>O pipeline enriquece automaticamente com fontes abertas: <b>Wikidata</b> (ano de fundação e país das marcas, CC0) e <b>Open-Meteo</b> (clima médio por zona, CC BY 4.0). Não faz scraping de lojas nem de pontuações de revistas.</p>
+      <div id="srcStatus"></div>
+      <h3>Qualidade</h3><div id="qualOut" class="muted">A carregar…</div></div>
+  </section>
+</main>
+
+<dialog id="detail"></dialog>
+<footer id="foot">Boss Cigar · Projeto pessoal e educativo · Para maiores de 18 anos. Fumar prejudica a saúde.</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const STRENGTH = ["", "Suave", "Suave-média", "Média", "Média-forte", "Forte"];
+const MONTHS = ["J","F","M","A","M","J","J","A","S","O","N","D"];
+let DB = { cigars: [], regions: [], meta: {} }, map;
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const lsGet = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+const cig = id => DB.cigars.find(c => c.id === id);
+const name = c => c ? `${c.brand} — ${c.line}` : "?";
+const unique = a => [...new Set(a)].sort((x, y) => x.localeCompare(y, "pt"));
+
+fetch("data/cigars.json").then(r => r.json()).then(init).catch(e => {
+  $("#cards").innerHTML = "<p class='muted'>Não foi possível carregar os dados. Em local, corre um servidor (ver README).</p>"; console.error(e);
+});
+
+function init(d) {
+  DB = d;
+  unique(DB.cigars.map(c => c.country)).forEach(c => $("#fCountry").insertAdjacentHTML("beforeend", `<option>${esc(c)}</option>`));
+  ["#q","#fCountry","#fStrength","#fSort","#fOnly"].forEach(i => $(i).addEventListener("input", renderCatalog));
+  const opts = DB.cigars.map(c => `<option value="${c.id}">${esc(name(c))}</option>`).join("");
+  ["#cmpA","#cmpB","#jCigar","#hCigar"].forEach(i => $(i).innerHTML = opts);
+  if (DB.cigars[1]) $("#cmpB").value = DB.cigars[1].id;
+  ["#cmpA","#cmpB"].forEach(i => $(i).addEventListener("input", renderCompare));
+  setupTabs(); renderCatalog(); setupPairing(); renderCompare(); renderVitolas();
+  setupHumidor(); setupTools(); setupJournal(); renderSources();
+  const m = DB.meta || {};
+  if (m.built_at) $("#foot").insertAdjacentHTML("afterbegin", `Dados atualizados em ${m.built_at.slice(0,10)} · `);
+}
+
+function setupTabs() {
+  document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("active", x === b));
+    document.querySelectorAll("main > section").forEach(s => s.classList.toggle("active", s.id === b.dataset.tab));
+    if (b.dataset.tab === "mapview") initMap();
+    if (b.dataset.tab === "journal") renderJournal();
+    if (b.dataset.tab === "humidor") renderHumidor();
+    scrollTo(0, 0);
+  }));
+}
+const goTab = t => document.querySelector(`[data-tab="${t}"]`).click();
+
+const meter = n => `<span class="meter" title="${STRENGTH[n]}">${[1,2,3,4,5].map(i => `<i class="${i<=n?"on":""}"></i>`).join("")}</span>`;
+const favs = () => lsGet("bc-favs", []);
+const isVer = c => (c.verifiedFields || []).length > 0;
+
+function cardHTML(c) {
+  const on = favs().includes(c.id);
+  return `<article class="card" data-id="${c.id}">
+    <button class="fav ${on?"on":""}" data-fav="${c.id}" aria-label="Favorito">${on?"★":"☆"}</button>
+    <h3>${esc(c.brand)} — ${esc(c.line)}</h3>
+    <div class="sub">${esc(c.country)} · ${esc(c.vitola)}</div>
+    ${meter(c.strength)} <span class="sub">${STRENGTH[c.strength]}</span>
+    ${isVer(c) ? '<span class="badge ok">verificado</span>' : '<span class="badge warn">por confirmar</span>'}<br>
+    ${c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("")}</article>`;
+}
+function bindCards(root) {
+  root.querySelectorAll(".card").forEach(el => el.addEventListener("click", () => openDetail(el.dataset.id)));
+  root.querySelectorAll(".fav").forEach(b => b.addEventListener("click", e => {
+    e.stopPropagation();
+    const f = favs(), i = f.indexOf(b.dataset.fav);
+    i >= 0 ? f.splice(i, 1) : f.push(b.dataset.fav); lsSet("bc-favs", f);
+    b.classList.toggle("on", i < 0); b.textContent = i < 0 ? "★" : "☆";
+  }));
+}
+
+function renderCatalog() {
+  const q = $("#q").value.trim().toLowerCase(), country = $("#fCountry").value, st = $("#fStrength").value,
+        sort = $("#fSort").value, only = $("#fOnly").value, f = favs();
+  const list = DB.cigars.filter(c => {
+    if (country && c.country !== country) return false;
+    if (st && String(c.strength) !== st) return false;
+    if (only === "fav" && !f.includes(c.id)) return false;
+    if (only === "ver" && !isVer(c)) return false;
+    if (!q) return true;
+    return [c.brand, c.line, c.country, c.wrapper, ...c.flavors, ...c.pairings.drinks, ...c.pairings.food].join(" ").toLowerCase().includes(q);
+  }).sort((a, b) => sort === "strength" ? a.strength - b.strength : (a[sort] || "").localeCompare(b[sort] || "", "pt"));
+  $("#count").textContent = `${list.length} charuto(s)`;
+  $("#cards").innerHTML = list.map(cardHTML).join("") || "<p class='muted'>Sem resultados.</p>";
+  bindCards($("#cards"));
+}
+
+function climateHTML(r) {
+  const k = r && r.climate; if (!k) return "";
+  const t = k.temp_c_monthly || [], rain = k.rain_mm_monthly || [], maxR = Math.max(...rain, 1);
+  const bars = rain.map((v, i) => `<div title="${MONTHS[i]}: ${t[i]} °C, ${v} mm" style="flex:1;text-align:center"><div style="height:${Math.round(v / maxR * 40)}px;background:var(--ember);margin:0 1px;border-radius:2px"></div><small class="muted">${MONTHS[i]}</small></div>`).join("");
+  return `<p><b>Clima (${esc(k.period)}):</b> ${k.temp_c_annual} °C de média · ${k.rain_mm_annual} mm/ano</p>
+    <div style="display:flex;align-items:flex-end;height:60px">${bars}</div><div class="warn">Precipitação média mensal · fonte: Open-Meteo</div>`;
+}
+
+function openDetail(id) {
+  const c = cig(id), r = DB.regions.find(x => x.id === c.region), d = $("#detail");
+  const ver = isVer(c) ? `<p><span class="badge ok">verificado</span> <span class="sub">${c.verifiedFields.join(", ")}</span> ${c.sources.map(s => `· <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join("")}</p>`
+    : `<p><span class="badge warn">por confirmar</span> <span class="sub">dados indicativos, ainda sem fonte</span></p>`;
+  const bf = c.brandFacts ? `<p class="sub">Marca (Wikidata): ${c.brandFacts.inception_year ? "fundada em " + c.brandFacts.inception_year : "ano desconhecido"}${c.brandFacts.countries?.length ? " · " + esc(c.brandFacts.countries.join(", ")) : ""} · <a href="${esc(c.brandFacts.url)}" target="_blank" rel="noopener">fonte</a></p>` : "";
+  d.innerHTML = `<h2 style="margin-top:0">${esc(name(c))}</h2>
+    <p class="muted">${esc(c.country)}${r ? " · " + esc(r.name) : ""}</p>${meter(c.strength)} ${STRENGTH[c.strength]}
+    <p><b>Vitola:</b> ${esc(c.vitola)}<br><b>Capa:</b> ${esc(c.wrapper)}</p><p>${esc(c.notes)}</p>
+    <p><b>Sabores:</b> ${c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("")}</p>
+    <p><b>Bebidas:</b> ${esc(c.pairings.drinks.join(", "))}<br><b>Comida:</b> ${esc(c.pairings.food.join(", "))}</p>
+    ${ver}${bf}${r ? `<p class="muted">${esc(r.note)}</p>${climateHTML(r)}` : ""}
+    <div class="row" style="margin-top:12px"><button class="btn" id="dLog">Registar prova</button><button class="btn ghost" id="dHum">+ Humidor</button><button class="btn ghost" id="dClose">Fechar</button></div>`;
+  d.showModal();
+  $("#dClose").onclick = () => d.close();
+  $("#dLog").onclick = () => { d.close(); goTab("journal"); $("#jCigar").value = c.id; };
+  $("#dHum").onclick = () => { d.close(); goTab("humidor"); $("#hCigar").value = c.id; };
+}
+
+function initMap() {
+  if (map) { setTimeout(() => map.invalidateSize(), 50); return; }
+  map = L.map("map").setView([15, -60], 2);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "© OpenStreetMap contributors" }).addTo(map);
+  DB.regions.forEach(r => {
+    const cs = DB.cigars.filter(c => c.region === r.id);
+    const k = r.climate ? `<br><small>${r.climate.temp_c_annual} °C · ${r.climate.rain_mm_annual} mm/ano</small>` : "";
+    const list = cs.length ? "<ul style='padding-left:18px;margin:6px 0'>" + cs.map(c => `<li><a href="#" data-open="${c.id}">${esc(name(c))}</a></li>`).join("") + "</ul>" : "<p><i>Sem charutos registados ainda.</i></p>";
+    L.circleMarker([r.lat, r.lng], { radius: 8 + cs.length * 1.5, color: "#d4a85a", fillColor: "#e0703a", fillOpacity: .8, weight: 2 })
+      .addTo(map).bindPopup(`<b>${esc(r.name)}</b><br>${esc(r.country)}${k}<p>${esc(r.note)}</p>${list}`);
+  });
+  map.on("popupopen", e => e.popup.getElement().querySelectorAll("[data-open]").forEach(a => a.addEventListener("click", ev => { ev.preventDefault(); openDetail(a.dataset.open); })));
+  setTimeout(() => map.invalidateSize(), 50);
+}
+
+function setupPairing() {
+  unique(DB.cigars.flatMap(c => c.pairings.drinks)).forEach(x => $("#pDrink").insertAdjacentHTML("beforeend", `<option>${esc(x)}</option>`));
+  unique(DB.cigars.flatMap(c => c.pairings.food)).forEach(x => $("#pFood").insertAdjacentHTML("beforeend", `<option>${esc(x)}</option>`));
+  unique(DB.cigars.flatMap(c => c.flavors)).forEach(x => $("#pFlavor").insertAdjacentHTML("beforeend", `<option>${esc(x)}</option>`));
+  ["#pDrink","#pFood","#pFlavor"].forEach(i => $(i).addEventListener("input", renderPairing)); renderPairing();
+}
+function renderPairing() {
+  const dr = $("#pDrink").value, fo = $("#pFood").value, fl = $("#pFlavor").value;
+  if (!dr && !fo && !fl) { $("#pairResults").innerHTML = "<p class='muted'>Escolhe pelo menos um filtro.</p>"; return; }
+  const l = DB.cigars.filter(c => (!dr || c.pairings.drinks.includes(dr)) && (!fo || c.pairings.food.includes(fo)) && (!fl || c.flavors.includes(fl)));
+  $("#pairResults").innerHTML = l.map(cardHTML).join("") || "<p class='muted'>Sem combinações.</p>"; bindCards($("#pairResults"));
+}
+
+function renderCompare() {
+  const a = cig($("#cmpA").value), b = cig($("#cmpB").value); if (!a || !b) return;
+  const row = (k, f) => `<tr><th>${k}</th><td>${f(a)}</td><td>${f(b)}</td></tr>`;
+  const reg = c => DB.regions.find(r => r.id === c.region);
+  $("#cmpOut").innerHTML = `<div class="panel"><table><tr><th></th><th>${esc(name(a))}</th><th>${esc(name(b))}</th></tr>
+    ${row("País", c => esc(c.country))}${row("Zona", c => esc(reg(c)?.name || "—"))}
+    ${row("Força", c => meter(c.strength) + " " + STRENGTH[c.strength])}${row("Vitola", c => esc(c.vitola))}${row("Capa", c => esc(c.wrapper))}
+    ${row("Sabores", c => c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join(""))}
+    ${row("Bebidas", c => esc(c.pairings.drinks.join(", ")))}${row("Comida", c => esc(c.pairings.food.join(", ")))}
+    ${row("Clima da zona", c => { const k = reg(c)?.climate; return k ? `${k.temp_c_annual} °C · ${k.rain_mm_annual} mm` : "—"; })}
+    ${row("Dados", c => isVer(c) ? '<span class="badge ok">verificado</span>' : '<span class="badge warn">por confirmar</span>')}</table></div>`;
+}
+
+function parseVitola(s) {
+  const m = String(s).match(/(\d+(?:\s\d+\/\d+)?)\s*x\s*(\d+)/); if (!m) return null;
+  const [w, fr] = m[1].split(" "); let len = +w; if (fr) { const [n, d] = fr.split("/"); len += n / d; }
+  return { len, ring: +m[2] };
+}
+function vitSVG(len, ring, color) {
+  const S = 36, W = len * S + 8, H = ring / 64 * S + 6, h = ring / 64 * S;
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${len}″ x ${ring}"><rect x="2" y="3" width="${len*S}" height="${h}" rx="${Math.min(h/2,10)}" fill="${color}" stroke="#d4a85a" stroke-width="1"/><rect x="${len*S*0.18}" y="3" width="${Math.max(6,len*S*0.06)}" height="${h}" fill="#d4a85a" opacity=".55"/></svg>`;
+}
+function renderVitolas() {
+  const ref = [["Petit Corona", 5, 42], ["Corona", 5.5, 42], ["Robusto", 5, 50], ["Toro", 6, 50], ["Gordo", 6, 60], ["Churchill", 7, 47], ["Double Corona", 7.5, 49], ["Lancero", 7.5, 38], ["Panetela", 6, 38]];
+  $("#vitRef").innerHTML = ref.map(([n, l, r]) => `<div class="vit-row"><div class="lbl"><b>${n}</b><br><span class="sub">${l}" × ${r}</span></div>${vitSVG(l, r, "#8a5a2b")}</div>`).join("");
+  $("#vitDb").innerHTML = DB.cigars.map(c => { const v = parseVitola(c.vitola); return v ? `<div class="vit-row"><div class="lbl"><b>${esc(name(c))}</b><br><span class="sub">${esc(c.vitola)}</span></div>${vitSVG(v.len, v.ring, "#7a4a22")}</div>` : ""; }).join("");
+}
+
+const HKEY = "bc-humidor";
+function setupHumidor() {
+  $("#hDate").valueAsDate = new Date();
+  $("#hAdd").onclick = () => {
+    const l = lsGet(HKEY, []); l.unshift({ id: Date.now(), cigar: $("#hCigar").value, qty: Math.max(1, +$("#hQty").value || 1), date: $("#hDate").value, note: $("#hNote").value.trim() });
+    lsSet(HKEY, l); $("#hNote").value = ""; renderHumidor();
+  };
+  $("#hExport").onclick = () => download("humidor-charutos.json", lsGet(HKEY, []));
+  renderHumidor();
+}
+function ageMonths(d) { if (!d) return null; const t = (Date.now() - new Date(d)) / 2629800000; return t < 0 ? 0 : Math.floor(t); }
+function renderHumidor() {
+  const l = lsGet(HKEY, []), total = l.reduce((s, x) => s + x.qty, 0);
+  $("#hList").innerHTML = (l.length ? `<p class="muted">${total} charuto(s) em ${l.length} entrada(s)</p>` : "<p class='muted'>Humidor vazio.</p>") + l.map(x => {
+    const a = ageMonths(x.date);
+    return `<div class="item"><b>${esc(name(cig(x.cigar)))}</b> × ${x.qty} <span class="muted">· ${esc(x.date || "")}${a !== null ? " · " + a + " mês(es) de humidor" : ""}${x.note ? " · " + esc(x.note) : ""}</span>
+      <div class="row" style="margin-top:6px"><button class="btn sm ghost" data-smoke="${x.id}">Fumei um</button><button class="btn sm ghost" data-del="${x.id}">Remover</button></div></div>`;
+  }).join("");
+  $("#hList").querySelectorAll("[data-smoke]").forEach(b => b.onclick = () => {
+    let l = lsGet(HKEY, []); const e = l.find(x => x.id == b.dataset.smoke); if (!e) return; e.qty--; if (e.qty <= 0) l = l.filter(x => x !== e);
+    lsSet(HKEY, l); renderHumidor(); goTab("journal"); $("#jCigar").value = e.cigar;
+  });
+  $("#hList").querySelectorAll("[data-del]").forEach(b => b.onclick = () => { lsSet(HKEY, lsGet(HKEY, []).filter(x => x.id != b.dataset.del)); renderHumidor(); });
+}
+
+let tStart = 0, tTimer = null, tMarks = [];
+const fmt = ms => { const s = Math.floor(ms / 1000); return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); };
+function setupTools() {
+  $("#tStart").onclick = () => {
+    if (tTimer) { clearInterval(tTimer); tTimer = null; $("#tStart").textContent = "Continuar"; tStart = Date.now() - tElapsed(); return; }
+    tStart = Date.now() - tElapsed(); $("#tStart").textContent = "Pausar";
+    tTimer = setInterval(() => $("#tClock").textContent = fmt(Date.now() - tStart), 500);
+  };
+  $("#tMark").onclick = () => { tMarks.push(fmt(tElapsed())); $("#tMarks").innerHTML = tMarks.map((m, i) => `Fim do ${i + 1}.º marco: ${m}`).join("<br>"); };
+  $("#tReset").onclick = () => { clearInterval(tTimer); tTimer = null; tStart = 0; tMarks = []; $("#tClock").textContent = "00:00"; $("#tMarks").innerHTML = ""; $("#tStart").textContent = "Iniciar"; };
+  newQuiz();
+}
+function tElapsed() { return tTimer ? Date.now() - tStart : (tStart ? (parseClock($("#tClock").textContent)) : 0); }
+function parseClock(t) { const [m, s] = t.split(":").map(Number); return (m * 60 + s) * 1000; }
+
+let qz = { n: 0, score: 0, total: 8 };
+function newQuiz() { qz = { n: 0, score: 0, total: 8 }; nextQ(); }
+function nextQ() {
+  if (qz.n >= qz.total) { $("#quiz").innerHTML = `<p>Pontuação: <b>${qz.score}/${qz.total}</b></p><button class="btn" id="qAgain">Jogar outra vez</button>`; $("#qAgain").onclick = newQuiz; return; }
+  const c = DB.cigars[Math.floor(Math.random() * DB.cigars.length)], kind = Math.random() < .5 ? "country" : "strength";
+  let q, opts, ans;
+  if (kind === "country") { q = `De que país é o ${name(c)}?`; opts = unique(DB.cigars.map(x => x.country)); ans = c.country; }
+  else { q = `Qual a força de ${name(c)}?`; opts = STRENGTH.slice(1); ans = STRENGTH[c.strength]; }
+  opts = opts.sort(() => Math.random() - .5).filter(o => o !== ans).slice(0, 3).concat(ans).sort(() => Math.random() - .5);
+  $("#quiz").innerHTML = `<p class="muted">Pergunta ${qz.n + 1}/${qz.total}</p><p><b>${esc(q)}</b></p><div class="row">${opts.map(o => `<button class="btn ghost" data-a="${esc(o)}">${esc(o)}</button>`).join("")}</div><p id="qFb"></p>`;
+  $("#quiz").querySelectorAll("[data-a]").forEach(b => b.onclick = () => {
+    const ok = b.dataset.a === ans; if (ok) qz.score++; qz.n++;
+    $("#qFb").innerHTML = ok ? "✅ Certo!" : `❌ Era ${esc(ans)}.`; $("#quiz").querySelectorAll("[data-a]").forEach(x => x.disabled = true); setTimeout(nextQ, 900);
+  });
+}
+
+const JKEY = "bc-journal";
+function setupJournal() {
+  $("#jSave").onclick = () => {
+    const l = lsGet(JKEY, []); l.unshift({ date: new Date().toISOString().slice(0, 10), cigar: $("#jCigar").value, drink: $("#jDrink").value.trim(), rating: +$("#jRating").value, notes: $("#jNotes").value.trim() });
+    lsSet(JKEY, l); $("#jNotes").value = ""; $("#jDrink").value = ""; renderJournal();
+  };
+  $("#jExport").onclick = () => download("diario-charutos.json", lsGet(JKEY, []));
+  renderJournal();
+}
+function renderJournal() {
+  const l = lsGet(JKEY, []);
+  $("#jList").innerHTML = l.map(e => `<div class="item"><b>${esc(name(cig(e.cigar)))}</b> · ${"★".repeat(e.rating)}${"☆".repeat(5 - e.rating)} <span class="muted">· ${esc(e.date)}${e.drink ? " · " + esc(e.drink) : ""}</span><div>${esc(e.notes)}</div></div>`).join("") || "<p class='muted'>Ainda sem provas registadas.</p>";
+}
+function download(fn, data) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" })); a.download = fn; a.click(); URL.revokeObjectURL(a.href); }
+
+function renderSources() {
+  const s = DB.meta?.sources || {};
+  $("#srcStatus").innerHTML = Object.keys(s).length ? "<p>" + Object.entries(s).map(([k, v]) => `<span class="badge ${v === "ok" ? "ok" : "warn"}">${esc(k)}: ${esc(v)}</span>`).join(" ") + "</p><p class='warn'>ok = dados frescos · CACHE = última versão guardada · PARCIAL/ERRO = parte da fonte indisponível</p>" : "";
+  fetch("data/quality.json").then(r => r.json()).then(q => {
+    $("#qualOut").innerHTML = `<ul><li>${q.cigars} charutos, ${q.regions} regiões</li>
+      <li>${q.cigars_with_verified_fields} com dados verificados (${Math.round(q.verified_share * 100)}%)</li>
+      <li>Marcas sem entrada no Wikidata: ${q.brands_without_wikidata.length}</li>
+      <li>Regiões sem clima: ${q.regions_without_climate.length} · sem charutos: ${q.regions_without_cigars.length}</li>
+      <li>Divergências de país face ao Wikidata: ${q.country_mismatch_vs_wikidata.length}</li></ul>`;
+  }).catch(() => { $("#qualOut").textContent = "Relatório indisponível."; });
+}
+</script>
+</body>
+</html>
