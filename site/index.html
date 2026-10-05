@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Boss Cigar — Base de dados de charutos</title>
-<meta name="description" content="Base de dados de charutos com mapa de origens, clima por terroir, harmonizações, comparador, humidor, diário de provas e guia em PDF.">
+<meta name="description" content="Base de dados de charutos com fontes abertas: mapa de origens, clima por terroir, produção por país, catálogo de marcas, tabacarias em Portugal, harmonizações, humidor e diário de provas.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
   :root { --bg:#1b120d; --panel:#26180f; --panel2:#31200f; --line:#4a3321; --text:#f1e6d6; --muted:#b5a089; --gold:#d4a85a; --ember:#e0703a; --ok:#7fb069; --warn:#d9a441; }
@@ -54,12 +54,15 @@
 <body>
 <header>
   <h1>🚬 Boss Cigar</h1>
-  <p>Base de dados de charutos · mapa e terroir · harmonizações · humidor · diário de provas</p>
+  <p>Base de dados de charutos com fontes abertas · terroir · produção por país · onde comprar · humidor · diário de provas</p>
 </header>
 
 <nav id="tabs">
   <button data-tab="catalog" class="active">Catálogo</button>
   <button data-tab="mapview">Mapa</button>
+  <button data-tab="brands">Marcas</button>
+  <button data-tab="producers">Países produtores</button>
+  <button data-tab="shops">Onde comprar</button>
   <button data-tab="pairing">Harmonizador</button>
   <button data-tab="compare">Comparador</button>
   <button data-tab="vitolas">Vitolas</button>
@@ -89,9 +92,34 @@
     <div id="map"></div>
   </section>
 
+  <section id="brands">
+    <div class="panel"><h2 style="margin-top:0">Catálogo aberto de marcas</h2>
+      <p class="muted">Tabela "List of cigar brands" da Wikipédia (<a href="https://en.wikipedia.org/wiki/List_of_cigar_brands" target="_blank" rel="noopener">fonte</a>, CC BY-SA 4.0), atualizada pelo pipeline. Os países são os <i>mencionados</i> no texto e podem ser a sede do fabricante, não a origem do tabaco.</p>
+      <div class="filters"><input id="bq" type="search" placeholder="Pesquisar marca ou fabricante…"><select id="bOnly"><option value="">Todas</option><option value="db">Só as que têm ficha no Boss Cigar</option></select></div>
+      <p class="muted" id="bCount"></p></div>
+    <div class="panel" style="overflow-x:auto"><table id="bTable"></table></div>
+  </section>
+
+  <section id="producers">
+    <div class="panel"><h2 style="margin-top:0">Produção de tabaco por país</h2>
+      <p class="muted" id="prodIntro"></p>
+      <p class="warn">Tabaco em folha (todos os usos, não só charutos). Fonte: FAOSTAT, CC BY 4.0.</p></div>
+    <div class="panel"><h3 style="margin-top:0">Países de origem dos charutos da base de dados</h3><div id="prodOrigins"></div></div>
+    <div class="panel" style="overflow-x:auto"><h3 style="margin-top:0">Maiores produtores mundiais</h3><table id="prodTable"></table></div>
+  </section>
+
+  <section id="shops">
+    <div class="panel"><h2 style="margin-top:0">Tabacarias em Portugal</h2>
+      <p class="muted">Locais marcados no OpenStreetMap como tabacaria, loja de charutos ou sala de fumo (© OpenStreetMap contributors, ODbL). Os dados são da comunidade: podem faltar lojas ou haver informação desatualizada. Podes corrigir diretamente no OpenStreetMap.</p>
+      <input id="sq" type="search" placeholder="Filtrar por nome ou cidade…"></div>
+    <div id="shopMap" style="height:440px;border-radius:12px;border:1px solid var(--line);margin-bottom:14px"></div>
+    <div id="shopList"></div>
+  </section>
+
   <section id="pairing">
     <div class="panel"><h2 style="margin-top:0">Harmonizador</h2>
-      <p class="muted">Escolhe uma bebida, um alimento ou um sabor.</p>
+      <p class="muted">Escolhe uma bebida, um alimento ou um sabor. As bebidas e comidas são <b>sugestões por regra</b> (força e capa), não afirmações de cada fabricante. Não existe uma fonte aberta de harmonizações por charuto.</p>
+      <details><summary class="muted" style="cursor:pointer">Ver as regras</summary><div id="rules"></div></details>
       <div class="filters"><select id="pDrink"><option value="">Bebida</option></select><select id="pFood"><option value="">Alimento</option></select><select id="pFlavor"><option value="">Sabor</option></select></div>
     </div>
     <div class="grid" id="pairResults"></div>
@@ -153,7 +181,15 @@
   <section id="sources">
     <div class="panel"><h2 style="margin-top:0">Origem e rigor dos dados</h2>
       <p>A base é um <b>seed curado à mão</b> (YAML no repositório) validado por um pipeline Python. Só os campos listados como <i>verificados</i> foram confirmados numa fonte; o resto é indicativo e está marcado como tal.</p>
-      <p>O pipeline enriquece automaticamente com fontes abertas: <b>Wikidata</b> (ano de fundação e país das marcas, CC0) e <b>Open-Meteo</b> (clima médio por zona, CC BY 4.0). Não faz scraping de lojas nem de pontuações de revistas.</p>
+      <p>O pipeline junta automaticamente fontes abertas, sem scraping de lojas nem de pontuações de revistas:</p>
+      <ul>
+        <li><b>Wikipédia</b> (CC BY-SA 4.0): catálogo de marcas e fabricantes.</li>
+        <li><b>Wikidata</b> (CC0): ano de fundação e país das marcas.</li>
+        <li><b>NASA POWER</b> (domínio público): temperatura, chuva e humidade por zona de cultivo.</li>
+        <li><b>FAOSTAT</b> (CC BY 4.0): produção de tabaco por país.</li>
+        <li><b>OpenStreetMap</b> (ODbL): tabacarias em Portugal.</li>
+      </ul>
+      <p><b>O que não tem fonte aberta:</b> força, capa e sabores de cada linha. Esses dados são curados à mão e só contam como verificados quando têm uma fonte citada. As harmonizações são calculadas por regra.</p>
       <div id="srcStatus"></div>
       <h3>Qualidade</h3><div id="qualOut" class="muted">A carregar…</div></div>
   </section>
@@ -188,7 +224,7 @@ function init(d) {
   if (DB.cigars[1]) $("#cmpB").value = DB.cigars[1].id;
   ["#cmpA","#cmpB"].forEach(i => $(i).addEventListener("input", renderCompare));
   setupTabs(); renderCatalog(); setupPairing(); renderCompare(); renderVitolas();
-  setupHumidor(); setupTools(); setupJournal(); renderSources();
+  setupHumidor(); setupTools(); setupJournal(); renderSources(); setupBrands(); setupProducers(); renderRules();
   const m = DB.meta || {};
   if (m.built_at) $("#foot").insertAdjacentHTML("afterbegin", `Dados atualizados em ${m.built_at.slice(0,10)} · `);
 }
@@ -200,6 +236,7 @@ function setupTabs() {
     if (b.dataset.tab === "mapview") initMap();
     if (b.dataset.tab === "journal") renderJournal();
     if (b.dataset.tab === "humidor") renderHumidor();
+    if (b.dataset.tab === "shops") initShops();
     scrollTo(0, 0);
   }));
 }
@@ -248,9 +285,9 @@ function renderCatalog() {
 function climateHTML(r) {
   const k = r && r.climate; if (!k) return "";
   const t = k.temp_c_monthly || [], rain = k.rain_mm_monthly || [], maxR = Math.max(...rain, 1);
-  const bars = rain.map((v, i) => `<div title="${MONTHS[i]}: ${t[i]} °C, ${v} mm" style="flex:1;text-align:center"><div style="height:${Math.round(v / maxR * 40)}px;background:var(--ember);margin:0 1px;border-radius:2px"></div><small class="muted">${MONTHS[i]}</small></div>`).join("");
-  return `<p><b>Clima (${esc(k.period)}):</b> ${k.temp_c_annual} °C de média · ${k.rain_mm_annual} mm/ano</p>
-    <div style="display:flex;align-items:flex-end;height:60px">${bars}</div><div class="warn">Precipitação média mensal · fonte: Open-Meteo</div>`;
+  const bars = rain.map((v, i) => `<div title="${MONTHS[i]}: ${t[i]} °C, ${v} mm${(k.rh_pct_monthly||[])[i] != null ? ", " + k.rh_pct_monthly[i] + "% HR" : ""}" style="flex:1;text-align:center"><div style="height:${Math.round(v / maxR * 40)}px;background:var(--ember);margin:0 1px;border-radius:2px"></div><small class="muted">${MONTHS[i]}</small></div>`).join("");
+  return `<p><b>Clima da zona:</b> ${k.temp_c_annual} °C de média · ${k.rain_mm_annual} mm/ano${k.rh_pct_annual ? " · humidade relativa " + k.rh_pct_annual + "%" : ""}</p>
+    <div style="display:flex;align-items:flex-end;height:60px">${bars}</div><div class="warn">Precipitação média mensal · fonte: NASA POWER (climatologia)</div>`;
 }
 
 function openDetail(id) {
@@ -262,8 +299,8 @@ function openDetail(id) {
     <p class="muted">${esc(c.country)}${r ? " · " + esc(r.name) : ""}</p>${meter(c.strength)} ${STRENGTH[c.strength]}
     <p><b>Vitola:</b> ${esc(c.vitola)}<br><b>Capa:</b> ${esc(c.wrapper)}</p><p>${esc(c.notes)}</p>
     <p><b>Sabores:</b> ${c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("")}</p>
-    <p><b>Bebidas:</b> ${esc(c.pairings.drinks.join(", "))}<br><b>Comida:</b> ${esc(c.pairings.food.join(", "))}</p>
-    ${ver}${bf}${r ? `<p class="muted">${esc(r.note)}</p>${climateHTML(r)}` : ""}
+    <p><b>Bebidas:</b> ${esc(c.pairings.drinks.join(", "))}<br><b>Comida:</b> ${esc(c.pairings.food.join(", "))}<br><span class="warn">Sugestão por regra: ${esc((c.pairings.why || []).join(" "))}</span></p>
+    ${ver}${bf}${c.wikipedia ? `<p class="sub">Wikipédia: ${esc(c.wikipedia.manufacturer || "—")}${c.wikipedia.notes ? " · " + esc(c.wikipedia.notes) : ""} · <a href="https://en.wikipedia.org/wiki/List_of_cigar_brands" target="_blank" rel="noopener">CC BY-SA</a></p>` : ""}${r ? `<p class="muted">${esc(r.note)}</p>${climateHTML(r)}` : ""}
     <div class="row" style="margin-top:12px"><button class="btn" id="dLog">Registar prova</button><button class="btn ghost" id="dHum">+ Humidor</button><button class="btn ghost" id="dClose">Fechar</button></div>`;
   d.showModal();
   $("#dClose").onclick = () => d.close();
@@ -277,7 +314,7 @@ function initMap() {
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "© OpenStreetMap contributors" }).addTo(map);
   DB.regions.forEach(r => {
     const cs = DB.cigars.filter(c => c.region === r.id);
-    const k = r.climate ? `<br><small>${r.climate.temp_c_annual} °C · ${r.climate.rain_mm_annual} mm/ano</small>` : "";
+    const k = r.climate ? `<br><small>${r.climate.temp_c_annual} °C · ${r.climate.rain_mm_annual} mm/ano${r.climate.rh_pct_annual ? " · " + r.climate.rh_pct_annual + "% HR" : ""}</small>` : "";
     const list = cs.length ? "<ul style='padding-left:18px;margin:6px 0'>" + cs.map(c => `<li><a href="#" data-open="${c.id}">${esc(name(c))}</a></li>`).join("") + "</ul>" : "<p><i>Sem charutos registados ainda.</i></p>";
     L.circleMarker([r.lat, r.lng], { radius: 8 + cs.length * 1.5, color: "#d4a85a", fillColor: "#e0703a", fillOpacity: .8, weight: 2 })
       .addTo(map).bindPopup(`<b>${esc(r.name)}</b><br>${esc(r.country)}${k}<p>${esc(r.note)}</p>${list}`);
@@ -308,7 +345,7 @@ function renderCompare() {
     ${row("Força", c => meter(c.strength) + " " + STRENGTH[c.strength])}${row("Vitola", c => esc(c.vitola))}${row("Capa", c => esc(c.wrapper))}
     ${row("Sabores", c => c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join(""))}
     ${row("Bebidas", c => esc(c.pairings.drinks.join(", ")))}${row("Comida", c => esc(c.pairings.food.join(", ")))}
-    ${row("Clima da zona", c => { const k = reg(c)?.climate; return k ? `${k.temp_c_annual} °C · ${k.rain_mm_annual} mm` : "—"; })}
+    ${row("Clima da zona", c => { const k = reg(c)?.climate; return k ? `${k.temp_c_annual} °C · ${k.rain_mm_annual} mm${k.rh_pct_annual ? " · " + k.rh_pct_annual + "% HR" : ""}` : "—"; })}
     ${row("Dados", c => isVer(c) ? '<span class="badge ok">verificado</span>' : '<span class="badge warn">por confirmar</span>')}</table></div>`;
 }
 
@@ -398,15 +435,82 @@ function renderJournal() {
 }
 function download(fn, data) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" })); a.download = fn; a.click(); URL.revokeObjectURL(a.href); }
 
+let BRANDS = [];
+function setupBrands() {
+  fetch("data/brands.json").then(r => r.json()).then(d => { BRANDS = d.brands || []; renderBrands(); }).catch(() => { $("#bCount").textContent = "Catálogo indisponível."; });
+  ["#bq", "#bOnly"].forEach(i => $(i).addEventListener("input", renderBrands));
+}
+function renderBrands() {
+  const q = $("#bq").value.trim().toLowerCase(), only = $("#bOnly").value;
+  const l = BRANDS.filter(b => (!only || b.inDb) && (!q || (b.brand + " " + b.manufacturer + " " + b.notes).toLowerCase().includes(q)));
+  $("#bCount").textContent = `${l.length} de ${BRANDS.length} marcas`;
+  $("#bTable").innerHTML = "<tr><th>Marca</th><th>Fabricante</th><th>Notas</th><th>Países mencionados</th></tr>" + l.map(b =>
+    `<tr><td>${esc(b.brand)}${b.inDb ? ' <span class="badge ok">ficha</span>' : ""}</td><td>${esc(b.manufacturer)}</td><td class="sub">${esc(b.notes)}</td><td class="sub">${esc(b.countries.join(", "))}</td></tr>`).join("");
+}
+
+const FAO_NAMES = { "Cuba": "Cuba", "República Dominicana": "Dominican Republic", "Nicarágua": "Nicaragua", "Honduras": "Honduras",
+  "México": "Mexico", "Brasil": "Brazil", "Equador": "Ecuador", "Estados Unidos": "United States of America", "Camarões": "Cameroon" };
+const fmtT = v => Math.round(v).toLocaleString("pt-PT") + " t";
+function spark(series) {
+  const pts = Object.entries(series || {}).filter(([, v]) => v != null); if (pts.length < 2) return "";
+  const vs = pts.map(p => p[1]), mx = Math.max(...vs), mn = Math.min(...vs), W = 140, H = 30;
+  const d = pts.map(([, v], i) => `${(i / (pts.length - 1) * W).toFixed(1)},${(H - 2 - (v - mn) / ((mx - mn) || 1) * (H - 4)).toFixed(1)}`).join(" ");
+  return `<svg width="${W}" height="${H}" role="img" aria-label="evolução ${pts[0][0]}–${pts[pts.length - 1][0]}"><polyline points="${d}" fill="none" stroke="#e0703a" stroke-width="1.6"/></svg>`;
+}
+function setupProducers() {
+  fetch("data/tobacco.json").then(r => r.json()).then(t => {
+    if (!t.ranking) { $("#prodIntro").textContent = "Dados FAOSTAT indisponíveis neste build."; return; }
+    $("#prodIntro").textContent = `Ano mais recente: ${t.latest_year}. Soma dos países com dados nesse ano: ${fmtT(t.world_t)}.`;
+    const origins = unique(DB.cigars.map(c => c.country));
+    $("#prodOrigins").innerHTML = "<table><tr><th>País</th><th>Produção (último ano)</th><th>Evolução desde 2000</th><th>Charutos na base</th></tr>" + origins.map(pt => {
+      const en = FAO_NAMES[pt], lb = en && t.latest_by_country?.[en];
+      return `<tr><td>${esc(pt)}</td><td>${lb ? fmtT(lb.production_t) + ` <span class="sub">(${lb.year})</span>` : "—"}</td><td>${en ? spark(t.series[en]) : ""}</td><td>${DB.cigars.filter(c => c.country === pt).length}</td></tr>`;
+    }).join("") + "</table>";
+    $("#prodTable").innerHTML = "<tr><th>#</th><th>País</th><th>Produção</th><th>Quota</th><th>Área colhida</th></tr>" + t.ranking.map((r, i) =>
+      `<tr><td>${i + 1}</td><td>${esc(r.country)}</td><td>${fmtT(r.production_t)}</td><td>${(r.share * 100).toFixed(1)}%</td><td>${r.area_ha ? Math.round(r.area_ha).toLocaleString("pt-PT") + " ha" : "—"}</td></tr>`).join("");
+  }).catch(() => { $("#prodIntro").textContent = "Dados FAOSTAT indisponíveis."; });
+}
+
+let SHOPS = null, shopMap, shopLayer;
+function initShops() {
+  const go = () => { renderShops(); setTimeout(() => shopMap && shopMap.invalidateSize(), 50); };
+  if (SHOPS) return go();
+  fetch("data/shops.json").then(r => r.json()).then(d => { SHOPS = d.shops || []; $("#sq").addEventListener("input", renderShops); go(); })
+    .catch(() => { SHOPS = []; go(); });
+}
+function renderShops() {
+  if (!shopMap) {
+    shopMap = L.map("shopMap").setView([39.6, -8.2], 6);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "© OpenStreetMap contributors" }).addTo(shopMap);
+    shopLayer = L.layerGroup().addTo(shopMap);
+  }
+  const q = $("#sq").value.trim().toLowerCase();
+  const l = SHOPS.filter(s => !q || (s.name + " " + (s.city || "")).toLowerCase().includes(q));
+  shopLayer.clearLayers();
+  l.forEach(s => L.circleMarker([s.lat, s.lng], { radius: 6, color: "#d4a85a", fillColor: "#e0703a", fillOpacity: .85, weight: 1 })
+    .addTo(shopLayer).bindPopup(`<b>${esc(s.name)}</b><br>${esc([s.street, s.city].filter(Boolean).join(", "))}${s.opening_hours ? "<br><small>" + esc(s.opening_hours) + "</small>" : ""}${s.website ? `<br><a href="${esc(s.website)}" target="_blank" rel="noopener">site</a>` : ""} · <a href="${esc(s.osm)}" target="_blank" rel="noopener">OSM</a>`));
+  $("#shopList").innerHTML = SHOPS.length
+    ? `<p class="muted">${l.length} local(is)</p>` + l.map(s => `<div class="item"><b>${esc(s.name)}</b> <span class="muted">· ${esc([s.street, s.city].filter(Boolean).join(", ") || "morada não indicada")}</span></div>`).join("")
+    : "<p class='muted'>Sem dados do OpenStreetMap neste build (a fonte pode ter estado indisponível). Volta a tentar após o próximo build.</p>";
+}
+
+function renderRules() {
+  $("#rules").innerHTML = "<table><tr><th>Quando</th><th>Bebidas</th><th>Comida</th><th>Porquê</th></tr>" + (DB.pairingRules || []).map(r =>
+    `<tr><td>${esc(r.when)}</td><td>${esc(r.drinks.join(", "))}</td><td>${esc(r.food.join(", "))}</td><td class="sub">${esc(r.why)}</td></tr>`).join("") + "</table>";
+}
+
 function renderSources() {
   const s = DB.meta?.sources || {};
-  $("#srcStatus").innerHTML = Object.keys(s).length ? "<p>" + Object.entries(s).map(([k, v]) => `<span class="badge ${v === "ok" ? "ok" : "warn"}">${esc(k)}: ${esc(v)}</span>`).join(" ") + "</p><p class='warn'>ok = dados frescos · CACHE = última versão guardada · PARCIAL/ERRO = parte da fonte indisponível</p>" : "";
+  const lic = (DB.meta?.licenses || []).map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.source)}</a> — ${esc(l.license)}</li>`).join("");
+  $("#srcStatus").innerHTML = (lic ? `<h3>Licenças</h3><ul>${lic}</ul>` : "") + (Object.keys(s).length ? "<p>" + Object.entries(s).map(([k, v]) => `<span class="badge ${v === "ok" ? "ok" : "warn"}">${esc(k)}: ${esc(v)}</span>`).join(" ") + "</p><p class='warn'>ok = dados frescos · CACHE = última versão guardada · PARCIAL/ERRO = parte da fonte indisponível</p>" : "");
   fetch("data/quality.json").then(r => r.json()).then(q => {
     $("#qualOut").innerHTML = `<ul><li>${q.cigars} charutos, ${q.regions} regiões</li>
       <li>${q.cigars_with_verified_fields} com dados verificados (${Math.round(q.verified_share * 100)}%)</li>
       <li>Marcas sem entrada no Wikidata: ${q.brands_without_wikidata.length}</li>
       <li>Regiões sem clima: ${q.regions_without_climate.length} · sem charutos: ${q.regions_without_cigars.length}</li>
-      <li>Divergências de país face ao Wikidata: ${q.country_mismatch_vs_wikidata.length}</li></ul>`;
+      <li>Divergências de país face ao Wikidata: ${q.country_mismatch_vs_wikidata.length}</li>
+      <li>Marcas no catálogo aberto (Wikipédia): ${q.brands_in_open_catalog} · marcas da base que lá não constam: ${q.brands_not_in_wikipedia_list.length ? esc(q.brands_not_in_wikipedia_list.join(", ")) : "nenhuma"}</li>
+      <li>Países com dados FAOSTAT: ${q.tobacco_countries} · tabacarias OSM em Portugal: ${q.shops_pt}</li></ul>`;
   }).catch(() => { $("#qualOut").textContent = "Relatório indisponível."; });
 }
 </script>

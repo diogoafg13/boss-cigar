@@ -34,8 +34,17 @@ def build_report(con: duckdb.DuckDBPyConnection) -> dict:
         if wd and _norm(country) not in {_norm(x) for x in wd}:
             mismatches.append({"id": cigar_id, "seed": country, "wikidata": wd})
 
+    n_wp = q("SELECT count(*) FROM wp_brands")[0][0]
+    missing_in_wp = [r[0] for r in q(
+        "SELECT DISTINCT c.brand FROM cigars c WHERE NOT EXISTS (SELECT 1 FROM wp_brands w "
+        "WHERE lower(strip_accents(w.brand)) = lower(strip_accents(c.brand))) ORDER BY 1")] if n_wp else []
+
     return {
         "cigars": n_cigars,
+        "brands_in_open_catalog": n_wp,
+        "brands_not_in_wikipedia_list": missing_in_wp,
+        "shops_pt": q("SELECT count(*) FROM shops")[0][0],
+        "tobacco_countries": q("SELECT count(DISTINCT country) FROM tobacco_production")[0][0],
         "regions": q("SELECT count(*) FROM regions")[0][0],
         "verified_share": round(n_verified / n_cigars, 3) if n_cigars else 0,
         "cigars_with_verified_fields": n_verified,

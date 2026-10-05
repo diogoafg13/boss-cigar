@@ -27,7 +27,7 @@ def get_json(url: str, params: dict | None = None, retries: int = 4, timeout: in
             r.raise_for_status()
             data = r.json()
             if isinstance(data, dict) and data.get("error") is True:
-                # Open-Meteo devolve 200/4xx com {"error": true, "reason": ...}
+                # algumas APIs devolvem {"error": true, "reason": ...} em vez de um código HTTP de erro
                 raise SourceError(str(data.get("reason", "erro da API"))[:160])
             return data
         except (requests.RequestException, SourceError, ValueError) as exc:

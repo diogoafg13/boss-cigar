@@ -6,11 +6,11 @@ from pydantic import ValidationError
 from bosscigar import build as build_mod
 from bosscigar.schema import Cigar
 from bosscigar.seed import SeedError, load_seed
-from bosscigar.sources import http, openmeteo, wikidata
+from bosscigar import pairing
+from bosscigar.sources import faostat, http, nasapower, osm, wikidata, wikipedia
 
 BASE = dict(id="x-y", brand="X", line="Y", country="Cuba", region="vuelta-abajo", strength=3,
-            vitola="Robusto 5 x 50", wrapper="Cubano", flavors=["cedro"],
-            pairings={"drinks": ["Rum"], "food": []})
+            vitola="Robusto 5 x 50", wrapper="Cubano", flavors=["cedro"])
 
 
 def test_real_seed_is_valid():
@@ -46,13 +46,82 @@ def test_seed_rejects_unknown_region(tmp_path):
         load_seed(tmp_path)
 
 
-def test_openmeteo_summarize():
-    dates = [f"2020-{m:02d}-15" for m in range(1, 13)]
-    daily = {"daily": {"time": dates, "temperature_2m_mean": [20.0] * 12, "precipitation_sum": [10.0] * 12}}
-    s = openmeteo.summarize(daily)
-    assert s["temp_c_annual"] == 20.0
-    assert s["rain_mm_annual"] == 120.0
-    assert openmeteo.summarize({"daily": {"time": [], "temperature_2m_mean": [], "precipitation_sum": []}}) == {}
+def test_nasapower_summarize():
+    months = {m: 1.0 for m in nasapower.MONTHS}
+    raw = {"properties": {"parameter": {
+        "T2M": {**{m: 25.0 for m in nasapower.MONTHS}, "ANN": 25.0},
+        "PRECTOTCORR": {**months, "ANN": 1.0},
+        "RH2M": {**{m: 80.0 for m in nasapower.MONTHS}, "JAN": -999.0, "ANN": 78.0}}}}
+    s = nasapower.summarize(raw)
+    assert s["temp_c_annual"] == 25.0 and s["rh_pct_annual"] == 78.0
+    assert s["rain_mm_monthly"][0] == 31  # 1 mm/dia x 31 dias
+    assert s["rh_pct_monthly"][0] is None  # -999 = sem dados
+    assert nasapower.summarize({}) == {}
+
+
+def test_faostat_parse_and_summary():
+    lines = [
+        'Area Code,Area Code (M49),Area,Item Code,Item Code (CPC),Item,Element Code,Element,Year Code,Year,Unit,Value,Flag,Note',
+        '"49","\'192","Cuba","826","\'01970","Unmanufactured tobacco","5510","Production","2023","2023","t","20000","A",',
+        '"49","\'192","Cuba","826","\'01970","Unmanufactured tobacco","5312","Area harvested","2023","2023","ha","15000","A",',
+        '"157","\'558","Nicaragua","826","\'01970","Unmanufactured tobacco","5510","Production","2023","2023","t","30000","A",',
+        '"5000","\'001","World","826","\'01970","Unmanufactured tobacco","5510","Production","2023","2023","t","99","A",',
+        '"49","\'192","Cuba","221","\'01371","Almonds","5510","Production","2023","2023","t","5","A",',
+    ]
+    data = faostat.parse_rows(lines)
+    assert set(data) == {"Cuba", "Nicaragua"}  # agregados 'World'/'China' e outros itens excluídos
+    s = faostat.summarize(data)
+    assert s["latest_year"] == 2023 and s["world_t"] == 50000
+    assert s["ranking"][0]["country"] == "Nicaragua" and s["ranking"][1]["area_ha"] == 15000
+    assert s["latest_by_country"]["Cuba"] == {"year": 2023, "production_t": 20000.0}
+
+
+WIKITEXT = """intro
+{| class="wikitable sortable"
+! Brand name
+! Manufacturer
+! Notes
+! Source
+|-
+|  [[Cohiba]]
+|  [[Habanos S.A.]]
+|  Cuban brand; also a [[Dominican Republic|Dominican]] version made in the Dominican Republic<ref>x</ref>
+|
+|-
+| ''Padrón''
+| Padrón Cigars
+| Made in [[Nicaragua]]
+|
+|}
+outro"""
+
+
+def test_wikipedia_parse_table():
+    rows = wikipedia.parse_table(WIKITEXT)
+    assert [r["brand"] for r in rows] == ["Cohiba", "Padrón"]
+    assert rows[0]["manufacturer"] == "Habanos S.A."
+    assert "<ref>" not in rows[0]["notes"]
+    assert rows[0]["countries"] == ["República Dominicana"]  # "Cuban" não é "Cuba"
+    assert rows[1]["countries"] == ["Nicarágua"]
+
+
+def test_osm_parse_skips_unnamed():
+    raw = {"elements": [
+        {"type": "node", "id": 1, "lat": 38.7, "lon": -9.1, "tags": {"shop": "tobacco", "name": "Tabacaria X", "addr:city": "Lisboa"}},
+        {"type": "way", "id": 2, "center": {"lat": 41.1, "lon": -8.6}, "tags": {"shop": "tobacco", "name": "Casa Y"}},
+        {"type": "node", "id": 3, "lat": 40.0, "lon": -8.0, "tags": {"shop": "tobacco"}},
+    ]}
+    shops = osm.parse(raw)
+    assert [s["name"] for s in shops] == ["Tabacaria X", "Casa Y"]
+    assert shops[1]["osm"].endswith("/way/2")
+
+
+def test_pairing_rules():
+    strong = pairing.suggest(5, "Habano Oscuro")
+    assert "Bourbon" in strong["drinks"] and "Porto Tawny 20 anos" in strong["drinks"]
+    mild = pairing.suggest(1, "Connecticut Shade")
+    assert "Café" in mild["drinks"] and "Bourbon" not in mild["drinks"]
+    assert len(pairing.rules_doc()) == 5
 
 
 def test_wikidata_lookup_filters_non_cigar_hits(monkeypatch):
@@ -98,7 +167,7 @@ def test_build_offline_end_to_end(tmp_path, monkeypatch):
     assert meta["sources"]["wikidata"] == "ERRO"  # sem cache em modo offline
     out = json.loads((tmp_path / "site" / "cigars.json").read_text(encoding="utf-8"))
     assert len(out["cigars"]) == meta["counts"]["cigars"]
-    assert all("verifiedFields" in c for c in out["cigars"])
+    assert all("verifiedFields" in c and c["pairings"]["drinks"] for c in out["cigars"])
     assert (tmp_path / "clean" / "cigars.parquet").exists()
     q = json.loads((tmp_path / "site" / "quality.json").read_text(encoding="utf-8"))
     assert q["regions_without_climate"]  # sem cache, nenhuma região tem clima

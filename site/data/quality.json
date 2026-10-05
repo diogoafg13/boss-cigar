@@ -1,5 +1,12 @@
 {
  "cigars": 28,
+ "brands_in_open_catalog": 159,
+ "brands_not_in_wikipedia_list": [
+  "Drew Estate",
+  "Te-Amo"
+ ],
+ "shops_pt": 0,
+ "tobacco_countries": 142,
  "regions": 12,
  "verified_share": 0.107,
  "cigars_with_verified_fields": 3,
@@ -18,20 +25,13 @@
   "jalapa",
   "ometepe"
  ],
- "regions_without_climate": [
-  "condega",
-  "ecuador",
-  "esteli"
- ],
+ "regions_without_climate": [],
  "brands_without_wikidata": [
   "Bolívar",
-  "Camacho",
-  "Diplomáticos",
   "Don Pepín García",
   "Drew Estate",
   "H. Upmann",
   "Hoyo de Monterrey",
-  "Oliva",
   "Padrón",
   "Partagás",
   "Ramón Allones",

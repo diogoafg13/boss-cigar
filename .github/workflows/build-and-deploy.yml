@@ -36,11 +36,12 @@ jobs:
       - name: Validar seed
         run: python -m bosscigar validate
 
-      - name: Construir dados (Wikidata + Open-Meteo, com fallback para cache)
+      - name: Construir dados (fontes abertas, com fallback para cache)
         run: python -m bosscigar build
 
       - name: Guardar cache e dados limpos no repositório
         if: github.ref == 'refs/heads/main'
+        continue-on-error: true   # sem permissão de escrita, o site publica na mesma
         run: |
           git config user.name  "boss-cigar-bot"
           git config user.email "actions@users.noreply.github.com"

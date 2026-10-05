@@ -1,25 +1,52 @@
 {
  "meta": {
-  "built_at": "2026-10-05T22:07:12+00:00",
+  "built_at": "2026-10-05T23:06:57+00:00",
   "version": "0.1.0",
   "mode": "cache",
   "sources": {
    "seed": "ok",
+   "wikipedia": "CACHE",
    "wikidata": "PARCIAL",
-   "open_meteo": "PARCIAL"
+   "nasa_power": "CACHE",
+   "faostat": "CACHE",
+   "openstreetmap": "ERRO"
   },
   "counts": {
    "cigars": 28,
-   "regions": 12
+   "regions": 12,
+   "brands_catalog": 159,
+   "shops": 0
   },
   "quality": {
    "verified_share": 0.107,
    "cigars_with_verified_fields": 3
   },
-  "attribution": [
-   "Dados de marcas: Wikidata (CC0)",
-   "Clima: Open-Meteo (CC BY 4.0)",
-   "Mapa: © OpenStreetMap contributors"
+  "licenses": [
+   {
+    "source": "Wikipédia — List of cigar brands",
+    "license": "CC BY-SA 4.0",
+    "url": "https://en.wikipedia.org/wiki/List_of_cigar_brands"
+   },
+   {
+    "source": "Wikidata",
+    "license": "CC0",
+    "url": "https://www.wikidata.org/"
+   },
+   {
+    "source": "NASA POWER",
+    "license": "Domínio público (NASA)",
+    "url": "https://power.larc.nasa.gov/"
+   },
+   {
+    "source": "FAOSTAT",
+    "license": "CC BY 4.0",
+    "url": "https://www.fao.org/faostat/"
+   },
+   {
+    "source": "OpenStreetMap",
+    "license": "ODbL",
+    "url": "https://www.openstreetmap.org/copyright"
+   }
   ]
  },
  "regions": [
@@ -31,37 +58,52 @@
    "lng": -83.7,
    "note": "Considerada a melhor zona de tabaco do mundo; terra de origem dos charutos cubanos de topo.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 1015.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 812.0,
     "rain_mm_monthly": [
-     38.6,
-     29.4,
-     26.1,
-     37.1,
-     126.3,
-     178.9,
-     80.0,
-     142.3,
-     160.8,
-     120.0,
-     38.3,
-     37.3
-    ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 25.4,
-    "temp_c_monthly": [
-     22.0,
-     22.6,
-     24.1,
-     25.9,
-     26.6,
-     27.1,
+     35.0,
      28.0,
-     27.9,
-     27.1,
-     26.0,
+     25.0,
+     35.0,
+     76.0,
+     124.0,
+     95.0,
+     120.0,
+     119.0,
+     93.0,
+     38.0,
+     24.0
+    ],
+    "rh_pct_annual": 74.0,
+    "rh_pct_monthly": [
+     75.0,
+     74.0,
+     69.0,
+     67.0,
+     69.0,
+     74.0,
+     73.0,
+     74.0,
+     78.0,
+     78.0,
+     77.0,
+     78.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 26.1,
+    "temp_c_monthly": [
+     22.3,
+     23.4,
+     24.4,
+     26.3,
+     27.7,
+     28.2,
+     28.7,
+     28.8,
+     28.0,
+     26.8,
      24.5,
-     23.0
+     23.4
     ]
    }
   },
@@ -72,7 +114,55 @@
    "lat": 13.09,
    "lng": -86.35,
    "note": "Capital do charuto nicaraguense; solo vulcânico, perfis ricos e picantes.",
-   "climate": null
+   "climate": {
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 1257.0,
+    "rain_mm_monthly": [
+     4.0,
+     4.0,
+     10.0,
+     35.0,
+     184.0,
+     211.0,
+     105.0,
+     144.0,
+     259.0,
+     242.0,
+     42.0,
+     17.0
+    ],
+    "rh_pct_annual": 74.0,
+    "rh_pct_monthly": [
+     70.0,
+     63.0,
+     57.0,
+     57.0,
+     71.0,
+     83.0,
+     80.0,
+     79.0,
+     85.0,
+     87.0,
+     83.0,
+     78.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 23.9,
+    "temp_c_monthly": [
+     22.6,
+     23.9,
+     25.4,
+     26.8,
+     25.6,
+     23.8,
+     23.8,
+     24.1,
+     23.5,
+     22.9,
+     22.2,
+     22.2
+    ]
+   }
   },
   {
    "id": "jalapa",
@@ -82,37 +172,52 @@
    "lng": -86.12,
    "note": "Vale mais fresco e húmido; tabaco tendencialmente mais suave e elegante.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 1291.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 1057.0,
     "rain_mm_monthly": [
-     33.5,
-     25.9,
-     31.2,
-     41.9,
-     152.7,
-     212.7,
-     124.7,
-     121.8,
-     170.6,
-     197.3,
-     121.7,
-     56.7
+     16.0,
+     14.0,
+     15.0,
+     36.0,
+     143.0,
+     182.0,
+     111.0,
+     122.0,
+     165.0,
+     164.0,
+     52.0,
+     37.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 23.2,
+    "rh_pct_annual": 75.0,
+    "rh_pct_monthly": [
+     72.0,
+     66.0,
+     60.0,
+     57.0,
+     69.0,
+     82.0,
+     81.0,
+     80.0,
+     83.0,
+     85.0,
+     82.0,
+     78.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 23.3,
     "temp_c_monthly": [
-     21.6,
-     22.1,
-     23.3,
-     25.0,
-     25.0,
+     21.7,
+     22.9,
+     24.3,
+     26.0,
+     25.3,
+     23.6,
      23.4,
-     23.3,
      23.7,
-     23.8,
-     23.1,
-     22.4,
-     21.8
+     23.4,
+     22.6,
+     21.7,
+     21.5
     ]
    }
   },
@@ -123,7 +228,55 @@
    "lat": 13.35,
    "lng": -86.4,
    "note": "Região vizinha de Estelí, conhecida por tabaco com doçura e especiaria.",
-   "climate": null
+   "climate": {
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 1158.0,
+    "rain_mm_monthly": [
+     8.0,
+     8.0,
+     11.0,
+     37.0,
+     167.0,
+     201.0,
+     106.0,
+     132.0,
+     215.0,
+     204.0,
+     43.0,
+     26.0
+    ],
+    "rh_pct_annual": 75.0,
+    "rh_pct_monthly": [
+     72.0,
+     65.0,
+     58.0,
+     57.0,
+     70.0,
+     83.0,
+     81.0,
+     80.0,
+     84.0,
+     86.0,
+     83.0,
+     79.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 23.4,
+    "temp_c_monthly": [
+     22.0,
+     23.3,
+     24.8,
+     26.3,
+     25.3,
+     23.5,
+     23.4,
+     23.8,
+     23.3,
+     22.5,
+     21.7,
+     21.6
+    ]
+   }
   },
   {
    "id": "ometepe",
@@ -133,37 +286,52 @@
    "lng": -85.58,
    "note": "Solo vulcânico numa ilha do Lago Nicarágua; tabaco intenso e terroso.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 2574.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 1430.0,
     "rain_mm_monthly": [
-     37.8,
-     28.3,
-     32.7,
-     56.8,
-     317.9,
-     387.4,
-     245.7,
-     285.2,
-     369.0,
-     467.0,
-     263.6,
-     82.9
+     2.0,
+     2.0,
+     3.0,
+     23.0,
+     187.0,
+     182.0,
+     119.0,
+     178.0,
+     276.0,
+     316.0,
+     133.0,
+     9.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 26.1,
+    "rh_pct_annual": 74.0,
+    "rh_pct_monthly": [
+     72.0,
+     67.0,
+     63.0,
+     63.0,
+     71.0,
+     79.0,
+     79.0,
+     78.0,
+     79.0,
+     80.0,
+     79.0,
+     76.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 27.9,
     "temp_c_monthly": [
-     25.3,
-     25.6,
-     26.4,
-     27.3,
+     26.8,
+     27.5,
+     28.4,
+     29.4,
+     29.0,
+     28.0,
+     27.8,
+     28.1,
+     27.8,
+     27.4,
      27.0,
-     26.2,
-     26.1,
-     26.2,
-     26.3,
-     25.9,
-     25.7,
-     25.5
+     26.9
     ]
    }
   },
@@ -175,37 +343,52 @@
    "lng": -70.69,
    "note": "Coração da produção dominicana; blends equilibrados, cremosos e consistentes.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 790.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 627.0,
     "rain_mm_monthly": [
-     52.7,
-     46.2,
-     70.5,
-     67.4,
-     75.3,
-     40.1,
-     35.1,
-     69.8,
-     93.1,
-     90.5,
-     87.1,
-     62.0
+     49.0,
+     29.0,
+     38.0,
+     44.0,
+     64.0,
+     39.0,
+     49.0,
+     55.0,
+     58.0,
+     60.0,
+     86.0,
+     56.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 25.0,
+    "rh_pct_annual": 76.0,
+    "rh_pct_monthly": [
+     79.0,
+     76.0,
+     73.0,
+     73.0,
+     74.0,
+     73.0,
+     75.0,
+     76.0,
+     75.0,
+     77.0,
+     80.0,
+     81.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 25.3,
     "temp_c_monthly": [
-     22.7,
-     22.7,
-     23.4,
-     24.5,
-     25.6,
+     23.0,
+     23.3,
+     23.9,
+     25.0,
+     25.9,
      26.9,
-     27.0,
+     26.9,
      27.1,
-     26.7,
-     25.8,
-     24.4,
-     23.3
+     27.1,
+     26.4,
+     24.8,
+     23.6
     ]
    }
   },
@@ -217,37 +400,52 @@
    "lng": -86.58,
    "note": "Vale do Jamastrán; tabaco de corpo médio a forte, com muitas fábricas.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 1291.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 1121.0,
     "rain_mm_monthly": [
-     29.8,
-     20.3,
-     29.4,
-     45.3,
-     147.1,
-     213.2,
-     113.2,
-     130.2,
-     174.0,
-     211.2,
-     129.4,
-     47.8
+     12.0,
+     10.0,
+     12.0,
+     40.0,
+     161.0,
+     197.0,
+     106.0,
+     128.0,
+     190.0,
+     179.0,
+     48.0,
+     38.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 23.0,
+    "rh_pct_annual": 74.0,
+    "rh_pct_monthly": [
+     71.0,
+     64.0,
+     58.0,
+     56.0,
+     69.0,
+     82.0,
+     80.0,
+     78.0,
+     82.0,
+     86.0,
+     83.0,
+     78.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 22.7,
     "temp_c_monthly": [
-     21.3,
-     22.2,
-     23.5,
-     25.1,
-     24.9,
-     23.2,
-     23.2,
-     23.5,
-     23.5,
+     21.0,
+     22.5,
+     24.0,
+     25.6,
+     24.6,
+     22.8,
      22.7,
-     22.0,
-     21.4
+     23.1,
+     22.7,
+     21.8,
+     20.8,
+     20.7
     ]
    }
   },
@@ -259,37 +457,52 @@
    "lng": -95.21,
    "note": "Origem de capas escuras (Maduro e Sumatra), com doçura e notas de cacau.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 1243.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 2138.0,
     "rain_mm_monthly": [
-     72.7,
-     41.4,
-     27.9,
-     20.4,
-     38.7,
-     179.8,
-     118.1,
-     147.7,
-     176.8,
-     224.2,
-     134.0,
-     61.5
+     100.0,
+     53.0,
+     41.0,
+     30.0,
+     84.0,
+     209.0,
+     246.0,
+     294.0,
+     386.0,
+     384.0,
+     216.0,
+     95.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 24.5,
+    "rh_pct_annual": 82.0,
+    "rh_pct_monthly": [
+     86.0,
+     86.0,
+     82.0,
+     76.0,
+     75.0,
+     80.0,
+     83.0,
+     84.0,
+     85.0,
+     84.0,
+     84.0,
+     86.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 25.3,
     "temp_c_monthly": [
-     20.7,
-     21.6,
-     24.0,
-     26.5,
-     28.0,
-     26.5,
+     21.4,
+     22.1,
+     23.7,
+     26.3,
+     27.9,
+     27.8,
+     27.2,
+     27.3,
+     27.0,
      26.1,
-     26.1,
-     25.6,
-     24.4,
-     22.7,
-     21.5
+     23.9,
+     22.4
     ]
    }
   },
@@ -301,37 +514,52 @@
    "lng": -39.1,
    "note": "Cruz das Almas e arredores; tabaco Mata Fina, doce e terroso, muito usado em capas Maduro.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 935.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 786.0,
     "rain_mm_monthly": [
-     82.3,
-     52.4,
-     72.1,
-     105.8,
-     96.1,
-     90.8,
-     85.1,
-     79.9,
-     55.0,
-     49.9,
-     93.7,
-     72.2
+     77.0,
+     72.0,
+     71.0,
+     84.0,
+     77.0,
+     76.0,
+     69.0,
+     60.0,
+     47.0,
+     40.0,
+     54.0,
+     59.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 23.9,
+    "rh_pct_annual": 73.0,
+    "rh_pct_monthly": [
+     68.0,
+     69.0,
+     71.0,
+     75.0,
+     79.0,
+     81.0,
+     80.0,
+     77.0,
+     72.0,
+     68.0,
+     66.0,
+     66.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 25.2,
     "temp_c_monthly": [
-     25.3,
-     25.7,
-     25.5,
-     24.7,
-     23.4,
-     22.2,
-     21.4,
-     21.5,
-     22.5,
-     24.1,
-     24.8,
-     25.4
+     26.9,
+     27.0,
+     27.0,
+     26.0,
+     24.6,
+     22.9,
+     22.1,
+     22.4,
+     23.8,
+     25.8,
+     26.8,
+     27.1
     ]
    }
   },
@@ -342,7 +570,55 @@
    "lat": -1.02,
    "lng": -79.46,
    "note": "Famoso pelas capas Connecticut cultivadas sob pano (shade-grown): suaves e cremosas.",
-   "climate": null
+   "climate": {
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 1257.0,
+    "rain_mm_monthly": [
+     184.0,
+     244.0,
+     254.0,
+     205.0,
+     108.0,
+     44.0,
+     23.0,
+     16.0,
+     19.0,
+     36.0,
+     44.0,
+     80.0
+    ],
+    "rh_pct_annual": 76.0,
+    "rh_pct_monthly": [
+     80.0,
+     86.0,
+     87.0,
+     86.0,
+     83.0,
+     79.0,
+     73.0,
+     66.0,
+     65.0,
+     68.0,
+     68.0,
+     73.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 22.7,
+    "temp_c_monthly": [
+     22.4,
+     22.1,
+     22.1,
+     22.4,
+     22.4,
+     22.3,
+     22.6,
+     23.3,
+     23.5,
+     23.1,
+     22.9,
+     22.8
+    ]
+   }
   },
   {
    "id": "connecticut",
@@ -352,37 +628,52 @@
    "lng": -72.65,
    "note": "Origem histórica das capas Connecticut Shade e Broadleaf.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 1230.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 1202.0,
     "rain_mm_monthly": [
-     104.9,
-     84.3,
+     76.0,
+     82.0,
+     96.0,
+     103.0,
+     93.0,
+     117.0,
+     103.0,
+     103.0,
      106.0,
-     114.1,
-     92.2,
-     85.2,
-     127.1,
-     91.1,
-     125.6,
-     110.2,
-     76.1,
-     113.5
+     123.0,
+     90.0,
+     110.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 11.0,
+    "rh_pct_annual": 80.0,
+    "rh_pct_monthly": [
+     89.0,
+     88.0,
+     83.0,
+     78.0,
+     78.0,
+     78.0,
+     74.0,
+     72.0,
+     73.0,
+     78.0,
+     82.0,
+     87.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 9.5,
     "temp_c_monthly": [
-     -1.3,
-     -0.7,
-     3.2,
-     9.0,
-     15.3,
-     20.2,
-     23.8,
+     -4.4,
+     -3.3,
+     1.1,
+     7.7,
+     14.1,
+     19.2,
      22.9,
-     19.0,
-     12.9,
-     6.2,
-     1.6
+     22.2,
+     18.3,
+     11.2,
+     4.7,
+     -0.8
     ]
    }
   },
@@ -394,37 +685,52 @@
    "lng": 9.7,
    "note": "Capas Cameroon: textura fina, notas de especiarias e doçura subtil.",
    "climate": {
-    "period": "2015-2024",
-    "rain_mm_annual": 2312.0,
+    "period": "climatologia NASA POWER",
+    "rain_mm_annual": 2452.0,
     "rain_mm_monthly": [
-     33.6,
-     50.7,
-     157.9,
-     179.7,
-     237.1,
-     283.1,
-     292.2,
-     287.7,
-     269.6,
-     281.5,
-     184.9,
-     54.0
+     30.0,
+     70.0,
+     153.0,
+     193.0,
+     191.0,
+     273.0,
+     327.0,
+     395.0,
+     365.0,
+     268.0,
+     159.0,
+     28.0
     ],
-    "source": "Open-Meteo (CC BY 4.0)",
-    "temp_c_annual": 26.2,
+    "rh_pct_annual": 88.0,
+    "rh_pct_monthly": [
+     81.0,
+     84.0,
+     87.0,
+     88.0,
+     89.0,
+     90.0,
+     90.0,
+     91.0,
+     90.0,
+     89.0,
+     88.0,
+     83.0
+    ],
+    "source": "NASA POWER",
+    "temp_c_annual": 25.9,
     "temp_c_monthly": [
-     27.0,
-     27.5,
-     27.1,
-     27.0,
-     26.6,
+     26.4,
+     26.9,
+     26.7,
+     26.7,
+     26.5,
      25.5,
-     24.9,
-     24.8,
+     24.7,
+     24.5,
      25.1,
      25.6,
-     26.1,
-     26.9
+     26.2,
+     26.4
     ]
    }
   }
@@ -445,26 +751,39 @@
     "creme",
     "especiarias"
    ],
-   "pairings": {
-    "drinks": [
-     "Rum añejo",
-     "Porto Tawny 20 anos",
-     "Espresso"
-    ],
-    "food": [
-     "Chocolate negro 70%",
-     "Amêndoas torradas"
-    ]
-   },
    "notes": "Uma das linhas cubanas mais prestigiadas, com fermentação extra de uma das folhas do blend.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+    ]
+   },
    "brandFacts": {
     "qid": "Q513070",
     "url": "https://www.wikidata.org/wiki/Q513070",
     "inception_year": 1966,
     "countries": [
      "Cuba"
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
+    "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
     ]
    }
   },
@@ -483,26 +802,39 @@
     "pimenta",
     "cacau"
    ],
-   "pairings": {
-    "drinks": [
-     "Rum agrícola",
-     "Whisky de malte (turfoso suave)",
-     "Espresso"
-    ],
-    "food": [
-     "Queijo curado",
-     "Chocolate negro"
-    ]
-   },
    "notes": "O torpedo cubano de referência; muito procurado em todo o mundo.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+    ]
+   },
    "brandFacts": {
     "qid": "Q1516396",
     "url": "https://www.wikidata.org/wiki/Q1516396",
     "inception_year": 1935,
     "countries": [
      "Cuba"
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. Altadis",
+    "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
     ]
    }
   },
@@ -521,20 +853,33 @@
     "couro",
     "especiarias"
    ],
+   "notes": "Robusto cubano muito popular, conhecido pelo carácter forte e terroso.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
      "Rum escuro",
      "Bourbon",
-     "Whisky de malte"
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
     ],
     "food": [
+     "Chocolate negro",
      "Carne grelhada",
-     "Queijo azul"
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
     ]
    },
-   "notes": "Robusto cubano muito popular, conhecido pelo carácter forte e terroso.",
-   "sources": [],
-   "verifiedFields": []
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
+    "notes": "Dueling Cuban and non-Cuban brands; non Cuban made in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
+   }
   },
   {
    "id": "romeo-churchill",
@@ -551,25 +896,36 @@
     "mel",
     "madeira"
    ],
-   "pairings": {
-    "drinks": [
-     "Porto Tawny 10 anos",
-     "Madeira Malmsey",
-     "Cognac VSOP"
-    ],
-    "food": [
-     "Frutos secos",
-     "Queijo de pasta semidura"
-    ]
-   },
    "notes": "Clássico de corpo médio, elegante e fácil de apreciar.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny 10 anos",
+     "Rum añejo",
+     "Cognac VSOP",
+     "Madeira"
+    ],
+    "food": [
+     "Frutos secos",
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
    "brandFacts": {
     "qid": "Q7363144",
     "url": "https://www.wikidata.org/wiki/Q7363144",
     "inception_year": null,
     "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. Altadis",
+    "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
    }
   },
   {
@@ -586,20 +942,31 @@
     "especiarias doces",
     "amêndoa"
    ],
-   "pairings": {
-    "drinks": [
-     "Rum añejo",
-     "Café filtrado",
-     "Porto Tawny"
-    ],
-    "food": [
-     "Pastel de nata",
-     "Frutos secos"
-    ]
-   },
    "notes": "Corpo médio, suave e aveludado; boa porta de entrada para os cubanos.",
    "sources": [],
-   "verifiedFields": []
+   "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny 10 anos",
+     "Rum añejo",
+     "Cognac VSOP",
+     "Madeira"
+    ],
+    "food": [
+     "Frutos secos",
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. Altadis",
+    "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
+   }
   },
   {
    "id": "padron-1964-anniversary",
@@ -616,20 +983,35 @@
     "nozes",
     "especiarias"
    ],
+   "notes": "Tabaco envelhecido em fábrica; muito equilibrado para a força que tem.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
-     "Rum añejo",
+     "Rum escuro",
      "Bourbon",
-     "Espresso"
+     "Whisky de malte",
+     "Espresso",
+     "Stout",
+     "Porto Tawny 20 anos"
     ],
     "food": [
      "Chocolate negro",
-     "Café com sobremesa"
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade.",
+     "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra."
     ]
    },
-   "notes": "Tabaco envelhecido em fábrica; muito equilibrado para a força que tem.",
-   "sources": [],
-   "verifiedFields": []
+   "wikipedia": {
+    "manufacturer": "",
+    "notes": "Nicaragua",
+    "countries": [
+     "Nicarágua"
+    ]
+   }
   },
   {
    "id": "padron-1926-no-9",
@@ -646,20 +1028,35 @@
     "cacau",
     "pimenta"
    ],
-   "pairings": {
-    "drinks": [
-     "Whisky de malte",
-     "Rum escuro",
-     "Stout"
-    ],
-    "food": [
-     "Chocolate negro intenso",
-     "Queijo curado"
-    ]
-   },
    "notes": "Linha de topo da casa Padrón, com complexidade e persistência notáveis.",
    "sources": [],
-   "verifiedFields": []
+   "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout",
+     "Porto Tawny 20 anos"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade.",
+     "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra."
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "",
+    "notes": "Nicaragua",
+    "countries": [
+     "Nicarágua"
+    ]
+   }
   },
   {
    "id": "fuente-hemingway-short-story",
@@ -676,25 +1073,36 @@
     "creme",
     "mel"
    ],
-   "pairings": {
-    "drinks": [
-     "Madeira Malmsey",
-     "Porto Tawny 10 anos",
-     "Cognac"
-    ],
-    "food": [
-     "Doces de ovos",
-     "Amêndoas"
-    ]
-   },
    "notes": "Perfecto curto de fumada suave e doce; ideal para uma pausa de cerca de 45 minutos.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny 10 anos",
+     "Rum añejo",
+     "Cognac VSOP",
+     "Madeira"
+    ],
+    "food": [
+     "Frutos secos",
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
    "brandFacts": {
     "qid": "Q4801736",
     "url": "https://www.wikidata.org/wiki/Q4801736",
     "inception_year": null,
     "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "Arturo Fuente",
+    "notes": "Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
    }
   },
   {
@@ -712,25 +1120,38 @@
     "frutos secos",
     "especiarias doces"
    ],
-   "pairings": {
-    "drinks": [
-     "Cognac XO",
-     "Rum añejo",
-     "Porto Vintage"
-    ],
-    "food": [
-     "Chocolate negro",
-     "Queijo de cabra curado"
-    ]
-   },
    "notes": "Raro e muito procurado; pioneiro em capas dominicanas de alta qualidade.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+    ]
+   },
    "brandFacts": {
     "qid": "Q4801736",
     "url": "https://www.wikidata.org/wiki/Q4801736",
     "inception_year": null,
     "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "Arturo Fuente",
+    "notes": "Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
    }
   },
   {
@@ -748,20 +1169,28 @@
     "madeira clara",
     "mel"
    ],
-   "pairings": {
-    "drinks": [
-     "Café",
-     "Champanhe",
-     "Porto branco"
-    ],
-    "food": [
-     "Pastelaria",
-     "Queijo fresco"
-    ]
-   },
    "notes": "Elegante e suave; excelente para manhãs ou depois de uma refeição leve.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Café",
+     "Porto branco",
+     "Champanhe",
+     "Cerveja lager",
+     "Café com leite",
+     "Chá"
+    ],
+    "food": [
+     "Pastelaria",
+     "Fruta",
+     "Queijo fresco"
+    ],
+    "why": [
+     "Charutos suaves: bebidas leves que não abafem o tabaco.",
+     "Capa clara: notas cremosas ligam com bebidas suaves."
+    ]
+   },
    "brandFacts": {
     "qid": "Q501422",
     "url": "https://www.wikidata.org/wiki/Q501422",
@@ -769,6 +1198,11 @@
     "countries": [
      "Suíça"
     ]
+   },
+   "wikipedia": {
+    "manufacturer": "Davidoff",
+    "notes": "Imperial Tobacco",
+    "countries": []
    }
   },
   {
@@ -785,17 +1219,6 @@
     "madeira clara",
     "nozes"
    ],
-   "pairings": {
-    "drinks": [
-     "Café",
-     "Chá verde",
-     "Porto branco"
-    ],
-    "food": [
-     "Biscoitos",
-     "Fruta"
-    ]
-   },
    "notes": "Fumada de cerca de 15 minutos; ideal para iniciantes e pausas curtas.",
    "sources": [
     {
@@ -806,6 +1229,25 @@
    "verifiedFields": [
     "vitola"
    ],
+   "pairings": {
+    "drinks": [
+     "Café",
+     "Porto branco",
+     "Champanhe",
+     "Cerveja lager",
+     "Café com leite",
+     "Chá"
+    ],
+    "food": [
+     "Pastelaria",
+     "Fruta",
+     "Queijo fresco"
+    ],
+    "why": [
+     "Charutos suaves: bebidas leves que não abafem o tabaco.",
+     "Capa clara: notas cremosas ligam com bebidas suaves."
+    ]
+   },
    "brandFacts": {
     "qid": "Q501422",
     "url": "https://www.wikidata.org/wiki/Q501422",
@@ -813,6 +1255,11 @@
     "countries": [
      "Suíça"
     ]
+   },
+   "wikipedia": {
+    "manufacturer": "Davidoff",
+    "notes": "Imperial Tobacco",
+    "countries": []
    }
   },
   {
@@ -830,25 +1277,40 @@
     "cacau",
     "terra"
    ],
-   "pairings": {
-    "drinks": [
-     "Bourbon",
-     "Whisky de malte intenso",
-     "Rum escuro"
-    ],
-    "food": [
-     "Carne grelhada",
-     "Chocolate 85%"
-    ]
-   },
    "notes": "Linha intensa e rica, para fumadores com experiência.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout",
+     "Porto Tawny 20 anos"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade.",
+     "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra."
+    ]
+   },
    "brandFacts": {
     "qid": "Q136651409",
     "url": "https://www.wikidata.org/wiki/Q136651409",
     "inception_year": 2008,
     "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "My Father - Jose Don Pepin Garcia",
+    "notes": "Esteli, Nicaragua",
+    "countries": [
+     "Nicarágua"
+    ]
    }
   },
   {
@@ -866,20 +1328,39 @@
     "pimenta",
     "especiarias"
    ],
+   "notes": "Muito bem pontuada pela imprensa especializada; força média-alta com bom equilíbrio.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
-     "Rum añejo",
+     "Rum escuro",
      "Bourbon",
-     "Espresso"
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
     ],
     "food": [
      "Chocolate negro",
-     "Frutos secos"
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
     ]
    },
-   "notes": "Muito bem pontuada pela imprensa especializada; força média-alta com bom equilíbrio.",
-   "sources": [],
-   "verifiedFields": []
+   "brandFacts": {
+    "qid": "Q7086963",
+    "url": "https://www.wikidata.org/wiki/Q7086963",
+    "inception_year": 1995,
+    "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "",
+    "notes": "J. Cortès Cigars N.V., a private, family-owned business based in Zwevegem, Belgium (2016)",
+    "countries": [
+     "Bélgica"
+    ]
+   }
   },
   {
    "id": "oliva-nub-connecticut",
@@ -895,20 +1376,41 @@
     "nozes",
     "amêndoa"
    ],
+   "notes": "Formato curto e grosso, concebido para fumada consistente do início ao fim.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
-     "Café com leite",
+     "Café",
+     "Porto branco",
+     "Champanhe",
      "Cerveja lager",
-     "Porto branco"
+     "Café com leite",
+     "Chá"
     ],
     "food": [
      "Pastelaria",
+     "Fruta",
      "Queijo fresco"
+    ],
+    "why": [
+     "Charutos suaves: bebidas leves que não abafem o tabaco.",
+     "Capa clara: notas cremosas ligam com bebidas suaves."
     ]
    },
-   "notes": "Formato curto e grosso, concebido para fumada consistente do início ao fim.",
-   "sources": [],
-   "verifiedFields": []
+   "brandFacts": {
+    "qid": "Q7086963",
+    "url": "https://www.wikidata.org/wiki/Q7086963",
+    "inception_year": 1995,
+    "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "",
+    "notes": "J. Cortès Cigars N.V., a private, family-owned business based in Zwevegem, Belgium (2016)",
+    "countries": [
+     "Bélgica"
+    ]
+   }
   },
   {
    "id": "drew-estate-liga-privada-no-9",
@@ -925,20 +1427,32 @@
     "café",
     "especiarias"
    ],
-   "pairings": {
-    "drinks": [
-     "Stout",
-     "Bourbon",
-     "Rum escuro"
-    ],
-    "food": [
-     "Brownie",
-     "Churrasco"
-    ]
-   },
    "notes": "Capa Broadleaf escura e brilhante; textura rica e muita fumaça.",
    "sources": [],
-   "verifiedFields": []
+   "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout",
+     "Porto Tawny 20 anos",
+     "Café com leite",
+     "Chá"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado",
+     "Pastelaria"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade.",
+     "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra.",
+     "Capa clara: notas cremosas ligam com bebidas suaves."
+    ]
+   }
   },
   {
    "id": "don-pepin-blue",
@@ -955,16 +1469,6 @@
     "especiarias",
     "terra"
    ],
-   "pairings": {
-    "drinks": [
-     "Rum añejo",
-     "Whisky de malte"
-    ],
-    "food": [
-     "Queijo curado",
-     "Frutos secos"
-    ]
-   },
    "notes": "Puro nicaraguense: capa Corojo Oscuro, capote Criollo, tripa Criollo/Corojo. Classificado como força plena numa análise consultada.",
    "sources": [
     {
@@ -976,7 +1480,33 @@
     "wrapper",
     "strength",
     "country"
-   ]
+   ],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout",
+     "Porto Tawny 20 anos"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade.",
+     "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra."
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "",
+    "notes": "Tabacalera Nicaragua (Esteli)",
+    "countries": [
+     "Nicarágua"
+    ]
+   }
   },
   {
    "id": "macanudo-cafe",
@@ -992,25 +1522,40 @@
     "madeira clara",
     "nozes"
    ],
+   "notes": "Uma das melhores portas de entrada: fácil, suave e acessível.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
      "Café",
+     "Porto branco",
+     "Champanhe",
      "Cerveja lager",
+     "Café com leite",
      "Chá"
     ],
     "food": [
      "Pastelaria",
-     "Fruta"
+     "Fruta",
+     "Queijo fresco"
+    ],
+    "why": [
+     "Charutos suaves: bebidas leves que não abafem o tabaco.",
+     "Capa clara: notas cremosas ligam com bebidas suaves."
     ]
    },
-   "notes": "Uma das melhores portas de entrada: fácil, suave e acessível.",
-   "sources": [],
-   "verifiedFields": [],
    "brandFacts": {
     "qid": "Q6722519",
     "url": "https://www.wikidata.org/wiki/Q6722519",
     "inception_year": null,
     "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "General Cigar Company",
+    "notes": "Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
    }
   },
   {
@@ -1028,17 +1573,6 @@
     "cacau",
     "couro"
    ],
-   "pairings": {
-    "drinks": [
-     "Bourbon",
-     "Rum añejo",
-     "Cognac"
-    ],
-    "food": [
-     "Chocolate",
-     "Frutos secos"
-    ]
-   },
    "notes": "Binder e tripa não são divulgados pela marca. A origem do tabaco (Honduras/Nicarágua) está por confirmar.",
    "sources": [
     {
@@ -1048,7 +1582,27 @@
    ],
    "verifiedFields": [
     "wrapper"
-   ]
+   ],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny 10 anos",
+     "Rum añejo",
+     "Cognac VSOP",
+     "Madeira"
+    ],
+    "food": [
+     "Frutos secos",
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "Rocky Patel",
+    "notes": "",
+    "countries": []
+   }
   },
   {
    "id": "camacho-connecticut",
@@ -1064,20 +1618,41 @@
     "madeira",
     "nozes"
    ],
+   "notes": "Alternativa suave com tabaco hondurenho.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
      "Café",
      "Porto branco",
-     "Cerveja clara"
+     "Champanhe",
+     "Cerveja lager",
+     "Café com leite",
+     "Chá"
     ],
     "food": [
      "Pastelaria",
-     "Queijo suave"
+     "Fruta",
+     "Queijo fresco"
+    ],
+    "why": [
+     "Charutos suaves: bebidas leves que não abafem o tabaco.",
+     "Capa clara: notas cremosas ligam com bebidas suaves."
     ]
    },
-   "notes": "Alternativa suave com tabaco hondurenho.",
-   "sources": [],
-   "verifiedFields": []
+   "brandFacts": {
+    "qid": "Q5024897",
+    "url": "https://www.wikidata.org/wiki/Q5024897",
+    "inception_year": 1961,
+    "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "Oettinger Davidoff Group",
+    "notes": "Honduras",
+    "countries": [
+     "Honduras"
+    ]
+   }
   },
   {
    "id": "te-amo-maduro",
@@ -1094,20 +1669,29 @@
     "café",
     "terra suave"
    ],
+   "notes": "Capa Maduro de San Andrés, doce e acessível.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
-     "Rum",
      "Café",
+     "Porto branco",
+     "Champanhe",
+     "Cerveja lager",
+     "Porto Tawny 20 anos",
      "Stout"
     ],
     "food": [
-     "Chocolate",
-     "Tarte de chocolate"
+     "Pastelaria",
+     "Fruta",
+     "Queijo fresco",
+     "Chocolate negro"
+    ],
+    "why": [
+     "Charutos suaves: bebidas leves que não abafem o tabaco.",
+     "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra."
     ]
-   },
-   "notes": "Capa Maduro de San Andrés, doce e acessível.",
-   "sources": [],
-   "verifiedFields": []
+   }
   },
   {
    "id": "dannemann-moods",
@@ -1123,24 +1707,36 @@
     "doçura",
     "cacau"
    ],
-   "pairings": {
-    "drinks": [
-     "Cachaça envelhecida",
-     "Café",
-     "Rum"
-    ],
-    "food": [
-     "Doces com café",
-     "Frutos secos"
-    ]
-   },
    "notes": "Representa a tradição de tabaco da Bahia, com notas doces e terrosas.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Café",
+     "Porto branco",
+     "Champanhe",
+     "Cerveja lager"
+    ],
+    "food": [
+     "Pastelaria",
+     "Fruta",
+     "Queijo fresco"
+    ],
+    "why": [
+     "Charutos suaves: bebidas leves que não abafem o tabaco."
+    ]
+   },
    "brandFacts": {
     "qid": "Q12043680",
     "url": "https://www.wikidata.org/wiki/Q12043680",
     "inception_year": 1873,
+    "countries": [
+     "Alemanha"
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "The German Dannemann GmbH and the Swiss company Burger Söhne shared the rights",
+    "notes": "Machine-made in Germany",
     "countries": [
      "Alemanha"
     ]
@@ -1161,26 +1757,39 @@
     "creme",
     "ervas"
    ],
-   "pairings": {
-    "drinks": [
-     "Rum añejo",
-     "Porto Tawny 20 anos",
-     "Espresso"
-    ],
-    "food": [
-     "Chocolate negro",
-     "Amêndoas"
-    ]
-   },
    "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
    "sources": [],
    "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+    ]
+   },
    "brandFacts": {
     "qid": "Q513070",
     "url": "https://www.wikidata.org/wiki/Q513070",
     "inception_year": 1966,
     "countries": [
      "Cuba"
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
+    "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
     ]
    }
   },
@@ -1199,20 +1808,33 @@
     "couro",
     "cacau"
    ],
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
      "Rum escuro",
      "Bourbon",
-     "Whisky de malte"
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
     ],
     "food": [
+     "Chocolate negro",
      "Carne grelhada",
-     "Chocolate amargo"
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
     ]
    },
-   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
-   "sources": [],
-   "verifiedFields": []
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. General Cigar Co.",
+    "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
+   }
   },
   {
    "id": "hoyo-epicure-no-2",
@@ -1229,20 +1851,31 @@
     "creme",
     "madeira"
    ],
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
      "Porto Tawny 10 anos",
-     "Café",
-     "Cognac"
+     "Rum añejo",
+     "Cognac VSOP",
+     "Madeira"
     ],
     "food": [
-     "Queijo semicurado",
-     "Frutos secos"
+     "Frutos secos",
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
     ]
    },
-   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
-   "sources": [],
-   "verifiedFields": []
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
+    "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in Honduras",
+    "countries": [
+     "Honduras"
+    ]
+   }
   },
   {
    "id": "trinidad-fundadores",
@@ -1259,20 +1892,31 @@
     "nozes",
     "especiarias doces"
    ],
-   "pairings": {
-    "drinks": [
-     "Madeira Malmsey",
-     "Porto Tawny 20 anos",
-     "Champanhe"
-    ],
-    "food": [
-     "Pastelaria",
-     "Frutos secos"
-    ]
-   },
    "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
    "sources": [],
-   "verifiedFields": []
+   "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Porto Tawny 10 anos",
+     "Rum añejo",
+     "Cognac VSOP",
+     "Madeira"
+    ],
+    "food": [
+     "Frutos secos",
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "1. Habanos S.A.; 2. Altadis",
+    "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
+    "countries": [
+     "República Dominicana"
+    ]
+   }
   },
   {
    "id": "ramon-allones-specially-selected",
@@ -1289,20 +1933,33 @@
     "terra",
     "couro"
    ],
-   "pairings": {
-    "drinks": [
-     "Rum añejo",
-     "Whisky de malte",
-     "Espresso"
-    ],
-    "food": [
-     "Queijo curado",
-     "Chocolate negro"
-    ]
-   },
    "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
    "sources": [],
-   "verifiedFields": []
+   "verifiedFields": [],
+   "pairings": {
+    "drinks": [
+     "Rum escuro",
+     "Bourbon",
+     "Whisky de malte",
+     "Espresso",
+     "Stout"
+    ],
+    "food": [
+     "Chocolate negro",
+     "Carne grelhada",
+     "Queijo curado"
+    ],
+    "why": [
+     "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+    ]
+   },
+   "wikipedia": {
+    "manufacturer": "",
+    "notes": "Cuba",
+    "countries": [
+     "Cuba"
+    ]
+   }
   },
   {
    "id": "diplomaticos-no-2",
@@ -1319,20 +1976,37 @@
     "nozes",
     "especiarias doces"
    ],
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
-     "Porto Tawny",
+     "Porto Tawny 10 anos",
+     "Rum añejo",
      "Cognac VSOP",
-     "Café"
+     "Madeira"
     ],
     "food": [
      "Frutos secos",
-     "Queijo suave"
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
     ]
    },
-   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
-   "sources": [],
-   "verifiedFields": []
+   "brandFacts": {
+    "qid": "Q3443871",
+    "url": "https://www.wikidata.org/wiki/Q3443871",
+    "inception_year": null,
+    "countries": []
+   },
+   "wikipedia": {
+    "manufacturer": "",
+    "notes": "Cuba",
+    "countries": [
+     "Cuba"
+    ]
+   }
   },
   {
    "id": "sancho-panza-belicosos",
@@ -1349,20 +2023,98 @@
     "especiarias",
     "creme"
    ],
+   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
+   "sources": [],
+   "verifiedFields": [],
    "pairings": {
     "drinks": [
+     "Porto Tawny 10 anos",
      "Rum añejo",
-     "Café",
+     "Cognac VSOP",
      "Madeira"
     ],
     "food": [
      "Frutos secos",
-     "Chocolate"
+     "Queijo semicurado"
+    ],
+    "why": [
+     "Corpo médio: bebidas envelhecidas de intensidade semelhante."
     ]
    },
-   "notes": "Linha cubana clássica. Perfil e força indicativos, por confirmar.",
-   "sources": [],
-   "verifiedFields": []
+   "wikipedia": {
+    "manufacturer": "General Cigar Co.",
+    "notes": "",
+    "countries": []
+   }
+  }
+ ],
+ "pairingRules": [
+  {
+   "when": "Força 1–2",
+   "drinks": [
+    "Café",
+    "Porto branco",
+    "Champanhe",
+    "Cerveja lager"
+   ],
+   "food": [
+    "Pastelaria",
+    "Fruta",
+    "Queijo fresco"
+   ],
+   "why": "Charutos suaves: bebidas leves que não abafem o tabaco."
+  },
+  {
+   "when": "Força 3",
+   "drinks": [
+    "Porto Tawny 10 anos",
+    "Rum añejo",
+    "Cognac VSOP",
+    "Madeira"
+   ],
+   "food": [
+    "Frutos secos",
+    "Queijo semicurado"
+   ],
+   "why": "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+  },
+  {
+   "when": "Força 4–5",
+   "drinks": [
+    "Rum escuro",
+    "Bourbon",
+    "Whisky de malte",
+    "Espresso",
+    "Stout"
+   ],
+   "food": [
+    "Chocolate negro",
+    "Carne grelhada",
+    "Queijo curado"
+   ],
+   "why": "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+  },
+  {
+   "when": "Capa maduro/oscuro/broadleaf",
+   "drinks": [
+    "Porto Tawny 20 anos",
+    "Stout"
+   ],
+   "food": [
+    "Chocolate negro"
+   ],
+   "why": "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra."
+  },
+  {
+   "when": "Capa connecticut/claro",
+   "drinks": [
+    "Café com leite",
+    "Chá"
+   ],
+   "food": [
+    "Pastelaria"
+   ],
+   "why": "Capa clara: notas cremosas ligam com bebidas suaves."
   }
  ]
 }

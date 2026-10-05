@@ -1,23 +1,50 @@
 {
- "built_at": "2026-10-05T22:07:12+00:00",
+ "built_at": "2026-10-05T23:06:57+00:00",
  "version": "0.1.0",
  "mode": "cache",
  "sources": {
   "seed": "ok",
+  "wikipedia": "CACHE",
   "wikidata": "PARCIAL",
-  "open_meteo": "PARCIAL"
+  "nasa_power": "CACHE",
+  "faostat": "CACHE",
+  "openstreetmap": "ERRO"
  },
  "counts": {
   "cigars": 28,
-  "regions": 12
+  "regions": 12,
+  "brands_catalog": 159,
+  "shops": 0
  },
  "quality": {
   "verified_share": 0.107,
   "cigars_with_verified_fields": 3
  },
- "attribution": [
-  "Dados de marcas: Wikidata (CC0)",
-  "Clima: Open-Meteo (CC BY 4.0)",
-  "Mapa: © OpenStreetMap contributors"
+ "licenses": [
+  {
+   "source": "Wikipédia — List of cigar brands",
+   "license": "CC BY-SA 4.0",
+   "url": "https://en.wikipedia.org/wiki/List_of_cigar_brands"
+  },
+  {
+   "source": "Wikidata",
+   "license": "CC0",
+   "url": "https://www.wikidata.org/"
+  },
+  {
+   "source": "NASA POWER",
+   "license": "Domínio público (NASA)",
+   "url": "https://power.larc.nasa.gov/"
+  },
+  {
+   "source": "FAOSTAT",
+   "license": "CC BY 4.0",
+   "url": "https://www.fao.org/faostat/"
+  },
+  {
+   "source": "OpenStreetMap",
+   "license": "ODbL",
+   "url": "https://www.openstreetmap.org/copyright"
+  }
  ]
 }

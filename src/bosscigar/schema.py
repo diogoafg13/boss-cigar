@@ -4,7 +4,7 @@ from __future__ import annotations
 from pydantic import BaseModel, Field, HttpUrl, field_validator, model_validator
 
 # Campos de um charuto cuja verificação pode ser declarada.
-VERIFIABLE = {"country", "region", "strength", "vitola", "wrapper", "flavors", "pairings"}
+VERIFIABLE = {"country", "region", "strength", "vitola", "wrapper", "flavors"}
 
 
 class Source(BaseModel):
@@ -21,11 +21,6 @@ class Region(BaseModel):
     note: str
 
 
-class Pairings(BaseModel):
-    drinks: list[str] = Field(min_length=1)
-    food: list[str] = Field(default_factory=list)
-
-
 class Cigar(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9-]+$")
     brand: str
@@ -36,7 +31,6 @@ class Cigar(BaseModel):
     vitola: str
     wrapper: str
     flavors: list[str] = Field(min_length=1)
-    pairings: Pairings
     notes: str = ""
     verified_fields: list[str] = Field(default_factory=list)
     sources: list[Source] = Field(default_factory=list)

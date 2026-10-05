@@ -11,14 +11,6 @@
   - café
   - creme
   - especiarias
-  pairings:
-    drinks:
-    - Rum añejo
-    - Porto Tawny 20 anos
-    - Espresso
-    food:
-    - Chocolate negro 70%
-    - Amêndoas torradas
   notes: Uma das linhas cubanas mais prestigiadas, com fermentação extra de uma das folhas do blend.
   verified_fields: []
   sources: []
@@ -35,14 +27,6 @@
   - terra
   - pimenta
   - cacau
-  pairings:
-    drinks:
-    - Rum agrícola
-    - Whisky de malte (turfoso suave)
-    - Espresso
-    food:
-    - Queijo curado
-    - Chocolate negro
   notes: O torpedo cubano de referência; muito procurado em todo o mundo.
   verified_fields: []
   sources: []
@@ -59,14 +43,6 @@
   - pimenta
   - couro
   - especiarias
-  pairings:
-    drinks:
-    - Rum escuro
-    - Bourbon
-    - Whisky de malte
-    food:
-    - Carne grelhada
-    - Queijo azul
   notes: Robusto cubano muito popular, conhecido pelo carácter forte e terroso.
   verified_fields: []
   sources: []
@@ -83,14 +59,6 @@
   - nozes
   - mel
   - madeira
-  pairings:
-    drinks:
-    - Porto Tawny 10 anos
-    - Madeira Malmsey
-    - Cognac VSOP
-    food:
-    - Frutos secos
-    - Queijo de pasta semidura
   notes: Clássico de corpo médio, elegante e fácil de apreciar.
   verified_fields: []
   sources: []
@@ -106,14 +74,6 @@
   - cedro
   - especiarias doces
   - amêndoa
-  pairings:
-    drinks:
-    - Rum añejo
-    - Café filtrado
-    - Porto Tawny
-    food:
-    - Pastel de nata
-    - Frutos secos
   notes: Corpo médio, suave e aveludado; boa porta de entrada para os cubanos.
   verified_fields: []
   sources: []
@@ -130,14 +90,6 @@
   - café
   - nozes
   - especiarias
-  pairings:
-    drinks:
-    - Rum añejo
-    - Bourbon
-    - Espresso
-    food:
-    - Chocolate negro
-    - Café com sobremesa
   notes: Tabaco envelhecido em fábrica; muito equilibrado para a força que tem.
   verified_fields: []
   sources: []
@@ -154,14 +106,6 @@
   - terra
   - cacau
   - pimenta
-  pairings:
-    drinks:
-    - Whisky de malte
-    - Rum escuro
-    - Stout
-    food:
-    - Chocolate negro intenso
-    - Queijo curado
   notes: Linha de topo da casa Padrón, com complexidade e persistência notáveis.
   verified_fields: []
   sources: []
@@ -178,14 +122,6 @@
   - madeira
   - creme
   - mel
-  pairings:
-    drinks:
-    - Madeira Malmsey
-    - Porto Tawny 10 anos
-    - Cognac
-    food:
-    - Doces de ovos
-    - Amêndoas
   notes: Perfecto curto de fumada suave e doce; ideal para uma pausa de cerca de 45 minutos.
   verified_fields: []
   sources: []
@@ -202,14 +138,6 @@
   - pimenta
   - frutos secos
   - especiarias doces
-  pairings:
-    drinks:
-    - Cognac XO
-    - Rum añejo
-    - Porto Vintage
-    food:
-    - Chocolate negro
-    - Queijo de cabra curado
   notes: Raro e muito procurado; pioneiro em capas dominicanas de alta qualidade.
   verified_fields: []
   sources: []
@@ -226,14 +154,6 @@
   - nozes
   - madeira clara
   - mel
-  pairings:
-    drinks:
-    - Café
-    - Champanhe
-    - Porto branco
-    food:
-    - Pastelaria
-    - Queijo fresco
   notes: Elegante e suave; excelente para manhãs ou depois de uma refeição leve.
   verified_fields: []
   sources: []
@@ -249,14 +169,6 @@
   - creme
   - madeira clara
   - nozes
-  pairings:
-    drinks:
-    - Café
-    - Chá verde
-    - Porto branco
-    food:
-    - Biscoitos
-    - Fruta
   notes: Fumada de cerca de 15 minutos; ideal para iniciantes e pausas curtas.
   verified_fields:
   - vitola
@@ -276,14 +188,6 @@
   - pimenta
   - cacau
   - terra
-  pairings:
-    drinks:
-    - Bourbon
-    - Whisky de malte intenso
-    - Rum escuro
-    food:
-    - Carne grelhada
-    - Chocolate 85%
   notes: Linha intensa e rica, para fumadores com experiência.
   verified_fields: []
   sources: []
@@ -300,14 +204,6 @@
   - café
   - pimenta
   - especiarias
-  pairings:
-    drinks:
-    - Rum añejo
-    - Bourbon
-    - Espresso
-    food:
-    - Chocolate negro
-    - Frutos secos
   notes: Muito bem pontuada pela imprensa especializada; força média-alta com bom equilíbrio.
   verified_fields: []
   sources: []
@@ -323,14 +219,6 @@
   - creme
   - nozes
   - amêndoa
-  pairings:
-    drinks:
-    - Café com leite
-    - Cerveja lager
-    - Porto branco
-    food:
-    - Pastelaria
-    - Queijo fresco
   notes: Formato curto e grosso, concebido para fumada consistente do início ao fim.
   verified_fields: []
   sources: []
@@ -347,14 +235,6 @@
   - terra
   - café
   - especiarias
-  pairings:
-    drinks:
-    - Stout
-    - Bourbon
-    - Rum escuro
-    food:
-    - Brownie
-    - Churrasco
   notes: Capa Broadleaf escura e brilhante; textura rica e muita fumaça.
   verified_fields: []
   sources: []
@@ -371,13 +251,6 @@
   - madeira
   - especiarias
   - terra
-  pairings:
-    drinks:
-    - Rum añejo
-    - Whisky de malte
-    food:
-    - Queijo curado
-    - Frutos secos
   notes: 'Puro nicaraguense: capa Corojo Oscuro, capote Criollo, tripa Criollo/Corojo. Classificado como
     força plena numa análise consultada.'
   verified_fields:
@@ -399,14 +272,6 @@
   - creme
   - madeira clara
   - nozes
-  pairings:
-    drinks:
-    - Café
-    - Cerveja lager
-    - Chá
-    food:
-    - Pastelaria
-    - Fruta
   notes: 'Uma das melhores portas de entrada: fácil, suave e acessível.'
   verified_fields: []
   sources: []
@@ -423,14 +288,6 @@
   - especiarias
   - cacau
   - couro
-  pairings:
-    drinks:
-    - Bourbon
-    - Rum añejo
-    - Cognac
-    food:
-    - Chocolate
-    - Frutos secos
   notes: Binder e tripa não são divulgados pela marca. A origem do tabaco (Honduras/Nicarágua) está por
     confirmar.
   verified_fields:
@@ -450,14 +307,6 @@
   - creme
   - madeira
   - nozes
-  pairings:
-    drinks:
-    - Café
-    - Porto branco
-    - Cerveja clara
-    food:
-    - Pastelaria
-    - Queijo suave
   notes: Alternativa suave com tabaco hondurenho.
   verified_fields: []
   sources: []
@@ -474,14 +323,6 @@
   - doçura
   - café
   - terra suave
-  pairings:
-    drinks:
-    - Rum
-    - Café
-    - Stout
-    food:
-    - Chocolate
-    - Tarte de chocolate
   notes: Capa Maduro de San Andrés, doce e acessível.
   verified_fields: []
   sources: []
@@ -497,14 +338,6 @@
   - terra
   - doçura
   - cacau
-  pairings:
-    drinks:
-    - Cachaça envelhecida
-    - Café
-    - Rum
-    food:
-    - Doces com café
-    - Frutos secos
   notes: Representa a tradição de tabaco da Bahia, com notas doces e terrosas.
   verified_fields: []
   sources: []
@@ -521,14 +354,6 @@
   - café
   - creme
   - ervas
-  pairings:
-    drinks:
-    - Rum añejo
-    - Porto Tawny 20 anos
-    - Espresso
-    food:
-    - Chocolate negro
-    - Amêndoas
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
@@ -545,14 +370,6 @@
   - pimenta
   - couro
   - cacau
-  pairings:
-    drinks:
-    - Rum escuro
-    - Bourbon
-    - Whisky de malte
-    food:
-    - Carne grelhada
-    - Chocolate amargo
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
@@ -569,14 +386,6 @@
   - cacau
   - creme
   - madeira
-  pairings:
-    drinks:
-    - Porto Tawny 10 anos
-    - Café
-    - Cognac
-    food:
-    - Queijo semicurado
-    - Frutos secos
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
@@ -593,14 +402,6 @@
   - cedro
   - nozes
   - especiarias doces
-  pairings:
-    drinks:
-    - Madeira Malmsey
-    - Porto Tawny 20 anos
-    - Champanhe
-    food:
-    - Pastelaria
-    - Frutos secos
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
@@ -617,14 +418,6 @@
   - cedro
   - terra
   - couro
-  pairings:
-    drinks:
-    - Rum añejo
-    - Whisky de malte
-    - Espresso
-    food:
-    - Queijo curado
-    - Chocolate negro
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
@@ -641,14 +434,6 @@
   - creme
   - nozes
   - especiarias doces
-  pairings:
-    drinks:
-    - Porto Tawny
-    - Cognac VSOP
-    - Café
-    food:
-    - Frutos secos
-    - Queijo suave
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
@@ -665,14 +450,6 @@
   - terra
   - especiarias
   - creme
-  pairings:
-    drinks:
-    - Rum añejo
-    - Café
-    - Madeira
-    food:
-    - Frutos secos
-    - Chocolate
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
