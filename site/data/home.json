@@ -1,0 +1,53 @@
+{
+ "place": "Lisboa",
+ "climate": {
+  "period": "climatologia NASA POWER",
+  "rain_mm_annual": 541.0,
+  "rain_mm_monthly": [
+   65.0,
+   51.0,
+   60.0,
+   54.0,
+   31.0,
+   11.0,
+   3.0,
+   6.0,
+   25.0,
+   79.0,
+   92.0,
+   64.0
+  ],
+  "rh_pct_annual": 80.0,
+  "rh_pct_monthly": [
+   81.0,
+   80.0,
+   80.0,
+   80.0,
+   79.0,
+   80.0,
+   81.0,
+   81.0,
+   81.0,
+   81.0,
+   80.0,
+   82.0
+  ],
+  "source": "NASA POWER",
+  "temp_c_annual": 16.5,
+  "temp_c_monthly": [
+   12.9,
+   12.8,
+   13.8,
+   15.0,
+   16.9,
+   18.9,
+   19.9,
+   20.5,
+   20.0,
+   18.6,
+   15.5,
+   13.5
+  ]
+ },
+ "source": "NASA POWER"
+}

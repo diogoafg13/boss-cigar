@@ -27,6 +27,10 @@ A nomenclatura francesa é a maior lista oficial e aberta de charutos que encont
 - liga cada ficha do seed às referências francesas (o nome tem de começar por marca + linha), mostrando o preço oficial;
 - se a página da douane bloquear o pedido, usa o URL em `data/seed/sources.yml` e, em último caso, a cache.
 
+### Histórico de preços
+
+`douane_fr_archive` em `data/seed/sources.yml` lista as edições anteriores da nomenclatura (desde janeiro de 2025). Cada uma é descarregada uma vez e fica em cache como *snapshot*. O build calcula a série de preço de cada referência, as maiores subidas e descidas, a variação mediana por marca e as referências que saíram do mercado no último ano. Variações acima de 75% são tratadas como erros de origem (preço da embalagem posto como unitário) e excluídas.
+
 ### O que não tem fonte aberta
 
 Não existe nenhuma base de dados aberta com força, capa e sabores por linha de charuto (a nomenclatura francesa tem nomes e preços, mas não perfil). Os sites que têm esses dados (revistas, lojas, agregadores) não têm licença aberta, e o projeto [cigarspace](https://github.com/sw3rm-labs/cigarspace) é não comercial e alimenta-se de catálogos de lojas. Por isso:
@@ -38,6 +42,17 @@ Não existe nenhuma base de dados aberta com força, capa e sabores por linha de
 
 - Cada fonte é guardada em `data/cache/`. Se falhar, usa-se a cache e o `meta.json` marca `CACHE`, `PARCIAL` ou `ERRO`.
 - O relatório de qualidade (`site/data/quality.json`, calculado em SQL) inclui: % verificado, marcas fora da Wikipédia/Wikidata, divergências de país e regiões sem clima.
+
+## Funcionalidades para aficionados
+
+Tudo o que é pessoal fica no browser (localStorage) e pode ser exportado em JSON.
+
+- **Para mim**: perfil de palato a partir do Diário (força, capa, país, marca, vitola, preço), recomendações da base e do catálogo oficial com explicação, e estatísticas (provas por mês, marcas, acompanhamentos, valor do humidor).
+- **Humidor**: referências do catálogo oficial, preço pago, código da caixa Habanos (mês/ano de embalamento; os códigos de fábrica são secretos e não são interpretados), alertas de descanso e de envelhecimento, registo do higrómetro e conselhos para o clima de Lisboa no mês corrente (NASA POWER).
+- **Preços oficiais**: evolução de cada referência, edições especiais (limitadas, regionais, zodíaco, reservas, aniversários) detetadas no nome, referências retiradas.
+- **Guias**: checklist anti-falsificação (marcas oficiais da Habanos S.A.), descodificador do código da caixa, tempo de fumada estimado, franquias de viagem (Guia para Viajantes, Portal das Finanças, fev. 2026).
+- **Diário**: provas de qualquer referência do catálogo oficial, partilha de uma nota por link, importação do diário de um amigo.
+- **Offline**: PWA com service worker; instalável no telemóvel e usável sem rede.
 
 ## Correr localmente
 
@@ -82,7 +97,7 @@ Os 28 charutos foram compilados de conhecimento geral. Só os campos com `verifi
 - [ ] Verificar os restantes charutos contra fontes públicas (fabricantes, Habanos S.A., Cigar Coop, Halfwheel)
 - [ ] Fotos de anilhas e vitolas (apenas com licença livre)
 - [ ] Roda de sabores interativa
-- [ ] Checklist de falsificações
+- [ ] Notas de prova partilhadas entre utilizadores (exige backend; ex.: GitHub Discussions via giscus)
 - [ ] Notificação de dados desatualizados (campos sem verificação há mais de N meses)
 
 ## Aviso

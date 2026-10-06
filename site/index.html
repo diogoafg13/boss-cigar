@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1b120d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>Boss Cigar — Base de dados de charutos</title>
 <meta name="description" content="Base de dados de charutos com fontes abertas: mapa de origens, clima por terroir, produção por país, catálogo de marcas, tabacarias em Portugal, harmonizações, humidor e diário de provas.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -59,6 +63,7 @@
 
 <nav id="tabs">
   <button data-tab="catalog" class="active">Catálogo</button>
+  <button data-tab="me">Para mim</button>
   <button data-tab="mapview">Mapa</button>
   <button data-tab="frcat">Preços oficiais</button>
   <button data-tab="brands">Marcas</button>
@@ -69,6 +74,7 @@
   <button data-tab="vitolas">Vitolas</button>
   <button data-tab="humidor">Humidor</button>
   <button data-tab="tools">Ferramentas</button>
+  <button data-tab="guides">Guias</button>
   <button data-tab="journal">Diário</button>
   <button data-tab="guide">Guia PDF</button>
   <button data-tab="sources">Fontes</button>
@@ -88,6 +94,33 @@
     <div class="grid" id="cards"></div>
   </section>
 
+  <section id="me">
+    <div class="panel"><h2 style="margin-top:0">Recomendações para ti</h2>
+      <p class="muted">Calculadas a partir das tuas provas no Diário: o que deste mais estrelas (força, capa, país, marca, vitola, preço) puxa as sugestões; o que deste poucas afasta. Tudo é calculado no teu browser.</p>
+      <div id="recoProfile"></div></div>
+    <div class="panel"><h3 style="margin-top:0">Da base de dados</h3><div class="grid" id="recoSeed"></div></div>
+    <div class="panel" style="overflow-x:auto"><h3 style="margin-top:0">Do catálogo oficial</h3><div id="recoFr"></div></div>
+    <div class="panel"><h2 style="margin-top:0">As minhas estatísticas</h2><div id="stats"></div></div>
+  </section>
+
+  <section id="guides">
+    <div class="panel"><h2 style="margin-top:0">Habano verdadeiro ou falso?</h2>
+      <p class="muted">Marca o que consegues confirmar. Baseado nas marcas de autenticidade descritas pela <a href="https://www.habanos.com/en/marks-of-distinction/" target="_blank" rel="noopener">Habanos S.A.</a>. Nenhuma checklist substitui comprar num Habanos Specialist ou numa tabacaria autorizada.</p>
+      <div id="fakeList"></div><div id="fakeScore" style="margin-top:10px"></div></div>
+    <div class="panel"><h2 style="margin-top:0">Ler o código da caixa</h2>
+      <p class="muted">Por baixo da caixa há um código de fábrica (secreto, não publicado pela Habanos) e a data de embalamento: mês em espanhol + ano com dois dígitos (sistema em uso desde 2000).</p>
+      <div class="filters"><input id="boxCode" placeholder="Ex.: ROS ABR 24"></div><div id="boxOut" class="muted"></div></div>
+    <div class="panel"><h2 style="margin-top:0">Quanto tempo demora a fumar?</h2>
+      <div class="filters"><input id="stLen" type="number" step="0.125" min="3" max="9" value="5" aria-label="Comprimento (polegadas)"><input id="stRing" type="number" min="26" max="70" value="50" aria-label="Ring gauge"></div>
+      <div id="stOut"></div>
+      <p class="warn">Estimativa grosseira (cerca de 10,5 minutos por polegada, ajustado ao ring gauge). Depende muito do ritmo de cada um.</p></div>
+    <div class="panel"><h2 style="margin-top:0">Viajar com charutos (Portugal)</h2>
+      <div style="overflow-x:auto"><table><tr><th>De onde vens</th><th>Charutos</th><th>Cigarrilhas (≤ 3 g)</th><th>Cigarros</th><th>Tabaco</th></tr>
+        <tr><td>Fora da UE (franquia, sem impostos)</td><td>50</td><td>100</td><td>200</td><td>250 g</td></tr>
+        <tr><td>Dentro da UE (quantidades indicativas de uso pessoal)</td><td>200</td><td>400</td><td>800</td><td>1 kg</td></tr></table></div>
+      <p class="warn">As franquias de fora da UE são alternativas (uma ou outra categoria, não a soma). Menores de 17 anos não têm franquia de tabaco. Fonte: <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/Folhetos_informativos/Documents/Guia_viajantes.pdf" target="_blank" rel="noopener">Guia para Viajantes, Portal das Finanças (fev. 2026)</a>. Confirma sempre antes de viajar.</p></div>
+  </section>
+
   <section id="mapview">
     <p class="muted">Cada ponto é uma zona de cultivo, com clima médio 2015–2024 quando disponível. Clica para ver os charutos.</p>
     <div id="map"></div>
@@ -101,11 +134,12 @@
         <select id="fBrand"><option value="">Todas as marcas</option></select>
         <select id="fVit"><option value="">Qualquer vitola</option></select>
         <select id="fMax"><option value="">Qualquer preço</option><option value="5">até 5 €</option><option value="10">até 10 €</option><option value="20">até 20 €</option><option value="40">até 40 €</option></select>
-        <select id="fKind"><option value="cig">Só charutos</option><option value="all">Charutos e cigarilhas</option><option value="cgl">Só cigarilhas</option></select>
+        <select id="fKind"><option value="cig">Só charutos</option><option value="all">Charutos e cigarilhas</option><option value="cgl">Só cigarilhas</option><option value="esp">Só edições especiais</option><option value="chg">Só com mudança de preço</option></select>
         <select id="fSortP"><option value="name">Ordenar: nome</option><option value="pa">Preço ↑</option><option value="pd">Preço ↓</option></select>
       </div>
       <p class="warn">A marca vem do catálogo da Wikipédia ou, se lá não estiver, é <i>inferida</i> do início do nome (assinalada com *). "Cigarilha" é uma heurística (nome ou preço inferior a 1,50 €).</p>
       <p class="muted" id="fCount"></p></div>
+    <div class="panel" id="priceHist"></div>
     <div class="panel" style="overflow-x:auto"><table id="fTable"></table><div class="row" style="margin-top:10px"><button class="btn ghost sm" id="fMore">Mostrar mais</button></div></div>
   </section>
 
@@ -157,10 +191,15 @@
   <section id="humidor">
     <div class="panel"><h2 style="margin-top:0">O meu humidor</h2>
       <p class="warn">Guardado apenas neste browser. Exporta o JSON para fazer cópia de segurança.</p>
-      <div class="filters"><select id="hCigar"></select><input id="hQty" type="number" min="1" value="1" aria-label="Quantidade"><input id="hDate" type="date" aria-label="Data de compra"><input id="hNote" placeholder="Nota (loja, caixa…)"></div>
+      <div class="filters"><select id="hCigar"></select><input id="hQty" type="number" min="1" value="1" aria-label="Quantidade"><input id="hDate" type="date" aria-label="Data de compra"><input id="hNote" placeholder="Nota (loja…)"></div>
+      <div class="filters"><input id="hOther" list="frList" placeholder="…ou escolhe do catálogo oficial"><input id="hPrice" type="number" step="0.01" min="0" placeholder="Preço pago por unidade (€)"><input id="hBox" placeholder="Código da caixa (ex.: ROS ABR 24)"></div>
       <div class="row"><button class="btn" id="hAdd">Adicionar ao humidor</button><button class="btn ghost" id="hExport">Exportar JSON</button></div>
     </div>
     <div id="hList"></div>
+    <div class="panel"><h3 style="margin-top:0">Higrómetro</h3>
+      <div class="filters"><input id="gRh" type="number" min="30" max="95" placeholder="Humidade (%)"><input id="gT" type="number" step="0.1" min="5" max="40" placeholder="Temperatura (°C)"></div>
+      <div class="row"><button class="btn sm" id="gAdd">Registar leitura</button></div><div id="gOut" style="margin-top:8px"></div></div>
+    <div class="panel"><h3 style="margin-top:0">O teu humidor em Lisboa este mês</h3><div id="homeAdvice" class="muted">A carregar…</div></div>
     <div class="panel"><h3 style="margin-top:0">Humidor 101</h3>
       <ul><li>Humidade relativa: 65–72% · temperatura: 18–21 °C, estável.</li>
           <li>Teste do sal: um pires com sal húmido num recipiente fechado deve marcar cerca de 75% HR; assim calibras o higrómetro.</li>
@@ -181,10 +220,14 @@
   <section id="journal">
     <div class="panel"><h2 style="margin-top:0">Diário de provas</h2>
       <p class="warn">Guardado apenas neste browser. Exportável em JSON.</p>
-      <div class="filters"><select id="jCigar"></select><input id="jDrink" placeholder="Bebida / acompanhamento"><select id="jRating"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3" selected>★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select></div>
+      <div class="filters"><select id="jCigar"></select><input id="jOther" list="frList" placeholder="…ou escolhe do catálogo oficial"><input id="jDrink" placeholder="Bebida / acompanhamento"><select id="jRating"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3" selected>★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select></div>
       <textarea id="jNotes" rows="3" placeholder="Primeiro terço, segundo terço, final, retrohale…"></textarea>
       <div class="row" style="margin-top:8px"><button class="btn" id="jSave">Guardar nota</button><button class="btn ghost" id="jExport">Exportar JSON</button></div></div>
     <div id="jList"></div>
+    <div class="panel"><h3 style="margin-top:0">Notas de amigos</h3>
+      <p class="warn">Abre um link de nota partilhado ou importa o diário (JSON) de um amigo. Fica só neste browser.</p>
+      <div class="row"><label class="btn ghost sm" for="jImport" style="cursor:pointer">Importar diário de amigo</label><input id="jImport" type="file" accept="application/json" style="display:none"></div>
+      <div id="friends" style="margin-top:8px"></div></div>
   </section>
 
   <section id="guide">
@@ -214,6 +257,7 @@
 </main>
 
 <dialog id="detail"></dialog>
+<datalist id="frList"></datalist>
 <footer id="foot">Boss Cigar · Projeto pessoal e educativo · Para maiores de 18 anos. Fumar prejudica a saúde.</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -243,6 +287,7 @@ function init(d) {
   ["#cmpA","#cmpB"].forEach(i => $(i).addEventListener("input", renderCompare));
   setupTabs(); renderCatalog(); setupPairing(); renderCompare(); renderVitolas();
   setupHumidor(); setupTools(); setupJournal(); renderSources(); setupBrands(); setupProducers(); renderRules();
+  if (window.afInit) afInit();
   const m = DB.meta || {};
   if (m.built_at) $("#foot").insertAdjacentHTML("afterbegin", `Dados atualizados em ${m.built_at.slice(0,10)} · `);
 }
@@ -320,6 +365,7 @@ function openDetail(id) {
     <p><b>Sabores:</b> ${c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("")}</p>
     <p><b>Bebidas:</b> ${esc(c.pairings.drinks.join(", "))}<br><b>Comida:</b> ${esc(c.pairings.food.join(", "))}<br><span class="warn">Sugestão por regra: ${esc((c.pairings.why || []).join(" "))}</span></p>
     ${c.priceFR ? `<p><b>Preço oficial em França:</b> ${c.priceFR.min === c.priceFR.max ? eur(c.priceFR.min) : eur(c.priceFR.min) + " – " + eur(c.priceFR.max)} por unidade<br><span class="sub">${c.priceFR.refs.slice(0, 4).map(r => esc(r.label) + (r.pack_size ? " (" + r.pack_size + ")" : "") + ": " + eur(r.unit_eur)).join(" · ")}</span><br><span class="warn">Douane FR · ${esc(c.priceFR.edition || "")}</span></p>` : ""}
+    ${window.afDetail ? afDetail(c) : ""}
     ${ver}${bf}${c.wikipedia ? `<p class="sub">Wikipédia: ${esc(c.wikipedia.manufacturer || "—")}${c.wikipedia.notes ? " · " + esc(c.wikipedia.notes) : ""} · <a href="https://en.wikipedia.org/wiki/List_of_cigar_brands" target="_blank" rel="noopener">CC BY-SA</a></p>` : ""}${r ? `<p class="muted">${esc(r.note)}</p>${climateHTML(r)}` : ""}
     <div class="row" style="margin-top:12px"><button class="btn" id="dLog">Registar prova</button><button class="btn ghost" id="dHum">+ Humidor</button><button class="btn ghost" id="dClose">Fechar</button></div>`;
   d.showModal();
@@ -562,5 +608,6 @@ function renderSources() {
   }).catch(() => { $("#qualOut").textContent = "Relatório indisponível."; });
 }
 </script>
+<script src="aficionado.js"></script>
 </body>
 </html>

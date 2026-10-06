@@ -1,0 +1,2334 @@
+{
+ "editions": [
+  {
+   "date": "2025-01-14",
+   "edition": "Arrêté du 14 janvier 2025",
+   "n": 3177
+  },
+  {
+   "date": "2025-02-07",
+   "edition": "Arrêté du 7 février 2025",
+   "n": 3113
+  },
+  {
+   "date": "2025-02-22",
+   "edition": "Arrêté publié au JORF n°0045 du 22 février 2025",
+   "n": 3113
+  },
+  {
+   "date": "2025-05-09",
+   "edition": "Arrêté du 9 mai 2025",
+   "n": 3144
+  },
+  {
+   "date": "2026-01-01",
+   "edition": "Arrêté du 3 décembre 2025, applicable au 1er janvier 2026",
+   "n": 3454
+  },
+  {
+   "date": "2026-06-01",
+   "edition": "Arrêté du 27 avril 2026, applicable au 1er juin 2026",
+   "n": 3540
+  },
+  {
+   "date": "2026-09-01",
+   "edition": "Arrêté du 5 août 2026, applicable au 1er septembre 2026",
+   "n": 3598
+  },
+  {
+   "date": "2026-11-01",
+   "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+   "n": 3664
+  }
+ ],
+ "n_changed": 1272,
+ "n_anomalies": 98,
+ "median_pct": 4.8,
+ "up": [
+  {
+   "label": "Flor de Selva Botte B20 E1",
+   "brand": "Flor de Selva",
+   "pack_size": 20,
+   "from": 1.55,
+   "to": 2.7,
+   "since": "2025-01-14",
+   "pct": 74.2
+  },
+  {
+   "label": "Flor  de Selva Botte TO1",
+   "brand": "Flor de Selva",
+   "pack_size": 20,
+   "from": 2.1,
+   "to": 3.6,
+   "since": "2025-01-14",
+   "pct": 71.4
+  },
+  {
+   "label": "Flor de Selva Botte Toro1",
+   "brand": "Flor de Selva",
+   "pack_size": 10,
+   "from": 2.1,
+   "to": 3.6,
+   "since": "2025-01-14",
+   "pct": 71.4
+  },
+  {
+   "label": "La Ley Reserva 2018 El Laguito (Coffret)",
+   "brand": "La Ley",
+   "pack_size": 21,
+   "from": 21.8,
+   "to": 37.0,
+   "since": "2025-01-14",
+   "pct": 69.7
+  },
+  {
+   "label": "Plasencia Cosecha 146 LM-R",
+   "brand": "Plasencia",
+   "pack_size": 20,
+   "from": 3.4,
+   "to": 5.7,
+   "since": "2025-01-14",
+   "pct": 67.6
+  },
+  {
+   "label": "Flor  de Selva Botte TOM1",
+   "brand": "Flor de Selva",
+   "pack_size": 20,
+   "from": 2.15,
+   "to": 3.6,
+   "since": "2025-01-14",
+   "pct": 67.4
+  },
+  {
+   "label": "Flor de Selva Botte C CL",
+   "brand": "Flor de Selva",
+   "pack_size": 4,
+   "from": 3.0,
+   "to": 5.0,
+   "since": "2025-01-14",
+   "pct": 66.7
+  },
+  {
+   "label": "Flor  de Selva Botte B15",
+   "brand": "Flor de Selva",
+   "pack_size": 10,
+   "from": 2.0,
+   "to": 3.3,
+   "since": "2025-01-14",
+   "pct": 65.0
+  },
+  {
+   "label": "Flor de Selva Botte B15M",
+   "brand": "Flor de Selva",
+   "pack_size": 20,
+   "from": 2.07,
+   "to": 3.4,
+   "since": "2025-01-14",
+   "pct": 64.3
+  },
+  {
+   "label": "Cumpay Botte B15",
+   "brand": "Cumpay",
+   "pack_size": 4,
+   "from": 2.2,
+   "to": 3.6,
+   "since": "2025-01-14",
+   "pct": 63.6
+  },
+  {
+   "label": "Cumpay Botte CH1",
+   "brand": "Cumpay",
+   "pack_size": 4,
+   "from": 2.3,
+   "to": 3.7,
+   "since": "2025-01-14",
+   "pct": 60.9
+  },
+  {
+   "label": "Cumpay Botte VM1",
+   "brand": "Cumpay",
+   "pack_size": 20,
+   "from": 2.16,
+   "to": 3.4,
+   "since": "2025-01-14",
+   "pct": 57.4
+  },
+  {
+   "label": "Flor de Selva Botte B20 Co",
+   "brand": "Flor de Selva",
+   "pack_size": 10,
+   "from": 2.1,
+   "to": 3.3,
+   "since": "2025-01-14",
+   "pct": 57.1
+  },
+  {
+   "label": "Flor de Selva Botte EG1",
+   "brand": "Flor de Selva",
+   "pack_size": 18,
+   "from": 1.9,
+   "to": 2.9,
+   "since": "2025-01-14",
+   "pct": 52.6
+  },
+  {
+   "label": "Flor  de Selva Botte GP",
+   "brand": "Flor de Selva",
+   "pack_size": 10,
+   "from": 2.3,
+   "to": 3.5,
+   "since": "2025-01-14",
+   "pct": 52.2
+  },
+  {
+   "label": "Flor de Selva Botte R1 Tubos",
+   "brand": "Flor de Selva",
+   "pack_size": 16,
+   "from": 2.0,
+   "to": 3.0,
+   "since": "2025-01-14",
+   "pct": 50.0
+  },
+  {
+   "label": "Villa Zamorano Vitolario cigares",
+   "brand": "Villa Zamorano",
+   "pack_size": 6,
+   "from": 2.0,
+   "to": 3.0,
+   "since": "2025-01-14",
+   "pct": 50.0
+  },
+  {
+   "label": "Flor de Selva Botte RM1",
+   "brand": "Flor de Selva",
+   "pack_size": 20,
+   "from": 1.9,
+   "to": 2.8,
+   "since": "2025-01-14",
+   "pct": 47.4
+  },
+  {
+   "label": "Plasencia Alma Fuerte G-S",
+   "brand": "Plasencia",
+   "pack_size": 10,
+   "from": 5.8,
+   "to": 8.5,
+   "since": "2025-01-14",
+   "pct": 46.6
+  },
+  {
+   "label": "Plasencia Alma del Campo T-R",
+   "brand": "Plasencia",
+   "pack_size": 10,
+   "from": 4.3,
+   "to": 6.3,
+   "since": "2025-01-14",
+   "pct": 46.5
+  },
+  {
+   "label": "Flor de Selva Botte B20 To",
+   "brand": "Flor de Selva",
+   "pack_size": 10,
+   "from": 2.2,
+   "to": 3.2,
+   "since": "2025-01-14",
+   "pct": 45.5
+  },
+  {
+   "label": "Room 101 Johnny Tobacconaut Robusto",
+   "brand": "Room",
+   "pack_size": 20,
+   "from": 9.5,
+   "to": 13.8,
+   "since": "2025-01-14",
+   "pct": 45.3
+  },
+  {
+   "label": "Plasencia Cosecha 146 SL-T",
+   "brand": "Plasencia",
+   "pack_size": 20,
+   "from": 4.0,
+   "to": 5.8,
+   "since": "2025-01-14",
+   "pct": 45.0
+  },
+  {
+   "label": "Flor de Selva Botte E1",
+   "brand": "Flor de Selva",
+   "pack_size": 10,
+   "from": 1.87,
+   "to": 2.7,
+   "since": "2025-01-14",
+   "pct": 44.4
+  },
+  {
+   "label": "Aganorsa Rare Leaf Corojo Lonsdale",
+   "brand": "Aganorsa",
+   "pack_size": 15,
+   "from": 12.5,
+   "to": 18.0,
+   "since": "2025-01-14",
+   "pct": 44.0
+  },
+  {
+   "label": "Flor de Selva Botte C B20",
+   "brand": "Flor de Selva",
+   "pack_size": 4,
+   "from": 3.5,
+   "to": 5.0,
+   "since": "2025-01-14",
+   "pct": 42.9
+  },
+  {
+   "label": "Flor de Selva Botte C MA",
+   "brand": "Flor de Selva",
+   "pack_size": 4,
+   "from": 3.5,
+   "to": 5.0,
+   "since": "2025-01-14",
+   "pct": 42.9
+  },
+  {
+   "label": "Flor de Selva N°30",
+   "brand": "Flor de Selva",
+   "pack_size": 10,
+   "from": 31.5,
+   "to": 45.0,
+   "since": "2025-01-14",
+   "pct": 42.9
+  },
+  {
+   "label": "Cohiba Wide Short E.L. (coffret)",
+   "brand": "Cohiba",
+   "pack_size": 50,
+   "from": 4.8,
+   "to": 6.8,
+   "since": "2025-01-14",
+   "pct": 41.7
+  },
+  {
+   "label": "Room 101 Johnny Tobacconaut Toro",
+   "brand": "Room",
+   "pack_size": 20,
+   "from": 10.5,
+   "to": 14.8,
+   "since": "2025-01-14",
+   "pct": 41.0
+  },
+  {
+   "label": "Aganorsa Rare Leaf Corojo Robusto",
+   "brand": "Aganorsa",
+   "pack_size": 15,
+   "from": 13.5,
+   "to": 19.0,
+   "since": "2025-01-14",
+   "pct": 40.7
+  },
+  {
+   "label": "Flor de Selva MP2R",
+   "brand": "Flor de Selva",
+   "pack_size": 25,
+   "from": 10.0,
+   "to": 14.0,
+   "since": "2025-05-09",
+   "pct": 40.0
+  },
+  {
+   "label": "Plasencia Alma Fuerte R-R",
+   "brand": "Plasencia",
+   "pack_size": 10,
+   "from": 5.1,
+   "to": 7.1,
+   "since": "2025-01-14",
+   "pct": 39.2
+  },
+  {
+   "label": "JOYA DE NICARAGUA ANTAÑO 1970 Robusto Grande",
+   "brand": "Joya de Nicaragua",
+   "pack_size": 20,
+   "from": 11.5,
+   "to": 16.0,
+   "since": "2025-01-14",
+   "pct": 39.1
+  },
+  {
+   "label": "Cumpay Botte V1",
+   "brand": "Cumpay",
+   "pack_size": 4,
+   "from": 2.3,
+   "to": 3.2,
+   "since": "2025-01-14",
+   "pct": 39.1
+  },
+  {
+   "label": "Cumpay Botte S1",
+   "brand": "Cumpay",
+   "pack_size": 4,
+   "from": 1.8,
+   "to": 2.5,
+   "since": "2025-01-14",
+   "pct": 38.9
+  },
+  {
+   "label": "La Estrella Solar Gigante",
+   "brand": "La Estrella",
+   "pack_size": 20,
+   "from": 5.8,
+   "to": 8.0,
+   "since": "2025-01-14",
+   "pct": 37.9
+  },
+  {
+   "label": "Plasencia Alma del Campo S-TG",
+   "brand": "Plasencia",
+   "pack_size": 10,
+   "from": 4.7,
+   "to": 6.4,
+   "since": "2025-01-14",
+   "pct": 36.2
+  },
+  {
+   "label": "Flor  de Selva Botte R1",
+   "brand": "Flor de Selva",
+   "pack_size": 4,
+   "from": 2.0,
+   "to": 2.7,
+   "since": "2025-01-14",
+   "pct": 35.0
+  },
+  {
+   "label": "Flor de Selva Botte R1 Semanario",
+   "brand": "Flor de Selva",
+   "pack_size": 7,
+   "from": 2.0,
+   "to": 2.7,
+   "since": "2025-01-14",
+   "pct": 35.0
+  }
+ ],
+ "down": [
+  {
+   "label": "Camacho Scorpion Black robusto BDL",
+   "brand": "Camacho",
+   "pack_size": 5,
+   "from": 8.9,
+   "to": 5.0,
+   "since": "2025-01-14",
+   "pct": -43.8
+  },
+  {
+   "label": "Rocky Patel Seed To Smoke Toro (Fagot)",
+   "brand": "Rocky Patel",
+   "pack_size": 10,
+   "from": 5.5,
+   "to": 3.4,
+   "since": "2025-01-14",
+   "pct": -38.2
+  },
+  {
+   "label": "Rocky Patel Seed To Smoke Churchill (Fagot)",
+   "brand": "Rocky Patel",
+   "pack_size": 10,
+   "from": 5.8,
+   "to": 3.6,
+   "since": "2025-01-14",
+   "pct": -37.9
+  },
+  {
+   "label": "Rocky Patel Seed To Smoke Sixty (Fagot)",
+   "brand": "Rocky Patel",
+   "pack_size": 10,
+   "from": 7.0,
+   "to": 4.5,
+   "since": "2025-01-14",
+   "pct": -35.7
+  },
+  {
+   "label": "Orient - Série Cities - Samarcande - ( Boîte )",
+   "brand": "Orient",
+   "pack_size": 20,
+   "from": 35.0,
+   "to": 24.9,
+   "since": "2026-01-01",
+   "pct": -28.9
+  },
+  {
+   "label": "Casdagli Rosetta (Coffret)",
+   "brand": null,
+   "pack_size": 25,
+   "from": 7.0,
+   "to": 5.0,
+   "since": "2025-01-14",
+   "pct": -28.6
+  },
+  {
+   "label": "Maestranza Duque",
+   "brand": "Maestranza",
+   "pack_size": 10,
+   "from": 16.9,
+   "to": 12.2,
+   "since": "2025-01-14",
+   "pct": -27.8
+  },
+  {
+   "label": "Orient - Série Cities - Ispahan - ( Boîte )",
+   "brand": "Orient",
+   "pack_size": 20,
+   "from": 27.5,
+   "to": 19.9,
+   "since": "2026-01-01",
+   "pct": -27.6
+  },
+  {
+   "label": "Hoyo de Monterrey Destinos (TR)",
+   "brand": "Hoyo de Monterrey",
+   "pack_size": 20,
+   "from": 99.0,
+   "to": 72.0,
+   "since": "2025-01-14",
+   "pct": -27.3
+  },
+  {
+   "label": "Maestranza Baron",
+   "brand": "Maestranza",
+   "pack_size": 10,
+   "from": 15.0,
+   "to": 10.9,
+   "since": "2025-01-14",
+   "pct": -27.3
+  },
+  {
+   "label": "Maestranza Conde",
+   "brand": "Maestranza",
+   "pack_size": 10,
+   "from": 15.0,
+   "to": 11.0,
+   "since": "2025-01-14",
+   "pct": -26.7
+  },
+  {
+   "label": "Orient - Série Cities - Istanbul - ( Boîte )",
+   "brand": "Orient",
+   "pack_size": 20,
+   "from": 29.5,
+   "to": 21.9,
+   "since": "2026-01-01",
+   "pct": -25.8
+  },
+  {
+   "label": "Orient - Série Cities - Cairo - ( Boîte )",
+   "brand": "Orient",
+   "pack_size": 20,
+   "from": 29.0,
+   "to": 21.7,
+   "since": "2026-01-01",
+   "pct": -25.2
+  },
+  {
+   "label": "Maestranza Vizconde",
+   "brand": "Maestranza",
+   "pack_size": 10,
+   "from": 16.0,
+   "to": 12.0,
+   "since": "2025-01-14",
+   "pct": -25.0
+  },
+  {
+   "label": "La Estancia #60, en 10 ciagres",
+   "brand": "La estancia",
+   "pack_size": 10,
+   "from": 45.0,
+   "to": 34.0,
+   "since": "2025-01-14",
+   "pct": -24.4
+  },
+  {
+   "label": "Orient - Série Cities - Casablanca - ( Boîte )",
+   "brand": "Orient",
+   "pack_size": 20,
+   "from": 22.5,
+   "to": 17.9,
+   "since": "2026-01-01",
+   "pct": -20.4
+  },
+  {
+   "label": "La Estancia #56, en 10 ciagres",
+   "brand": "La estancia",
+   "pack_size": 10,
+   "from": 41.0,
+   "to": 33.0,
+   "since": "2025-01-14",
+   "pct": -19.5
+  },
+  {
+   "label": "Don Duarte Golden Grande (coffret)",
+   "brand": "Don Duarte",
+   "pack_size": 18,
+   "from": 14.9,
+   "to": 12.0,
+   "since": "2025-01-14",
+   "pct": -19.5
+  },
+  {
+   "label": "Maestranza Marquez",
+   "brand": "Maestranza",
+   "pack_size": 10,
+   "from": 15.5,
+   "to": 12.5,
+   "since": "2025-01-14",
+   "pct": -19.4
+  },
+  {
+   "label": "Rocky Patel N°6 Corona (Coffret)",
+   "brand": "Rocky Patel",
+   "pack_size": 20,
+   "from": 11.0,
+   "to": 8.9,
+   "since": "2025-01-14",
+   "pct": -19.1
+  }
+ ],
+ "brands": [
+  {
+   "brand": "Aganorsa",
+   "n": 6,
+   "median_pct": 32.9
+  },
+  {
+   "brand": "La Estrella",
+   "n": 5,
+   "median_pct": 30.4
+  },
+  {
+   "brand": "Room",
+   "n": 6,
+   "median_pct": 29.2
+  },
+  {
+   "brand": "San Pedro",
+   "n": 15,
+   "median_pct": 25.0
+  },
+  {
+   "brand": "Cumpay",
+   "n": 39,
+   "median_pct": 23.8
+  },
+  {
+   "brand": "Joya de Nicaragua",
+   "n": 9,
+   "median_pct": 23.3
+  },
+  {
+   "brand": "Don Tomas",
+   "n": 24,
+   "median_pct": 12.1
+  },
+  {
+   "brand": "Aroma",
+   "n": 5,
+   "median_pct": 11.8
+  },
+  {
+   "brand": "Polmard",
+   "n": 6,
+   "median_pct": 10.2
+  },
+  {
+   "brand": "Flor de Selva",
+   "n": 171,
+   "median_pct": 10.1
+  },
+  {
+   "brand": "Corleone",
+   "n": 7,
+   "median_pct": 10.0
+  },
+  {
+   "brand": "Macanudo",
+   "n": 18,
+   "median_pct": 9.0
+  },
+  {
+   "brand": "CAO",
+   "n": 21,
+   "median_pct": 8.3
+  },
+  {
+   "brand": "Balmoral",
+   "n": 19,
+   "median_pct": 6.2
+  },
+  {
+   "brand": "Meerapfel",
+   "n": 17,
+   "median_pct": 6.2
+  },
+  {
+   "brand": "FFOX",
+   "n": 9,
+   "median_pct": 6.0
+  },
+  {
+   "brand": "Silencio",
+   "n": 10,
+   "median_pct": 5.8
+  },
+  {
+   "brand": "Villa Zamorano",
+   "n": 65,
+   "median_pct": 5.6
+  },
+  {
+   "brand": "Santo",
+   "n": 11,
+   "median_pct": 5.6
+  },
+  {
+   "brand": "Alec Bradley",
+   "n": 18,
+   "median_pct": 5.3
+  },
+  {
+   "brand": "Romeo y Julieta",
+   "n": 39,
+   "median_pct": 5.3
+  },
+  {
+   "brand": "Quintero",
+   "n": 7,
+   "median_pct": 5.2
+  },
+  {
+   "brand": "Jose",
+   "n": 12,
+   "median_pct": 5.1
+  },
+  {
+   "brand": "Por Larrañaga",
+   "n": 5,
+   "median_pct": 5.1
+  },
+  {
+   "brand": "Valentino",
+   "n": 7,
+   "median_pct": 5.0
+  },
+  {
+   "brand": "Punch",
+   "n": 8,
+   "median_pct": 4.9
+  },
+  {
+   "brand": "Bolívar",
+   "n": 8,
+   "median_pct": 4.8
+  },
+  {
+   "brand": "H. Upmann",
+   "n": 22,
+   "median_pct": 4.8
+  },
+  {
+   "brand": "Hoyo de Monterrey",
+   "n": 28,
+   "median_pct": 4.8
+  },
+  {
+   "brand": "San Cristóbal de la Habana",
+   "n": 5,
+   "median_pct": 4.8
+  },
+  {
+   "brand": "Eiroa",
+   "n": 11,
+   "median_pct": 4.8
+  },
+  {
+   "brand": "Montecristo",
+   "n": 51,
+   "median_pct": 4.7
+  },
+  {
+   "brand": "Partagás",
+   "n": 42,
+   "median_pct": 4.7
+  },
+  {
+   "brand": "Vegueros",
+   "n": 10,
+   "median_pct": 4.7
+  },
+  {
+   "brand": "Cuaba",
+   "n": 6,
+   "median_pct": 4.6
+  },
+  {
+   "brand": "Villiger",
+   "n": 7,
+   "median_pct": 4.5
+  },
+  {
+   "brand": "Quai d'Orsay",
+   "n": 10,
+   "median_pct": 4.5
+  },
+  {
+   "brand": "Ramón Allones",
+   "n": 5,
+   "median_pct": 4.5
+  },
+  {
+   "brand": "Vegafina",
+   "n": 18,
+   "median_pct": 4.3
+  },
+  {
+   "brand": "CLE",
+   "n": 22,
+   "median_pct": 4.3
+  },
+  {
+   "brand": "Los Dueños",
+   "n": 5,
+   "median_pct": 4.2
+  },
+  {
+   "brand": "Antonella",
+   "n": 14,
+   "median_pct": 4.1
+  },
+  {
+   "brand": "SAGA",
+   "n": 7,
+   "median_pct": 4.1
+  },
+  {
+   "brand": "Arturo Fuente",
+   "n": 70,
+   "median_pct": 4.0
+  },
+  {
+   "brand": "Plasencia",
+   "n": 24,
+   "median_pct": 4.0
+  },
+  {
+   "brand": "El Sublimado",
+   "n": 9,
+   "median_pct": 3.9
+  },
+  {
+   "brand": "New World",
+   "n": 7,
+   "median_pct": 3.8
+  },
+  {
+   "brand": "Asylum",
+   "n": 16,
+   "median_pct": 3.1
+  },
+  {
+   "brand": "Davidoff",
+   "n": 32,
+   "median_pct": 2.9
+  },
+  {
+   "brand": "Guantanamera",
+   "n": 6,
+   "median_pct": 2.7
+  },
+  {
+   "brand": "Encore",
+   "n": 5,
+   "median_pct": 2.7
+  },
+  {
+   "brand": "Cohiba",
+   "n": 36,
+   "median_pct": 2.5
+  },
+  {
+   "brand": "Gurkha",
+   "n": 8,
+   "median_pct": 2.5
+  },
+  {
+   "brand": "El Incomparable",
+   "n": 9,
+   "median_pct": 2.3
+  },
+  {
+   "brand": "Horacio",
+   "n": 10,
+   "median_pct": 1.8
+  },
+  {
+   "brand": "Fuente Fuente Opus X",
+   "n": 7,
+   "median_pct": -5.1
+  },
+  {
+   "brand": "Rocky Patel",
+   "n": 8,
+   "median_pct": -6.0
+  },
+  {
+   "brand": "God",
+   "n": 11,
+   "median_pct": -8.2
+  },
+  {
+   "brand": "Machetero",
+   "n": 10,
+   "median_pct": -11.3
+  },
+  {
+   "brand": "Qorum",
+   "n": 9,
+   "median_pct": -14.3
+  },
+  {
+   "brand": "Orient",
+   "n": 5,
+   "median_pct": -25.8
+  },
+  {
+   "brand": "Maestranza",
+   "n": 5,
+   "median_pct": -26.7
+  }
+ ],
+ "removed": [
+  {
+   "label": "1 ea La Historia EIII,Encore Majestic & Pledge Prequel",
+   "pack_size": 3,
+   "last_eur": 19.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "ADRIAN MAGNUS Original Light Robusto",
+   "pack_size": 10,
+   "last_eur": 17.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "ADRIAN MAGNUS Original Light Toro",
+   "pack_size": 10,
+   "last_eur": 18.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Aladino  Vintage  Toro",
+   "pack_size": 20,
+   "last_eur": 21.3,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "ALC Short Robusto",
+   "pack_size": 20,
+   "last_eur": 16.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Alec Bradley Fine & Rare Churchill 2024 LE",
+   "pack_size": 10,
+   "last_eur": 29.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Ambasciator Italico Bruno",
+   "pack_size": 5,
+   "last_eur": 2.04,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Ambasciator Italico Maturo",
+   "pack_size": 5,
+   "last_eur": 3.1,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Antonella Boîte Découverte de 5 MADURO",
+   "pack_size": 5,
+   "last_eur": 15.4,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella CHURCHILL CLARO (coffret)",
+   "pack_size": 26,
+   "last_eur": 19.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella CHURCHILL MADURO (coffret)",
+   "pack_size": 26,
+   "last_eur": 19.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella GORDITO CLARO (coffret)",
+   "pack_size": 26,
+   "last_eur": 16.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella GORDITO MADURO (coffret)",
+   "pack_size": 26,
+   "last_eur": 16.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella GRAN TORO CLARO (coffret)",
+   "pack_size": 26,
+   "last_eur": 19.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella GRAN TORO MADURO (coffret)",
+   "pack_size": 26,
+   "last_eur": 19.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella ROBUSTO CLARO (coffret)",
+   "pack_size": 26,
+   "last_eur": 12.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella TORO CLARO (coffret)",
+   "pack_size": 26,
+   "last_eur": 14.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella TORO MADURO (coffret)",
+   "pack_size": 26,
+   "last_eur": 14.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella TORPEDO CLARO (coffret)",
+   "pack_size": 26,
+   "last_eur": 14.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Antonella TORPEDO MADURO (coffret)",
+   "pack_size": 26,
+   "last_eur": 14.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Asylum 13 April fool's  2023  90 x 9",
+   "pack_size": 3,
+   "last_eur": 60.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Asylum 13 Robusto 50 x 5",
+   "pack_size": 20,
+   "last_eur": 14.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Asylum 13 Super Goliath 80 x 8",
+   "pack_size": 21,
+   "last_eur": 30.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Asylum 13 Toro Gordo 60 x 6",
+   "pack_size": 20,
+   "last_eur": 16.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Asylum Sensorium 11/18 (Boite)",
+   "pack_size": 20,
+   "last_eur": 95.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Balmoral Serie Signaturas Paso Doble Brindis Toro",
+   "pack_size": 10,
+   "last_eur": 21.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Balmoral Serie Signaturas Paso Doble Gran Toro",
+   "pack_size": 10,
+   "last_eur": 16.2,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Balmoral Serie Signaturas Paso Doble Robusto",
+   "pack_size": 10,
+   "last_eur": 15.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Balmoral Signaturas Dueto Churchill",
+   "pack_size": 10,
+   "last_eur": 16.2,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Balmoral Signaturas Dueto Gran Toro",
+   "pack_size": 10,
+   "last_eur": 15.6,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Balmoral Signaturas Dueto Ovacion",
+   "pack_size": 10,
+   "last_eur": 15.4,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Barreda Don Chico Connecticut Robusto",
+   "pack_size": 21,
+   "last_eur": 19.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Don Chico Connecticut Toro",
+   "pack_size": 21,
+   "last_eur": 21.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Don Chico Maduro Robusto",
+   "pack_size": 21,
+   "last_eur": 21.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Don Chico Maduro Toro",
+   "pack_size": 21,
+   "last_eur": 22.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Lotes Reservados Nº 10 Doble Robusto",
+   "pack_size": 25,
+   "last_eur": 8.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Lotes Reservados Nº 10 Gran Toro",
+   "pack_size": 25,
+   "last_eur": 9.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Lotes Reservados Nº 10 Petit Canon",
+   "pack_size": 25,
+   "last_eur": 8.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Vega Supremo Oro Doble Rbusto",
+   "pack_size": 24,
+   "last_eur": 15.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Barreda Vega Supremo Oro Doble Robusto",
+   "pack_size": 24,
+   "last_eur": 15.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Barreda Vega Supremo Oro Gran Canon",
+   "pack_size": 24,
+   "last_eur": 15.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Bentley Cigars Corona (Etui)",
+   "pack_size": 5,
+   "last_eur": 14.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Bismarck Figurado (coffret)",
+   "pack_size": 25,
+   "last_eur": 7.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Bundle Cusano Connecticut Robusto",
+   "pack_size": 16,
+   "last_eur": 6.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "CAO Arcana Firewalker Toro",
+   "pack_size": 20,
+   "last_eur": 14.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "CAO Arcana Seriee STOKK Toro box-pressed",
+   "pack_size": 20,
+   "last_eur": 17.2,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "CAO Consigliere Associate",
+   "pack_size": 20,
+   "last_eur": 9.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "CAO Hommage to Pilon Toro",
+   "pack_size": 20,
+   "last_eur": 15.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "CAO Mortal Coil Toro",
+   "pack_size": 20,
+   "last_eur": 13.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Cao Osa Lot 50",
+   "pack_size": 25,
+   "last_eur": 10.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Cao Osa Lot 54",
+   "pack_size": 25,
+   "last_eur": 11.3,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "CAO Torque 60",
+   "pack_size": 8,
+   "last_eur": 15.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "CAO Vision Churchill",
+   "pack_size": 20,
+   "last_eur": 21.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "CAO Zocalo Toro",
+   "pack_size": 20,
+   "last_eur": 8.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Cavalier Genève White  Salomes 7x50x58 (Coffret)",
+   "pack_size": 20,
+   "last_eur": 23.3,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Cavalier Genève White  Salomes 7x50x58 (Fagot)",
+   "pack_size": 20,
+   "last_eur": 23.3,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Cohiba Espendidos Gran Reserva 2017 coffret spécial",
+   "pack_size": 2,
+   "last_eur": 698.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Cohiba Esplendidos Gran Reserva",
+   "pack_size": 15,
+   "last_eur": 591.8,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Cohiba short (coffret)",
+   "pack_size": 50,
+   "last_eur": 2.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corita Cilaos Grand Victoria (Coffret)",
+   "pack_size": 20,
+   "last_eur": 9.8,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Corita Cilaos Short Victoria (Coffret)",
+   "pack_size": 20,
+   "last_eur": 8.9,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Corita Cilaos Vacoa (Coffret)",
+   "pack_size": 20,
+   "last_eur": 9.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Corleone - Linea Barista",
+   "pack_size": 5,
+   "last_eur": 24.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Corleone Cig'Art Limited Edition 2026",
+   "pack_size": 10,
+   "last_eur": 52.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Coffret Finest Premium Selection",
+   "pack_size": 24,
+   "last_eur": 20.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Cupola",
+   "pack_size": 15,
+   "last_eur": 14.4,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Il Capo",
+   "pack_size": 15,
+   "last_eur": 21.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone La Liberta Limited Series",
+   "pack_size": 10,
+   "last_eur": 19.3,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Lupara",
+   "pack_size": 15,
+   "last_eur": 18.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Onore",
+   "pack_size": 15,
+   "last_eur": 20.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Pizzino",
+   "pack_size": 15,
+   "last_eur": 14.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Rispetto",
+   "pack_size": 15,
+   "last_eur": 17.2,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Corleone Sang % Chardonnay (Coffret bois)",
+   "pack_size": 10,
+   "last_eur": 275.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Corleone Sang % Pinot Noir (Coffret bois)",
+   "pack_size": 10,
+   "last_eur": 275.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Cusano Nicaragua Robusto",
+   "pack_size": 16,
+   "last_eur": 6.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Cusano Reserva  Robusto (coffret)",
+   "pack_size": 25,
+   "last_eur": 5.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Davidoff Dominicana Robusto (Coffret)",
+   "pack_size": 10,
+   "last_eur": 31.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Davidoff Dominicana Toro (Coffret)",
+   "pack_size": 10,
+   "last_eur": 37.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Davidoff Master Selection Edition 2014",
+   "pack_size": 10,
+   "last_eur": 43.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Davidoff Nicaragua Robusto Box Press",
+   "pack_size": 4,
+   "last_eur": 24.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Davidoff Signature Ambassadrice (coffret)",
+   "pack_size": 10,
+   "last_eur": 11.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Davidoff Signature No.1 LE 2023",
+   "pack_size": 10,
+   "last_eur": 39.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Don Pepin Garcia Series JJ, 20th anniversary (Coffret)",
+   "pack_size": 17,
+   "last_eur": 41.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Don Pepin Series JJ 20th Anniversary Toro (coffret)",
+   "pack_size": 16,
+   "last_eur": 76.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Drew Estate Liga Privada Seleccion de Mercado Toro",
+   "pack_size": 10,
+   "last_eur": 34.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Drew Estate M81 Blackened Robusto",
+   "pack_size": 20,
+   "last_eur": 20.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Drew Estate S84 Blackened Robusto",
+   "pack_size": 20,
+   "last_eur": 19.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Edito Allegro Churchill",
+   "pack_size": 1,
+   "last_eur": 18.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "EIROA 51 CBT  50 x 10",
+   "pack_size": 9,
+   "last_eur": 51.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "EIROA CBT  Lancero 38 x 7",
+   "pack_size": 20,
+   "last_eur": 19.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Eiroa Classique Robusto 50 x 5 (20)",
+   "pack_size": 20,
+   "last_eur": 18.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Eiroa Classique Robusto 50 x 5 (5)",
+   "pack_size": 5,
+   "last_eur": 18.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "EIROA Dark Natural Robusto 50 x 5",
+   "pack_size": 20,
+   "last_eur": 19.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "EIROA The first 20 Years 40 x 4",
+   "pack_size": 20,
+   "last_eur": 11.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "El Credito New Line série R Esteli n°54",
+   "pack_size": 18,
+   "last_eur": 10.7,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "El Septimo GILGAMESH Aqua Anu",
+   "pack_size": 1,
+   "last_eur": 23.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "El Septimo GILGAMESH King Sargon",
+   "pack_size": 1,
+   "last_eur": 23.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "El Septimo GILGAMESH Sable Shamash",
+   "pack_size": 1,
+   "last_eur": 23.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "El Septimo LONG SHOT BLACK",
+   "pack_size": 10,
+   "last_eur": 60.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "El Septimo NAPOLEON CONNECTUCUT",
+   "pack_size": 20,
+   "last_eur": 33.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "El Septimo SENSUAL SECRET WHITE",
+   "pack_size": 25,
+   "last_eur": 60.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Endure Robusto 5 x 50",
+   "pack_size": 20,
+   "last_eur": 28.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Endure Toro 6 x 52",
+   "pack_size": 20,
+   "last_eur": 32.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Fagot Churchill",
+   "pack_size": 20,
+   "last_eur": 5.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Fagot Perfecto n°1",
+   "pack_size": 20,
+   "last_eur": 4.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Fagot Perfecto n°2",
+   "pack_size": 20,
+   "last_eur": 4.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Fagot Robusto n°1",
+   "pack_size": 20,
+   "last_eur": 4.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Fagot Short Robusto",
+   "pack_size": 20,
+   "last_eur": 4.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Fagot Toro n°1",
+   "pack_size": 20,
+   "last_eur": 5.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Fagot Toro n°2",
+   "pack_size": 20,
+   "last_eur": 5.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "FFOX Angel's Share Robusto (5,25 x 50) Tin",
+   "pack_size": 29,
+   "last_eur": 45.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "God Of Fire Serie B Double Robusto Tubos",
+   "pack_size": 8,
+   "last_eur": 48.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Guri H series Perfecto",
+   "pack_size": 10,
+   "last_eur": 21.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Guri Sumo Hakuho Cundas",
+   "pack_size": 30,
+   "last_eur": 18.9,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Guri Sumo Hakuho Cundason",
+   "pack_size": 30,
+   "last_eur": 17.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Guri Sumo Kisenosato Cundas",
+   "pack_size": 30,
+   "last_eur": 19.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Guri Sumo Kisenosato Cundason",
+   "pack_size": 30,
+   "last_eur": 18.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "H.Upmann Noellas  Jarre",
+   "pack_size": 25,
+   "last_eur": 20.3,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Horacio Gran Reserva Bulier H52",
+   "pack_size": null,
+   "last_eur": 17.2,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Horacio Gran Reserva Bulier H56",
+   "pack_size": null,
+   "last_eur": 18.2,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Horacio Gran Reserva Bulier H60",
+   "pack_size": null,
+   "last_eur": 18.6,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Hoyo de Monterrey Monterreys N°4 Edition Limitée 2021",
+   "pack_size": 10,
+   "last_eur": 65.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Jose Gener Robusto (Coffret)",
+   "pack_size": 24,
+   "last_eur": 18.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "José L.Piedra Petit Cetros",
+   "pack_size": 25,
+   "last_eur": 3.1,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Joya de Nicaragua Cuatro Cinco Edicion Europa Doble Corona LE",
+   "pack_size": 10,
+   "last_eur": 28.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Joya de Nicaragua L’Ambassadeur Numero Uno",
+   "pack_size": 25,
+   "last_eur": 23.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Kentucky Fire Cured Chunky",
+   "pack_size": 10,
+   "last_eur": 12.8,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Kentucky Fire Cured Fat Molly",
+   "pack_size": 10,
+   "last_eur": 17.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "La Gloria Cubana Podium Ed. Rég.",
+   "pack_size": 10,
+   "last_eur": 40.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "La Ley Reserva 2016 Corona Gorda (Coffret)",
+   "pack_size": 21,
+   "last_eur": 22.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Legend Of Eight  Bigshort (Coffret)",
+   "pack_size": 25,
+   "last_eur": 31.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Galactico (Coffret)",
+   "pack_size": 12,
+   "last_eur": 42.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Galactico (Coffret)",
+   "pack_size": 25,
+   "last_eur": 42.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Hercules, (Coffret)",
+   "pack_size": 12,
+   "last_eur": 28.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Karma (Coffret)",
+   "pack_size": 12,
+   "last_eur": 29.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Karma (Coffret)",
+   "pack_size": 25,
+   "last_eur": 29.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Strike (Coffret)",
+   "pack_size": 12,
+   "last_eur": 18.9,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Tesoro (Coffret)",
+   "pack_size": 12,
+   "last_eur": 19.9,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight  Tesoro (Coffret)",
+   "pack_size": 25,
+   "last_eur": 19.9,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight Bigshort (Coffret)",
+   "pack_size": 12,
+   "last_eur": 31.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight Hercules, (Coffret)",
+   "pack_size": 25,
+   "last_eur": 28.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Legend Of Eight Strike (Coffret)",
+   "pack_size": 25,
+   "last_eur": 18.9,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Liga Privada Belicoso",
+   "pack_size": 24,
+   "last_eur": 25.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Liga Privada No. 9 Flying Pig",
+   "pack_size": 12,
+   "last_eur": 26.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Liga Privada Robusto oscuro",
+   "pack_size": 24,
+   "last_eur": 24.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Liga Privada Selección de Mercado Coronets (Coffret)",
+   "pack_size": 10,
+   "last_eur": 3.6,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Liga Privada Toro oscuro",
+   "pack_size": 24,
+   "last_eur": 26.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Corona  (Coffret bois)",
+   "pack_size": 10,
+   "last_eur": 13.2,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Corona  (Coffret bois)",
+   "pack_size": 25,
+   "last_eur": 13.2,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Petite Corona  (Coffret bois)",
+   "pack_size": 10,
+   "last_eur": 12.7,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Petite Corona  (Coffret bois)",
+   "pack_size": 25,
+   "last_eur": 12.7,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Robusto  (Coffret bois)",
+   "pack_size": 10,
+   "last_eur": 13.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Robusto  (Coffret bois)",
+   "pack_size": 25,
+   "last_eur": 13.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Toro  (Coffret bois)",
+   "pack_size": 10,
+   "last_eur": 13.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Toro  (Coffret bois)",
+   "pack_size": 25,
+   "last_eur": 13.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Wide Churchill (Coffret Bois)",
+   "pack_size": 10,
+   "last_eur": 14.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Lopar Wide Churchill (Coffret bois)",
+   "pack_size": 25,
+   "last_eur": 14.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo 1968 Edition Limitée Gigante",
+   "pack_size": 20,
+   "last_eur": 14.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado black Gigante",
+   "pack_size": 10,
+   "last_eur": 13.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado black Robusto",
+   "pack_size": 10,
+   "last_eur": 11.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado Brazilian Shade",
+   "pack_size": 10,
+   "last_eur": 12.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado Edition Limitée 2022 Robusto",
+   "pack_size": 10,
+   "last_eur": 13.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado Jamao Toro",
+   "pack_size": 20,
+   "last_eur": 12.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado petit Piramide",
+   "pack_size": 20,
+   "last_eur": 11.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado Robusto",
+   "pack_size": 10,
+   "last_eur": 11.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado Tercio Aged Toro Edition Limitée",
+   "pack_size": 10,
+   "last_eur": 15.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Inspirado year of the Dragon Rothschild Masivo",
+   "pack_size": 10,
+   "last_eur": 23.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Macanudo Year of the Rabbit Toro",
+   "pack_size": 10,
+   "last_eur": 11.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "MAZO DE FUEGO MERCHANT TORO",
+   "pack_size": null,
+   "last_eur": 17.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "MERCHANT GORGO",
+   "pack_size": 20,
+   "last_eur": 16.5,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Montecristo Fragata (T.R.)",
+   "pack_size": 20,
+   "last_eur": 15.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Montecristo n°3 (5 étuis de 3)",
+   "pack_size": 3,
+   "last_eur": 21.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Montecristo Petit n°2 (5 étuis de 3)",
+   "pack_size": 3,
+   "last_eur": 21.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Montecristo Supremos Edition Limitée 2019",
+   "pack_size": 25,
+   "last_eur": 40.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "MONTEGO Oro Reserva Toro",
+   "pack_size": 10,
+   "last_eur": 15.4,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "MONTEGO Prestigio Toro",
+   "pack_size": 10,
+   "last_eur": 13.9,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "MONTEGO Sereno Toro",
+   "pack_size": 10,
+   "last_eur": 12.9,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "New World Dorado Gordito, (coffret)",
+   "pack_size": 10,
+   "last_eur": 20.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "New World Dorado Robusto, (coffret)",
+   "pack_size": 10,
+   "last_eur": 20.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Nica Rustica El Brujito",
+   "pack_size": 25,
+   "last_eur": 14.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Oliva Serie O Corona 6x46, (Coffret)",
+   "pack_size": 20,
+   "last_eur": 9.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Oliva Série O Corona",
+   "pack_size": 20,
+   "last_eur": 9.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Oscar Valladares Leaf Connecticut Toro",
+   "pack_size": 10,
+   "last_eur": 22.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Oscar Valladares Leaf Corojo Toro",
+   "pack_size": 10,
+   "last_eur": 22.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Oscar Valladares Leaf Maduro Toro",
+   "pack_size": 10,
+   "last_eur": 22.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Oscar Valladares Leaf Sumatra Toro",
+   "pack_size": 10,
+   "last_eur": 22.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Padilla Barcelona 556 (Coffret)",
+   "pack_size": 20,
+   "last_eur": 10.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Padilla Barcelona 652 (Coffret)",
+   "pack_size": 20,
+   "last_eur": 11.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Padilla Barcelona 660 (Coffret)",
+   "pack_size": 20,
+   "last_eur": 12.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Pasencia YT",
+   "pack_size": 8,
+   "last_eur": 2.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Patoro  Vintage Robusto",
+   "pack_size": 25,
+   "last_eur": 33.0,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Patoro VA Extra Belicoso",
+   "pack_size": 10,
+   "last_eur": 45.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Plasencia Reserva Original Botte SC",
+   "pack_size": 10,
+   "last_eur": 4.7,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Plasencia Reserva Original Short Corona",
+   "pack_size": 10,
+   "last_eur": 15.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Plasencia Y- R",
+   "pack_size": 10,
+   "last_eur": 5.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Plasencia Year of the Rabbit",
+   "pack_size": 10,
+   "last_eur": 56.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Plasencia Year of the Tiger",
+   "pack_size": 8,
+   "last_eur": 43.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Quesada 50th Anniversary Toro Prensado (coffret)",
+   "pack_size": 10,
+   "last_eur": 18.5,
+   "last_seen": "2026-09-01"
+  },
+  {
+   "label": "Rafael Gonzalez Perlas (5 étuis de 5)",
+   "pack_size": 5,
+   "last_eur": 6.9,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Rocky Patel ALR 2eme Edition Robusto (Coffret), en. 20 cigares",
+   "pack_size": null,
+   "last_eur": 19.9,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Rocky Patel Vintage Series Junior (coffret)",
+   "pack_size": 50,
+   "last_eur": 6.5,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Rocky Patel Vintage Series Robusto (coffret)",
+   "pack_size": 20,
+   "last_eur": 12.5,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Rocky Patel Vintage Series Sixty (coffret)",
+   "pack_size": 20,
+   "last_eur": 15.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Rocky Patel Vintage Series Torpedo (coffret)",
+   "pack_size": 20,
+   "last_eur": 13.5,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Romeo y Julieta Petit Julietas (5 étuis de 5)",
+   "pack_size": 5,
+   "last_eur": 8.1,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Schizo Hercule 70 x 7",
+   "pack_size": 20,
+   "last_eur": 8.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Schizo Robusto 50 x 5",
+   "pack_size": 20,
+   "last_eur": 5.1,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Selection Bundle 10",
+   "pack_size": 10,
+   "last_eur": 7.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Selection Bundle 11",
+   "pack_size": 10,
+   "last_eur": 5.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Silencio Serie M Prominente",
+   "pack_size": 10,
+   "last_eur": 35.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Skull 77 El Diablo (Coffret bois)",
+   "pack_size": 15,
+   "last_eur": 19.4,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Skull 77 El Niño (Coffret bois)",
+   "pack_size": 15,
+   "last_eur": 13.4,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Skull 77 El Unico (Coffret bois)",
+   "pack_size": 15,
+   "last_eur": 16.4,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Skull 77 El Volcano (Coffret bois)",
+   "pack_size": 15,
+   "last_eur": 17.4,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Smoking Jacket Robusto Imperial (Boite)",
+   "pack_size": 20,
+   "last_eur": 15.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Smoking Jacket Toro Magno 50 x 7",
+   "pack_size": 20,
+   "last_eur": 16.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Sélection 1 Bundle FR",
+   "pack_size": 10,
+   "last_eur": 7.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "The Judge Gran Robusto (Coffret)",
+   "pack_size": 23,
+   "last_eur": 24.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "The Only One Collection Mca Edition (Coffret)",
+   "pack_size": 10,
+   "last_eur": 41.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "The Only One Collection Military Edition (Coffret)",
+   "pack_size": 10,
+   "last_eur": 39.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "The Only One Collection Yaniv Edery (Coffret)",
+   "pack_size": 10,
+   "last_eur": 47.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "The Only One, Coillection first Edition (Coffret)",
+   "pack_size": 10,
+   "last_eur": 43.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "The Only One, Collection Deep Blue Edition (Coffret)",
+   "pack_size": 10,
+   "last_eur": 45.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Timón Short Corona",
+   "pack_size": 5,
+   "last_eur": 3.6,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Trinidad Corsel (año chino)",
+   "pack_size": 18,
+   "last_eur": 88.5,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Trinidad Robustos Extra coleccion TR",
+   "pack_size": 14,
+   "last_eur": 100.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Undercrown 10 Coronets (Coffret)",
+   "pack_size": 10,
+   "last_eur": 3.0,
+   "last_seen": "2026-06-01"
+  },
+  {
+   "label": "Undercrown 10 Flying Pig",
+   "pack_size": 12,
+   "last_eur": 24.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Undercrown 10 Robusto",
+   "pack_size": 20,
+   "last_eur": 20.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Undercrown 10 Toro",
+   "pack_size": 20,
+   "last_eur": 21.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Undercrown Belicoso",
+   "pack_size": 25,
+   "last_eur": 16.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Undercrown Gran Toro",
+   "pack_size": 25,
+   "last_eur": 15.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Undercrown Robusto",
+   "pack_size": 25,
+   "last_eur": 14.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Valentino Siesto Anniversary Doble Capa Pico Pato 54x6",
+   "pack_size": 24,
+   "last_eur": 40.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Villa Zamorano Botte R1  Danli",
+   "pack_size": 25,
+   "last_eur": 2.0,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Villa Zamorano Botte TO1  Danli",
+   "pack_size": 25,
+   "last_eur": 2.1,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Villa Zamorano Robusto Danli",
+   "pack_size": 25,
+   "last_eur": 8.5,
+   "last_seen": "2026-01-01"
+  },
+  {
+   "label": "Villa Zamorano Toro Danli",
+   "pack_size": 25,
+   "last_eur": 9.6,
+   "last_seen": "2026-01-01"
+  }
+ ],
+ "source": "Douane française — nomenclature mensuelle des prix des tabacs"
+}

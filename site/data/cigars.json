@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-10-06T11:49:57+00:00",
+  "built_at": "2026-10-06T12:44:33+00:00",
   "version": "0.1.0",
   "mode": "cache",
   "sources": {
@@ -10,7 +10,8 @@
    "nasa_power": "CACHE",
    "faostat": "CACHE",
    "openstreetmap": "ERRO",
-   "douane_fr": "CACHE"
+   "douane_fr": "CACHE",
+   "douane_fr_historico": "CACHE"
   },
   "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
   "counts": {
@@ -791,6 +792,16 @@
     "min": 110.0,
     "max": 117.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      107.0
+     ],
+     [
+      "2026-06-01",
+      110.0
+     ]
+    ],
     "refs": [
      {
       "label": "Cohiba Siglo VI",
@@ -867,6 +878,16 @@
     "min": 29.8,
     "max": 29.8,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      28.5
+     ],
+     [
+      "2026-06-01",
+      29.8
+     ]
+    ],
     "refs": [
      {
       "label": "Montecristo n°2 (5 étuis de 3)",
@@ -935,6 +956,16 @@
     "min": 23.8,
     "max": 27.7,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      22.7
+     ],
+     [
+      "2026-06-01",
+      23.8
+     ]
+    ],
     "refs": [
      {
       "label": "Partagas Serie D n°4",
@@ -1007,6 +1038,16 @@
     "min": 34.5,
     "max": 37.5,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      33.0
+     ],
+     [
+      "2026-06-01",
+      34.5
+     ]
+    ],
     "refs": [
      {
       "label": "Romeo y Julieta Churchills",
@@ -1078,6 +1119,16 @@
     "min": 27.2,
     "max": 275.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      26.0
+     ],
+     [
+      "2026-06-01",
+      27.2
+     ]
+    ],
     "refs": [
      {
       "label": "H.Upmann Magnum 50",
@@ -1205,6 +1256,7 @@
     "min": 46.0,
     "max": 46.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": null,
     "refs": [
      {
       "label": "Padron 1926, N°9 (Coffret)",
@@ -1265,6 +1317,7 @@
     "min": 16.0,
     "max": 16.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": null,
     "refs": [
      {
       "label": "Arturo Fuente Hemingway short-story",
@@ -1339,6 +1392,16 @@
     "min": 41.0,
     "max": 140.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      39.0
+     ],
+     [
+      "2026-01-01",
+      41.0
+     ]
+    ],
     "refs": [
      {
       "label": "Arturo Fuente Opus X Perfection #4",
@@ -1447,6 +1510,7 @@
     "min": 18.0,
     "max": 20.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": null,
     "refs": [
      {
       "label": "Davidoff Signature 2000",
@@ -1639,6 +1703,7 @@
     "min": 20.0,
     "max": 26.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": null,
     "refs": [
      {
       "label": "Oliva Serie V Melanio Maduro Robusto",
@@ -1793,6 +1858,7 @@
     "min": 22.0,
     "max": 24.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": null,
     "refs": [
      {
       "label": "Liga Privada N°9  Robusto (Coffret)",
@@ -2011,6 +2077,7 @@
     "min": 14.0,
     "max": 15.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": null,
     "refs": [
      {
       "label": "Camacho Connecticut Robusto (coffret)",
@@ -2169,6 +2236,16 @@
     "min": 82.0,
     "max": 90.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      80.0
+     ],
+     [
+      "2026-06-01",
+      82.0
+     ]
+    ],
     "refs": [
      {
       "label": "Cohiba Robustos (5 étuis de 3)",
@@ -2237,6 +2314,16 @@
     "min": 19.2,
     "max": 22.9,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      18.3
+     ],
+     [
+      "2026-06-01",
+      19.2
+     ]
+    ],
     "refs": [
      {
       "label": "Bolivar Royal Coronas",
@@ -2297,6 +2384,16 @@
     "min": 22.0,
     "max": 25.1,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      21.0
+     ],
+     [
+      "2026-06-01",
+      22.0
+     ]
+    ],
     "refs": [
      {
       "label": "Hoyo de Monterrey Epicure n°2 (5 étuis de 3)",
@@ -2369,6 +2466,16 @@
     "min": 68.0,
     "max": 68.0,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      67.0
+     ],
+     [
+      "2026-06-01",
+      68.0
+     ]
+    ],
     "refs": [
      {
       "label": "Trinidad Fundadores",
@@ -2472,6 +2579,16 @@
     "min": 18.4,
     "max": 18.4,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      17.6
+     ],
+     [
+      "2026-06-01",
+      18.4
+     ]
+    ],
     "refs": [
      {
       "label": "Diplomaticos n°2",
@@ -2526,6 +2643,16 @@
     "min": 20.7,
     "max": 20.7,
     "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "hist": [
+     [
+      "2025-01-14",
+      19.8
+     ],
+     [
+      "2026-06-01",
+      20.7
+     ]
+    ],
     "refs": [
      {
       "label": "Sancho Panza Belicosos",

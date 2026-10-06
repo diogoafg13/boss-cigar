@@ -236,3 +236,42 @@ def test_douane_link_seed_is_anchored():
     links = douane_fr.link_seed(items, seed)
     assert [i["label"] for i in links["mc2"]] == ["Montecristo n°2"]   # não apanha "Petit n°2"
     assert links["cr"][0]["label"].startswith("Cohiba Robustos")       # plural tolerado
+
+
+# --- Histórico de preços e edições especiais --------------------------------
+
+def test_edition_date():
+    assert douane_fr.edition_date("Arrêté du 29 septembre 2026, applicable au 1er novembre 2026") == "2026-11-01"
+    assert douane_fr.edition_date("Arrêté du 9 mai 2025") == "2025-05-09"
+    assert douane_fr.edition_date("sem data") is None
+
+
+def test_history_and_removed():
+    items = _fr_items()["items"]
+    old = douane_fr.snapshot({"edition": "Arrêté du 1 janvier 2026", "items": [
+        {**i, "unit_eur": (i["unit_eur"] or 0) - 2} for i in items] + [
+        {"label": "Velho Robusto", "pack_size": 10, "unit_eur": 9.0, "cigarillo": False}]})
+    cur = douane_fr.snapshot({"edition": "Arrêté du 1 octobre 2026, applicable au 1er novembre 2026", "items": items})
+    snaps = [old, cur]
+    h = douane_fr.history_for(items, snaps)
+    k = douane_fr.price_key(next(i for i in items if i["label"] == "Montecristo n°2"))
+    assert h[k] == [["2026-01-01", 27.8], ["2026-11-01", 29.8]]
+    removed = douane_fr.removed_since(snaps)
+    assert [r["label"] for r in removed] == ["Velho Robusto"]
+
+
+def test_special_editions():
+    assert douane_fr.special_kind("Quai D'Orsay Clemenceau Edition Régionale 2020") == "Edição Regional"
+    assert douane_fr.special_kind("Cohiba 55 Aniversario Edition Limitée 2021") == "Edição Limitada"
+    assert douane_fr.special_kind("Davidoff Year of the Dragon (coffret)") == "Ano zodiacal chinês"
+    assert douane_fr.special_kind("Montecristo n°2") is None
+
+
+def test_price_summary_excludes_anomalies():
+    from bosscigar.build import summarize_prices
+    items = [
+        {"label": "A Robusto", "brand": "A", "hist": [["2025-01-01", 10.0], ["2026-01-01", 11.0]]},
+        {"label": "B Toro", "brand": "B", "hist": [["2025-01-01", 0.6], ["2026-01-01", 12.0]]},  # erro de origem
+    ]
+    s = summarize_prices(items, [{"date": "2025-01-01", "edition": "x", "prices": {}}], [])
+    assert s["n_changed"] == 1 and s["n_anomalies"] == 1 and s["up"][0]["pct"] == 10.0

@@ -133,10 +133,28 @@ def _enrich(it: dict) -> dict:
         if s and 30 <= int(s.group(1)) <= 70:
             it["length_in"], it["ring"] = float(s.group(2).replace(",", ".")), int(s.group(1))
     it["sampler"] = bool(SAMPLER.search(name))
+    it["special"] = special_kind(name)
     # cigarilha: pelo nome ou preço unitário muito baixo (heurística assinalada no site)
     it["cigarillo"] = bool(CIGARILLO.search(name)) or (it["unit_eur"] is not None and it["unit_eur"] < 1.5)
     it["label"] = re.sub(r",?\s*(en|de)\s+(bo[iî]te\s+de\s+|coffret\s+de\s+)?\d+\s*(cigares?|unit[ée]s?)?\s*$", "", name, flags=re.I).strip(" ,")
     return it
+
+
+SPECIAL = [
+    ("Edição Limitada", re.compile(r"edici[oó]n\s+limitada|[ée]dition\s+limit[ée]e|limited\s+edition|\bL\.?E\.?\b|\bLE\s*20\d\d|\b20\d\d\s*LE\b", re.I)),
+    ("Edição Regional", re.compile(r"edici[oó]n\s+regional|[ée]dition\s+r[ée]gionale|regional\s+edition|\bE\.?R\.?\b", re.I)),
+    ("Ano zodiacal chinês", re.compile(r"a[ñn]o\s+del?\s+\w+|year\s+of\s+the|ann[ée]e\s+du", re.I)),
+    ("Reserva / Gran Reserva", re.compile(r"\bgran\s+reserva\b|\breserva\b|\bcosecha\s+20\d\d", re.I)),
+    ("Aniversário / comemorativa", re.compile(r"aniversario|anniversary|anniversaire|\b\d{2,3}\s*(?:th|[ºo°]|e|ème)?\s*ani", re.I)),
+    ("Humidor / caixa de coleção", re.compile(r"\bhumidor\b|\bcoffre\b|\bcollection\b|\bcabinet\b", re.I)),
+]
+
+
+def special_kind(label: str) -> str | None:
+    for kind, rx in SPECIAL:
+        if rx.search(label):
+            return kind
+    return None
 
 
 def read_ods(content: bytes) -> list[list]:
@@ -145,14 +163,114 @@ def read_ods(content: bytes) -> list[list]:
     return df.values.tolist()
 
 
+def download(url: str, retries: int = 5) -> bytes:
+    """O servidor da douane devolve 403 intermitentes (anti-bot): tenta várias vezes com pausa crescente."""
+    import time
+    last = None
+    for attempt in range(retries):
+        try:
+            r = requests.get(url, timeout=90, headers={"User-Agent": USER_AGENT})
+            if r.status_code == 200 and r.content[:2] == b"PK":  # ODS = zip
+                return r.content
+            last = SourceError(f"HTTP {r.status_code} ({len(r.content)} bytes)")
+        except requests.RequestException as exc:
+            last = exc
+        time.sleep(min(5 * (attempt + 1), 30))
+    raise SourceError(f"download falhou: {last}")
+
+
 def fetch() -> dict:
     url = discover_url() or configured_url()
     if not url:
         raise SourceError("sem URL do ODS (descoberta falhou e data/seed/sources.yml não tem douane_fr_ods)")
-    r = requests.get(url, timeout=90, headers={"User-Agent": USER_AGENT})
-    r.raise_for_status()
-    out = parse_table(read_ods(r.content))
+    out = parse_table(read_ods(download(url)))
     out["url"] = url
+    return out
+
+
+MONTHS_FR = {"janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6, "juillet": 7,
+             "août": 8, "aout": 8, "septembre": 9, "octobre": 10, "novembre": 11, "décembre": 12, "decembre": 12}
+
+
+def edition_date(edition: str) -> str | None:
+    """'Arrêté du 29 septembre 2026, applicable au 1er novembre 2026' -> '2026-11-01'.
+    Sem 'applicable au', usa a data do arrêté."""
+    m = re.search(r"applicable\s+au\s+(\d+)(?:er)?\s+([a-zéû]+)\s+(\d{4})", edition, re.I) or \
+        re.search(r"du\s+(\d+)(?:er)?\s+([a-zéû]+)\s+(\d{4})", edition, re.I)
+    if not m or m.group(2).lower() not in MONTHS_FR:
+        return None
+    return f"{int(m.group(3)):04d}-{MONTHS_FR[m.group(2).lower()]:02d}-{int(m.group(1)):02d}"
+
+
+def price_key(it: dict) -> str:
+    return f"{squash(it['label'])}|{it.get('pack_size') or ''}"
+
+
+def snapshot(parsed: dict) -> dict:
+    """Versão compacta de uma edição para o histórico: {data, edição, preços por chave}."""
+    items = [i for i in parsed["items"] if i.get("unit_eur") is not None]
+    return {"date": edition_date(parsed.get("edition", "")), "edition": parsed.get("edition"),
+            "prices": {price_key(i): i["unit_eur"] for i in items},
+            "labels": {price_key(i): [i["label"], i.get("pack_size"), bool(i.get("cigarillo"))] for i in items}}
+
+
+def archive_urls() -> list[str]:
+    p = SEED_DIR / "sources.yml"
+    if not p.exists():
+        return []
+    return list((yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("douane_fr_archive") or [])
+
+
+def price_history(current: dict) -> tuple[list[dict], str]:
+    """Snapshots ordenados por data (arquivo + edição atual). Cada URL do arquivo é descarregado uma vez."""
+    import hashlib
+    snaps, states = [], []
+    for url in archive_urls():
+        name = "douane_fr_snap2_" + hashlib.sha1(url.encode()).hexdigest()[:10]
+        data, state = fetch_with_cache(name, lambda url=url: snapshot(parse_table(read_ods(download(url)))))
+        states.append(state.split(" ")[0].rstrip(":"))
+        if data and data.get("date"):
+            snaps.append(data)
+    if current.get("items"):
+        snaps.append(snapshot(current))
+    by_date = {}
+    for s in snaps:  # várias versões no mesmo mês (ex.: '_0'): fica a última lida
+        by_date[s["date"]] = s
+    status = "ok" if all(s == "ok" for s in states) else ("ERRO" if states and all(s == "ERRO" for s in states) else
+                                                         ("PARCIAL" if "ERRO" in states else "CACHE"))
+    return [by_date[d] for d in sorted(by_date)], status
+
+
+def removed_since(snaps: list[dict]) -> list[dict]:
+    """Charutos que estiveram à venda nos 12 meses anteriores à edição atual e já não estão."""
+    if len(snaps) < 2:
+        return []
+    cur = snaps[-1]
+    cutoff = f"{int(cur['date'][:4]) - 1:04d}{cur['date'][4:]}"
+    out, seen = [], set(cur["prices"])
+    for s in reversed(snaps[:-1]):
+        if s["date"] < cutoff:
+            break
+        for k, (label, pack, cigarillo) in s.get("labels", {}).items():
+            if k not in seen and not cigarillo:
+                seen.add(k)
+                out.append({"label": label, "pack_size": pack, "last_eur": s["prices"].get(k), "last_seen": s["date"]})
+    return sorted(out, key=lambda x: x["label"].lower())
+
+
+def history_for(items: list[dict], snaps: list[dict]) -> dict[str, list]:
+    """Para cada referência atual: [[data, preço], ...] só quando o preço muda (compacto)."""
+    out = {}
+    for it in items:
+        k = price_key(it)
+        series, last = [], None
+        for s in snaps:
+            v = s["prices"].get(k)
+            if v is not None and v != last:
+                series.append([s["date"], v])
+                last = v
+        if series:
+            out[k] = series
     return out
 
 
@@ -261,4 +379,7 @@ def link_seed(items: list[dict], cigars: list) -> dict[str, list[dict]]:
 
 def french_catalog() -> tuple[dict, str]:
     data, state = fetch_with_cache("douane_fr_cigars", fetch)
-    return data or {"items": []}, state.split(" ")[0].rstrip(":")
+    data = data or {"items": []}
+    for it in data["items"]:  # campos derivados recalculados: a cache pode ser de uma versão anterior do parser
+        _enrich(it)
+    return data, state.split(" ")[0].rstrip(":")

@@ -3,3 +3,14 @@
 # douane_fr como CACHE durante muito tempo, atualizar este URL com o .ods mais recente de:
 # https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures
 douane_fr_ods: "https://www.douane.gouv.fr/sites/default/files/2026-10/05/Maquette%20JORF%201er%20novembre%202026_0.ods"
+
+# Edições anteriores (para o histórico de preços). Cada edição é descarregada uma vez e fica em cache.
+# Para acrescentar meses: copiar o link .ods da página acima.
+douane_fr_archive:
+  - "https://www.douane.gouv.fr/sites/default/files/2025-01/15/Maquette%20JORF%20F%C3%A9vrier%202025.ods"
+  - "https://www.douane.gouv.fr/sites/default/files/2025-02/12/Maquette%20JORF%20Mars%202025_0.ods"
+  - "https://www.douane.gouv.fr/sites/default/files/2025-03/05/Maquette%20JORF%20Mars%202025.ods"
+  - "https://www.douane.gouv.fr/sites/default/files/2025-05/12/Maquette%20JORF%20Juin%202025.ods"
+  - "https://www.douane.gouv.fr/sites/default/files/2025-12/12/Maquette%20JORF%201er%20janvier%202026_0.ods"
+  - "https://www.douane.gouv.fr/sites/default/files/2026-05/07/Maquette%20JORF%201er%20juin%202026.ods"
+  - "https://www.douane.gouv.fr/sites/default/files/2026-08/12/Maquette%20JORF%201er%20septembre%202026.ods"
