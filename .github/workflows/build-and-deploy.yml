@@ -36,6 +36,15 @@ jobs:
       - name: Validar seed
         run: python -m bosscigar validate
 
+      - name: Recuperar dados publicados como cache (fontes sem cache no repositório)
+        run: |
+          mkdir -p data/cache
+          if [ ! -s data/cache/osm_shops_pt.json ]; then
+            curl -fsS -m 30 "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/data/shops.json" -o /tmp/shops.json \
+              && python -c "import json; d=json.load(open('/tmp/shops.json')).get('shops') or []; d and json.dump(d, open('data/cache/osm_shops_pt.json','w'), ensure_ascii=False)" \
+              || echo "sem versão publicada das tabacarias"
+          fi
+
       - name: Construir dados (fontes abertas, com fallback para cache)
         run: python -m bosscigar build
 
