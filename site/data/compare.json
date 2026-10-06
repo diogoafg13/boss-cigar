@@ -1269,7 +1269,7 @@
    "label": "Diplomaticos n°2",
    "fr_label": "Diplomaticos n°2",
    "es_label": "Diplomáticos Nº 2",
-   "brand": "Diplomáticos",
+   "brand": "Diplomaticos",
    "fr": 18.4,
    "es": 20.6,
    "diff_pct": 12.0
@@ -2835,7 +2835,7 @@
    "label": "San Cristobal de la Habana El Principe",
    "fr_label": "San Cristobal de la Habana El Principe",
    "es_label": "San Cristobal de la Habana El Principe",
-   "brand": "San Cristobal de la Habana",
+   "brand": "San Cristóbal de la Habana",
    "fr": 11.1,
    "es": 7.25,
    "diff_pct": -34.7
@@ -2844,7 +2844,7 @@
    "label": "San Cristobal de la Habana La Fuerza",
    "fr_label": "San Cristobal de la Habana La Fuerza",
    "es_label": "San Cristobal de la Habana La Fuerza",
-   "brand": "San Cristobal de la Habana",
+   "brand": "San Cristóbal de la Habana",
    "fr": 22.0,
    "es": 12.3,
    "diff_pct": -44.1

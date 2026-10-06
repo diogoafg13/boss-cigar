@@ -44,17 +44,6 @@
   "website": null
  },
  {
-  "city": "Cabanas de Tavira",
-  "kind": "tobacco",
-  "lat": 37.135294,
-  "lng": -7.59967,
-  "name": "Tabacaria Mimos",
-  "opening_hours": null,
-  "osm": "https://www.openstreetmap.org/node/11407322368",
-  "street": "Avenida da Ria Formosa",
-  "website": null
- },
- {
   "city": "Caldas da Rainha",
   "kind": "tobacco",
   "lat": 39.406306,
@@ -297,15 +286,15 @@
   "website": null
  },
  {
-  "city": "Montijo",
+  "city": "Moreira",
   "kind": "tobacco",
-  "lat": 38.707254,
-  "lng": -8.97277,
-  "name": "Tabacaria da Sorte",
+  "lat": 41.247479,
+  "lng": -8.663685,
+  "name": "Tabacaria Pedras Rubras",
   "opening_hours": null,
-  "osm": "https://www.openstreetmap.org/node/5068850823",
-  "street": "Avenida João de Deus",
-  "website": null
+  "osm": "https://www.openstreetmap.org/node/14174988006",
+  "street": "Rua Doutor Farinhote 1279",
+  "website": "https://pedrasrubrascity.com/negocios/tabacaria-pedras-rubras.html"
  },
  {
   "city": "Ponta Delgada",
@@ -1542,8 +1531,8 @@
  {
   "city": null,
   "kind": "tobacco",
-  "lat": 40.65662,
-  "lng": -7.911992,
+  "lat": 40.656615,
+  "lng": -7.911988,
   "name": "Tabak",
   "opening_hours": null,
   "osm": "https://www.openstreetmap.org/node/5885519197",
