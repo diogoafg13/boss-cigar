@@ -72,13 +72,9 @@ Tudo o que é pessoal fica no browser (localStorage) e pode ser exportado em JSO
 - **Livro**: "Do Zero ao Expert" em PDF (`site/docs/`), roteiro de aprendizagem com progresso, vinhos portugueses (Porto, Madeira, Moscatel) e mapa de sabores por origem. É conteúdo editorial do projeto, não fonte de verificação.
 - **Lojas**: filtro de especialistas em charutos no mapa (identificados pelo nome no OpenStreetMap).
 
-## Notificações push (opcional)
+## Receber novidades (RSS)
 
-1. Instala a app [ntfy](https://ntfy.sh) no telemóvel e subscreve um tópico com um nome difícil de adivinhar (ex.: `boss-cigar-<algo-aleatório>`).
-2. No GitHub: Settings → Secrets and variables → Actions → New repository secret: `NTFY_TOPIC` = esse nome.
-3. Edita `data/seed/watchlist.yml` com as referências que queres destacar.
-
-A cada execução do workflow, cada entrada nova do feed (nova edição francesa ou alteração em Espanha) gera uma notificação. As referências da watchlist aparecem em destaque.
+Subscreve `https://diogoafg13.github.io/boss-cigar/feed.xml` em qualquer leitor de RSS/Atom (Feedly, Inoreader, NetNewsWire, Reeder…). Cada nova edição francesa e cada alteração em Espanha aparece como uma entrada, com subidas, descidas, novidades e retiradas.
 
 ## Correr localmente
 

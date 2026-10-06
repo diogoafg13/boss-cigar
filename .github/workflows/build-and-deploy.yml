@@ -48,13 +48,6 @@ jobs:
       - name: Construir dados (fontes abertas, com fallback para cache)
         run: python -m bosscigar build
 
-      - name: Notificações push (opcional, secret NTFY_TOPIC)
-        if: github.ref == 'refs/heads/main'
-        continue-on-error: true
-        env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python -m bosscigar.notify
-
       - name: Guardar cache e dados limpos no repositório
         if: github.ref == 'refs/heads/main'
         continue-on-error: true   # sem permissão de escrita, o site publica na mesma
