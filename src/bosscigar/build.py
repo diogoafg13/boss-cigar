@@ -13,6 +13,7 @@ from .quality import build_report
 from .seed import load_seed
 from .sources.douane_fr import (french_catalog, history_for, link_seed, match_brands, price_history,
                                  price_key, removed_since)
+from .sources.cmt_es import compare_fr_es, spanish_catalog
 from .sources.faostat import tobacco_production
 from .sources.nasapower import climate_for_regions
 from .sources.osm import shops_portugal
@@ -91,9 +92,16 @@ def build(verbose: bool = True) -> dict:
     wp_brands = wp.get("brands", [])
     log(f"wikipedia: {wp_status} ({len(wp_brands)} marcas)")
 
+    es, es_status = spanish_catalog()
+    es_items = es.get("items", [])
+    es_brands = sorted({i["brand"] for i in es_items if i.get("brand")})
+    es_links = link_seed(es_items, cigars)
+    log(f"CMT Espanha: {es_status} ({len(es_items)} referências, {len(es_brands)} marcas, {len(es_links)}/{len(cigars)} fichas ligadas)")
+
     fr, fr_status = french_catalog()
     fr_items = fr.get("items", [])
-    match_brands(fr_items, [b["brand"] for b in wp_brands] + [c.brand for c in cigars])
+    # as marcas oficiais espanholas ajudam a reconhecer marcas no catálogo francês
+    match_brands(fr_items, [b["brand"] for b in wp_brands] + [c.brand for c in cigars] + es_brands)
     fr_links = link_seed(fr_items, cigars)
     log(f"douane FR: {fr_status} ({len(fr_items)} referências, {len(fr_links)}/{len(cigars)} fichas ligadas) {fr.get('edition', '')}")
 
@@ -104,6 +112,12 @@ def build(verbose: bool = True) -> dict:
         it["hist"] = h if h and len(h) > 1 else None
         it["first_seen"] = h[0][0] if h else None
     removed = removed_since(snaps)
+    es_hist_snaps = [{"date": s["date"], "prices": s["prices"]} for s in es.get("snapshots", [])]
+    es_hist = history_for(es_items, es_hist_snaps) if es_hist_snaps else {}
+    for it in es_items:
+        h = es_hist.get(price_key(it))
+        it["hist"] = h if h and len(h) > 1 else None
+    compare = compare_fr_es(fr_items, es_items)
     prices_summary = summarize_prices(fr_items, snaps, removed)
     log(f"histórico de preços: {hist_status} ({len(snaps)} edições, {prices_summary['n_changed']} referências com mudança, "
         f"{len(removed)} retiradas no último ano)")
@@ -140,6 +154,12 @@ def build(verbose: bool = True) -> dict:
                             "edition": fr.get("edition"),
                             "hist": next((r["hist"] for r in refs if r.get("hist")), None),
                             "refs": [{k: r.get(k) for k in ("label", "pack_size", "unit_eur", "pack_eur")} for r in refs[:8]]}
+        es_refs = es_links.get(c.id)
+        if es_refs:
+            p_es = [r["unit_eur"] for r in es_refs if r["unit_eur"]]
+            d["priceES"] = {"min": min(p_es) if p_es else None, "max": max(p_es) if p_es else None,
+                            "fetched": es.get("fetched"),
+                            "refs": [{k: r.get(k) for k in ("label", "pack_size", "unit_eur")} for r in es_refs[:6]]}
         w = wp_index.get(norm(c.brand))
         if w:
             d["wikipedia"] = {"manufacturer": w["manufacturer"], "notes": w["notes"], "countries": w["countries"]}
@@ -171,11 +191,13 @@ def build(verbose: bool = True) -> dict:
             "openstreetmap": osm_status,
             "douane_fr": fr_status,
             "douane_fr_historico": hist_status,
+            "cmt_espanha": es_status,
         },
         "douane_fr_edition": fr.get("edition"),
         "counts": {"cigars": len(cigars), "regions": len(regions), "brands_catalog": len(wp_brands),
                    "shops": len(shops),
-                   "fr_references": len(fr_items)},
+                   "fr_references": len(fr_items), "es_references": len(es_items)},
+        "cmt_es_fetched": es.get("fetched"),
         "quality": {k: report[k] for k in ("verified_share", "cigars_with_verified_fields")},
         "licenses": [
             {"source": "Wikipédia — List of cigar brands", "license": "CC BY-SA 4.0", "url": PAGE_URL},
@@ -185,6 +207,9 @@ def build(verbose: bool = True) -> dict:
             {"source": "OpenStreetMap", "license": "ODbL", "url": "https://www.openstreetmap.org/copyright"},
             {"source": "Douane française — nomenclature des prix des tabacs", "license": "Informação pública reutilizável (CRPA art. L321-1), com menção da fonte",
              "url": "https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures"},
+            {"source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — preços de labores",
+             "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
+             "url": "https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx"},
         ],
     }
 
@@ -199,6 +224,19 @@ def build(verbose: bool = True) -> dict:
         {"edition": fr.get("edition"), "url": fr.get("url"), "fields": keys,
          "rows": [[it.get(k) for k in keys] for it in fr_items]}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     write("prices.json", prices_summary)
+    from .feed import build_feed
+    from .sources.douane_fr import squash as _sq
+    es_labels = {f"{_sq(i['label'])}|{i.get('pack_size') or ''}": i["label"] for i in es_items}
+    (SITE_DATA_DIR.parent / "feed.xml").write_text(build_feed(snaps, es.get("snapshots", []), es_labels), encoding="utf-8")
+    es_keys = ("label", "brand", "vitola", "length_in", "ring", "pack_size", "unit_eur", "surcharge_eur",
+               "cigarillo", "sampler", "special", "hist")
+    (SITE_DATA_DIR / "es_catalog.json").write_text(json.dumps(
+        {"zone": es.get("zone"), "fetched": es.get("fetched"), "fields": es_keys,
+         "rows": [[it.get(k) for k in es_keys] for it in es_items]}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    import statistics
+    write("compare.json", {"fr_edition": fr.get("edition"), "es_fetched": es.get("fetched"), "n": len(compare),
+                           "median_diff_pct": round(statistics.median([r["diff_pct"] for r in compare]), 1) if compare else None,
+                           "es_cheaper": sum(1 for r in compare if r["diff_pct"] < 0), "rows": compare})
     write("home.json", {"place": HOME["name"], "climate": home_climate, "source": "NASA POWER"})
     write("shops.json", {"license": "ODbL — © OpenStreetMap contributors", "shops": shops})
     write("meta.json", meta)

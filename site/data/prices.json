@@ -209,7 +209,7 @@
   },
   {
    "label": "Plasencia Alma Fuerte G-S",
-   "brand": "Plasencia",
+   "brand": "Plasencia Alma Fuerte",
    "pack_size": 10,
    "from": 5.8,
    "to": 8.5,
@@ -335,7 +335,7 @@
   },
   {
    "label": "Plasencia Alma Fuerte R-R",
-   "brand": "Plasencia",
+   "brand": "Plasencia Alma Fuerte",
    "pack_size": 10,
    "from": 5.1,
    "to": 7.1,
@@ -595,17 +595,12 @@
    "median_pct": 32.9
   },
   {
-   "brand": "La Estrella",
-   "n": 5,
-   "median_pct": 30.4
-  },
-  {
    "brand": "Room",
    "n": 6,
    "median_pct": 29.2
   },
   {
-   "brand": "San Pedro",
+   "brand": "San Pedro de Macoris",
    "n": 15,
    "median_pct": 25.0
   },
@@ -616,7 +611,7 @@
   },
   {
    "brand": "Joya de Nicaragua",
-   "n": 9,
+   "n": 7,
    "median_pct": 23.3
   },
   {
@@ -628,6 +623,11 @@
    "brand": "Aroma",
    "n": 5,
    "median_pct": 11.8
+  },
+  {
+   "brand": "CAO",
+   "n": 16,
+   "median_pct": 10.8
   },
   {
    "brand": "Polmard",
@@ -650,11 +650,6 @@
    "median_pct": 9.0
   },
   {
-   "brand": "CAO",
-   "n": 21,
-   "median_pct": 8.3
-  },
-  {
    "brand": "Balmoral",
    "n": 19,
    "median_pct": 6.2
@@ -668,6 +663,11 @@
    "brand": "FFOX",
    "n": 9,
    "median_pct": 6.0
+  },
+  {
+   "brand": "Alec Bradley",
+   "n": 16,
+   "median_pct": 5.9
   },
   {
    "brand": "Silencio",
@@ -685,11 +685,6 @@
    "median_pct": 5.6
   },
   {
-   "brand": "Alec Bradley",
-   "n": 18,
-   "median_pct": 5.3
-  },
-  {
    "brand": "Romeo y Julieta",
    "n": 39,
    "median_pct": 5.3
@@ -700,7 +695,7 @@
    "median_pct": 5.2
   },
   {
-   "brand": "Jose",
+   "brand": "Jose L. Piedra",
    "n": 12,
    "median_pct": 5.1
   },
@@ -731,17 +726,17 @@
   },
   {
    "brand": "Hoyo de Monterrey",
-   "n": 28,
+   "n": 23,
    "median_pct": 4.8
   },
   {
-   "brand": "San Cristóbal de la Habana",
+   "brand": "San Cristobal de la Habana",
    "n": 5,
    "median_pct": 4.8
   },
   {
    "brand": "Eiroa",
-   "n": 11,
+   "n": 8,
    "median_pct": 4.8
   },
   {
@@ -752,6 +747,11 @@
   {
    "brand": "Partagás",
    "n": 42,
+   "median_pct": 4.7
+  },
+  {
+   "brand": "Hoyo de Monterrey Le",
+   "n": 5,
    "median_pct": 4.7
   },
   {
@@ -775,7 +775,7 @@
    "median_pct": 4.5
   },
   {
-   "brand": "Ramón Allones",
+   "brand": "Ramon Allones",
    "n": 5,
    "median_pct": 4.5
   },
@@ -790,6 +790,11 @@
    "median_pct": 4.3
   },
   {
+   "brand": "Plasencia",
+   "n": 18,
+   "median_pct": 4.2
+  },
+  {
    "brand": "Los Dueños",
    "n": 5,
    "median_pct": 4.2
@@ -800,18 +805,13 @@
    "median_pct": 4.1
   },
   {
-   "brand": "SAGA",
+   "brand": "Saga",
    "n": 7,
    "median_pct": 4.1
   },
   {
    "brand": "Arturo Fuente",
    "n": 70,
-   "median_pct": 4.0
-  },
-  {
-   "brand": "Plasencia",
-   "n": 24,
    "median_pct": 4.0
   },
   {
@@ -823,6 +823,11 @@
    "brand": "New World",
    "n": 7,
    "median_pct": 3.8
+  },
+  {
+   "brand": "Plasencia Alma Fuerte",
+   "n": 6,
+   "median_pct": 3.5
   },
   {
    "brand": "Asylum",

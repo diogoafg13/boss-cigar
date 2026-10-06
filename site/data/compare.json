@@ -1,0 +1,3348 @@
+{
+ "fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+ "es_fetched": "2026-10-06",
+ "n": 371,
+ "median_diff_pct": -26.2,
+ "es_cheaper": 350,
+ "rows": [
+  {
+   "label": "Adrian Magnus 1808 Robusto",
+   "fr_label": "ADRIAN MAGNUS  1808 Robusto",
+   "es_label": "Adrian Magnus 1808 Robusto",
+   "brand": "Adrian Magnus",
+   "fr": 19.0,
+   "es": 9.35,
+   "diff_pct": -50.8
+  },
+  {
+   "label": "Adrian Magnus 1808 Toro",
+   "fr_label": "ADRIAN MAGNUS  1808 Toro",
+   "es_label": "Adrian Magnus 1808 Toro",
+   "brand": "Adrian Magnus",
+   "fr": 20.0,
+   "es": 9.95,
+   "diff_pct": -50.3
+  },
+  {
+   "label": "ADRIAN MAGNUS Imperials Robusto",
+   "fr_label": "ADRIAN MAGNUS Imperials Robusto",
+   "es_label": "Adrian Magnus Imperials Robusto",
+   "brand": "Adrian Magnus",
+   "fr": 30.0,
+   "es": 13.0,
+   "diff_pct": -56.7
+  },
+  {
+   "label": "ADRIAN MAGNUS Imperials Wide Churchill",
+   "fr_label": "ADRIAN MAGNUS Imperials Wide Churchill",
+   "es_label": "Adrian Magnus Imperials Wide Churchill",
+   "brand": "Adrian Magnus",
+   "fr": 32.0,
+   "es": 15.0,
+   "diff_pct": -53.1
+  },
+  {
+   "label": "ADRIAN MAGNUS Leyenda Toro",
+   "fr_label": "ADRIAN MAGNUS Leyenda Toro",
+   "es_label": "Adrian Magnus Leyenda Toro",
+   "brand": "Adrian Magnus",
+   "fr": 65.0,
+   "es": 32.0,
+   "diff_pct": -50.8
+  },
+  {
+   "label": "Adrian Magnus Millennium Gran Toro",
+   "fr_label": "ADRIAN MAGNUS   Millennium Gran Toro",
+   "es_label": "Adrian Magnus Millennium Gran Toro",
+   "brand": "Adrian Magnus",
+   "fr": 26.5,
+   "es": 12.5,
+   "diff_pct": -52.8
+  },
+  {
+   "label": "Adrian Magnus Supremos Toro",
+   "fr_label": "ADRIAN MAGNUS   Supremos Toro",
+   "es_label": "Adrian Magnus Supremos Toro",
+   "brand": "Adrian Magnus",
+   "fr": 28.5,
+   "es": 13.0,
+   "diff_pct": -54.4
+  },
+  {
+   "label": "Adrian Magnus XO Cognac Toro",
+   "fr_label": "ADRIAN MAGNUS  XO Cognac Toro",
+   "es_label": "Adrian Magnus XO Cognac Toro",
+   "brand": "Adrian Magnus",
+   "fr": 45.0,
+   "es": 24.5,
+   "diff_pct": -45.6
+  },
+  {
+   "label": "Alec Bradley Black Market Punk",
+   "fr_label": "Alec Bradley Black Market Punk",
+   "es_label": "Alec Bradley Black Market Punk",
+   "brand": "Alec Bradley",
+   "fr": 8.5,
+   "es": 5.8,
+   "diff_pct": -31.8
+  },
+  {
+   "label": "Alec Bradley Black Market Robusto",
+   "fr_label": "Alec Bradley Black Market Robusto",
+   "es_label": "Alec Bradley Black Market Robusto",
+   "brand": "Alec Bradley",
+   "fr": 11.3,
+   "es": 5.5,
+   "diff_pct": -51.3
+  },
+  {
+   "label": "Alec Bradley Gatekeeper Robusto",
+   "fr_label": "Alec Bradley Gatekeeper Robusto",
+   "es_label": "Alec Bradley Gatekeeper Robusto",
+   "brand": "Alec Bradley",
+   "fr": 12.5,
+   "es": 9.2,
+   "diff_pct": -26.4
+  },
+  {
+   "label": "Alec Bradley Gatekeeper Toro",
+   "fr_label": "Alec Bradley Gatekeeper Toro",
+   "es_label": "Alec Bradley Gatekeeper Toro",
+   "brand": "Alec Bradley",
+   "fr": 14.0,
+   "es": 10.0,
+   "diff_pct": -28.6
+  },
+  {
+   "label": "Alec Bradley Prensado Churchill",
+   "fr_label": "Alec Bradley Prensado Churchill",
+   "es_label": "Alec Bradley Prensado Churchill",
+   "brand": "Alec Bradley Prensado",
+   "fr": 14.5,
+   "es": 5.7,
+   "diff_pct": -60.7
+  },
+  {
+   "label": "Alec Bradley Prensado Robusto",
+   "fr_label": "Alec Bradley Prensado Robusto",
+   "es_label": "Alec Bradley Prensado Robusto",
+   "brand": "Alec Bradley Prensado",
+   "fr": 13.0,
+   "es": 9.6,
+   "diff_pct": -26.2
+  },
+  {
+   "label": "Alec Bradley Project 40 Toro",
+   "fr_label": "Alec Bradley Project 40 Toro",
+   "es_label": "Alec Bradley Project 40 Toro",
+   "brand": "Alec Bradley",
+   "fr": 8.5,
+   "es": 9.1,
+   "diff_pct": 7.1
+  },
+  {
+   "label": "Alec Bradley Texas Lancero",
+   "fr_label": "Alec Bradley Texas Lancero",
+   "es_label": "Alec Bradley Texas Lancero",
+   "brand": "Alec Bradley",
+   "fr": 17.0,
+   "es": 10.5,
+   "diff_pct": -38.2
+  },
+  {
+   "label": "Arturo Fuente Canones",
+   "fr_label": "Arturo Fuente Canones",
+   "es_label": "Arturo Fuente Cañones",
+   "brand": "Arturo Fuente",
+   "fr": 26.0,
+   "es": 9.7,
+   "diff_pct": -62.7
+  },
+  {
+   "label": "Arturo Fuente Château Fuente",
+   "fr_label": "Arturo Fuente Château Fuente",
+   "es_label": "Arturo Fuente Chateau Fuente",
+   "brand": "Arturo Fuente",
+   "fr": 16.0,
+   "es": 6.3,
+   "diff_pct": -60.6
+  },
+  {
+   "label": "Arturo Fuente Cubanitos",
+   "fr_label": "Arturo Fuente Cubanitos",
+   "es_label": "Arturo Fuente Cubanitos",
+   "brand": "Arturo Fuente",
+   "fr": 6.0,
+   "es": 2.0,
+   "diff_pct": -66.7
+  },
+  {
+   "label": "Arturo Fuente don Carlos Eye of the Bull",
+   "fr_label": "Arturo Fuente don Carlos Eye of the Bull",
+   "es_label": "Arturo Fuente Don Carlos Eye of the Bull",
+   "brand": "Arturo Fuente",
+   "fr": 35.0,
+   "es": 29.5,
+   "diff_pct": -15.7
+  },
+  {
+   "label": "Arturo Fuente Don Carlos Personal Réserve",
+   "fr_label": "Arturo Fuente Don Carlos Personal Réserve",
+   "es_label": "Arturo Fuente Don Carlos Personal Reserve",
+   "brand": "Arturo Fuente",
+   "fr": 52.0,
+   "es": 34.9,
+   "diff_pct": -32.9
+  },
+  {
+   "label": "Arturo Fuente Emperador 7x52",
+   "fr_label": "Arturo Fuente Emperador (7 x 52)",
+   "es_label": "Arturo Fuente Emperador 7x52",
+   "brand": "Arturo Fuente",
+   "fr": 14.0,
+   "es": 10.3,
+   "diff_pct": -26.4
+  },
+  {
+   "label": "Arturo Fuente exquisitos",
+   "fr_label": "Arturo Fuente exquisitos",
+   "es_label": "Arturo Fuente Exquisitos",
+   "brand": "Arturo Fuente",
+   "fr": 6.9,
+   "es": 2.6,
+   "diff_pct": -62.3
+  },
+  {
+   "label": "Arturo Fuente Hemingway Best Seller",
+   "fr_label": "Arturo Fuente Hemingway Best Seller",
+   "es_label": "Arturo Fuente Hemingway Best Seller",
+   "brand": "Arturo Fuente",
+   "fr": 22.5,
+   "es": 15.8,
+   "diff_pct": -29.8
+  },
+  {
+   "label": "Arturo Fuente Hemingway Classic",
+   "fr_label": "Arturo Fuente Hemingway Classic",
+   "es_label": "Arturo Fuente Hemingway Classic",
+   "brand": "Arturo Fuente",
+   "fr": 28.0,
+   "es": 11.3,
+   "diff_pct": -59.6
+  },
+  {
+   "label": "Arturo Fuente Hemingway Short Story 4x49",
+   "fr_label": "Arturo Fuente Hemingway Short Story (4 x 49)",
+   "es_label": "Arturo Fuente Hemingway Short Story 4x49",
+   "brand": "Arturo Fuente",
+   "fr": 16.0,
+   "es": 13.3,
+   "diff_pct": -16.9
+  },
+  {
+   "label": "Arturo Fuente Hemingway short-story",
+   "fr_label": "Arturo Fuente Hemingway short-story",
+   "es_label": "Arturo Fuente Hemingway Short Story",
+   "brand": "Arturo Fuente",
+   "fr": 16.0,
+   "es": 7.1,
+   "diff_pct": -55.6
+  },
+  {
+   "label": "Arturo Fuente Hemingway Signature",
+   "fr_label": "Arturo Fuente Hemingway Signature",
+   "es_label": "Arturo Fuente Hemingway Signature",
+   "brand": "Arturo Fuente",
+   "fr": 24.0,
+   "es": 10.1,
+   "diff_pct": -57.9
+  },
+  {
+   "label": "Arturo Fuente Opus X Belicoso XXX",
+   "fr_label": "Arturo Fuente Opus X Belicoso XXX",
+   "es_label": "Arturo Fuente Opus X Belicoso XXX",
+   "brand": "Arturo Fuente",
+   "fr": 43.0,
+   "es": 36.7,
+   "diff_pct": -14.7
+  },
+  {
+   "label": "Arturo Fuente Opus X Double-Corona",
+   "fr_label": "Arturo Fuente Opus X Double-Corona",
+   "es_label": "Arturo Fuente Opus X Double Corona",
+   "brand": "Arturo Fuente",
+   "fr": 69.0,
+   "es": 27.6,
+   "diff_pct": -60.0
+  },
+  {
+   "label": "Arturo Fuente opus X Fuente Fuente",
+   "fr_label": "Arturo Fuente opus X Fuente Fuente",
+   "es_label": "Arturo Fuente Opus X Fuente Fuente",
+   "brand": "Arturo Fuente",
+   "fr": 46.0,
+   "es": 37.6,
+   "diff_pct": -18.3
+  },
+  {
+   "label": "Arturo Fuente Opus X Magnum O",
+   "fr_label": "Arturo Fuente Opus X Magnum O",
+   "es_label": "Arturo Fuente Opus X Magnum O",
+   "brand": "Arturo Fuente",
+   "fr": 59.0,
+   "es": 51.9,
+   "diff_pct": -12.0
+  },
+  {
+   "label": "Arturo Fuente Opus X Pussy Cats",
+   "fr_label": "Arturo Fuente Opus X Pussy Cats",
+   "es_label": "Arturo Fuente Opus X Pussy Cats",
+   "brand": "Arturo Fuente",
+   "fr": 42.0,
+   "es": 36.1,
+   "diff_pct": -14.0
+  },
+  {
+   "label": "Arturo Fuente Opus X robusto",
+   "fr_label": "Arturo Fuente Opus X robusto",
+   "es_label": "Arturo Fuente Opus X Robusto",
+   "brand": "Arturo Fuente",
+   "fr": 55.0,
+   "es": 43.4,
+   "diff_pct": -21.1
+  },
+  {
+   "label": "Arturo Fuente Rainforest Delight",
+   "fr_label": "Arturo Fuente Rainforest Delight",
+   "es_label": "Arturo Fuente Rainforest Delight",
+   "brand": "Arturo Fuente",
+   "fr": 7.5,
+   "es": 5.3,
+   "diff_pct": -29.3
+  },
+  {
+   "label": "Ashton Vsg Wizard",
+   "fr_label": "Ashton VSG Wizard (coffret)",
+   "es_label": "Ashton Vsg Wizard",
+   "brand": "Ashton Vsg",
+   "fr": 26.0,
+   "es": 20.5,
+   "diff_pct": -21.2
+  },
+  {
+   "label": "Asylum 13 Goliath 80x6",
+   "fr_label": "Asylum 13 Goliath 80 x 6",
+   "es_label": "Asylum 13 Goliath 80x6",
+   "brand": "Asylum",
+   "fr": 24.0,
+   "es": 13.4,
+   "diff_pct": -44.2
+  },
+  {
+   "label": "Asylum 13 Pandemonium 60x8 1/2",
+   "fr_label": "Asylum 13 Pandemonium 60 x  81/2",
+   "es_label": "Asylum 13 Pandemonium 60x8 1/2",
+   "brand": "Asylum",
+   "fr": 27.0,
+   "es": 14.5,
+   "diff_pct": -46.3
+  },
+  {
+   "label": "Asylum 13 Super Goliath 80x8",
+   "fr_label": "Asylum 13 Super Goliath 80 x 8",
+   "es_label": "Asylum 13 Super Goliath 80x8",
+   "brand": "Asylum",
+   "fr": 30.0,
+   "es": 15.5,
+   "diff_pct": -48.3
+  },
+  {
+   "label": "Asylum 867 Zero Robusto 50X5",
+   "fr_label": "Asylum 867 Zero Robusto 50 x 5",
+   "es_label": "Asylum 867 Zero Robusto 50X5",
+   "brand": "Asylum",
+   "fr": 13.0,
+   "es": 9.8,
+   "diff_pct": -24.6
+  },
+  {
+   "label": "Avo Heritage Robusto",
+   "fr_label": "Avo Heritage Robusto (coffret)",
+   "es_label": "Avo Heritage Robusto",
+   "brand": "AVO",
+   "fr": 14.5,
+   "es": 10.5,
+   "diff_pct": -27.6
+  },
+  {
+   "label": "Bolivar Belicosos Finos",
+   "fr_label": "Bolivar Belicosos Finos",
+   "es_label": "Bolivar Belicosos Finos",
+   "brand": "Bolívar",
+   "fr": 22.3,
+   "es": 18.2,
+   "diff_pct": -18.4
+  },
+  {
+   "label": "Bolivar Petit Coronas",
+   "fr_label": "Bolivar Petit Coronas",
+   "es_label": "Bolivar Petit Coronas",
+   "brand": "Bolívar",
+   "fr": 13.5,
+   "es": 10.6,
+   "diff_pct": -21.5
+  },
+  {
+   "label": "Bolivar Royal Coronas",
+   "fr_label": "Bolivar Royal Coronas",
+   "es_label": "Bolivar Royal Coronas",
+   "brand": "Bolívar",
+   "fr": 19.2,
+   "es": 19.6,
+   "diff_pct": 2.1
+  },
+  {
+   "label": "Camacho Connecticut Robusto",
+   "fr_label": "Camacho Connecticut Robusto (coffret)",
+   "es_label": "Camacho Connecticut Robusto",
+   "brand": "Camacho",
+   "fr": 14.0,
+   "es": 8.2,
+   "diff_pct": -41.4
+  },
+  {
+   "label": "Camacho Ecuador Robusto",
+   "fr_label": "Camacho Ecuador Robusto (coffret)",
+   "es_label": "Camacho Ecuador Robusto",
+   "brand": "Camacho",
+   "fr": 14.0,
+   "es": 5.9,
+   "diff_pct": -57.9
+  },
+  {
+   "label": "Camacho Nicaragua Gran Churchill",
+   "fr_label": "Camacho Nicaragua Gran Churchill (coffret)",
+   "es_label": "Camacho Nicaragua Gran Churchill",
+   "brand": "Camacho",
+   "fr": 14.0,
+   "es": 10.5,
+   "diff_pct": -25.0
+  },
+  {
+   "label": "Camacho Nicaragua Robusto",
+   "fr_label": "Camacho Nicaragua Robusto (coffret)",
+   "es_label": "Camacho Nicaragua Robusto",
+   "brand": "Camacho",
+   "fr": 10.0,
+   "es": 8.2,
+   "diff_pct": -18.0
+  },
+  {
+   "label": "Canalenos Extra",
+   "fr_label": "Canalenos Extra",
+   "es_label": "Canaleños Extra",
+   "brand": "Canaleños",
+   "fr": 6.0,
+   "es": 1.8,
+   "diff_pct": -70.0
+  },
+  {
+   "label": "CAO Amazon Basin Rothschild",
+   "fr_label": "CAO Amazon Basin Rothschild",
+   "es_label": "Cao Amazon Basin Rothschild",
+   "brand": "CAO",
+   "fr": 17.0,
+   "es": 6.0,
+   "diff_pct": -64.7
+  },
+  {
+   "label": "CAO Amazon Basin Toro",
+   "fr_label": "CAO Amazon Basin Toro",
+   "es_label": "Cao Amazon Basin Toro",
+   "brand": "CAO",
+   "fr": 20.0,
+   "es": 8.0,
+   "diff_pct": -60.0
+  },
+  {
+   "label": "CAO BX3 Robusto",
+   "fr_label": "CAO BX3 Robusto",
+   "es_label": "Cao Bx3 Robusto",
+   "brand": "CAO",
+   "fr": 11.0,
+   "es": 6.7,
+   "diff_pct": -39.1
+  },
+  {
+   "label": "CAO BX3 Toro",
+   "fr_label": "CAO BX3 Toro",
+   "es_label": "Cao Bx3 Toro",
+   "brand": "CAO",
+   "fr": 11.5,
+   "es": 7.3,
+   "diff_pct": -36.5
+  },
+  {
+   "label": "CAO Cameroon Perfecto",
+   "fr_label": "CAO Cameroon Perfecto",
+   "es_label": "Cao Cameroon Perfecto",
+   "brand": "CAO",
+   "fr": 10.5,
+   "es": 5.5,
+   "diff_pct": -47.6
+  },
+  {
+   "label": "CAO Consigliere Soldier",
+   "fr_label": "CAO Consigliere Soldier",
+   "es_label": "CAO Consigliere Soldier",
+   "brand": "CAO",
+   "fr": 10.0,
+   "es": 5.6,
+   "diff_pct": -44.0
+  },
+  {
+   "label": "CAO Gold Maduro Robusto",
+   "fr_label": "CAO Gold Maduro Robusto",
+   "es_label": "Cao Gold Maduro Robusto",
+   "brand": "CAO",
+   "fr": 10.0,
+   "es": 6.8,
+   "diff_pct": -32.0
+  },
+  {
+   "label": "CAO Gold Robusto",
+   "fr_label": "CAO Gold Robusto",
+   "es_label": "Cao Gold Robusto",
+   "brand": "CAO",
+   "fr": 9.5,
+   "es": 6.4,
+   "diff_pct": -32.6
+  },
+  {
+   "label": "CAO Medio Tiempo Magnifico",
+   "fr_label": "CAO Medio Tiempo Magnifico",
+   "es_label": "Cao Medio Tiempo Magnifico",
+   "brand": "CAO",
+   "fr": 14.5,
+   "es": 10.0,
+   "diff_pct": -31.0
+  },
+  {
+   "label": "CAO Medio Tiempo Robusto",
+   "fr_label": "CAO Medio Tiempo Robusto",
+   "es_label": "Cao Medio Tiempo Robusto",
+   "brand": "CAO",
+   "fr": 13.0,
+   "es": 9.0,
+   "diff_pct": -30.8
+  },
+  {
+   "label": "CAO Pilon Churchill",
+   "fr_label": "CAO Pilon Churchill",
+   "es_label": "Cao Pilon Churchill",
+   "brand": "Cao Pilon",
+   "fr": 13.0,
+   "es": 7.4,
+   "diff_pct": -43.1
+  },
+  {
+   "label": "Cao Pilon Corona",
+   "fr_label": "Cao Pilon Corona",
+   "es_label": "Cao Pilon Corona",
+   "brand": "Cao Pilon",
+   "fr": 10.5,
+   "es": 5.5,
+   "diff_pct": -47.6
+  },
+  {
+   "label": "Cao Pilon Robusto extra",
+   "fr_label": "Cao Pilon Robusto extra",
+   "es_label": "Cao Pilon Robusto Extra",
+   "brand": "Cao Pilon",
+   "fr": 11.0,
+   "es": 6.7,
+   "diff_pct": -39.1
+  },
+  {
+   "label": "CAO Pilon Toro",
+   "fr_label": "CAO Pilon Toro",
+   "es_label": "Cao Pilon Toro",
+   "brand": "Cao Pilon",
+   "fr": 12.0,
+   "es": 7.3,
+   "diff_pct": -39.2
+  },
+  {
+   "label": "CAO Session Garage",
+   "fr_label": "CAO Session Garage",
+   "es_label": "CAO Session Garage",
+   "brand": "CAO",
+   "fr": 10.5,
+   "es": 7.2,
+   "diff_pct": -31.4
+  },
+  {
+   "label": "CAO Session Shop",
+   "fr_label": "CAO Session Shop",
+   "es_label": "CAO Session Shop",
+   "brand": "CAO",
+   "fr": 11.5,
+   "es": 8.2,
+   "diff_pct": -28.7
+  },
+  {
+   "label": "Capitol Casino",
+   "fr_label": "Capitol Casino",
+   "es_label": "Capitol Casino",
+   "brand": "Capitol",
+   "fr": 12.9,
+   "es": 11.0,
+   "diff_pct": -14.7
+  },
+  {
+   "label": "Capitol Gala",
+   "fr_label": "Capitol Gala",
+   "es_label": "Capitol Gala",
+   "brand": "Capitol",
+   "fr": 14.9,
+   "es": 13.0,
+   "diff_pct": -12.8
+  },
+  {
+   "label": "Capitol Jack",
+   "fr_label": "Capitol Jack",
+   "es_label": "Capitol Jack",
+   "brand": "Capitol",
+   "fr": 10.9,
+   "es": 9.0,
+   "diff_pct": -17.4
+  },
+  {
+   "label": "Cohiba Ambar",
+   "fr_label": "Cohiba Ambar",
+   "es_label": "Cohiba Ambar",
+   "brand": "Cohiba",
+   "fr": 100.0,
+   "es": 113.3,
+   "diff_pct": 13.3
+  },
+  {
+   "label": "Cohiba Coronas Especiales",
+   "fr_label": "Cohiba Coronas Especiales (5 étuis de 5)",
+   "es_label": "Cohiba Coronas Especiales",
+   "brand": "Cohiba",
+   "fr": 61.5,
+   "es": 59.2,
+   "diff_pct": -3.7
+  },
+  {
+   "label": "Cohiba Esplendidos",
+   "fr_label": "Cohiba Esplendidos (5 étuis de 3)",
+   "es_label": "Cohiba Esplendidos",
+   "brand": "Cohiba",
+   "fr": 127.5,
+   "es": 128.6,
+   "diff_pct": 0.9
+  },
+  {
+   "label": "Cohiba Exquisitos",
+   "fr_label": "Cohiba Exquisitos (5 étuis de 5)",
+   "es_label": "Cohiba Exquisitos",
+   "brand": "Cohiba",
+   "fr": 41.0,
+   "es": 39.2,
+   "diff_pct": -4.4
+  },
+  {
+   "label": "Cohiba Lanceros",
+   "fr_label": "Cohiba Lanceros",
+   "es_label": "Cohiba Lanceros",
+   "brand": "Cohiba",
+   "fr": 97.0,
+   "es": 96.6,
+   "diff_pct": -0.4
+  },
+  {
+   "label": "Cohiba Medio Siglo",
+   "fr_label": "Cohiba Medio Siglo",
+   "es_label": "Cohiba Medio Siglo",
+   "brand": "Cohiba",
+   "fr": 71.0,
+   "es": 68.0,
+   "diff_pct": -4.2
+  },
+  {
+   "label": "Cohiba Medio Siglo T",
+   "fr_label": "Cohiba Medio Siglo (tube - 5 étuis de 3)",
+   "es_label": "Cohiba Medio Siglo T",
+   "brand": "Cohiba",
+   "fr": 75.5,
+   "es": 70.0,
+   "diff_pct": -7.3
+  },
+  {
+   "label": "Cohiba Piramides Extra",
+   "fr_label": "Cohiba Piramides Extra",
+   "es_label": "Cohiba Piramides Extra",
+   "brand": "Cohiba",
+   "fr": 129.0,
+   "es": 127.0,
+   "diff_pct": -1.6
+  },
+  {
+   "label": "Cohiba Piramides Extra Tubo",
+   "fr_label": "Cohiba Piramides Extra (tube - 5 étuis de 3)",
+   "es_label": "Cohiba Piramides Extra Tubo",
+   "brand": "Cohiba",
+   "fr": 136.0,
+   "es": 129.0,
+   "diff_pct": -5.1
+  },
+  {
+   "label": "Cohiba Robustos",
+   "fr_label": "Cohiba Robustos (5 étuis de 3)",
+   "es_label": "Cohiba Robustos",
+   "brand": "Cohiba",
+   "fr": 82.0,
+   "es": 80.5,
+   "diff_pct": -1.8
+  },
+  {
+   "label": "Cohiba short",
+   "fr_label": "Cohiba short",
+   "es_label": "Cohiba Short",
+   "brand": "Cohiba",
+   "fr": 2.95,
+   "es": 1.65,
+   "diff_pct": -44.1
+  },
+  {
+   "label": "Cohiba Siglo I",
+   "fr_label": "Cohiba Siglo I (5 étuis de 5)",
+   "es_label": "Cohiba Siglo I",
+   "brand": "Cohiba",
+   "fr": 36.0,
+   "es": 34.0,
+   "diff_pct": -5.6
+  },
+  {
+   "label": "Cohiba Siglo II",
+   "fr_label": "Cohiba Siglo II (5 étuis de 5)",
+   "es_label": "Cohiba Siglo II",
+   "brand": "Cohiba",
+   "fr": 43.0,
+   "es": 39.2,
+   "diff_pct": -8.8
+  },
+  {
+   "label": "Cohiba Siglo II Tubo",
+   "fr_label": "Cohiba Siglo II (tube - 5 étuis de 3)",
+   "es_label": "Cohiba Siglo II Tubo",
+   "brand": "Cohiba",
+   "fr": 46.0,
+   "es": 41.2,
+   "diff_pct": -10.4
+  },
+  {
+   "label": "Cohiba Siglo III",
+   "fr_label": "Cohiba Siglo III (5 étuis de 5)",
+   "es_label": "Cohiba Siglo III",
+   "brand": "Cohiba",
+   "fr": 60.0,
+   "es": 57.2,
+   "diff_pct": -4.7
+  },
+  {
+   "label": "Cohiba Siglo IV",
+   "fr_label": "Cohiba Siglo IV (5 étuis de 5)",
+   "es_label": "Cohiba Siglo IV",
+   "brand": "Cohiba",
+   "fr": 67.0,
+   "es": 64.6,
+   "diff_pct": -3.6
+  },
+  {
+   "label": "Cohiba Siglo IV Tubo",
+   "fr_label": "Cohiba Siglo IV (tube - 5 étuis de 3)",
+   "es_label": "Cohiba Siglo IV Tubo",
+   "brand": "Cohiba",
+   "fr": 78.0,
+   "es": 66.6,
+   "diff_pct": -14.6
+  },
+  {
+   "label": "Cohiba Siglo V",
+   "fr_label": "Cohiba Siglo V",
+   "es_label": "Cohiba Siglo V",
+   "brand": "Cohiba",
+   "fr": 84.5,
+   "es": 70.2,
+   "diff_pct": -16.9
+  },
+  {
+   "label": "Cohiba Siglo VI",
+   "fr_label": "Cohiba Siglo VI",
+   "es_label": "Cohiba Siglo VI",
+   "brand": "Cohiba",
+   "fr": 110.0,
+   "es": 110.2,
+   "diff_pct": 0.2
+  },
+  {
+   "label": "Cohiba Siglo VI Tubo",
+   "fr_label": "Cohiba Siglo VI (tube - 5 étuis de 3)",
+   "es_label": "Cohiba Siglo VI Tubo",
+   "brand": "Cohiba",
+   "fr": 117.0,
+   "es": 112.2,
+   "diff_pct": -4.1
+  },
+  {
+   "label": "Cohiba Wide Short",
+   "fr_label": "Cohiba Wide Short (10 étuis de 6)",
+   "es_label": "Cohiba Wide Short",
+   "brand": "Cohiba",
+   "fr": 5.1,
+   "es": 3.3,
+   "diff_pct": -35.3
+  },
+  {
+   "label": "Cuaba Distinguidos",
+   "fr_label": "Cuaba Distinguidos",
+   "es_label": "Cuaba Distinguidos",
+   "brand": "Cuaba",
+   "fr": 23.0,
+   "es": 21.5,
+   "diff_pct": -6.5
+  },
+  {
+   "label": "Cuaba Divinos",
+   "fr_label": "Cuaba Divinos",
+   "es_label": "Cuaba Divinos",
+   "brand": "Cuaba",
+   "fr": 11.5,
+   "es": 9.5,
+   "diff_pct": -17.4
+  },
+  {
+   "label": "Cuaba Tradicionales",
+   "fr_label": "Cuaba Tradicionales",
+   "es_label": "Cuaba Tradicionales",
+   "brand": "Cuaba",
+   "fr": 13.8,
+   "es": 11.4,
+   "diff_pct": -17.4
+  },
+  {
+   "label": "Cumpay Corona",
+   "fr_label": "Cumpay Corona",
+   "es_label": "Cumpay Corona",
+   "brand": "Cumpay",
+   "fr": 12.6,
+   "es": 4.7,
+   "diff_pct": -62.7
+  },
+  {
+   "label": "Cumpay N°15",
+   "fr_label": "Cumpay N°15",
+   "es_label": "Cumpay Nº 15",
+   "brand": "Cumpay",
+   "fr": 13.8,
+   "es": 6.5,
+   "diff_pct": -52.9
+  },
+  {
+   "label": "Cumpay Robusto",
+   "fr_label": "Cumpay Robusto",
+   "es_label": "Cumpay Robusto",
+   "brand": "Cumpay",
+   "fr": 12.6,
+   "es": 5.2,
+   "diff_pct": -58.7
+  },
+  {
+   "label": "Cumpay Short",
+   "fr_label": "Cumpay Short (boîte)",
+   "es_label": "Cumpay Short",
+   "brand": "Cumpay",
+   "fr": 10.8,
+   "es": 4.5,
+   "diff_pct": -58.3
+  },
+  {
+   "label": "Davidoff Aniversario Entreacto",
+   "fr_label": "Davidoff Aniversario Entreacto",
+   "es_label": "Davidoff Aniversario Entreacto",
+   "brand": "Davidoff",
+   "fr": 15.0,
+   "es": 11.5,
+   "diff_pct": -23.3
+  },
+  {
+   "label": "Davidoff Aniversario N°1 LE 2023",
+   "fr_label": "Davidoff Aniversario N°1 LE 2023",
+   "es_label": "Davidoff Aniversario Nº 1 LE 2023",
+   "brand": "Davidoff",
+   "fr": 69.0,
+   "es": 60.0,
+   "diff_pct": -13.0
+  },
+  {
+   "label": "Davidoff Aniversario N°3 Tubos",
+   "fr_label": "Davidoff Aniversario N°3 Tubos",
+   "es_label": "Davidoff Aniversario Nº 3 Tubos",
+   "brand": "Davidoff",
+   "fr": 34.5,
+   "es": 17.5,
+   "diff_pct": -49.3
+  },
+  {
+   "label": "Davidoff Aniversario Nº 3",
+   "fr_label": "Davidoff Aniversario N°3 (coffret)",
+   "es_label": "Davidoff Aniversario Nº 3",
+   "brand": "Davidoff",
+   "fr": 32.5,
+   "es": 26.0,
+   "diff_pct": -20.0
+  },
+  {
+   "label": "Davidoff Aniversario Short Perfecto",
+   "fr_label": "Davidoff Aniversario Short Perfecto (coffret)",
+   "es_label": "Davidoff Aniversario Short Perfecto",
+   "brand": "Davidoff",
+   "fr": 25.5,
+   "es": 20.2,
+   "diff_pct": -20.8
+  },
+  {
+   "label": "Davidoff Aniversario Special R",
+   "fr_label": "Davidoff Aniversario Special R",
+   "es_label": "Davidoff Aniversario Special R",
+   "brand": "Davidoff",
+   "fr": 28.0,
+   "es": 22.5,
+   "diff_pct": -19.6
+  },
+  {
+   "label": "Davidoff Aniversario Special R Tubos",
+   "fr_label": "Davidoff Aniversario Special R Tubos",
+   "es_label": "Davidoff Aniversario Special R Tubos",
+   "brand": "Davidoff",
+   "fr": 30.0,
+   "es": 23.5,
+   "diff_pct": -21.7
+  },
+  {
+   "label": "Davidoff Aniversario Special T",
+   "fr_label": "Davidoff Aniversario Special T",
+   "es_label": "Davidoff Aniversario Special T",
+   "brand": "Davidoff",
+   "fr": 33.0,
+   "es": 26.8,
+   "diff_pct": -18.8
+  },
+  {
+   "label": "Davidoff demi tasse",
+   "fr_label": "Davidoff demi tasse",
+   "es_label": "Davidoff Demi Tasse",
+   "brand": "Davidoff",
+   "fr": 2.6,
+   "es": 2.08,
+   "diff_pct": -20.0
+  },
+  {
+   "label": "Davidoff Dominicana Short Robusto",
+   "fr_label": "Davidoff Dominicana Short Robusto (Coffret)",
+   "es_label": "Davidoff Dominicana Short Robusto",
+   "brand": "Davidoff",
+   "fr": 27.0,
+   "es": 13.5,
+   "diff_pct": -50.0
+  },
+  {
+   "label": "Davidoff Escurio Gran Perfecto",
+   "fr_label": "Davidoff Escurio Gran Perfecto",
+   "es_label": "Davidoff Escurio Gran Perfecto",
+   "brand": "Davidoff",
+   "fr": 25.0,
+   "es": 12.2,
+   "diff_pct": -51.2
+  },
+  {
+   "label": "Davidoff Escurio Gran Toro",
+   "fr_label": "Davidoff Escurio Gran Toro",
+   "es_label": "Davidoff Escurio Gran Toro",
+   "brand": "Davidoff",
+   "fr": 27.5,
+   "es": 14.2,
+   "diff_pct": -48.4
+  },
+  {
+   "label": "Davidoff Escurio Petit Robusto",
+   "fr_label": "Davidoff Escurio Petit Robusto",
+   "es_label": "Davidoff Escurio Petit Robusto",
+   "brand": "Davidoff",
+   "fr": 16.5,
+   "es": 10.8,
+   "diff_pct": -34.5
+  },
+  {
+   "label": "Davidoff Escurio Robusto",
+   "fr_label": "Davidoff Escurio Robusto (coffret)",
+   "es_label": "Davidoff Escurio Robusto",
+   "brand": "Davidoff",
+   "fr": 23.5,
+   "es": 16.2,
+   "diff_pct": -31.1
+  },
+  {
+   "label": "Davidoff Escurio Robusto Tubos",
+   "fr_label": "Davidoff Escurio Robusto Tubos",
+   "es_label": "Davidoff Escurio Robusto Tubos",
+   "brand": "Davidoff",
+   "fr": 25.5,
+   "es": 12.5,
+   "diff_pct": -51.0
+  },
+  {
+   "label": "Davidoff Grand Cru Diademas Finas LE 2024",
+   "fr_label": "Davidoff Grand Cru Diademas Finas LE 2024",
+   "es_label": "Davidoff Grand Cru Diademas Finas Le 2024",
+   "brand": "Davidoff",
+   "fr": 59.0,
+   "es": 57.0,
+   "diff_pct": -3.4
+  },
+  {
+   "label": "Davidoff Grand cru n °2",
+   "fr_label": "Davidoff Grand cru n °2",
+   "es_label": "Davidoff Grand Cru Nº 2",
+   "brand": "Davidoff",
+   "fr": 22.0,
+   "es": 11.5,
+   "diff_pct": -47.7
+  },
+  {
+   "label": "Davidoff Grand cru n °5",
+   "fr_label": "Davidoff Grand cru n °5",
+   "es_label": "Davidoff Grand Cru Nº 5",
+   "brand": "Davidoff",
+   "fr": 15.5,
+   "es": 12.5,
+   "diff_pct": -19.4
+  },
+  {
+   "label": "Davidoff Grand Cru Robusto",
+   "fr_label": "Davidoff Grand Cru Robusto",
+   "es_label": "Davidoff Grand Cru Robusto",
+   "brand": "Davidoff",
+   "fr": 25.0,
+   "es": 18.9,
+   "diff_pct": -24.4
+  },
+  {
+   "label": "Davidoff Grand Cru Toro",
+   "fr_label": "Davidoff Grand Cru Toro",
+   "es_label": "Davidoff Grand Cru Toro",
+   "brand": "Davidoff",
+   "fr": 29.0,
+   "es": 22.9,
+   "diff_pct": -21.0
+  },
+  {
+   "label": "Davidoff Maduro Robusto",
+   "fr_label": "Davidoff Maduro Robusto",
+   "es_label": "Davidoff Maduro Robusto",
+   "brand": "Davidoff",
+   "fr": 55.0,
+   "es": 50.0,
+   "diff_pct": -9.1
+  },
+  {
+   "label": "Davidoff Maduro Toro",
+   "fr_label": "Davidoff Maduro Toro",
+   "es_label": "Davidoff Maduro Toro",
+   "brand": "Davidoff",
+   "fr": 60.0,
+   "es": 54.0,
+   "diff_pct": -10.0
+  },
+  {
+   "label": "Davidoff Nicaragua Diadema",
+   "fr_label": "Davidoff Nicaragua Diadema",
+   "es_label": "Davidoff Nicaragua Diadema",
+   "brand": "Davidoff",
+   "fr": 30.0,
+   "es": 19.25,
+   "diff_pct": -35.8
+  },
+  {
+   "label": "Davidoff Nicaragua Robusto",
+   "fr_label": "Davidoff Nicaragua Robusto",
+   "es_label": "Davidoff Nicaragua Robusto",
+   "brand": "Davidoff",
+   "fr": 23.5,
+   "es": 18.8,
+   "diff_pct": -20.0
+  },
+  {
+   "label": "Davidoff Nicaragua Robusto Tubos",
+   "fr_label": "Davidoff Nicaragua Robusto Tubos",
+   "es_label": "Davidoff Nicaragua Robusto Tubos",
+   "brand": "Davidoff",
+   "fr": 25.5,
+   "es": 19.8,
+   "diff_pct": -22.4
+  },
+  {
+   "label": "Davidoff Nicaragua Short Corona",
+   "fr_label": "Davidoff Nicaragua Short Corona (coffret)",
+   "es_label": "Davidoff Nicaragua Short Corona",
+   "brand": "Davidoff",
+   "fr": 16.5,
+   "es": 7.5,
+   "diff_pct": -54.5
+  },
+  {
+   "label": "Davidoff Nicaragua Toro",
+   "fr_label": "Davidoff Nicaragua Toro (coffret)",
+   "es_label": "Davidoff Nicaragua Toro",
+   "brand": "Davidoff",
+   "fr": 28.0,
+   "es": 14.2,
+   "diff_pct": -49.3
+  },
+  {
+   "label": "Davidoff Oro Blanco",
+   "fr_label": "Davidoff Oro Blanco (coffret)",
+   "es_label": "Davidoff Oro Blanco",
+   "brand": "Davidoff",
+   "fr": 600.0,
+   "es": 600.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Davidoff Oro Blanco 111 years",
+   "fr_label": "Davidoff Oro Blanco 111 years",
+   "es_label": "Davidoff Oro Blanco 111 Years",
+   "brand": "Davidoff",
+   "fr": 750.0,
+   "es": 750.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Davidoff Primeros",
+   "fr_label": "Davidoff Primeros",
+   "es_label": "Davidoff Primeros",
+   "brand": "Davidoff",
+   "fr": 7.5,
+   "es": 5.0,
+   "diff_pct": -33.3
+  },
+  {
+   "label": "Davidoff Puro Dominicano Corona Larga",
+   "fr_label": "Davidoff Puro Dominicano Corona Larga (coffret)",
+   "es_label": "Davidoff Puro Dominicano Corona Larga",
+   "brand": "Davidoff",
+   "fr": 23.0,
+   "es": 18.3,
+   "diff_pct": -20.4
+  },
+  {
+   "label": "Davidoff Puro Dominicano Perfecto",
+   "fr_label": "Davidoff Puro Dominicano Perfecto (coffret)",
+   "es_label": "Davidoff Puro Dominicano Perfecto",
+   "brand": "Davidoff",
+   "fr": 25.0,
+   "es": 19.7,
+   "diff_pct": -21.2
+  },
+  {
+   "label": "Davidoff Puro Dominicano Short Robusto",
+   "fr_label": "Davidoff Puro Dominicano Short Robusto (coffret)",
+   "es_label": "Davidoff Puro Dominicano Short Robusto",
+   "brand": "Davidoff",
+   "fr": 20.0,
+   "es": 15.5,
+   "diff_pct": -22.5
+  },
+  {
+   "label": "Davidoff Royal Release Robusto",
+   "fr_label": "Davidoff Royal Release Robusto (coffret)",
+   "es_label": "Davidoff Royal Release Robusto",
+   "brand": "Davidoff",
+   "fr": 120.0,
+   "es": 120.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Davidoff Royal Release Salomones",
+   "fr_label": "Davidoff Royal Release Salomones",
+   "es_label": "Davidoff Royal Release Salomones",
+   "brand": "Davidoff",
+   "fr": 150.0,
+   "es": 150.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Davidoff Signature 1000",
+   "fr_label": "Davidoff Signature 1000 (coffret)",
+   "es_label": "Davidoff Signature 1000",
+   "brand": "Davidoff",
+   "fr": 13.5,
+   "es": 11.0,
+   "diff_pct": -18.5
+  },
+  {
+   "label": "Davidoff Signature 2000 Tubos",
+   "fr_label": "Davidoff Signature 2000 Tubos",
+   "es_label": "Davidoff Signature 2000 Tubos",
+   "brand": "Davidoff",
+   "fr": 20.0,
+   "es": 15.4,
+   "diff_pct": -23.0
+  },
+  {
+   "label": "Davidoff Signature 6000",
+   "fr_label": "Davidoff Signature 6000 (coffret)",
+   "es_label": "Davidoff Signature 6000",
+   "brand": "Davidoff",
+   "fr": 22.5,
+   "es": 17.9,
+   "diff_pct": -20.4
+  },
+  {
+   "label": "Davidoff Signature N°2",
+   "fr_label": "Davidoff Signature N°2",
+   "es_label": "Davidoff Signature Nº 2",
+   "brand": "Davidoff",
+   "fr": 21.0,
+   "es": 21.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Davidoff Signature N°2 Tubos",
+   "fr_label": "Davidoff Signature N°2 Tubos",
+   "es_label": "Davidoff Signature Nº 2 Tubos",
+   "brand": "Davidoff",
+   "fr": 23.0,
+   "es": 22.0,
+   "diff_pct": -4.3
+  },
+  {
+   "label": "Davidoff Yamasa Toro",
+   "fr_label": "Davidoff Yamasa Toro",
+   "es_label": "Davidoff Yamasa Toro",
+   "brand": "Davidoff",
+   "fr": 30.0,
+   "es": 22.4,
+   "diff_pct": -25.3
+  },
+  {
+   "label": "Davidoff Year of the Dragon",
+   "fr_label": "Davidoff Year of the Dragon (coffret)",
+   "es_label": "Davidoff Year of the Dragon",
+   "brand": "Davidoff",
+   "fr": 70.0,
+   "es": 52.0,
+   "diff_pct": -25.7
+  },
+  {
+   "label": "Davidoff Year of the Horse",
+   "fr_label": "Davidoff Year of the Horse (coffret)",
+   "es_label": "Davidoff Year of the Horse",
+   "brand": "Davidoff",
+   "fr": 65.0,
+   "es": 65.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Davidoff Year Of The Snake",
+   "fr_label": "Davidoff Year of the Snake (coffret)",
+   "es_label": "Davidoff Year Of The Snake",
+   "brand": "Davidoff",
+   "fr": 62.0,
+   "es": 62.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Diplomaticos n°2",
+   "fr_label": "Diplomaticos n°2",
+   "es_label": "Diplomáticos Nº 2",
+   "brand": "Diplomáticos",
+   "fr": 18.4,
+   "es": 20.6,
+   "diff_pct": 12.0
+  },
+  {
+   "label": "Don Tomas Brazil Robusto",
+   "fr_label": "Don Tomas Brazil Robusto",
+   "es_label": "Don Tomas Brazil Robusto",
+   "brand": "Don Tomas",
+   "fr": 7.0,
+   "es": 4.4,
+   "diff_pct": -37.1
+  },
+  {
+   "label": "Don Tomas Brazil Rothschild",
+   "fr_label": "Don Tomas Brazil Rothschild",
+   "es_label": "Don Tomas Brazil Rothschild",
+   "brand": "Don Tomas",
+   "fr": 6.5,
+   "es": 4.1,
+   "diff_pct": -36.9
+  },
+  {
+   "label": "Don Tomas Buena Fé Grueso",
+   "fr_label": "Don Tomas Buena Fé Grueso",
+   "es_label": "Don Tomas Buena Fé Grueso",
+   "brand": "Don Tomas",
+   "fr": 7.5,
+   "es": 5.3,
+   "diff_pct": -29.3
+  },
+  {
+   "label": "Don Tomas Buena Fé Robusto",
+   "fr_label": "Don Tomas Buena Fé Robusto",
+   "es_label": "Don Tomas Buena Fé Robusto",
+   "brand": "Don Tomas",
+   "fr": 6.5,
+   "es": 4.3,
+   "diff_pct": -33.8
+  },
+  {
+   "label": "Don Tomas Buena Fé Rothschild",
+   "fr_label": "Don Tomas Buena Fé Rothschild",
+   "es_label": "Don Tomas Buena Fé Rothschild",
+   "brand": "Don Tomas",
+   "fr": 6.0,
+   "es": 4.0,
+   "diff_pct": -33.3
+  },
+  {
+   "label": "Don Tomas bundle Gigante",
+   "fr_label": "Don Tomas bundle Gigante",
+   "es_label": "Don Tomas Bundle Gigante",
+   "brand": "Don Tomas",
+   "fr": 4.8,
+   "es": 2.5,
+   "diff_pct": -47.9
+  },
+  {
+   "label": "Don Tomas Clasico Allegro Tubo",
+   "fr_label": "Don Tomas Clasico Allegro Tubo",
+   "es_label": "Don Tomas Clasico Allegro Tube",
+   "brand": "Don Tomas",
+   "fr": 8.1,
+   "es": 6.0,
+   "diff_pct": -25.9
+  },
+  {
+   "label": "Don Tomas Clasico n°4",
+   "fr_label": "Don Tomas Clasico n°4",
+   "es_label": "Don Tomas Clásico Nº 4",
+   "brand": "Don Tomas",
+   "fr": 6.1,
+   "es": 2.8,
+   "diff_pct": -54.1
+  },
+  {
+   "label": "Don Tomas Clasico Robusto",
+   "fr_label": "Don Tomas Clasico Robusto",
+   "es_label": "Don Tomas Clasico Robusto",
+   "brand": "Don Tomas",
+   "fr": 6.5,
+   "es": 4.3,
+   "diff_pct": -33.8
+  },
+  {
+   "label": "Don Tomas Clasico Rothschild",
+   "fr_label": "Don Tomas Clasico Rothschild",
+   "es_label": "Don Tomas Clasico Rothschild",
+   "brand": "Don Tomas",
+   "fr": 6.0,
+   "es": 4.0,
+   "diff_pct": -33.3
+  },
+  {
+   "label": "Don Tomas Corona Tubos",
+   "fr_label": "Don Tomas Corona (tube)",
+   "es_label": "Don Tomas Corona Tubos",
+   "brand": "Don Tomas",
+   "fr": 7.1,
+   "es": 2.95,
+   "diff_pct": -58.5
+  },
+  {
+   "label": "Don Tomas Nicaragua Robusto",
+   "fr_label": "Don Tomas Nicaragua Robusto",
+   "es_label": "Don Tomas Nicaragua Robusto",
+   "brand": "Don Tomas",
+   "fr": 6.5,
+   "es": 4.4,
+   "diff_pct": -32.3
+  },
+  {
+   "label": "Don Tomas Nicaragua Rothschild",
+   "fr_label": "Don Tomas Nicaragua Rothschild",
+   "es_label": "Don Tomas Nicaragua Rothschild",
+   "brand": "Don Tomas",
+   "fr": 6.0,
+   "es": 4.05,
+   "diff_pct": -32.5
+  },
+  {
+   "label": "Don Tomas Nicaragua Toro",
+   "fr_label": "Don Tomas Nicaragua Toro",
+   "es_label": "Don Tomas Nicaragua Toro",
+   "brand": "Don Tomas",
+   "fr": 9.0,
+   "es": 5.3,
+   "diff_pct": -41.1
+  },
+  {
+   "label": "El Viejo Continente Maximum",
+   "fr_label": "El Viejo Continente Maximum (Coffret)",
+   "es_label": "El Viejo Continente Maximum",
+   "brand": "El Viejo Continente",
+   "fr": 13.0,
+   "es": 5.75,
+   "diff_pct": -55.8
+  },
+  {
+   "label": "Enclave Toro",
+   "fr_label": "Enclave Toro (coffret)",
+   "es_label": "Enclave Toro",
+   "brand": "Enclave",
+   "fr": 14.0,
+   "es": 8.95,
+   "diff_pct": -36.1
+  },
+  {
+   "label": "Flor de Copan Corona",
+   "fr_label": "Flor de Copan Corona",
+   "es_label": "Flor de Copán Corona",
+   "brand": "Flor de Copán",
+   "fr": 8.5,
+   "es": 5.3,
+   "diff_pct": -37.6
+  },
+  {
+   "label": "Flor de Copan Rothschild",
+   "fr_label": "Flor de Copan Rothschild",
+   "es_label": "Flor de Copán Rothschild",
+   "brand": "Flor de Copán",
+   "fr": 10.0,
+   "es": 6.4,
+   "diff_pct": -36.0
+  },
+  {
+   "label": "Flor de Selva Barroco",
+   "fr_label": "Flor de Selva Barroco (boîte)",
+   "es_label": "Flor de Selva Barroco",
+   "brand": "Flor de Selva",
+   "fr": 12.0,
+   "es": 7.1,
+   "diff_pct": -40.8
+  },
+  {
+   "label": "Flor de Selva Churchill",
+   "fr_label": "Flor de Selva Churchill",
+   "es_label": "Flor de Selva Churchill",
+   "brand": "Flor de Selva",
+   "fr": 17.9,
+   "es": 9.1,
+   "diff_pct": -49.2
+  },
+  {
+   "label": "Flor de Selva Corona",
+   "fr_label": "Flor de Selva Corona",
+   "es_label": "Flor de Selva Corona",
+   "brand": "Flor de Selva",
+   "fr": 14.0,
+   "es": 6.8,
+   "diff_pct": -51.4
+  },
+  {
+   "label": "Flor de Selva Doble Corona",
+   "fr_label": "Flor de Selva Doble Corona",
+   "es_label": "Flor de Selva Doble Corona",
+   "brand": "Flor de Selva",
+   "fr": 18.8,
+   "es": 9.6,
+   "diff_pct": -48.9
+  },
+  {
+   "label": "Flor de Selva Fino",
+   "fr_label": "Flor de Selva Fino",
+   "es_label": "Flor de Selva Fino",
+   "brand": "Flor de Selva",
+   "fr": 14.2,
+   "es": 6.3,
+   "diff_pct": -55.6
+  },
+  {
+   "label": "Flor de Selva N°15",
+   "fr_label": "Flor de Selva N°15",
+   "es_label": "Flor de Selva Nº 15",
+   "brand": "Flor de Selva",
+   "fr": 15.5,
+   "es": 6.6,
+   "diff_pct": -57.4
+  },
+  {
+   "label": "Flor de Selva Panetela",
+   "fr_label": "Flor de Selva Panetela",
+   "es_label": "Flor de Selva Panetela",
+   "brand": "Flor de Selva",
+   "fr": 9.7,
+   "es": 4.2,
+   "diff_pct": -56.7
+  },
+  {
+   "label": "Flor de Selva Petit Corona",
+   "fr_label": "Flor de Selva Petit Corona",
+   "es_label": "Flor de Selva Petit Corona",
+   "brand": "Flor de Selva",
+   "fr": 12.4,
+   "es": 5.5,
+   "diff_pct": -55.6
+  },
+  {
+   "label": "Flor de Selva Robusto",
+   "fr_label": "Flor de Selva Robusto (boîte)",
+   "es_label": "Flor de Selva Robusto",
+   "brand": "Flor de Selva",
+   "fr": 13.9,
+   "es": 11.5,
+   "diff_pct": -17.3
+  },
+  {
+   "label": "Flor de Selva Robusto Maduro",
+   "fr_label": "Flor de Selva Robusto Maduro (boite)",
+   "es_label": "Flor de Selva Robusto Maduro",
+   "brand": "Flor de Selva",
+   "fr": 14.6,
+   "es": 12.0,
+   "diff_pct": -17.8
+  },
+  {
+   "label": "Flor de Selva Siesta",
+   "fr_label": "Flor de Selva Siesta (boîte)",
+   "es_label": "Flor de Selva Siesta",
+   "brand": "Flor de Selva",
+   "fr": 11.5,
+   "es": 5.3,
+   "diff_pct": -53.9
+  },
+  {
+   "label": "Flor de Selva Tempo",
+   "fr_label": "Flor de Selva Tempo (boîte)",
+   "es_label": "Flor de Selva Tempo",
+   "brand": "Flor de Selva",
+   "fr": 17.2,
+   "es": 8.6,
+   "diff_pct": -50.0
+  },
+  {
+   "label": "Fonseca Cosacos",
+   "fr_label": "Fonseca Cosacos",
+   "es_label": "Fonseca Cosacos",
+   "brand": "Fonseca",
+   "fr": 9.2,
+   "es": 7.3,
+   "diff_pct": -20.7
+  },
+  {
+   "label": "Fonseca Delicias",
+   "fr_label": "Fonseca Delicias",
+   "es_label": "Fonseca Delicias",
+   "brand": "Fonseca",
+   "fr": 6.0,
+   "es": 4.4,
+   "diff_pct": -26.7
+  },
+  {
+   "label": "Fonseca n°1",
+   "fr_label": "Fonseca n°1",
+   "es_label": "Fonseca Nº 1",
+   "brand": "Fonseca",
+   "fr": 12.4,
+   "es": 10.0,
+   "diff_pct": -19.4
+  },
+  {
+   "label": "Guantanamera Cristales",
+   "fr_label": "Guantanamera Cristales",
+   "es_label": "Guantanamera Cristales",
+   "brand": "Guantanamera",
+   "fr": 3.8,
+   "es": 2.1,
+   "diff_pct": -44.7
+  },
+  {
+   "label": "Guantanamera Decimos",
+   "fr_label": "Guantanamera Decimos",
+   "es_label": "Guantanamera Decimos",
+   "brand": "Guantanamera",
+   "fr": 2.4,
+   "es": 1.5,
+   "diff_pct": -37.5
+  },
+  {
+   "label": "Gurkha Heritage Robusto",
+   "fr_label": "Gurkha Heritage Robusto (coffret)",
+   "es_label": "Gurkha Heritage Robusto",
+   "brand": "Gurkha",
+   "fr": 13.9,
+   "es": 11.8,
+   "diff_pct": -15.1
+  },
+  {
+   "label": "Gurkha Heritage Robusto Corto",
+   "fr_label": "Gurkha Heritage Robusto Corto (coffret)",
+   "es_label": "Gurkha Heritage Robusto Corto",
+   "brand": "Gurkha",
+   "fr": 12.0,
+   "es": 8.8,
+   "diff_pct": -26.7
+  },
+  {
+   "label": "H.Upmann Connoisseur n°1",
+   "fr_label": "H.Upmann Connoisseur n°1",
+   "es_label": "H.Upmann Connoisseur Nº 1",
+   "brand": "H. Upmann",
+   "fr": 19.8,
+   "es": 17.1,
+   "diff_pct": -13.6
+  },
+  {
+   "label": "H.Upmann Connossieur N°2",
+   "fr_label": "H.Upmann Connossieur N°2",
+   "es_label": "H.Upmann Connossieur No.2",
+   "brand": "H. Upmann",
+   "fr": 22.6,
+   "es": 20.1,
+   "diff_pct": -11.1
+  },
+  {
+   "label": "H.Upmann Epicures",
+   "fr_label": "H.Upmann Epicures",
+   "es_label": "H.Upmann Epicures",
+   "brand": "H. Upmann",
+   "fr": 8.0,
+   "es": 5.4,
+   "diff_pct": -32.5
+  },
+  {
+   "label": "H.Upmann Magnum 46",
+   "fr_label": "H.Upmann Magnum 46",
+   "es_label": "H.Upmann Magnum 46",
+   "brand": "H. Upmann",
+   "fr": 23.0,
+   "es": 19.0,
+   "diff_pct": -17.4
+  },
+  {
+   "label": "H.Upmann Magnum 46 Tubo",
+   "fr_label": "H.Upmann Magnum 46 (tube - 5 étuis de 3)",
+   "es_label": "H.Upmann Magnum 46 Tubo",
+   "brand": "H. Upmann",
+   "fr": 26.7,
+   "es": 19.7,
+   "diff_pct": -26.2
+  },
+  {
+   "label": "H.Upmann Magnum 50",
+   "fr_label": "H.Upmann Magnum 50",
+   "es_label": "H.Upmann Magnum 50",
+   "brand": "H. Upmann",
+   "fr": 27.2,
+   "es": 23.1,
+   "diff_pct": -15.1
+  },
+  {
+   "label": "H.Upmann Magnum 50 Tubo",
+   "fr_label": "H.Upmann Magnum 50 (tube - 5 étuis de 3)",
+   "es_label": "H.Upmann Magnum 50 Tubo",
+   "brand": "H. Upmann",
+   "fr": 31.2,
+   "es": 23.8,
+   "diff_pct": -23.7
+  },
+  {
+   "label": "H.Upmann Magnum 54",
+   "fr_label": "H.Upmann Magnum 54",
+   "es_label": "H.Upmann Magnum 54",
+   "brand": "H. Upmann",
+   "fr": 23.6,
+   "es": 20.5,
+   "diff_pct": -13.1
+  },
+  {
+   "label": "H.Upmann Magnum 54 T",
+   "fr_label": "H.Upmann Magnum 54 (tube - 5 étuis de 3)",
+   "es_label": "H.Upmann Magnum 54 T",
+   "brand": "H. Upmann",
+   "fr": 28.1,
+   "es": 21.2,
+   "diff_pct": -24.6
+  },
+  {
+   "label": "H.Upmann Regalias",
+   "fr_label": "H.Upmann Regalias",
+   "es_label": "H.Upmann Regalias",
+   "brand": "H. Upmann",
+   "fr": 9.0,
+   "es": 11.9,
+   "diff_pct": 32.2
+  },
+  {
+   "label": "H.Upmann Sir Winston",
+   "fr_label": "H.Upmann Sir Winston",
+   "es_label": "H.Upmann Sir Winston",
+   "brand": "H. Upmann",
+   "fr": 39.2,
+   "es": 29.9,
+   "diff_pct": -23.7
+  },
+  {
+   "label": "Horacio Colosso",
+   "fr_label": "Horacio, Colosso (boîte)",
+   "es_label": "Horacio Colosso",
+   "brand": "Horacio",
+   "fr": 19.9,
+   "es": 14.4,
+   "diff_pct": -27.6
+  },
+  {
+   "label": "Horacio XXL",
+   "fr_label": "Horacio, XXL (boîte)",
+   "es_label": "Horacio XXL",
+   "brand": "Horacio",
+   "fr": 24.9,
+   "es": 16.0,
+   "diff_pct": -35.7
+  },
+  {
+   "label": "Hoyo de Monterrey Destinos TR",
+   "fr_label": "Hoyo de Monterrey Destinos (TR)",
+   "es_label": "Hoyo de Monterrey Destinos TR",
+   "brand": "Hoyo de Monterrey",
+   "fr": 72.0,
+   "es": 50.0,
+   "diff_pct": -30.6
+  },
+  {
+   "label": "Hoyo de Monterrey Double Coronas",
+   "fr_label": "Hoyo de Monterrey Double Coronas",
+   "es_label": "Hoyo de Monterrey Double Coronas",
+   "brand": "Hoyo de Monterrey",
+   "fr": 35.1,
+   "es": 32.2,
+   "diff_pct": -8.3
+  },
+  {
+   "label": "Hoyo de Monterrey Epicure n°1",
+   "fr_label": "Hoyo de Monterrey Epicure n°1",
+   "es_label": "Hoyo de Monterrey Epicure Nº 1",
+   "brand": "Hoyo de Monterrey",
+   "fr": 23.0,
+   "es": 21.2,
+   "diff_pct": -7.8
+  },
+  {
+   "label": "Hoyo de Monterrey Epicure N°3",
+   "fr_label": "Hoyo de Monterrey Epicure N°3",
+   "es_label": "Hoyo de Monterrey Epicure No. 3",
+   "brand": "Hoyo de Monterrey",
+   "fr": 25.5,
+   "es": 23.8,
+   "diff_pct": -6.7
+  },
+  {
+   "label": "Hoyo de Monterrey Epicure Nº 2",
+   "fr_label": "Hoyo de Monterrey Epicure n°2 (5 étuis de 3)",
+   "es_label": "Hoyo de Monterrey Epicure Nº 2",
+   "brand": "Hoyo de Monterrey",
+   "fr": 22.0,
+   "es": 21.2,
+   "diff_pct": -3.6
+  },
+  {
+   "label": "Hoyo de Monterrey Epicure Nº 2 Tubo",
+   "fr_label": "Hoyo de Monterrey Epicure N°2 (tube - 5 étuis de 3)",
+   "es_label": "Hoyo de Monterrey Epicure Nº 2 Tubo",
+   "brand": "Hoyo de Monterrey",
+   "fr": 25.1,
+   "es": 21.9,
+   "diff_pct": -12.7
+  },
+  {
+   "label": "Hoyo de Monterrey Le Hoyo de San Juan",
+   "fr_label": "Hoyo de Monterrey Le Hoyo de San Juan",
+   "es_label": "Hoyo de Monterrey Le Hoyo de San Juan",
+   "brand": "Hoyo de Monterrey Le",
+   "fr": 29.1,
+   "es": 24.8,
+   "diff_pct": -14.8
+  },
+  {
+   "label": "Hoyo de Monterrey Le Hoyo du Député",
+   "fr_label": "Hoyo de Monterrey Le Hoyo du Député",
+   "es_label": "Hoyo de Monterrey Le Hoyo du Depute",
+   "brand": "Hoyo de Monterrey Le",
+   "fr": 12.2,
+   "es": 9.0,
+   "diff_pct": -26.2
+  },
+  {
+   "label": "Hoyo de Monterrey Le Hoyo du Maire",
+   "fr_label": "Hoyo de Monterrey Le Hoyo du Maire",
+   "es_label": "Hoyo de Monterrey Le Hoyo du Maire",
+   "brand": "Hoyo de Monterrey Le",
+   "fr": 9.8,
+   "es": 5.6,
+   "diff_pct": -42.9
+  },
+  {
+   "label": "Hoyo de Monterrey Petit Robustos",
+   "fr_label": "Hoyo de Monterrey Petit Robustos (5 étuis de 3)",
+   "es_label": "Hoyo de Monterrey Petit Robustos",
+   "brand": "Hoyo de Monterrey",
+   "fr": 17.8,
+   "es": 15.4,
+   "diff_pct": -13.5
+  },
+  {
+   "label": "Hoyo de Monterrey Primaveras",
+   "fr_label": "Hoyo de Monterrey Primaveras (coffret)",
+   "es_label": "Hoyo de Monterrey Primaveras",
+   "brand": "Hoyo de Monterrey",
+   "fr": 70.2,
+   "es": 98.9,
+   "diff_pct": 40.9
+  },
+  {
+   "label": "Jose L. Piedra Cazadores",
+   "fr_label": "Jose L. Piedra Cazadores (5 étuis de 5)",
+   "es_label": "Jose L. Piedra Cazadores",
+   "brand": "Jose L. Piedra",
+   "fr": 3.9,
+   "es": 2.2,
+   "diff_pct": -43.6
+  },
+  {
+   "label": "Jose L. Piedra Conservas",
+   "fr_label": "Jose L. Piedra Conservas",
+   "es_label": "Jose L. Piedra Conservas",
+   "brand": "Jose L. Piedra",
+   "fr": 4.2,
+   "es": 2.2,
+   "diff_pct": -47.6
+  },
+  {
+   "label": "Jose L. Piedra Petit Caballeros",
+   "fr_label": "Jose L. Piedra Petit Caballeros (5 étuis de 3)",
+   "es_label": "Jose L. Piedra Petit Caballeros",
+   "brand": "Jose L. Piedra",
+   "fr": 4.1,
+   "es": 2.6,
+   "diff_pct": -36.6
+  },
+  {
+   "label": "Jose L. Piedra Petit Cazadores",
+   "fr_label": "Jose L. Piedra Petit Cazadores (5 étuis de 5)",
+   "es_label": "Jose L. Piedra Petit Cazadores",
+   "brand": "Jose L. Piedra",
+   "fr": 3.1,
+   "es": 1.9,
+   "diff_pct": -38.7
+  },
+  {
+   "label": "La Aurora 107 Nicaragua Robusto",
+   "fr_label": "La Aurora 107 Nicaragua Robusto",
+   "es_label": "La Aurora 107 Nicaragua Robusto",
+   "brand": "La Aurora",
+   "fr": 14.6,
+   "es": 6.85,
+   "diff_pct": -53.1
+  },
+  {
+   "label": "La Aurora 107 Nicaragua Toro",
+   "fr_label": "La Aurora 107 Nicaragua Toro",
+   "es_label": "La Aurora 107 Nicaragua Toro",
+   "brand": "La Aurora",
+   "fr": 16.2,
+   "es": 7.65,
+   "diff_pct": -52.8
+  },
+  {
+   "label": "La Aurora Escogidos Robusto",
+   "fr_label": "La Aurora Escogidos Robusto",
+   "es_label": "La Aurora Escogidos Robusto",
+   "brand": "La Aurora",
+   "fr": 14.8,
+   "es": 7.6,
+   "diff_pct": -48.6
+  },
+  {
+   "label": "La Aurora Escogidos Toro",
+   "fr_label": "La Aurora Escogidos Toro",
+   "es_label": "La Aurora Escogidos Toro",
+   "brand": "La Aurora",
+   "fr": 16.5,
+   "es": 8.0,
+   "diff_pct": -51.5
+  },
+  {
+   "label": "La Estrella Polar Gigante",
+   "fr_label": "La Estrella Polar Gigante",
+   "es_label": "La Estrella Polar Gigante",
+   "brand": "La Estrella Polar",
+   "fr": 7.0,
+   "es": 3.55,
+   "diff_pct": -49.3
+  },
+  {
+   "label": "La Estrella Polar Robusto",
+   "fr_label": "La Estrella Polar Robusto",
+   "es_label": "La Estrella Polar Robusto",
+   "brand": "La Estrella Polar",
+   "fr": 6.0,
+   "es": 3.05,
+   "diff_pct": -49.2
+  },
+  {
+   "label": "La Estrella Polar Rothschild",
+   "fr_label": "La Estrella Polar Rothschild",
+   "es_label": "La Estrella Polar Rothschild",
+   "brand": "La Estrella Polar",
+   "fr": 5.5,
+   "es": 2.75,
+   "diff_pct": -50.0
+  },
+  {
+   "label": "La Estrella Solar Gigante",
+   "fr_label": "La Estrella Solar Gigante",
+   "es_label": "La Estrella Solar Gigante",
+   "brand": "La Estrella",
+   "fr": 8.0,
+   "es": 3.55,
+   "diff_pct": -55.6
+  },
+  {
+   "label": "La Estrella Solar Robusto",
+   "fr_label": "La Estrella Solar Robusto",
+   "es_label": "La Estrella Solar Robusto",
+   "brand": "La Estrella",
+   "fr": 6.0,
+   "es": 3.05,
+   "diff_pct": -49.2
+  },
+  {
+   "label": "La Flor de Cano Elegidos",
+   "fr_label": "La Flor de Cano Elegidos (5 étuis de 3)",
+   "es_label": "La Flor de Cano Elegidos",
+   "brand": "La Flor de Cano",
+   "fr": 6.8,
+   "es": 6.7,
+   "diff_pct": -1.5
+  },
+  {
+   "label": "La Flor Dominicana Andalusian Bull",
+   "fr_label": "La Flor Dominicana Andalusian Bull (coffret)",
+   "es_label": "La Flor Dominicana Andalusian Bull",
+   "brand": "La Flor Dominicana",
+   "fr": 27.0,
+   "es": 31.9,
+   "diff_pct": 18.1
+  },
+  {
+   "label": "La Flor Dominicana Reserva Especial Toro",
+   "fr_label": "La Flor Dominicana Reserva Especial Toro (coffret)",
+   "es_label": "La Flor Dominicana Reserva Especial Toro",
+   "brand": "La Flor Dominicana",
+   "fr": 16.0,
+   "es": 14.8,
+   "diff_pct": -7.5
+  },
+  {
+   "label": "La gloria cubana Médaille d'Or n°4",
+   "fr_label": "La gloria cubana Médaille d'Or n°4",
+   "es_label": "La Gloria Cubana Medaille D'Or Nº 4",
+   "brand": "La Gloria Cubana",
+   "fr": 12.1,
+   "es": 10.8,
+   "diff_pct": -10.7
+  },
+  {
+   "label": "La Gloria Cubana Turquinos",
+   "fr_label": "La Gloria Cubana Turquinos",
+   "es_label": "La Gloria Cubana Turquinos",
+   "brand": "La Gloria Cubana",
+   "fr": 20.2,
+   "es": 19.2,
+   "diff_pct": -5.0
+  },
+  {
+   "label": "La Ley Cañonazo",
+   "fr_label": "La Ley Canonazo (coffret)",
+   "es_label": "La Ley Cañonazo",
+   "brand": "La Ley",
+   "fr": 19.5,
+   "es": 14.0,
+   "diff_pct": -28.2
+  },
+  {
+   "label": "La Ley Robusto",
+   "fr_label": "La Ley Robusto (coffret)",
+   "es_label": "La Ley Robusto",
+   "brand": "La Ley",
+   "fr": 18.0,
+   "es": 12.8,
+   "diff_pct": -28.9
+  },
+  {
+   "label": "Liga Privada No 9 Robusto",
+   "fr_label": "Liga Privada N°9  Robusto (Coffret)",
+   "es_label": "Liga Privada No 9 Robusto",
+   "brand": "Liga Privada",
+   "fr": 22.0,
+   "es": 22.0,
+   "diff_pct": 0.0
+  },
+  {
+   "label": "Macanudo Emissary France Perfecto",
+   "fr_label": "Macanudo Emissary France Perfecto",
+   "es_label": "Macanudo Emissary France Perfecto",
+   "brand": "Macanudo",
+   "fr": 16.0,
+   "es": 12.9,
+   "diff_pct": -19.4
+  },
+  {
+   "label": "Macanudo Emissary France Robusto",
+   "fr_label": "Macanudo Emissary France Robusto",
+   "es_label": "Macanudo Emissary France Robusto",
+   "brand": "Macanudo",
+   "fr": 14.0,
+   "es": 10.9,
+   "diff_pct": -22.1
+  },
+  {
+   "label": "Macanudo Inspirado Black Toro",
+   "fr_label": "Macanudo Inspirado Black Toro",
+   "es_label": "Macanudo Inspirado Black Toro",
+   "brand": "Macanudo",
+   "fr": 11.2,
+   "es": 7.1,
+   "diff_pct": -36.6
+  },
+  {
+   "label": "Macanudo Inspirado Decade Torpedo",
+   "fr_label": "Macanudo Inspirado Decade Torpedo",
+   "es_label": "Macanudo Inspirado Decade Torpedo",
+   "brand": "Macanudo",
+   "fr": 16.5,
+   "es": 10.0,
+   "diff_pct": -39.4
+  },
+  {
+   "label": "Macanudo Inspirado Green Robusto",
+   "fr_label": "Macanudo Inspirado Green Robusto",
+   "es_label": "Macanudo Inspirado Green Robusto",
+   "brand": "Macanudo",
+   "fr": 9.0,
+   "es": 6.2,
+   "diff_pct": -31.1
+  },
+  {
+   "label": "Macanudo Inspirado Green Toro",
+   "fr_label": "Macanudo Inspirado Green Toro",
+   "es_label": "Macanudo Inspirado Green Toro",
+   "brand": "Macanudo",
+   "fr": 9.7,
+   "es": 6.6,
+   "diff_pct": -32.0
+  },
+  {
+   "label": "Macanudo Inspirado Orange Gigante",
+   "fr_label": "Macanudo Inspirado Orange Gigante",
+   "es_label": "Macanudo Inspirado Orange Gigante",
+   "brand": "Macanudo",
+   "fr": 10.0,
+   "es": 6.5,
+   "diff_pct": -35.0
+  },
+  {
+   "label": "Macanudo Inspirado Orange Lancero",
+   "fr_label": "Macanudo Inspirado Orange Lancero",
+   "es_label": "Macanudo Inspirado Orange Lancero",
+   "brand": "Macanudo",
+   "fr": 9.0,
+   "es": 6.4,
+   "diff_pct": -28.9
+  },
+  {
+   "label": "Macanudo Inspirado Orange Robusto",
+   "fr_label": "Macanudo Inspirado Orange Robusto",
+   "es_label": "Macanudo Inspirado Orange Robusto",
+   "brand": "Macanudo",
+   "fr": 8.0,
+   "es": 5.9,
+   "diff_pct": -26.2
+  },
+  {
+   "label": "Macanudo Inspirado Red Gigante",
+   "fr_label": "Macanudo Inspirado Red Gigante",
+   "es_label": "Macanudo Inspirado Red Gigante",
+   "brand": "Macanudo",
+   "fr": 10.7,
+   "es": 7.0,
+   "diff_pct": -34.6
+  },
+  {
+   "label": "Macanudo Inspirado Red Toro",
+   "fr_label": "Macanudo Inspirado Red Toro",
+   "es_label": "Macanudo Inspirado Red Toro",
+   "brand": "Macanudo",
+   "fr": 9.5,
+   "es": 6.4,
+   "diff_pct": -32.6
+  },
+  {
+   "label": "Macanudo Inspirado White Churchill",
+   "fr_label": "Macanudo Inspirado White Churchill",
+   "es_label": "Macanudo Inspirado White Churchill",
+   "brand": "Macanudo",
+   "fr": 9.3,
+   "es": 6.3,
+   "diff_pct": -32.3
+  },
+  {
+   "label": "Macanudo Inspirado White Robusto",
+   "fr_label": "Macanudo Inspirado White Robusto",
+   "es_label": "Macanudo Inspirado White Robusto",
+   "brand": "Macanudo",
+   "fr": 8.0,
+   "es": 5.9,
+   "diff_pct": -26.2
+  },
+  {
+   "label": "Macanudo Inspirado White Rothschild",
+   "fr_label": "Macanudo Inspirado White Rothschild",
+   "es_label": "Macanudo Inspirado White Rothschild",
+   "brand": "Macanudo",
+   "fr": 7.5,
+   "es": 5.5,
+   "diff_pct": -26.7
+  },
+  {
+   "label": "Macanudo Inspirado White Toro",
+   "fr_label": "Macanudo Inspirado White Toro",
+   "es_label": "Macanudo Inspirado White Toro",
+   "brand": "Macanudo",
+   "fr": 8.8,
+   "es": 6.4,
+   "diff_pct": -27.3
+  },
+  {
+   "label": "Montecristo A",
+   "fr_label": "Montecristo A",
+   "es_label": "Montecristo A",
+   "brand": "Montecristo",
+   "fr": 78.4,
+   "es": 65.0,
+   "diff_pct": -17.1
+  },
+  {
+   "label": "Montecristo Double Edmundo",
+   "fr_label": "Montecristo Double Edmundo (5 étuis de 3)",
+   "es_label": "Montecristo Double Edmundo",
+   "brand": "Montecristo",
+   "fr": 33.5,
+   "es": 25.8,
+   "diff_pct": -23.0
+  },
+  {
+   "label": "Montecristo Edmundo",
+   "fr_label": "Montecristo Edmundo (5 étuis de 3)",
+   "es_label": "Montecristo Edmundo",
+   "brand": "Montecristo",
+   "fr": 30.4,
+   "es": 25.7,
+   "diff_pct": -15.5
+  },
+  {
+   "label": "Montecristo Edmundo Tubo",
+   "fr_label": "Montecristo Edmundo (tube - 5 étuis de 3)",
+   "es_label": "Montecristo Edmundo Tubo",
+   "brand": "Montecristo",
+   "fr": 33.5,
+   "es": 26.4,
+   "diff_pct": -21.2
+  },
+  {
+   "label": "Montecristo Especial",
+   "fr_label": "Montecristo Especial",
+   "es_label": "Montecristo Especial",
+   "brand": "Montecristo",
+   "fr": 32.4,
+   "es": 25.4,
+   "diff_pct": -21.6
+  },
+  {
+   "label": "Montecristo Especial n°2",
+   "fr_label": "Montecristo Especial n°2",
+   "es_label": "Montecristo Especial Nº 2",
+   "brand": "Montecristo",
+   "fr": 24.6,
+   "es": 18.9,
+   "diff_pct": -23.2
+  },
+  {
+   "label": "Montecristo Joyitas",
+   "fr_label": "Montecristo Joyitas (5 étuis de 5)",
+   "es_label": "Montecristo Joyitas",
+   "brand": "Montecristo",
+   "fr": 12.5,
+   "es": 9.0,
+   "diff_pct": -28.0
+  },
+  {
+   "label": "Montecristo Media Corona",
+   "fr_label": "Montecristo Media Corona",
+   "es_label": "Montecristo Media Corona",
+   "brand": "Montecristo",
+   "fr": 12.3,
+   "es": 8.2,
+   "diff_pct": -33.3
+  },
+  {
+   "label": "Montecristo n°1",
+   "fr_label": "Montecristo n°1",
+   "es_label": "Montecristo Nº 1",
+   "brand": "Montecristo",
+   "fr": 25.1,
+   "es": 20.9,
+   "diff_pct": -16.7
+  },
+  {
+   "label": "Montecristo Nº 2",
+   "fr_label": "Montecristo n°2 (5 étuis de 3)",
+   "es_label": "Montecristo Nº 2",
+   "brand": "Montecristo",
+   "fr": 29.8,
+   "es": 25.8,
+   "diff_pct": -13.4
+  },
+  {
+   "label": "Montecristo Nº 3",
+   "fr_label": "Montecristo n°3 (5 étuis de 5)",
+   "es_label": "Montecristo Nº 3",
+   "brand": "Montecristo",
+   "fr": 22.0,
+   "es": 16.6,
+   "diff_pct": -24.5
+  },
+  {
+   "label": "Montecristo Nº 4",
+   "fr_label": "Montecristo n°4 (5 étuis de 3)",
+   "es_label": "Montecristo Nº 4",
+   "brand": "Montecristo",
+   "fr": 17.3,
+   "es": 12.7,
+   "diff_pct": -26.6
+  },
+  {
+   "label": "Montecristo Nº 5",
+   "fr_label": "Montecristo n°5 (5 étuis de 5)",
+   "es_label": "Montecristo Nº 5",
+   "brand": "Montecristo",
+   "fr": 14.6,
+   "es": 9.1,
+   "diff_pct": -37.7
+  },
+  {
+   "label": "Montecristo Petit Edmundo",
+   "fr_label": "Montecristo Petit Edmundo",
+   "es_label": "Montecristo Petit Edmundo",
+   "brand": "Montecristo",
+   "fr": 22.5,
+   "es": 18.3,
+   "diff_pct": -18.7
+  },
+  {
+   "label": "Montecristo Petit Edmundo Tubo",
+   "fr_label": "Montecristo Petit Edmundo (tube - 5 étuis de 3)",
+   "es_label": "Montecristo Petit Edmundo Tubo",
+   "brand": "Montecristo",
+   "fr": 25.5,
+   "es": 19.0,
+   "diff_pct": -25.5
+  },
+  {
+   "label": "Montecristo Petit n°2",
+   "fr_label": "Montecristo Petit n°2",
+   "es_label": "Montecristo Petit Nº 2",
+   "brand": "Montecristo",
+   "fr": 22.5,
+   "es": 18.3,
+   "diff_pct": -18.7
+  },
+  {
+   "label": "Montecristo Petit Tubos",
+   "fr_label": "Montecristo Petit Tubos",
+   "es_label": "Montecristo Petit Tubos",
+   "brand": "Montecristo",
+   "fr": 20.7,
+   "es": 13.4,
+   "diff_pct": -35.3
+  },
+  {
+   "label": "Montecristo Wide Edmundo",
+   "fr_label": "Montecristo Wide Edmundo",
+   "es_label": "Montecristo Wide Edmundo",
+   "brand": "Montecristo",
+   "fr": 31.5,
+   "es": 26.3,
+   "diff_pct": -16.5
+  },
+  {
+   "label": "MONTEGO Oro Reserva Robusto",
+   "fr_label": "MONTEGO Oro Reserva Robusto",
+   "es_label": "Montego Oro Reserva Robusto",
+   "brand": "Montego",
+   "fr": 13.5,
+   "es": 5.75,
+   "diff_pct": -57.4
+  },
+  {
+   "label": "MONTEGO Prestigio Robusto",
+   "fr_label": "MONTEGO Prestigio Robusto",
+   "es_label": "Montego Prestigio Robusto",
+   "brand": "Montego",
+   "fr": 12.0,
+   "es": 4.95,
+   "diff_pct": -58.8
+  },
+  {
+   "label": "MONTEGO Sereno Robusto",
+   "fr_label": "MONTEGO Sereno Robusto",
+   "es_label": "Montego Sereno Robusto",
+   "brand": "Montego",
+   "fr": 11.0,
+   "es": 4.5,
+   "diff_pct": -59.1
+  },
+  {
+   "label": "Montosa Robusto",
+   "fr_label": "Montosa Robusto",
+   "es_label": "Montosa Robusto",
+   "brand": "Montosa",
+   "fr": 7.5,
+   "es": 5.6,
+   "diff_pct": -25.3
+  },
+  {
+   "label": "Montosa Short Robusto",
+   "fr_label": "Montosa Short Robusto",
+   "es_label": "Montosa Short Robusto",
+   "brand": "Montosa",
+   "fr": 7.3,
+   "es": 5.4,
+   "diff_pct": -26.0
+  },
+  {
+   "label": "Montosa Toro",
+   "fr_label": "Montosa Toro",
+   "es_label": "Montosa Toro",
+   "brand": "Montosa",
+   "fr": 7.7,
+   "es": 5.8,
+   "diff_pct": -24.7
+  },
+  {
+   "label": "Nicarao Especial Gordo",
+   "fr_label": "Nicarao Especial Gordo (coffret)",
+   "es_label": "Nicarao Especial Gordo",
+   "brand": "Nicarao",
+   "fr": 15.5,
+   "es": 9.3,
+   "diff_pct": -40.0
+  },
+  {
+   "label": "Nicarao Especial Torito",
+   "fr_label": "Nicarao Especial Torito (coffret)",
+   "es_label": "Nicarao Especial Torito",
+   "brand": "Nicarao",
+   "fr": 14.0,
+   "es": 6.95,
+   "diff_pct": -50.4
+  },
+  {
+   "label": "Nicarao Especial Toro",
+   "fr_label": "Nicarao Especial Toro (coffret)",
+   "es_label": "Nicarao Especial Toro",
+   "brand": "Nicarao",
+   "fr": 15.9,
+   "es": 9.4,
+   "diff_pct": -40.9
+  },
+  {
+   "label": "Nicarao Exclusivo Don Rafa",
+   "fr_label": "Nicarao Exclusivo Don Rafa (coffret)",
+   "es_label": "Nicarao Exclusivo Don Rafa",
+   "brand": "Nicarao",
+   "fr": 25.0,
+   "es": 16.5,
+   "diff_pct": -34.0
+  },
+  {
+   "label": "Partagas Lusitanias",
+   "fr_label": "Partagas Lusitanias",
+   "es_label": "Partagas Lusitanias",
+   "brand": "Partagás",
+   "fr": 35.6,
+   "es": 32.2,
+   "diff_pct": -9.6
+  },
+  {
+   "label": "Partagas Maduro N°1",
+   "fr_label": "Partagas Maduro N°1",
+   "es_label": "Partagas Maduro Nº 1",
+   "brand": "Partagás",
+   "fr": 25.7,
+   "es": 23.0,
+   "diff_pct": -10.5
+  },
+  {
+   "label": "Partagas Maduro N°2",
+   "fr_label": "Partagas Maduro N°2",
+   "es_label": "Partagas Maduro nº 2",
+   "brand": "Partagás",
+   "fr": 26.4,
+   "es": 23.2,
+   "diff_pct": -12.1
+  },
+  {
+   "label": "Partagás Cedros Año Chino",
+   "fr_label": "Partagas Cedros (año chino)",
+   "es_label": "Partagás Cedros Año Chino",
+   "brand": "Partagás",
+   "fr": 81.0,
+   "es": 64.0,
+   "diff_pct": -21.0
+  },
+  {
+   "label": "Plasencia Alma del Cielo Celeste-Robusto",
+   "fr_label": "Plasencia Alma del Cielo Celeste-Robusto",
+   "es_label": "Plasencia Alma del Cielo Celeste Robusto",
+   "brand": "Plasencia",
+   "fr": 29.8,
+   "es": 26.3,
+   "diff_pct": -11.7
+  },
+  {
+   "label": "Plasencia Alma Fuerte Generación V Salomón",
+   "fr_label": "Plasencia Alma Fuerte  Generacion V -Salomon",
+   "es_label": "Plasencia Alma Fuerte Generación V Salomón",
+   "brand": "Plasencia Alma Fuerte",
+   "fr": 29.7,
+   "es": 27.95,
+   "diff_pct": -5.9
+  },
+  {
+   "label": "Plasencia Alma Fuerte Sixto I Hexagono",
+   "fr_label": "Plasencia Alma Fuerte Sixto I Hexagono",
+   "es_label": "Plasencia Alma Fuerte Sixto I Hexágono",
+   "brand": "Plasencia Alma Fuerte",
+   "fr": 28.5,
+   "es": 26.6,
+   "diff_pct": -6.7
+  },
+  {
+   "label": "Plasencia Alma Fuerte Sixto II Hexagono",
+   "fr_label": "Plasencia Alma Fuerte Sixto II Hexagono",
+   "es_label": "Plasencia Alma Fuerte Sixto II Hexágono",
+   "brand": "Plasencia Alma Fuerte",
+   "fr": 29.5,
+   "es": 26.6,
+   "diff_pct": -9.8
+  },
+  {
+   "label": "Plasencia Cosecha 146 La Musica-Robusto",
+   "fr_label": "Plasencia Cosecha 146 La Musica-Robusto",
+   "es_label": "Plasencia Cosecha 146 La Música-Robusto",
+   "brand": "Plasencia",
+   "fr": 19.0,
+   "es": 11.0,
+   "diff_pct": -42.1
+  },
+  {
+   "label": "Plasencia Cosecha 146 San Luis-Toro",
+   "fr_label": "Plasencia Cosecha 146 San Luis-Toro",
+   "es_label": "Plasencia Cosecha 146 San Luis-Toro",
+   "brand": "Plasencia",
+   "fr": 21.3,
+   "es": 13.5,
+   "diff_pct": -36.6
+  },
+  {
+   "label": "Plasencia Cosecha 149 La Vega Robusto",
+   "fr_label": "Plasencia Cosecha 149 La Vega - Robusto",
+   "es_label": "Plasencia Cosecha 149 La Vega Robusto",
+   "brand": "Plasencia",
+   "fr": 18.6,
+   "es": 16.5,
+   "diff_pct": -11.3
+  },
+  {
+   "label": "Plasencia Cosecha 151 La Musica Robusto",
+   "fr_label": "Plasencia Cosecha 151  La Musica - Robusto",
+   "es_label": "Plasencia Cosecha 151 La Musica Robusto",
+   "brand": "Plasencia",
+   "fr": 19.3,
+   "es": 15.95,
+   "diff_pct": -17.4
+  },
+  {
+   "label": "Plasencia Cosecha 151 La Tradicion Toro",
+   "fr_label": "Plasencia Cosecha 151  La Tradicion - Toro",
+   "es_label": "Plasencia Cosecha 151 La Tradicion Toro",
+   "brand": "Plasencia",
+   "fr": 23.0,
+   "es": 18.8,
+   "diff_pct": -18.3
+  },
+  {
+   "label": "Plasencia Reserva Original Cortés",
+   "fr_label": "Plasencia Reserva Original Cortés",
+   "es_label": "Plasencia Reserva Original Cortes",
+   "brand": "Plasencia",
+   "fr": 19.5,
+   "es": 16.1,
+   "diff_pct": -17.4
+  },
+  {
+   "label": "Plasencia Reserva Original Robusto",
+   "fr_label": "Plasencia Reserva Original Robusto",
+   "es_label": "Plasencia Reserva Original Robusto",
+   "brand": "Plasencia",
+   "fr": 16.0,
+   "es": 12.6,
+   "diff_pct": -21.3
+  },
+  {
+   "label": "Plasencia Reserva Original Short Corona",
+   "fr_label": "Plasencia Reserva Original Short Corona",
+   "es_label": "Plasencia Reserva Original Short Corona",
+   "brand": "Plasencia",
+   "fr": 15.0,
+   "es": 9.9,
+   "diff_pct": -34.0
+  },
+  {
+   "label": "Por Larranaga Galanes",
+   "fr_label": "Por Larranaga Galanes",
+   "es_label": "Por Larrañaga Galanes",
+   "brand": "Por Larrañaga",
+   "fr": 14.2,
+   "es": 11.8,
+   "diff_pct": -16.9
+  },
+  {
+   "label": "Por Larrañaga Petit Coronas",
+   "fr_label": "Por Larrañaga Petit Coronas",
+   "es_label": "Por Larrañaga Petit Coronas",
+   "brand": "Por Larrañaga",
+   "fr": 10.9,
+   "es": 8.5,
+   "diff_pct": -22.0
+  },
+  {
+   "label": "Punch Punch",
+   "fr_label": "Punch Punch",
+   "es_label": "Punch Punch",
+   "brand": "Punch",
+   "fr": 21.2,
+   "es": 19.0,
+   "diff_pct": -10.4
+  },
+  {
+   "label": "Punch Short de Punch",
+   "fr_label": "Punch Short de Punch",
+   "es_label": "Punch Short de Punch",
+   "brand": "Punch",
+   "fr": 17.6,
+   "es": 18.6,
+   "diff_pct": 5.7
+  },
+  {
+   "label": "Punch Triunfos",
+   "fr_label": "Punch Triunfos (10 étuis alu de 5)",
+   "es_label": "Punch Triunfos",
+   "brand": "Punch",
+   "fr": 16.2,
+   "es": 11.9,
+   "diff_pct": -26.5
+  },
+  {
+   "label": "Quai D'Orsay Especial D'Orsay",
+   "fr_label": "Quai D'Orsay Especial D'Orsay",
+   "es_label": "Quai D'Orsay Especial D'Orsay",
+   "brand": "Quai d'Orsay",
+   "fr": 59.0,
+   "es": 50.0,
+   "diff_pct": -15.3
+  },
+  {
+   "label": "Quai D'Orsay Imperiales TR",
+   "fr_label": "Quai d'Orsay Imperiales (TR)",
+   "es_label": "Quai D'Orsay Imperiales TR",
+   "brand": "Quai d'Orsay",
+   "fr": 98.0,
+   "es": 72.1,
+   "diff_pct": -26.4
+  },
+  {
+   "label": "Quai D'Orsay N°50",
+   "fr_label": "Quai D'Orsay N°50",
+   "es_label": "Quai D'Orsay No. 50",
+   "brand": "Quai d'Orsay",
+   "fr": 16.0,
+   "es": 14.8,
+   "diff_pct": -7.5
+  },
+  {
+   "label": "Quai d'Orsay N°52",
+   "fr_label": "Quai d'Orsay N°52",
+   "es_label": "Quai D'Orsay No. 52",
+   "brand": "Quai d'Orsay",
+   "fr": 24.0,
+   "es": 22.7,
+   "diff_pct": -5.4
+  },
+  {
+   "label": "Quai D'Orsay N°54",
+   "fr_label": "Quai D'Orsay N°54",
+   "es_label": "Quai D'Orsay No. 54",
+   "brand": "Quai d'Orsay",
+   "fr": 22.0,
+   "es": 21.0,
+   "diff_pct": -4.5
+  },
+  {
+   "label": "Rafael Gonzalez Coronas de Lonsdales",
+   "fr_label": "Rafael Gonzalez Coronas de Lonsdales",
+   "es_label": "Rafael Gonzalez Coronas De Lonsdales",
+   "brand": "Rafael Gonzalez",
+   "fr": 13.0,
+   "es": 9.6,
+   "diff_pct": -26.2
+  },
+  {
+   "label": "Ramon Allones Allones N°3",
+   "fr_label": "Ramon Allones Allones N°3",
+   "es_label": "Ramón Allones Allones No.3",
+   "brand": "Ramon Allones",
+   "fr": 23.0,
+   "es": 22.2,
+   "diff_pct": -3.5
+  },
+  {
+   "label": "Ramon Allones Gigantes",
+   "fr_label": "Ramon Allones Gigantes",
+   "es_label": "Ramon Allones Gigantes",
+   "brand": "Ramon Allones",
+   "fr": 29.7,
+   "es": 20.0,
+   "diff_pct": -32.7
+  },
+  {
+   "label": "Rey del Mundo Choix Suprême",
+   "fr_label": "Rey del Mundo Choix Suprême",
+   "es_label": "Rey del Mundo Choix Supreme",
+   "brand": "Rey del Mundo",
+   "fr": 15.9,
+   "es": 14.0,
+   "diff_pct": -11.9
+  },
+  {
+   "label": "Rey del Mundo Demi Tasse",
+   "fr_label": "Rey del Mundo Demi Tasse",
+   "es_label": "Rey del Mundo Demi Tasse",
+   "brand": "Rey del Mundo",
+   "fr": 6.9,
+   "es": 6.0,
+   "diff_pct": -13.0
+  },
+  {
+   "label": "Romeo y Julieta Belicosos",
+   "fr_label": "Romeo y Julieta Belicosos",
+   "es_label": "Romeo y Julieta Belicosos",
+   "brand": "Romeo y Julieta",
+   "fr": 24.1,
+   "es": 21.5,
+   "diff_pct": -10.8
+  },
+  {
+   "label": "Romeo y Julieta Cazadores",
+   "fr_label": "Romeo y Julieta Cazadores",
+   "es_label": "Romeo y Julieta Cazadores",
+   "brand": "Romeo y Julieta",
+   "fr": 18.5,
+   "es": 16.4,
+   "diff_pct": -11.4
+  },
+  {
+   "label": "Romeo y Julieta Cedros de Luxe n°2",
+   "fr_label": "Romeo y Julieta Cedros de Luxe n°2",
+   "es_label": "Romeo y Julieta Cedros de Luxe Nº2",
+   "brand": "Romeo y Julieta",
+   "fr": 17.9,
+   "es": 15.8,
+   "diff_pct": -11.7
+  },
+  {
+   "label": "Romeo y Julieta Cedros de Luxe n°3",
+   "fr_label": "Romeo y Julieta Cedros de Luxe n°3",
+   "es_label": "Romeo y Julieta Cedros de Luxe Nº3",
+   "brand": "Romeo y Julieta",
+   "fr": 16.5,
+   "es": 11.9,
+   "diff_pct": -27.9
+  },
+  {
+   "label": "Romeo y Julieta Churchills",
+   "fr_label": "Romeo y Julieta Churchills",
+   "es_label": "Romeo y Julieta Churchills",
+   "brand": "Romeo y Julieta",
+   "fr": 34.5,
+   "es": 29.3,
+   "diff_pct": -15.1
+  },
+  {
+   "label": "Romeo y Julieta Churchills Tubo",
+   "fr_label": "Romeo y Julieta Churchills (tube - 5 étuis de 3)",
+   "es_label": "Romeo y Julieta Churchills Tubo",
+   "brand": "Romeo y Julieta",
+   "fr": 37.5,
+   "es": 30.0,
+   "diff_pct": -20.0
+  },
+  {
+   "label": "Romeo y Julieta Coronitas en Cedro",
+   "fr_label": "Romeo y Julieta Coronitas en Cedro",
+   "es_label": "Romeo y Julieta Coronitas en Cedro",
+   "brand": "Romeo y Julieta",
+   "fr": 8.9,
+   "es": 8.7,
+   "diff_pct": -2.2
+  },
+  {
+   "label": "Romeo y Julieta Mille Fleurs",
+   "fr_label": "Romeo y Julieta Mille Fleurs",
+   "es_label": "Romeo y Julieta Mille Fleurs",
+   "brand": "Romeo y Julieta",
+   "fr": 8.9,
+   "es": 7.4,
+   "diff_pct": -16.9
+  },
+  {
+   "label": "Romeo y Julieta Petit Churchills T",
+   "fr_label": "Romeo y Julieta Petit Churchills (tube - 5 étuis de 3)",
+   "es_label": "Romeo y Julieta Petit Churchills T",
+   "brand": "Romeo y Julieta",
+   "fr": 23.6,
+   "es": 16.2,
+   "diff_pct": -31.4
+  },
+  {
+   "label": "Romeo y Julieta Petit Coronas",
+   "fr_label": "Romeo y Julieta Petit Coronas",
+   "es_label": "Romeo y Julieta Petit Coronas",
+   "brand": "Romeo y Julieta",
+   "fr": 14.6,
+   "es": 10.4,
+   "diff_pct": -28.8
+  },
+  {
+   "label": "Romeo y Julieta Petit Julietas",
+   "fr_label": "Romeo y Julieta Petit Julietas",
+   "es_label": "Romeo y Julieta Petit Julietas",
+   "brand": "Romeo y Julieta",
+   "fr": 8.5,
+   "es": 6.4,
+   "diff_pct": -24.7
+  },
+  {
+   "label": "Romeo y Julieta Petit Royales",
+   "fr_label": "Romeo y Julieta Petit Royales",
+   "es_label": "Romeo y Julieta Petit Royales",
+   "brand": "Romeo y Julieta",
+   "fr": 13.9,
+   "es": 9.5,
+   "diff_pct": -31.7
+  },
+  {
+   "label": "Romeo y Julieta Regalias de Londres",
+   "fr_label": "Romeo y Julieta Regalias de Londres",
+   "es_label": "Romeo y Julieta Regalías de Londres",
+   "brand": "Romeo y Julieta",
+   "fr": 8.6,
+   "es": 7.9,
+   "diff_pct": -8.1
+  },
+  {
+   "label": "Romeo y Julieta Short Churchills",
+   "fr_label": "Romeo y Julieta Short Churchills",
+   "es_label": "Romeo y Julieta Short Churchills",
+   "brand": "Romeo y Julieta",
+   "fr": 23.5,
+   "es": 21.2,
+   "diff_pct": -9.8
+  },
+  {
+   "label": "Romeo y Julieta Short Churchills Tubo",
+   "fr_label": "Romeo y Julieta Short Churchills (tube - 5 étuis de 3)",
+   "es_label": "Romeo y Julieta Short Churchills Tubo",
+   "brand": "Romeo y Julieta",
+   "fr": 26.8,
+   "es": 21.9,
+   "diff_pct": -18.3
+  },
+  {
+   "label": "Romeo y Julieta Wide Churchills TR",
+   "fr_label": "Romeo y Julieta Wide Churchills TR (coffret)",
+   "es_label": "Romeo y Julieta Wide Churchills TR",
+   "brand": "Romeo y Julieta",
+   "fr": 75.0,
+   "es": 55.0,
+   "diff_pct": -26.7
+  },
+  {
+   "label": "Saint Luis Rey Regios",
+   "fr_label": "Saint Luis Rey Regios",
+   "es_label": "Saint Luis Rey Regios",
+   "brand": "Saint Luis Rey",
+   "fr": 15.7,
+   "es": 14.5,
+   "diff_pct": -7.6
+  },
+  {
+   "label": "San Cristobal de la Habana El Principe",
+   "fr_label": "San Cristobal de la Habana El Principe",
+   "es_label": "San Cristobal de la Habana El Principe",
+   "brand": "San Cristobal de la Habana",
+   "fr": 11.1,
+   "es": 7.25,
+   "diff_pct": -34.7
+  },
+  {
+   "label": "San Cristobal de la Habana La Fuerza",
+   "fr_label": "San Cristobal de la Habana La Fuerza",
+   "es_label": "San Cristobal de la Habana La Fuerza",
+   "brand": "San Cristobal de la Habana",
+   "fr": 22.0,
+   "es": 12.3,
+   "diff_pct": -44.1
+  },
+  {
+   "label": "San Pedro de Macoris Brazil Perla",
+   "fr_label": "San Pedro de Macoris Brazil Perla",
+   "es_label": "San Pedro De Macoris Brazil Perla",
+   "brand": "San Pedro de Macoris",
+   "fr": 6.0,
+   "es": 3.45,
+   "diff_pct": -42.5
+  },
+  {
+   "label": "San Pedro de Macoris Brazil Robusto",
+   "fr_label": "San Pedro de Macoris Brazil Robusto",
+   "es_label": "San Pedro De Macoris Brazil Robusto",
+   "brand": "San Pedro de Macoris",
+   "fr": 7.4,
+   "es": 4.05,
+   "diff_pct": -45.3
+  },
+  {
+   "label": "San Pedro de Macoris Ecuador Perla",
+   "fr_label": "San Pedro de Macoris Ecuador Perla",
+   "es_label": "San Pedro de Macoris Ecuador Perla",
+   "brand": "San Pedro de Macoris",
+   "fr": 5.5,
+   "es": 3.45,
+   "diff_pct": -37.3
+  },
+  {
+   "label": "San Pedro de Macoris Ecuador Robusto",
+   "fr_label": "San Pedro de Macoris Ecuador Robusto",
+   "es_label": "San Pedro de Macoris Ecuador Robusto",
+   "brand": "San Pedro de Macoris",
+   "fr": 6.8,
+   "es": 4.05,
+   "diff_pct": -40.4
+  },
+  {
+   "label": "Sancho Panza Belicosos",
+   "fr_label": "Sancho Panza Belicosos",
+   "es_label": "Sancho Panza Belicosos",
+   "brand": "Sancho Panza",
+   "fr": 20.7,
+   "es": 15.6,
+   "diff_pct": -24.6
+  },
+  {
+   "label": "Sancho Panza Non Plus",
+   "fr_label": "Sancho Panza Non Plus",
+   "es_label": "Sancho Panza Non Plus",
+   "brand": "Sancho Panza",
+   "fr": 12.0,
+   "es": 9.2,
+   "diff_pct": -23.3
+  },
+  {
+   "label": "Silencio Black Gigante",
+   "fr_label": "Silencio Black Gigante",
+   "es_label": "Silencio Black Gigante",
+   "brand": "Silencio",
+   "fr": 17.4,
+   "es": 13.5,
+   "diff_pct": -22.4
+  },
+  {
+   "label": "Silencio Black Robusto",
+   "fr_label": "Silencio Black Robusto",
+   "es_label": "Silencio Black Robusto",
+   "brand": "Silencio",
+   "fr": 16.4,
+   "es": 12.0,
+   "diff_pct": -26.8
+  },
+  {
+   "label": "Silencio Black Supremo",
+   "fr_label": "Silencio Black Supremo",
+   "es_label": "Silencio Black Supremo",
+   "brand": "Silencio",
+   "fr": 16.9,
+   "es": 13.0,
+   "diff_pct": -23.1
+  },
+  {
+   "label": "Silencio Blue Robusto",
+   "fr_label": "Silencio Blue Robusto",
+   "es_label": "Silencio Blue Robusto",
+   "brand": "Silencio",
+   "fr": 16.5,
+   "es": 13.0,
+   "diff_pct": -21.2
+  },
+  {
+   "label": "Silencio Blue Toro",
+   "fr_label": "Silencio Blue Toro",
+   "es_label": "Silencio Blue Toro",
+   "brand": "Silencio",
+   "fr": 17.0,
+   "es": 13.6,
+   "diff_pct": -20.0
+  },
+  {
+   "label": "Silencio Los Rios Pequenos",
+   "fr_label": "Silencio Los Rios Pequenos",
+   "es_label": "Silencio Los Rios Pequeños",
+   "brand": "Silencio",
+   "fr": 5.0,
+   "es": 4.0,
+   "diff_pct": -20.0
+  },
+  {
+   "label": "Silencio Los Rios Robusto",
+   "fr_label": "Silencio Los Rios Robusto",
+   "es_label": "Silencio Los Rios Robusto",
+   "brand": "Silencio",
+   "fr": 16.5,
+   "es": 13.5,
+   "diff_pct": -18.2
+  },
+  {
+   "label": "Silencio Los Rios Toro",
+   "fr_label": "Silencio Los Rios Toro",
+   "es_label": "Silencio Los Rios Toro",
+   "brand": "Silencio",
+   "fr": 17.5,
+   "es": 14.5,
+   "diff_pct": -17.1
+  },
+  {
+   "label": "Silencio Red Dot Churchill",
+   "fr_label": "Silencio Red Dot Churchill",
+   "es_label": "Silencio Red Dot Churchill",
+   "brand": "Silencio",
+   "fr": 16.4,
+   "es": 13.6,
+   "diff_pct": -17.1
+  },
+  {
+   "label": "Silencio Red Dot Robusto",
+   "fr_label": "Silencio Red Dot Robusto",
+   "es_label": "Silencio Red Dot Robusto",
+   "brand": "Silencio",
+   "fr": 14.9,
+   "es": 12.5,
+   "diff_pct": -16.1
+  },
+  {
+   "label": "Silencio Riviera Perfecto",
+   "fr_label": "Silencio Riviera Perfecto",
+   "es_label": "Silencio Riviera Perfecto",
+   "brand": "Silencio",
+   "fr": 22.0,
+   "es": 18.0,
+   "diff_pct": -18.2
+  },
+  {
+   "label": "Silencio Riviera Robusto",
+   "fr_label": "Silencio Riviera Robusto",
+   "es_label": "Silencio Riviera Robusto",
+   "brand": "Silencio",
+   "fr": 18.0,
+   "es": 13.0,
+   "diff_pct": -27.8
+  },
+  {
+   "label": "Silencio Serie M Double Robusto",
+   "fr_label": "Silencio Serie M Double Robusto",
+   "es_label": "Silencio Serie M Double Robusto",
+   "brand": "Silencio",
+   "fr": 34.0,
+   "es": 29.9,
+   "diff_pct": -12.1
+  },
+  {
+   "label": "The Circus Vulcano",
+   "fr_label": "The Circus Vulcano (coffret)",
+   "es_label": "The Circus Vulcano",
+   "brand": "The Circus",
+   "fr": 13.5,
+   "es": 8.2,
+   "diff_pct": -39.3
+  },
+  {
+   "label": "Toscano Antico",
+   "fr_label": "Toscano Antico",
+   "es_label": "Toscano Antico",
+   "brand": "Toscano",
+   "fr": 3.22,
+   "es": 1.7,
+   "diff_pct": -47.2
+  },
+  {
+   "label": "Toscano Robusto",
+   "fr_label": "Toscano Robusto",
+   "es_label": "Toscano Robusto",
+   "brand": "Toscano",
+   "fr": 3.15,
+   "es": 2.2,
+   "diff_pct": -30.2
+  },
+  {
+   "label": "Trinidad Coloniales",
+   "fr_label": "Trinidad Coloniales",
+   "es_label": "Trinidad Coloniales",
+   "brand": "Trinidad",
+   "fr": 51.0,
+   "es": 49.0,
+   "diff_pct": -3.9
+  },
+  {
+   "label": "Trinidad Esmeralda",
+   "fr_label": "Trinidad Esmeralda",
+   "es_label": "Trinidad Esmeralda",
+   "brand": "Trinidad",
+   "fr": 69.0,
+   "es": 67.0,
+   "diff_pct": -2.9
+  },
+  {
+   "label": "Trinidad Fundadores",
+   "fr_label": "Trinidad Fundadores",
+   "es_label": "Trinidad Fundadores",
+   "brand": "Trinidad",
+   "fr": 68.0,
+   "es": 67.0,
+   "diff_pct": -1.5
+  },
+  {
+   "label": "Trinidad Media Luna",
+   "fr_label": "Trinidad Media Luna",
+   "es_label": "Trinidad Media Luna",
+   "brand": "Trinidad",
+   "fr": 48.0,
+   "es": 45.0,
+   "diff_pct": -6.2
+  },
+  {
+   "label": "Trinidad Reyes",
+   "fr_label": "Trinidad Reyes",
+   "es_label": "Trinidad Reyes",
+   "brand": "Trinidad",
+   "fr": 37.0,
+   "es": 34.0,
+   "diff_pct": -8.1
+  },
+  {
+   "label": "Trinidad Robusto Extra",
+   "fr_label": "Trinidad Robusto Extra",
+   "es_label": "Trinidad Robusto Extra",
+   "brand": "Trinidad",
+   "fr": 83.0,
+   "es": 120.0,
+   "diff_pct": 44.6
+  },
+  {
+   "label": "Trinidad short",
+   "fr_label": "Trinidad short",
+   "es_label": "Trinidad Short",
+   "brand": "Trinidad",
+   "fr": 2.8,
+   "es": 1.55,
+   "diff_pct": -44.6
+  },
+  {
+   "label": "Trinidad Topes",
+   "fr_label": "Trinidad Topes",
+   "es_label": "Trinidad Topes",
+   "brand": "Trinidad",
+   "fr": 69.0,
+   "es": 64.0,
+   "diff_pct": -7.2
+  },
+  {
+   "label": "Trinidad Vigia",
+   "fr_label": "Trinidad Vigia",
+   "es_label": "Trinidad Vigia",
+   "brand": "Trinidad",
+   "fr": 56.0,
+   "es": 53.0,
+   "diff_pct": -5.4
+  },
+  {
+   "label": "Trinidad Vigia T",
+   "fr_label": "Trinidad Vigia (tube - 5 étuis de 3)",
+   "es_label": "Trinidad Vigia T",
+   "brand": "Trinidad",
+   "fr": 59.0,
+   "es": 55.0,
+   "diff_pct": -6.8
+  },
+  {
+   "label": "Undercrown 10 Robusto",
+   "fr_label": "Undercrown 10 Robusto (Coffret)",
+   "es_label": "Undercrown 10 Robusto",
+   "brand": "Undercrown",
+   "fr": 11.5,
+   "es": 15.15,
+   "diff_pct": 31.7
+  },
+  {
+   "label": "Undercrown 10 Toro",
+   "fr_label": "Undercrown 10 Toro (Coffret)",
+   "es_label": "Undercrown 10 Toro",
+   "brand": "Undercrown",
+   "fr": 12.5,
+   "es": 16.15,
+   "diff_pct": 29.2
+  },
+  {
+   "label": "Vegafina Classic Perla",
+   "fr_label": "Vegafina Classic Perla",
+   "es_label": "Vegafina Classic Perla",
+   "brand": "Vegafina",
+   "fr": 4.9,
+   "es": 2.95,
+   "diff_pct": -39.8
+  },
+  {
+   "label": "Vegafina Nicaragua Gran Toro",
+   "fr_label": "Vegafina Nicaragua Gran Toro",
+   "es_label": "Vegafina Nicaragua Gran Toro",
+   "brand": "Vegafina",
+   "fr": 11.3,
+   "es": 6.6,
+   "diff_pct": -41.6
+  },
+  {
+   "label": "Vegafina Nicaragua Robusto",
+   "fr_label": "Vegafina Nicaragua Robusto",
+   "es_label": "Vegafina Nicaragua Robusto",
+   "brand": "Vegafina",
+   "fr": 10.3,
+   "es": 5.7,
+   "diff_pct": -44.7
+  },
+  {
+   "label": "Vegafina Nicaragua Short",
+   "fr_label": "Vegafina Nicaragua Short",
+   "es_label": "Vegafina Nicaragua Short",
+   "brand": "Vegafina",
+   "fr": 7.3,
+   "es": 3.4,
+   "diff_pct": -53.4
+  },
+  {
+   "label": "Vegas Robaina Famosos",
+   "fr_label": "Vegas Robaina Famosos",
+   "es_label": "Vegas Robaina Famosos",
+   "brand": "Vegas Robaina",
+   "fr": 18.9,
+   "es": 16.0,
+   "diff_pct": -15.3
+  },
+  {
+   "label": "Vegas Robaina Unicos",
+   "fr_label": "Vegas Robaina Unicos",
+   "es_label": "Vegas Robaina Unicos",
+   "brand": "Vegas Robaina",
+   "fr": 25.5,
+   "es": 22.0,
+   "diff_pct": -13.7
+  },
+  {
+   "label": "Vegueros Centrofinos",
+   "fr_label": "Vegueros Centrofinos (4 étuis de 4)",
+   "es_label": "Vegueros Centrofinos",
+   "brand": "Vegueros",
+   "fr": 13.4,
+   "es": 8.4,
+   "diff_pct": -37.3
+  },
+  {
+   "label": "Vegueros Centrogordos",
+   "fr_label": "Vegueros Centrogordos (4 étuis de 4)",
+   "es_label": "Vegueros Centrogordos",
+   "brand": "Vegueros",
+   "fr": 12.3,
+   "es": 7.5,
+   "diff_pct": -39.0
+  },
+  {
+   "label": "Vegueros Entretiempos",
+   "fr_label": "Vegueros Entretiempos (4 étuis de 4)",
+   "es_label": "Vegueros Entretiempos",
+   "brand": "Vegueros",
+   "fr": 12.0,
+   "es": 7.4,
+   "diff_pct": -38.3
+  },
+  {
+   "label": "Vegueros Mañanitas",
+   "fr_label": "Vegueros Mañanitas (4 étuis de 4)",
+   "es_label": "Vegueros Mañanitas",
+   "brand": "Vegueros",
+   "fr": 9.2,
+   "es": 5.4,
+   "diff_pct": -41.3
+  },
+  {
+   "label": "Vegueros Tapados",
+   "fr_label": "Vegueros Tapados (4 étuis de 4)",
+   "es_label": "Vegueros Tapados",
+   "brand": "Vegueros",
+   "fr": 11.5,
+   "es": 5.9,
+   "diff_pct": -48.7
+  },
+  {
+   "label": "Villa Zamorano Corona",
+   "fr_label": "Villa Zamorano Corona",
+   "es_label": "Villa Zamorano Corona",
+   "brand": "Villa Zamorano",
+   "fr": 5.7,
+   "es": 2.0,
+   "diff_pct": -64.9
+  },
+  {
+   "label": "Villa Zamorano El Gordo",
+   "fr_label": "Villa Zamorano El Gordo",
+   "es_label": "Villa Zamorano El Gordo",
+   "brand": "Villa Zamorano",
+   "fr": 7.3,
+   "es": 2.6,
+   "diff_pct": -64.4
+  },
+  {
+   "label": "Villa Zamorano Expreso",
+   "fr_label": "Villa Zamorano Expreso",
+   "es_label": "Villa Zamorano Expreso",
+   "brand": "Villa Zamorano",
+   "fr": 4.5,
+   "es": 2.75,
+   "diff_pct": -38.9
+  },
+  {
+   "label": "Villa Zamorano Intenso",
+   "fr_label": "Villa Zamorano Intenso",
+   "es_label": "Villa Zamorano Intenso",
+   "brand": "Villa Zamorano",
+   "fr": 4.9,
+   "es": 1.9,
+   "diff_pct": -61.2
+  },
+  {
+   "label": "Villa Zamorano Robusto",
+   "fr_label": "Villa Zamorano Robusto",
+   "es_label": "Villa Zamorano Robusto",
+   "brand": "Villa Zamorano",
+   "fr": 6.4,
+   "es": 2.2,
+   "diff_pct": -65.6
+  },
+  {
+   "label": "Villa Zamorano Soberano",
+   "fr_label": "Villa Zamorano Soberano",
+   "es_label": "Villa Zamorano Soberano",
+   "brand": "Villa Zamorano",
+   "fr": 9.0,
+   "es": 5.1,
+   "diff_pct": -43.3
+  },
+  {
+   "label": "Zino Honduras Half Corona",
+   "fr_label": "Zino Honduras Half Corona (coffret)",
+   "es_label": "Zino Honduras Half Corona",
+   "brand": "Zino",
+   "fr": 5.9,
+   "es": 4.9,
+   "diff_pct": -16.9
+  },
+  {
+   "label": "Zino Honduras Robusto",
+   "fr_label": "Zino Honduras Robusto (coffret)",
+   "es_label": "Zino Honduras Robusto",
+   "brand": "Zino",
+   "fr": 8.0,
+   "es": 5.9,
+   "diff_pct": -26.2
+  },
+  {
+   "label": "Zino Honduras Toro",
+   "fr_label": "Zino Honduras Toro (coffret)",
+   "es_label": "Zino Honduras Toro",
+   "brand": "Zino",
+   "fr": 9.0,
+   "es": 6.9,
+   "diff_pct": -23.3
+  },
+  {
+   "label": "Zino Robusto",
+   "fr_label": "Zino Robusto",
+   "es_label": "Zino Robusto",
+   "brand": "Zino",
+   "fr": 8.0,
+   "es": 6.45,
+   "diff_pct": -19.4
+  }
+ ]
+}

@@ -1,17 +1,18 @@
 {
  "meta": {
-  "built_at": "2026-10-06T17:48:55+00:00",
+  "built_at": "2026-10-06T18:08:37+00:00",
   "version": "0.1.0",
-  "mode": "auto",
+  "mode": "cache",
   "sources": {
    "seed": "ok",
-   "wikipedia": "ok",
-   "wikidata": "ok",
-   "nasa_power": "ok",
-   "faostat": "ok",
-   "openstreetmap": "ok",
-   "douane_fr": "ok",
-   "douane_fr_historico": "ok"
+   "wikipedia": "CACHE",
+   "wikidata": "CACHE",
+   "nasa_power": "CACHE",
+   "faostat": "CACHE",
+   "openstreetmap": "CACHE",
+   "douane_fr": "CACHE",
+   "douane_fr_historico": "CACHE",
+   "cmt_espanha": "CACHE"
   },
   "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
   "counts": {
@@ -19,8 +20,10 @@
    "regions": 12,
    "brands_catalog": 159,
    "shops": 150,
-   "fr_references": 3720
+   "fr_references": 3720,
+   "es_references": 4798
   },
+  "cmt_es_fetched": "2026-10-06",
   "quality": {
    "verified_share": 0.107,
    "cigars_with_verified_fields": 3
@@ -55,6 +58,11 @@
     "source": "Douane française — nomenclature des prix des tabacs",
     "license": "Informação pública reutilizável (CRPA art. L321-1), com menção da fonte",
     "url": "https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures"
+   },
+   {
+    "source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — preços de labores",
+    "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
+    "url": "https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx"
    }
   ]
  },
@@ -68,20 +76,7 @@
    "note": "Considerada a melhor zona de tabaco do mundo; terra de origem dos charutos cubanos de topo.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.3,
-     23.4,
-     24.4,
-     26.3,
-     27.7,
-     28.2,
-     28.7,
-     28.8,
-     28.0,
-     26.8,
-     24.5,
-     23.4
-    ],
+    "rain_mm_annual": 812.0,
     "rain_mm_monthly": [
      35.0,
      28.0,
@@ -96,6 +91,7 @@
      38.0,
      24.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      75.0,
      74.0,
@@ -110,10 +106,22 @@
      77.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 26.1,
-    "rain_mm_annual": 812.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.3,
+     23.4,
+     24.4,
+     26.3,
+     27.7,
+     28.2,
+     28.7,
+     28.8,
+     28.0,
+     26.8,
+     24.5,
+     23.4
+    ]
    }
   },
   {
@@ -125,20 +133,7 @@
    "note": "Capital do charuto nicaraguense; solo vulcânico, perfis ricos e picantes.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.6,
-     23.9,
-     25.4,
-     26.8,
-     25.6,
-     23.8,
-     23.8,
-     24.1,
-     23.5,
-     22.9,
-     22.2,
-     22.2
-    ],
+    "rain_mm_annual": 1257.0,
     "rain_mm_monthly": [
      4.0,
      4.0,
@@ -153,6 +148,7 @@
      42.0,
      17.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      70.0,
      63.0,
@@ -167,10 +163,22 @@
      83.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 23.9,
-    "rain_mm_annual": 1257.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.6,
+     23.9,
+     25.4,
+     26.8,
+     25.6,
+     23.8,
+     23.8,
+     24.1,
+     23.5,
+     22.9,
+     22.2,
+     22.2
+    ]
    }
   },
   {
@@ -182,20 +190,7 @@
    "note": "Vale mais fresco e húmido; tabaco tendencialmente mais suave e elegante.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     21.7,
-     22.9,
-     24.3,
-     26.0,
-     25.3,
-     23.6,
-     23.4,
-     23.7,
-     23.4,
-     22.6,
-     21.7,
-     21.5
-    ],
+    "rain_mm_annual": 1057.0,
     "rain_mm_monthly": [
      16.0,
      14.0,
@@ -210,6 +205,7 @@
      52.0,
      37.0
     ],
+    "rh_pct_annual": 75.0,
     "rh_pct_monthly": [
      72.0,
      66.0,
@@ -224,10 +220,22 @@
      82.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 23.3,
-    "rain_mm_annual": 1057.0,
-    "rh_pct_annual": 75.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     21.7,
+     22.9,
+     24.3,
+     26.0,
+     25.3,
+     23.6,
+     23.4,
+     23.7,
+     23.4,
+     22.6,
+     21.7,
+     21.5
+    ]
    }
   },
   {
@@ -239,20 +247,7 @@
    "note": "Região vizinha de Estelí, conhecida por tabaco com doçura e especiaria.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.0,
-     23.3,
-     24.8,
-     26.3,
-     25.3,
-     23.5,
-     23.4,
-     23.8,
-     23.3,
-     22.5,
-     21.7,
-     21.6
-    ],
+    "rain_mm_annual": 1158.0,
     "rain_mm_monthly": [
      8.0,
      8.0,
@@ -267,6 +262,7 @@
      43.0,
      26.0
     ],
+    "rh_pct_annual": 75.0,
     "rh_pct_monthly": [
      72.0,
      65.0,
@@ -281,10 +277,22 @@
      83.0,
      79.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 23.4,
-    "rain_mm_annual": 1158.0,
-    "rh_pct_annual": 75.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.0,
+     23.3,
+     24.8,
+     26.3,
+     25.3,
+     23.5,
+     23.4,
+     23.8,
+     23.3,
+     22.5,
+     21.7,
+     21.6
+    ]
    }
   },
   {
@@ -296,20 +304,7 @@
    "note": "Solo vulcânico numa ilha do Lago Nicarágua; tabaco intenso e terroso.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     26.8,
-     27.5,
-     28.4,
-     29.4,
-     29.0,
-     28.0,
-     27.8,
-     28.1,
-     27.8,
-     27.4,
-     27.0,
-     26.9
-    ],
+    "rain_mm_annual": 1430.0,
     "rain_mm_monthly": [
      2.0,
      2.0,
@@ -324,6 +319,7 @@
      133.0,
      9.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      72.0,
      67.0,
@@ -338,10 +334,22 @@
      79.0,
      76.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 27.9,
-    "rain_mm_annual": 1430.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     26.8,
+     27.5,
+     28.4,
+     29.4,
+     29.0,
+     28.0,
+     27.8,
+     28.1,
+     27.8,
+     27.4,
+     27.0,
+     26.9
+    ]
    }
   },
   {
@@ -353,20 +361,7 @@
    "note": "Coração da produção dominicana; blends equilibrados, cremosos e consistentes.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     23.0,
-     23.3,
-     23.9,
-     25.0,
-     25.9,
-     26.9,
-     26.9,
-     27.1,
-     27.1,
-     26.4,
-     24.8,
-     23.6
-    ],
+    "rain_mm_annual": 627.0,
     "rain_mm_monthly": [
      49.0,
      29.0,
@@ -381,6 +376,7 @@
      86.0,
      56.0
     ],
+    "rh_pct_annual": 76.0,
     "rh_pct_monthly": [
      79.0,
      76.0,
@@ -395,10 +391,22 @@
      80.0,
      81.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.3,
-    "rain_mm_annual": 627.0,
-    "rh_pct_annual": 76.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     23.0,
+     23.3,
+     23.9,
+     25.0,
+     25.9,
+     26.9,
+     26.9,
+     27.1,
+     27.1,
+     26.4,
+     24.8,
+     23.6
+    ]
    }
   },
   {
@@ -410,20 +418,7 @@
    "note": "Vale do Jamastrán; tabaco de corpo médio a forte, com muitas fábricas.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     21.0,
-     22.5,
-     24.0,
-     25.6,
-     24.6,
-     22.8,
-     22.7,
-     23.1,
-     22.7,
-     21.8,
-     20.8,
-     20.7
-    ],
+    "rain_mm_annual": 1121.0,
     "rain_mm_monthly": [
      12.0,
      10.0,
@@ -438,6 +433,7 @@
      48.0,
      38.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      71.0,
      64.0,
@@ -452,10 +448,22 @@
      83.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 22.7,
-    "rain_mm_annual": 1121.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     21.0,
+     22.5,
+     24.0,
+     25.6,
+     24.6,
+     22.8,
+     22.7,
+     23.1,
+     22.7,
+     21.8,
+     20.8,
+     20.7
+    ]
    }
   },
   {
@@ -467,20 +475,7 @@
    "note": "Origem de capas escuras (Maduro e Sumatra), com doçura e notas de cacau.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     21.4,
-     22.1,
-     23.7,
-     26.3,
-     27.9,
-     27.8,
-     27.2,
-     27.3,
-     27.0,
-     26.1,
-     23.9,
-     22.4
-    ],
+    "rain_mm_annual": 2138.0,
     "rain_mm_monthly": [
      100.0,
      53.0,
@@ -495,6 +490,7 @@
      216.0,
      95.0
     ],
+    "rh_pct_annual": 82.0,
     "rh_pct_monthly": [
      86.0,
      86.0,
@@ -509,10 +505,22 @@
      84.0,
      86.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.3,
-    "rain_mm_annual": 2138.0,
-    "rh_pct_annual": 82.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     21.4,
+     22.1,
+     23.7,
+     26.3,
+     27.9,
+     27.8,
+     27.2,
+     27.3,
+     27.0,
+     26.1,
+     23.9,
+     22.4
+    ]
    }
   },
   {
@@ -524,20 +532,7 @@
    "note": "Cruz das Almas e arredores; tabaco Mata Fina, doce e terroso, muito usado em capas Maduro.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     26.9,
-     27.0,
-     27.0,
-     26.0,
-     24.6,
-     22.9,
-     22.1,
-     22.4,
-     23.8,
-     25.8,
-     26.8,
-     27.1
-    ],
+    "rain_mm_annual": 786.0,
     "rain_mm_monthly": [
      77.0,
      72.0,
@@ -552,6 +547,7 @@
      54.0,
      59.0
     ],
+    "rh_pct_annual": 73.0,
     "rh_pct_monthly": [
      68.0,
      69.0,
@@ -566,10 +562,22 @@
      66.0,
      66.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.2,
-    "rain_mm_annual": 786.0,
-    "rh_pct_annual": 73.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     26.9,
+     27.0,
+     27.0,
+     26.0,
+     24.6,
+     22.9,
+     22.1,
+     22.4,
+     23.8,
+     25.8,
+     26.8,
+     27.1
+    ]
    }
   },
   {
@@ -581,20 +589,7 @@
    "note": "Famoso pelas capas Connecticut cultivadas sob pano (shade-grown): suaves e cremosas.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.4,
-     22.1,
-     22.1,
-     22.4,
-     22.4,
-     22.3,
-     22.6,
-     23.3,
-     23.5,
-     23.1,
-     22.9,
-     22.8
-    ],
+    "rain_mm_annual": 1257.0,
     "rain_mm_monthly": [
      184.0,
      244.0,
@@ -609,6 +604,7 @@
      44.0,
      80.0
     ],
+    "rh_pct_annual": 76.0,
     "rh_pct_monthly": [
      80.0,
      86.0,
@@ -623,10 +619,22 @@
      68.0,
      73.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 22.7,
-    "rain_mm_annual": 1257.0,
-    "rh_pct_annual": 76.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.4,
+     22.1,
+     22.1,
+     22.4,
+     22.4,
+     22.3,
+     22.6,
+     23.3,
+     23.5,
+     23.1,
+     22.9,
+     22.8
+    ]
    }
   },
   {
@@ -638,20 +646,7 @@
    "note": "Origem histórica das capas Connecticut Shade e Broadleaf.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     -4.4,
-     -3.3,
-     1.1,
-     7.7,
-     14.1,
-     19.2,
-     22.9,
-     22.2,
-     18.3,
-     11.2,
-     4.7,
-     -0.8
-    ],
+    "rain_mm_annual": 1202.0,
     "rain_mm_monthly": [
      76.0,
      82.0,
@@ -666,6 +661,7 @@
      90.0,
      110.0
     ],
+    "rh_pct_annual": 80.0,
     "rh_pct_monthly": [
      89.0,
      88.0,
@@ -680,10 +676,22 @@
      82.0,
      87.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 9.5,
-    "rain_mm_annual": 1202.0,
-    "rh_pct_annual": 80.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     -4.4,
+     -3.3,
+     1.1,
+     7.7,
+     14.1,
+     19.2,
+     22.9,
+     22.2,
+     18.3,
+     11.2,
+     4.7,
+     -0.8
+    ]
    }
   },
   {
@@ -695,20 +703,7 @@
    "note": "Capas Cameroon: textura fina, notas de especiarias e doçura subtil.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     26.4,
-     26.9,
-     26.7,
-     26.7,
-     26.5,
-     25.5,
-     24.7,
-     24.5,
-     25.1,
-     25.6,
-     26.2,
-     26.4
-    ],
+    "rain_mm_annual": 2452.0,
     "rain_mm_monthly": [
      30.0,
      70.0,
@@ -723,6 +718,7 @@
      159.0,
      28.0
     ],
+    "rh_pct_annual": 88.0,
     "rh_pct_monthly": [
      81.0,
      84.0,
@@ -737,10 +733,22 @@
      88.0,
      83.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.9,
-    "rain_mm_annual": 2452.0,
-    "rh_pct_annual": 88.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     26.4,
+     26.9,
+     26.7,
+     26.7,
+     26.5,
+     25.5,
+     24.7,
+     24.5,
+     25.1,
+     25.6,
+     26.2,
+     26.4
+    ]
    }
   }
  ],
@@ -820,6 +828,28 @@
       "pack_size": 3,
       "unit_eur": 117.0,
       "pack_eur": 351.0
+     }
+    ]
+   },
+   "priceES": {
+    "min": 110.2,
+    "max": 112.2,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Cohiba Siglo VI",
+      "pack_size": 10,
+      "unit_eur": 110.2
+     },
+     {
+      "label": "Cohiba Siglo VI",
+      "pack_size": 25,
+      "unit_eur": 110.2
+     },
+     {
+      "label": "Cohiba Siglo VI Tubo",
+      "pack_size": 3,
+      "unit_eur": 112.2
      }
     ]
    },
@@ -906,6 +936,33 @@
       "pack_size": 25,
       "unit_eur": 29.8,
       "pack_eur": 745.0
+     }
+    ]
+   },
+   "priceES": {
+    "min": 25.8,
+    "max": 35.0,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Montecristo Nº 2",
+      "pack_size": 10,
+      "unit_eur": 25.8
+     },
+     {
+      "label": "Montecristo Nº 2",
+      "pack_size": 25,
+      "unit_eur": 25.8
+     },
+     {
+      "label": "Montecristo Nº 2",
+      "pack_size": 3,
+      "unit_eur": 25.8
+     },
+     {
+      "label": "Montecristo No.2 - Tauromaquia y Mazzantini",
+      "pack_size": 10,
+      "unit_eur": 35.0
      }
     ]
    },
@@ -1075,6 +1132,33 @@
      }
     ]
    },
+   "priceES": {
+    "min": 29.3,
+    "max": 30.0,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Romeo y Julieta Churchills",
+      "pack_size": 25,
+      "unit_eur": 29.3
+     },
+     {
+      "label": "Romeo y Julieta Churchills Tubo",
+      "pack_size": 10,
+      "unit_eur": 30.0
+     },
+     {
+      "label": "Romeo y Julieta Churchills Tubo",
+      "pack_size": 25,
+      "unit_eur": 30.0
+     },
+     {
+      "label": "Romeo y Julieta Churchills Tubo",
+      "pack_size": 3,
+      "unit_eur": 30.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. Altadis",
     "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
@@ -1159,6 +1243,33 @@
       "pack_size": 3,
       "unit_eur": 275.0,
       "pack_eur": 825.0
+     }
+    ]
+   },
+   "priceES": {
+    "min": 23.1,
+    "max": 25.1,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "H.Upmann Magnum 50",
+      "pack_size": 25,
+      "unit_eur": 23.1
+     },
+     {
+      "label": "H.Upmann Magnum 50 Caja",
+      "pack_size": 10,
+      "unit_eur": 23.1
+     },
+     {
+      "label": "H.Upmann Magnum 50 Tubo",
+      "pack_size": 3,
+      "unit_eur": 23.8
+     },
+     {
+      "label": "H.Upmann Magnum 50 Serie Sevilla",
+      "pack_size": 21,
+      "unit_eur": 25.1
      }
     ]
    },
@@ -1339,6 +1450,28 @@
      }
     ]
    },
+   "priceES": {
+    "min": 7.1,
+    "max": 13.9,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Arturo Fuente Hemingway Short Story",
+      "pack_size": 25,
+      "unit_eur": 7.1
+     },
+     {
+      "label": "Arturo Fuente Hemingway Short Story 4x49",
+      "pack_size": 25,
+      "unit_eur": 13.3
+     },
+     {
+      "label": "Arturo Fuente Hemingway Short Story 4 X 49",
+      "pack_size": 15,
+      "unit_eur": 13.9
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "Arturo Fuente",
     "notes": "Dominican Republic",
@@ -1453,6 +1586,43 @@
      }
     ]
    },
+   "priceES": {
+    "min": 14.9,
+    "max": 62.6,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Arturo Fuente Opus X Perfecxion nº 5",
+      "pack_size": 42,
+      "unit_eur": 14.9
+     },
+     {
+      "label": "Arturo Fuente Opus X Petite Lancero",
+      "pack_size": 32,
+      "unit_eur": 17.9
+     },
+     {
+      "label": "Arturo Fuente Opus X Double Corona",
+      "pack_size": 32,
+      "unit_eur": 27.6
+     },
+     {
+      "label": "Arturo Fuente Opus X Perfecxion nº 4",
+      "pack_size": 42,
+      "unit_eur": 34.9
+     },
+     {
+      "label": "Arturo Fuente Opus X Pussy Cats",
+      "pack_size": 39,
+      "unit_eur": 36.1
+     },
+     {
+      "label": "Arturo Fuente Opus X Belicoso XXX",
+      "pack_size": 42,
+      "unit_eur": 36.7
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "Arturo Fuente",
     "notes": "Dominican Republic",
@@ -1541,6 +1711,23 @@
       "pack_size": 4,
       "unit_eur": 20.0,
       "pack_eur": 80.0
+     }
+    ]
+   },
+   "priceES": {
+    "min": 15.4,
+    "max": 15.4,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Davidoff Signature 2000 Tubos",
+      "pack_size": 20,
+      "unit_eur": 15.4
+     },
+     {
+      "label": "Davidoff Signature 2000 Tubos",
+      "pack_size": 4,
+      "unit_eur": 15.4
      }
     ]
    },
@@ -1755,6 +1942,43 @@
      }
     ]
    },
+   "priceES": {
+    "min": 15.0,
+    "max": 27.5,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Oliva Serie V Melanio Petit Corona 4-1/2x46",
+      "pack_size": 10,
+      "unit_eur": 15.0
+     },
+     {
+      "label": "Oliva Serie V Melanio Churchill 7x50",
+      "pack_size": 10,
+      "unit_eur": 18.0
+     },
+     {
+      "label": "Oliva Serie V Melanio Robusto 5x52",
+      "pack_size": 10,
+      "unit_eur": 18.0
+     },
+     {
+      "label": "Oliva Serie V Melanio Torpedo Maduro 6 1/2x52",
+      "pack_size": 10,
+      "unit_eur": 19.0
+     },
+     {
+      "label": "Oliva Serie V Melanio Robusto Maduro 5x52",
+      "pack_size": 10,
+      "unit_eur": 19.0
+     },
+     {
+      "label": "Oliva Serie V Melanio Doble Toro 6x60",
+      "pack_size": 10,
+      "unit_eur": 22.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "",
     "notes": "J. Cortès Cigars N.V., a private, family-owned business based in Zwevegem, Belgium (2016)",
@@ -1879,6 +2103,33 @@
       "pack_eur": 288.0
      }
     ]
+   },
+   "priceES": {
+    "min": 2.75,
+    "max": 24.6,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Liga Privada nº 9 Coronets",
+      "pack_size": 10,
+      "unit_eur": 2.75
+     },
+     {
+      "label": "Liga Privada No 9 Robusto",
+      "pack_size": 24,
+      "unit_eur": 22.0
+     },
+     {
+      "label": "Drew Estate Liga Privada Nº 9 Toro 6x52",
+      "pack_size": 24,
+      "unit_eur": 24.5
+     },
+     {
+      "label": "Liga Privada Nº 9 Flying Pig",
+      "pack_size": 12,
+      "unit_eur": 24.6
+     }
+    ]
    }
   },
   {
@@ -1976,6 +2227,23 @@
     "url": "https://www.wikidata.org/wiki/Q6722519",
     "inception_year": null,
     "countries": []
+   },
+   "priceES": {
+    "min": 2.0,
+    "max": 5.72,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Macanudo Café Court",
+      "pack_size": 5,
+      "unit_eur": 2.0
+     },
+     {
+      "label": "Macanudo Café Expositor",
+      "pack_size": 68,
+      "unit_eur": 5.72
+     }
+    ]
    },
    "wikipedia": {
     "manufacturer": "General Cigar Company",
@@ -2090,6 +2358,33 @@
       "pack_size": 4,
       "unit_eur": 15.0,
       "pack_eur": 60.0
+     }
+    ]
+   },
+   "priceES": {
+    "min": 5.0,
+    "max": 9.2,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Camacho Connecticut Corona",
+      "pack_size": 20,
+      "unit_eur": 5.0
+     },
+     {
+      "label": "Camacho Connecticut Figurado",
+      "pack_size": 20,
+      "unit_eur": 7.0
+     },
+     {
+      "label": "Camacho Connecticut Robusto",
+      "pack_size": 20,
+      "unit_eur": 8.2
+     },
+     {
+      "label": "Camacho Connecticut Robusto Tubos",
+      "pack_size": 20,
+      "unit_eur": 9.2
      }
     ]
    },
@@ -2267,6 +2562,33 @@
      }
     ]
    },
+   "priceES": {
+    "min": 80.5,
+    "max": 425.0,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Cohiba Robustos",
+      "pack_size": 25,
+      "unit_eur": 80.5
+     },
+     {
+      "label": "Cohiba Robustos",
+      "pack_size": 3,
+      "unit_eur": 80.5
+     },
+     {
+      "label": "Cohiba Robusto Tubo",
+      "pack_size": 3,
+      "unit_eur": 82.5
+     },
+     {
+      "label": "Cohiba Robustos Reserva Cosecha 2014",
+      "pack_size": 20,
+      "unit_eur": 425.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
     "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in the Dominican Republic",
@@ -2336,6 +2658,28 @@
       "pack_size": 10,
       "unit_eur": 22.9,
       "pack_eur": 229.0
+     }
+    ]
+   },
+   "priceES": {
+    "min": 19.6,
+    "max": 24.8,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Bolivar Royal Coronas",
+      "pack_size": 25,
+      "unit_eur": 19.6
+     },
+     {
+      "label": "Bolivar Royal Corona Tubo",
+      "pack_size": 10,
+      "unit_eur": 20.3
+     },
+     {
+      "label": "Bolivar Royal Coronas Estuche",
+      "pack_size": 5,
+      "unit_eur": 24.8
      }
     ]
    },
@@ -2421,6 +2765,33 @@
      }
     ]
    },
+   "priceES": {
+    "min": 21.2,
+    "max": 21.9,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Hoyo de Monterrey Epicure Nº 2",
+      "pack_size": 25,
+      "unit_eur": 21.2
+     },
+     {
+      "label": "Hoyo de Monterrey Epicure Nº 2",
+      "pack_size": 3,
+      "unit_eur": 21.2
+     },
+     {
+      "label": "Hoyo de Monterrey Epicure Nº 2",
+      "pack_size": 50,
+      "unit_eur": 21.2
+     },
+     {
+      "label": "Hoyo de Monterrey Epicure Nº 2 Tubo",
+      "pack_size": 3,
+      "unit_eur": 21.9
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
     "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in Honduras",
@@ -2485,6 +2856,18 @@
      }
     ]
    },
+   "priceES": {
+    "min": 67.0,
+    "max": 67.0,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Trinidad Fundadores",
+      "pack_size": 24,
+      "unit_eur": 67.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. Altadis",
     "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
@@ -2526,6 +2909,23 @@
     ],
     "why": [
      "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+    ]
+   },
+   "priceES": {
+    "min": 19.0,
+    "max": 19.0,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Ramon Allones Specially Selected",
+      "pack_size": 25,
+      "unit_eur": 19.0
+     },
+     {
+      "label": "Ramon Allones Specially Selected",
+      "pack_size": 50,
+      "unit_eur": 19.0
+     }
     ]
    },
    "wikipedia": {
@@ -2598,6 +2998,18 @@
      }
     ]
    },
+   "priceES": {
+    "min": 20.6,
+    "max": 20.6,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Diplomáticos Nº 2",
+      "pack_size": 25,
+      "unit_eur": 20.6
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "",
     "notes": "Cuba",
@@ -2667,6 +3079,18 @@
       "pack_size": 25,
       "unit_eur": 20.7,
       "pack_eur": 517.5
+     }
+    ]
+   },
+   "priceES": {
+    "min": 15.6,
+    "max": 15.6,
+    "fetched": "2026-10-06",
+    "refs": [
+     {
+      "label": "Sancho Panza Belicosos",
+      "pack_size": 25,
+      "unit_eur": 15.6
      }
     ]
    },

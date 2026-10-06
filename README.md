@@ -19,6 +19,7 @@ data/seed/*.yml ─► validação (pydantic) ─► fontes abertas ─► Parqu
 | Temperatura, chuva e humidade por zona de cultivo | [NASA POWER](https://power.larc.nasa.gov/) (climatologia) | Domínio público |
 | Produção de tabaco por país desde 2000 | [FAOSTAT](https://www.fao.org/faostat/) (item 826) | CC BY 4.0 |
 | Tabacarias em Portugal | [OpenStreetMap](https://www.openstreetmap.org/) via Overpass | ODbL |
+| **~4 800 charutos à venda em Espanha: marca, nome, embalagem, preço oficial** (lista vigente) | [Ministerio de Hacienda — CMT, Precios de labores](https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx) (exportação CSV do buscador oficial) | Reutilização permitida, incluindo comercial, citando "Origem dos dados: Ministerio de Hacienda" (Ley 37/2007) |
 | **~3 400 charutos à venda em França: nome, vitola, embalagem, preço oficial** (mensal) | [Douane — nomenclature des prix des tabacs](https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures) (ODS) | Informação pública reutilizável (CRPA art. L321-1), com menção da fonte |
 
 A nomenclatura francesa é a maior lista oficial e aberta de charutos que encontrei. Não traz força, capa nem sabores, mas traz o nome comercial exato de cada referência, o formato, a embalagem e o preço homologado. O pipeline:
@@ -26,6 +27,14 @@ A nomenclatura francesa é a maior lista oficial e aberta de charutos que encont
 - deteta vitola e medidas no nome quando existem;
 - liga cada ficha do seed às referências francesas (o nome tem de começar por marca + linha), mostrando o preço oficial;
 - se a página da douane bloquear o pedido, usa o URL em `data/seed/sources.yml` e, em último caso, a cache.
+
+### Espanha e comparação
+
+O buscador oficial do CMT tem um botão "Exportar a CSV"; o pipeline reproduz esse pedido (zona Península e Illes Balears, labor Cigarros). A marca vem explícita (em maiúsculas no início do nome) e serve também para reconhecer marcas no catálogo francês. Cada execução guarda um snapshot datado, por isso o histórico espanhol cresce a cada semana. `compare.json` junta as referências que existem nos dois países (nome normalizado) e calcula a diferença de preço.
+
+### Feed de novidades
+
+`site/feed.xml` (Atom) tem uma entrada por cada nova edição francesa e por cada alteração detetada em Espanha: subidas, descidas, novas referências e retiradas.
 
 ### Histórico de preços
 
@@ -53,6 +62,11 @@ Tudo o que é pessoal fica no browser (localStorage) e pode ser exportado em JSO
 - **Guias**: checklist anti-falsificação (marcas oficiais da Habanos S.A.), descodificador do código da caixa, tempo de fumada estimado, franquias de viagem (Guia para Viajantes, Portal das Finanças, fev. 2026).
 - **Diário**: provas de qualquer referência do catálogo oficial, partilha de uma nota por link, importação do diário de um amigo.
 - **Offline**: PWA com service worker; instalável no telemóvel e usável sem rede.
+- **Lista de desejos**: ♡ em qualquer referência oficial (FR/ES); alerta quando o preço muda ou a referência sai do catálogo.
+- **Prova guiada**: sabores por terço numa roda de sabores, tiragem, combustão, cinza, força sentida e retrohale; os sabores alimentam as recomendações.
+- **Sincronização**: diário, humidor, higrómetro, favoritos, desejos e notas de amigos num Gist privado do utilizador (token guardado só no browser); a reposição junta sem apagar nada.
+- **Guias**: também calculadora de Boveda (regra do fabricante) e glossário pesquisável.
+- **Inglês**: botão EN/PT para a interface (menus, títulos, botões); os dados mantêm a língua de origem.
 
 ## Correr localmente
 
@@ -96,7 +110,6 @@ Os 28 charutos foram compilados de conhecimento geral. Só os campos com `verifi
 
 - [ ] Verificar os restantes charutos contra fontes públicas (fabricantes, Habanos S.A., Cigar Coop, Halfwheel)
 - [ ] Fotos de anilhas e vitolas (apenas com licença livre)
-- [ ] Roda de sabores interativa
 - [ ] Notas de prova partilhadas entre utilizadores (exige backend; ex.: GitHub Discussions via giscus)
 - [ ] Notificação de dados desatualizados (campos sem verificação há mais de N meses)
 

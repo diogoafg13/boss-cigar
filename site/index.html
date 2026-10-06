@@ -56,7 +56,8 @@
 </style>
 </head>
 <body>
-<header>
+<header style="position:relative">
+  <button id="langBtn" class="btn ghost sm" style="position:absolute;right:16px;top:16px" aria-label="Language">EN</button>
   <h1>🚬 Boss Cigar</h1>
   <p>Base de dados de charutos com fontes abertas · terroir · produção por país · onde comprar · humidor · diário de provas</p>
 </header>
@@ -100,7 +101,17 @@
       <div id="recoProfile"></div></div>
     <div class="panel"><h3 style="margin-top:0">Da base de dados</h3><div class="grid" id="recoSeed"></div></div>
     <div class="panel" style="overflow-x:auto"><h3 style="margin-top:0">Do catálogo oficial</h3><div id="recoFr"></div></div>
+    <div class="panel"><h2 style="margin-top:0">Lista de desejos</h2>
+      <p class="muted">Junta referências no separador "Preços oficiais" (♡). Avisa quando o preço muda ou a referência sai do catálogo. Para receber as novidades sem abrir o site, subscreve o <a href="feed.xml" target="_blank" rel="noopener">feed de preços (Atom/RSS)</a>.</p>
+      <div id="wish"></div></div>
     <div class="panel"><h2 style="margin-top:0">As minhas estatísticas</h2><div id="stats"></div></div>
+    <div class="panel"><h2 style="margin-top:0">Sincronizar entre dispositivos</h2>
+      <p class="muted">Guarda o diário, o humidor, o higrómetro, os favoritos, a lista de desejos e as notas de amigos num <b>Gist privado</b> da tua conta GitHub, e repõe-nos noutro telemóvel ou computador.</p>
+      <ol class="warn"><li>No GitHub: Settings → Developer settings → Personal access tokens → <b>Fine-grained token</b> com permissão <i>Gists: Read and write</i> (ou token clássico só com <i>gist</i>).</li>
+        <li>Cola o token aqui. Fica <b>apenas neste browser</b>; não é enviado para mais lado nenhum além da API do GitHub.</li></ol>
+      <div class="filters"><input id="syncToken" type="password" autocomplete="off" placeholder="Token do GitHub"><input id="syncGist" placeholder="ID do Gist (preenche-se sozinho)"></div>
+      <div class="row"><button class="btn sm" id="syncPush">Enviar para o Gist</button><button class="btn ghost sm" id="syncPull">Trazer do Gist (junta)</button><button class="btn ghost sm" id="syncForget">Esquecer token</button></div>
+      <div id="syncOut" class="muted" style="margin-top:8px"></div></div>
   </section>
 
   <section id="guides">
@@ -114,6 +125,12 @@
       <div class="filters"><input id="stLen" type="number" step="0.125" min="3" max="9" value="5" aria-label="Comprimento (polegadas)"><input id="stRing" type="number" min="26" max="70" value="50" aria-label="Ring gauge"></div>
       <div id="stOut"></div>
       <p class="warn">Estimativa grosseira (cerca de 10,5 minutos por polegada, ajustado ao ring gauge). Depende muito do ritmo de cada um.</p></div>
+    <div class="panel"><h2 style="margin-top:0">Quantos Boveda preciso?</h2>
+      <div class="filters"><input id="bvCap" type="number" min="5" max="2000" value="50" aria-label="Capacidade do humidor (charutos)"><select id="bvRh"><option value="69">69% (mais húmido)</option><option value="65" selected>65%</option><option value="62">62% (mais seco)</option></select><select id="bvSeason"><option value="0">Humidor já em uso</option><option value="1">Humidor novo (precisa de curar)</option></select></div>
+      <div id="bvOut"></div>
+      <p class="warn">Regra do fabricante: 1 pacote de 60 g por cada 25 charutos de <i>capacidade</i> (mesmo que não esteja cheio); 1 de 320 g equivale a 5 de 60 g; o de 8 g serve até 5 charutos. Troca quando o pacote ficar duro/estaladiço. Fontes: <a href="https://cigarchief.com/guides/boveda-humidity-packs/" target="_blank" rel="noopener">Cigar Chief</a>, <a href="https://www.famous-smoke.com/cigaradvisor/cigar-humidification/boveda-packs-humidity-product-guide" target="_blank" rel="noopener">Famous Smoke</a>.</p></div>
+    <div class="panel"><h2 style="margin-top:0">Glossário</h2>
+      <input id="glq" type="search" placeholder="Procurar termo (capa, tripa, retrohale…)"><div id="glOut" style="margin-top:8px"></div></div>
     <div class="panel"><h2 style="margin-top:0">Viajar com charutos (Portugal)</h2>
       <div style="overflow-x:auto"><table><tr><th>De onde vens</th><th>Charutos</th><th>Cigarrilhas (≤ 3 g)</th><th>Cigarros</th><th>Tabaco</th></tr>
         <tr><td>Fora da UE (franquia, sem impostos)</td><td>50</td><td>100</td><td>200</td><td>250 g</td></tr>
@@ -127,9 +144,10 @@
   </section>
 
   <section id="frcat">
-    <div class="panel"><h2 style="margin-top:0">Catálogo oficial de preços (França)</h2>
-      <p class="muted">Todas as referências de charutos homologadas para venda em França continental, com o preço oficial de venda ao público. Fonte: <a href="https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures" target="_blank" rel="noopener">Direction générale des douanes</a>, <span id="frEdition"></span>. Os preços em Portugal são diferentes; serve para comparar marcas e formatos.</p>
+    <div class="panel"><h2 style="margin-top:0">Catálogos oficiais de preços: França e Espanha</h2>
+      <p class="muted" id="catIntro">Todas as referências de charutos homologadas para venda, com o preço oficial de venda ao público. Fontes: <a href="https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures" target="_blank" rel="noopener">Direction générale des douanes</a> (França) e <a href="https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx" target="_blank" rel="noopener">Comisionado para el Mercado de Tabacos</a> (Espanha; origem dos dados: Ministerio de Hacienda). <span id="frEdition"></span>. Os preços em Portugal são diferentes; serve para comparar marcas, formatos e o custo de comprar em cada país.</p>
       <div class="filters">
+        <select id="fCountryP"><option value="fr">🇫🇷 França (douane)</option><option value="es">🇪🇸 Espanha (CMT)</option></select>
         <input id="fq" type="search" placeholder="Pesquisar nome ou marca…">
         <select id="fBrand"><option value="">Todas as marcas</option></select>
         <select id="fVit"><option value="">Qualquer vitola</option></select>
@@ -139,6 +157,7 @@
       </div>
       <p class="warn">A marca vem do catálogo da Wikipédia ou, se lá não estiver, é <i>inferida</i> do início do nome (assinalada com *). "Cigarilha" é uma heurística (nome ou preço inferior a 1,50 €).</p>
       <p class="muted" id="fCount"></p></div>
+    <div class="panel" id="cmpFrEs"></div>
     <div class="panel" id="priceHist"></div>
     <div class="panel" style="overflow-x:auto"><table id="fTable"></table><div class="row" style="margin-top:10px"><button class="btn ghost sm" id="fMore">Mostrar mais</button></div></div>
   </section>
@@ -221,6 +240,22 @@
     <div class="panel"><h2 style="margin-top:0">Diário de provas</h2>
       <p class="warn">Guardado apenas neste browser. Exportável em JSON.</p>
       <div class="filters"><select id="jCigar"></select><input id="jOther" list="frList" placeholder="…ou escolhe do catálogo oficial"><input id="jDrink" placeholder="Bebida / acompanhamento"><select id="jRating"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3" selected>★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select></div>
+      <details id="guided" style="margin:8px 0"><summary style="cursor:pointer"><b>Prova guiada</b> <span class="sub">(terços, roda de sabores, construção)</span></summary>
+        <div class="row" style="margin:8px 0" id="gThirds">
+          <label><input type="radio" name="gThird" value="1" checked style="width:auto"> 1.º terço</label>
+          <label><input type="radio" name="gThird" value="2" style="width:auto"> 2.º terço</label>
+          <label><input type="radio" name="gThird" value="3" style="width:auto"> 3.º terço</label></div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+          <div id="wheel" style="flex:none"></div>
+          <div style="flex:1;min-width:220px"><div id="wheelNotes" class="muted">Toca numa família de sabores.</div><div id="gPicked" style="margin-top:10px"></div></div></div>
+        <div class="filters" style="margin-top:10px">
+          <label class="sub">Tiragem <select id="gDraw"><option value="">—</option><option value="1">1 · presa</option><option value="2">2</option><option value="3">3 · ideal</option><option value="4">4</option><option value="5">5 · aberta demais</option></select></label>
+          <label class="sub">Combustão <select id="gBurn"><option value="">—</option><option value="1">1 · torta, retoques</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 · perfeita</option></select></label>
+          <label class="sub">Cinza <select id="gAsh"><option value="">—</option><option value="1">1 · cai cedo, escura</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 · firme, clara</option></select></label>
+          <label class="sub">Força sentida <select id="gStr"><option value="">—</option><option value="1">1 · suave</option><option value="2">2</option><option value="3">3 · média</option><option value="4">4</option><option value="5">5 · forte</option></select></label>
+        </div>
+        <input id="gRetro" placeholder="Retrohale (pelo nariz): pimenta, cedro…" style="margin-top:6px">
+      </details>
       <textarea id="jNotes" rows="3" placeholder="Primeiro terço, segundo terço, final, retrohale…"></textarea>
       <div class="row" style="margin-top:8px"><button class="btn" id="jSave">Guardar nota</button><button class="btn ghost" id="jExport">Exportar JSON</button></div></div>
     <div id="jList"></div>
@@ -240,6 +275,7 @@
 
   <section id="sources">
     <div class="panel"><h2 style="margin-top:0">Origem e rigor dos dados</h2>
+      <p>📡 <a href="feed.xml" target="_blank" rel="noopener">Feed de novidades de preços (Atom)</a> — uma entrada por cada nova edição francesa e por cada alteração detetada em Espanha.</p>
       <p>A base é um <b>seed curado à mão</b> (YAML no repositório) validado por um pipeline Python. Só os campos listados como <i>verificados</i> foram confirmados numa fonte; o resto é indicativo e está marcado como tal.</p>
       <p>O pipeline junta automaticamente fontes abertas, sem scraping de lojas nem de pontuações de revistas:</p>
       <ul>
@@ -608,6 +644,7 @@ function renderSources() {
   }).catch(() => { $("#qualOut").textContent = "Relatório indisponível."; });
 }
 </script>
+<script src="i18n-en.js"></script>
 <script src="aficionado.js"></script>
 </body>
 </html>

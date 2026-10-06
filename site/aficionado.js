@@ -50,9 +50,13 @@ window.afInit = function () {
   fetch("data/prices.json").then(r => r.json()).then(p => { PRICES = p; renderPriceHist(); }).catch(() => {});
   fetch("data/home.json").then(r => r.json()).then(h => { HOME = h; renderHomeAdvice(); }).catch(() => { $("#homeAdvice").textContent = "Sem dados de clima."; });
   setupGuides();
+  setupBoveda();
+  setupGlossary();
   setupFriends();
+  setupSync();
+  setupLang();
   document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => {
-    if (b.dataset.tab === "me") loadFr().then(renderMe);
+    if (b.dataset.tab === "me") { loadFr().then(renderMe); renderWish(); }
     if (b.dataset.tab === "humidor") loadFr().then(() => { renderHumidor(); renderHygro(); });
   }));
   openSharedNote();
@@ -61,10 +65,73 @@ window.afInit = function () {
 
 /* ---------- ficha: preço oficial e evolução ---------- */
 window.afDetail = function (c) {
+  let out = "";
   const h = c.priceFR && c.priceFR.hist;
-  if (!h) return "";
-  return `<p class="sub">Evolução do preço oficial em França: ${histSpark(h, 140, 30)} ${pct(histPct(h))} desde ${esc(h[0][0])}</p>`;
+  if (h) out += `<p class="sub">Evolução do preço oficial em França: ${histSpark(h, 140, 30)} ${pct(histPct(h))} desde ${esc(h[0][0])}</p>`;
+  if (c.priceES) {
+    const e = c.priceES;
+    out += `<p><b>Preço oficial em Espanha:</b> ${e.min === e.max ? eur(e.min) : eur(e.min) + " – " + eur(e.max)} por unidade${c.priceFR && c.priceFR.min ? ` <span class="sub">(${pct(Math.round((e.min - c.priceFR.min) / c.priceFR.min * 1000) / 10)} face a França)</span>` : ""}<br>
+      <span class="sub">${e.refs.slice(0, 4).map(r => esc(r.label) + (r.pack_size ? " (" + r.pack_size + ")" : "") + ": " + eur(r.unit_eur)).join(" · ")}</span><br><span class="warn">Origem dos dados: Ministerio de Hacienda (CMT) · ${esc(e.fetched || "")}</span></p>`;
+  }
+  return out;
 };
+
+/* ---------- Preços oficiais: França / Espanha ---------- */
+const CATS = { fr: null, es: null }, CAT_META = { fr: {}, es: {} };
+let CAT_COUNTRY = "fr", CAT_BOUND = false, COMPARE = null;
+
+function loadCat(country) {
+  if (CATS[country]) return Promise.resolve(CATS[country]);
+  return fetch(`data/${country}_catalog.json`).then(r => r.json()).then(d => {
+    CATS[country] = d.rows.map(r => Object.fromEntries(d.fields.map((k, i) => [k, r[i]])));
+    CAT_META[country] = d;
+    if (country === "fr" && !FR_ROWS) { FR_ROWS = CATS.fr; FR_BY_LABEL = new Map(FR_ROWS.map(x => [x.label, x])); }
+    return CATS[country];
+  });
+}
+
+function fillCatFilters() {
+  const keepB = $("#fBrand").value, keepV = $("#fVit").value;
+  $("#fBrand").innerHTML = '<option value="">Todas as marcas</option>' + unique(FR.filter(x => x.brand && !x.cigarillo).map(x => x.brand)).map(b => `<option>${esc(b)}</option>`).join("");
+  $("#fVit").innerHTML = '<option value="">Qualquer vitola</option>' + unique(FR.filter(x => x.vitola).map(x => x.vitola)).map(v => `<option>${esc(v)}</option>`).join("");
+  if ([...$("#fBrand").options].some(o => o.value === keepB)) $("#fBrand").value = keepB;
+  if ([...$("#fVit").options].some(o => o.value === keepV)) $("#fVit").value = keepV;
+  const m = CAT_META[CAT_COUNTRY];
+  $("#frEdition").textContent = CAT_COUNTRY === "fr" ? `França: ${m.edition || ""}` : `Espanha: lista vigente recolhida a ${m.fetched || "?"} (${m.zone || ""})`;
+  $("#priceHist").style.display = CAT_COUNTRY === "fr" ? "" : "none";
+}
+
+function initFr() {
+  const go = () => loadCat(CAT_COUNTRY).then(rows => {
+    FR = rows; fillCatFilters();
+    if (!CAT_BOUND) {
+      CAT_BOUND = true;
+      ["#fq", "#fBrand", "#fVit", "#fMax", "#fKind", "#fSortP"].forEach(i => $(i).addEventListener("input", () => { FR_LIMIT = 100; renderFr(); }));
+      $("#fCountryP").addEventListener("change", () => { CAT_COUNTRY = $("#fCountryP").value; FR_LIMIT = 100; go(); });
+      $("#fMore").onclick = () => { FR_LIMIT += 200; renderFr(); };
+    }
+    applyPending(); renderFr();
+  }).catch(() => { $("#fCount").textContent = "Catálogo indisponível."; });
+  go();
+  if (!COMPARE) fetch("data/compare.json").then(r => r.json()).then(c => { COMPARE = c; renderCompareFrEs(); }).catch(() => {});
+}
+
+function renderCompareFrEs() {
+  const c = COMPARE; if (!c || !c.n) { $("#cmpFrEs").style.display = "none"; return; }
+  $("#cmpFrEs").innerHTML = `<h3 style="margin-top:0">França ou Espanha: onde é mais barato?</h3>
+    <p class="muted">${c.n} referências existem nas duas listas oficiais. Em ${c.es_cheaper} são mais baratas em Espanha; diferença mediana ${pct(c.median_diff_pct)} (preço espanhol face ao francês, por unidade, na tabacaria).</p>
+    <div class="filters"><input id="cq" type="search" placeholder="Filtrar a comparação…"><select id="cSort"><option value="d">Maior poupança em Espanha</option><option value="u">Mais caro em Espanha</option><option value="n">Nome</option></select></div>
+    <div style="overflow-x:auto"><table id="cTable"></table></div>
+    <p class="warn">Compara a mesma referência pelo nome normalizado (tubos e estojos à parte). Em Espanha há também o preço "con recargo" (bares, hotéis), mais alto.</p>`;
+  const draw = () => {
+    const q = $("#cq").value.trim().toLowerCase(), so = $("#cSort").value;
+    let l = c.rows.filter(r => !q || (r.label + " " + (r.brand || "")).toLowerCase().includes(q));
+    l.sort(so === "d" ? (a, b) => a.diff_pct - b.diff_pct : so === "u" ? (a, b) => b.diff_pct - a.diff_pct : (a, b) => a.label.localeCompare(b.label, "pt"));
+    $("#cTable").innerHTML = "<tr><th>Referência</th><th>Marca</th><th>🇫🇷</th><th>🇪🇸</th><th>Diferença</th></tr>" + l.slice(0, 60).map(r =>
+      `<tr><td>${esc(r.label)}</td><td>${esc(r.brand || "—")}</td><td>${eur(r.fr)}</td><td>${eur(r.es)}</td><td>${pct(r.diff_pct)}</td></tr>`).join("");
+  };
+  $("#cq").addEventListener("input", draw); $("#cSort").addEventListener("input", draw); draw();
+}
 
 /* ---------- Preços oficiais: filtros extra, evolução, histórico ---------- */
 function renderFr() {
@@ -83,12 +150,107 @@ function renderFr() {
   $("#fCount").textContent = `${l.length} referência(s)` + (l.length > FR_LIMIT ? ` · a mostrar ${FR_LIMIT}` : "");
   $("#fTable").innerHTML = "<tr><th>Referência</th><th>Marca</th><th>Vitola</th><th>Medidas</th><th>Emb.</th><th>€/unidade</th><th>Evolução</th></tr>" + l.slice(0, FR_LIMIT).map(x => {
     const p = histPct(x.hist);
-    return `<tr><td>${esc(x.label)}${x.new ? ' <span class="badge ok">novo</span>' : ""}${x.special ? ` <span class="badge warn">${esc(x.special)}</span>` : ""}${x.sampler ? ' <span class="badge warn">sortido</span>' : ""}</td>
+    const wk = wishKey(CAT_COUNTRY, x), on = wishHas(wk);
+    return `<tr><td><button class="fav ${on ? "on" : ""}" style="position:static;font-size:1.05rem;padding:0 4px" data-wk="${esc(wk)}" title="Lista de desejos" aria-label="Lista de desejos">${on ? "♥" : "♡"}</button>${esc(x.label)}${x.new ? ' <span class="badge ok">novo</span>' : ""}${x.special ? ` <span class="badge warn">${esc(x.special)}</span>` : ""}${x.sampler ? ' <span class="badge warn">sortido</span>' : ""}</td>
       <td>${esc(x.brand || "—")}${x.brand_source === "inferida" ? "*" : ""}</td><td>${esc(x.vitola || "—")}</td>
       <td class="sub">${x.ring ? x.length_in + '" × ' + x.ring + "<br>" + smokeTime(x.length_in, x.ring).label : "—"}</td><td>${x.pack_size || "—"}</td>
       <td>${eur(x.unit_eur)}</td><td class="sub">${x.hist ? histSpark(x.hist) + " " + pct(p) : (x.first_seen && PRICES && x.first_seen !== PRICES.editions[0].date ? "novo desde " + esc(x.first_seen) : "—")}</td></tr>`;
   }).join("");
   $("#fMore").style.display = l.length > FR_LIMIT ? "" : "none";
+  $("#fTable").querySelectorAll("[data-wk]").forEach(b => b.onclick = () => {
+    const k = b.dataset.wk, x = FR.find(r => wishKey(CAT_COUNTRY, r) === k);
+    toggleWish(k, x, CAT_COUNTRY); const on = wishHas(k); b.classList.toggle("on", on); b.textContent = on ? "♥" : "♡";
+  });
+}
+
+/* ---------- Lista de desejos ---------- */
+const WKEY = "bc-wish";
+const wishKey = (country, x) => `${country}|${x.label}|${x.pack_size || ""}`;
+const wishHas = k => lsGet(WKEY, []).some(w => w.key === k);
+function toggleWish(k, x, country) {
+  let l = lsGet(WKEY, []);
+  if (l.some(w => w.key === k)) l = l.filter(w => w.key !== k);
+  else l.unshift({ key: k, country, label: x.label, pack_size: x.pack_size || null, brand: x.brand || null, price: x.unit_eur, added: today() });
+  lsSet(WKEY, l);
+}
+function renderWish() {
+  const l = lsGet(WKEY, []);
+  if (!l.length) { $("#wish").innerHTML = "<p class='muted'>Vazia. Usa ♡ no separador Preços oficiais.</p>"; return; }
+  Promise.all([loadCat("fr").catch(() => []), loadCat("es").catch(() => [])]).then(() => {
+    const find = w => (CATS[w.country] || []).find(x => wishKey(w.country, x) === w.key);
+    let alerts = 0;
+    $("#wish").innerHTML = `<table><tr><th></th><th>Referência</th><th>Quando juntaste</th><th>Agora</th><th>Estado</th><th></th></tr>${l.map((w, i) => {
+      const x = find(w), now = x ? x.unit_eur : null;
+      let st = "sem mudança";
+      if (!x) { st = "⚠ saiu do catálogo"; alerts++; }
+      else if (now != null && w.price != null && now !== w.price) { st = (now > w.price ? "⬆ subiu " : "⬇ desceu ") + pct(Math.round((now - w.price) / w.price * 1000) / 10); alerts++; }
+      return `<tr><td>${w.country === "es" ? "🇪🇸" : "🇫🇷"}</td><td>${esc(w.label)}${w.pack_size ? ` <span class="sub">(${w.pack_size})</span>` : ""}</td><td>${eur(w.price)} <span class="sub">${esc(w.added)}</span></td><td>${x ? eur(now) : "—"}</td><td>${st}</td>
+        <td style="white-space:nowrap"><button class="btn sm ghost" data-wh="${i}">+ Humidor</button> <button class="btn sm ghost" data-wd="${i}">✕</button></td></tr>`;
+    }).join("")}</table>${alerts ? `<p class="warn">${alerts} alerta(s) desde que juntaste estas referências.</p>` : ""}`;
+    $("#wish").querySelectorAll("[data-wd]").forEach(b => b.onclick = () => { const x = lsGet(WKEY, []); x.splice(+b.dataset.wd, 1); lsSet(WKEY, x); renderWish(); });
+    $("#wish").querySelectorAll("[data-wh]").forEach(b => b.onclick = () => { const w = l[+b.dataset.wh], x = find(w); goTab("humidor"); $("#hOther").value = w.label; $("#hPrice").value = x && x.unit_eur || w.price || ""; });
+  });
+}
+
+/* ---------- Sincronização via Gist privado ---------- */
+const SYNC_KEYS = ["bc-journal", "bc-humidor", "bc-hygro", "bc-favs", "bc-wish", "bc-friends", "bc-fake"];
+const GIST_FILE = "boss-cigar.json";
+function gh(path, opts = {}) {
+  const tok = lsGet("bc-sync-token", "");
+  if (!tok) return Promise.reject(new Error("Falta o token."));
+  return fetch("https://api.github.com" + path, { ...opts, headers: { "Accept": "application/vnd.github+json", "Authorization": "Bearer " + tok, ...(opts.body ? { "Content-Type": "application/json" } : {}) } })
+    .then(r => r.ok ? r.json() : r.json().catch(() => ({})).then(j => { throw new Error(`GitHub ${r.status}: ${j.message || r.statusText}`); }));
+}
+function mergeList(local, remote, key) {
+  const out = [...local];
+  for (const r of remote || []) {
+    const k = key ? key(r) : JSON.stringify(r);
+    if (!out.some(l => (key ? key(l) : JSON.stringify(l)) === k)) out.push(r);
+  }
+  return out;
+}
+const MERGE_KEY = {
+  "bc-journal": e => `${e.date}|${e.cigar}|${e.notes}`, "bc-humidor": e => String(e.id), "bc-hygro": e => `${e.date}|${e.rh}|${e.t}`,
+  "bc-wish": e => e.key, "bc-friends": e => `${e.from}|${e.date}|${e.cigar}|${e.notes}`,
+};
+function setupSync() {
+  $("#syncToken").value = lsGet("bc-sync-token", "") ? "••••••••" : "";
+  $("#syncGist").value = lsGet("bc-sync-gist", "");
+  const say = (t, err) => { $("#syncOut").innerHTML = (err ? "⚠ " : "") + esc(t); };
+  const saveInputs = () => {
+    const t = $("#syncToken").value.trim(); if (t && !/^•+$/.test(t)) lsSet("bc-sync-token", t);
+    lsSet("bc-sync-gist", $("#syncGist").value.trim());
+  };
+  $("#syncPush").onclick = () => {
+    saveInputs();
+    const payload = { app: "boss-cigar", version: 1, saved: new Date().toISOString(), data: Object.fromEntries(SYNC_KEYS.map(k => [k, lsGet(k, [])])) };
+    const body = JSON.stringify({ description: "Boss Cigar — dados pessoais (privado)", public: false, files: { [GIST_FILE]: { content: JSON.stringify(payload, null, 1) } } });
+    const id = lsGet("bc-sync-gist", "");
+    say("A enviar…");
+    (id ? gh(`/gists/${id}`, { method: "PATCH", body }) : gh("/gists", { method: "POST", body }))
+      .then(g => { lsSet("bc-sync-gist", g.id); $("#syncGist").value = g.id; lsSet("bc-sync-last", payload.saved); say(`Enviado para o Gist privado ${g.id} (${new Date().toLocaleString("pt-PT")}). Noutro dispositivo, cola o mesmo token e este ID e carrega em "Trazer do Gist".`); })
+      .catch(e => say(e.message, true));
+  };
+  $("#syncPull").onclick = () => {
+    saveInputs();
+    const id = lsGet("bc-sync-gist", ""); if (!id) { say("Indica o ID do Gist.", true); return; }
+    say("A trazer…");
+    gh(`/gists/${id}`).then(g => {
+      const f = g.files && g.files[GIST_FILE]; if (!f) throw new Error("Este Gist não tem dados do Boss Cigar.");
+      return f.truncated ? fetch(f.raw_url).then(r => r.json()) : JSON.parse(f.content);
+    }).then(p => {
+      let n = 0;
+      for (const k of SYNC_KEYS) {
+        const local = lsGet(k, []), remote = (p.data || {})[k];
+        if (!Array.isArray(remote)) continue;
+        const merged = mergeList(local, remote, MERGE_KEY[k]);
+        n += merged.length - local.length; lsSet(k, merged);
+      }
+      say(`Junção feita: ${n} registo(s) novo(s) trazidos do Gist. Nada local foi apagado.`);
+      renderJournal(); renderHumidor(); renderHygro(); renderFriends(); renderWish();
+    }).catch(e => say(e.message, true));
+  };
+  $("#syncForget").onclick = () => { lsSet("bc-sync-token", ""); $("#syncToken").value = ""; say("Token esquecido neste browser."); };
 }
 
 function renderPriceHist() {
@@ -153,6 +315,83 @@ function setupGuides() {
     $("#stOut").innerHTML = `<p><b>${t.label}</b> para ${len}" × ${ring}</p>`;
   };
   ["#stLen", "#stRing"].forEach(i => $(i).addEventListener("input", st)); st();
+}
+
+/* ---------- Idioma ---------- */
+function setupLang() {
+  const en = lsGet("bc-lang", "pt") === "en";
+  $("#langBtn").textContent = en ? "PT" : "EN";
+  $("#langBtn").title = en ? "Ver em português" : "View in English";
+  $("#langBtn").onclick = () => { lsSet("bc-lang", en ? "pt" : "en"); location.reload(); };
+  if (en && window.bcApplyEnglish) bcApplyEnglish();
+}
+
+/* ---------- Calculadora Boveda ---------- */
+function setupBoveda() {
+  const calc = () => {
+    const cap = Math.max(1, +$("#bvCap").value || 0), rh = $("#bvRh").value, season = $("#bvSeason").value === "1";
+    if (cap <= 5) { $("#bvOut").innerHTML = `<p><b>1 pacote de 8 g</b> (${rh}%) chega para até 5 charutos (estojo de viagem).</p>`; return; }
+    const n60 = Math.ceil(cap / 25);
+    const n320 = Math.floor(n60 / 5), rest = n60 - n320 * 5;
+    const alt = n320 ? `ou <b>${n320} × 320 g</b>${rest ? ` + <b>${rest} × 60 g</b>` : ""}` : "";
+    $("#bvOut").innerHTML = `<p>Para ${cap} charutos de capacidade: <b>${n60} × 60 g</b> de ${rh}% ${alt}.</p>`
+      + (season ? `<p class="sub">Humidor novo: primeiro cura a madeira com ${n60} pacote(s) de cura de 84% (1 por cada 25 charutos), cerca de 14 dias, sem charutos lá dentro. Depois troca pelos de ${rh}%.</p>` : "")
+      + `<p class="sub">Em Lisboa a humidade exterior é alta quase todo o ano; muitos aficionados preferem 65% (ou 62% se a tiragem ficar presa).</p>`;
+  };
+  ["#bvCap", "#bvRh", "#bvSeason"].forEach(i => $(i).addEventListener("input", calc)); calc();
+}
+
+/* ---------- Glossário ---------- */
+const GLOSSARY = [
+  ["Capa (wrapper)", "Folha exterior do charuto; dá o aspeto e boa parte do sabor inicial."],
+  ["Capote (binder)", "Folha que segura a tripa e lhe dá forma, por baixo da capa."],
+  ["Tripa (filler)", "Folhas interiores, que definem o essencial do sabor e da força."],
+  ["Tripa longa / curta / mista", "Longa: folhas inteiras de ponta a ponta (charutos premium). Curta: pedaços picados (charutos de máquina). Mista: combinação das duas."],
+  ["Ligada (blend)", "Receita de folhas (variedades, colheitas, posições na planta) que compõe o charuto."],
+  ["Ligero, seco, volado", "Folhas de cima, do meio e de baixo da planta: mais força e combustão lenta (ligero), aroma (seco), combustão (volado)."],
+  ["Puro", "Charuto em que capa, capote e tripa vêm todos do mesmo país."],
+  ["Vitola", "Formato e medidas de um charuto (comprimento × ring gauge)."],
+  ["Vitola de galera", "Nome de fábrica do formato em Cuba (ex.: Robustos, Cañonazo), independente do nome comercial."],
+  ["Ring gauge (cepo)", "Diâmetro em 64 avos de polegada: 50 = 50/64″ ≈ 19,8 mm."],
+  ["Parejo", "Charuto de lados retos (Corona, Robusto, Churchill…)."],
+  ["Figurado", "Charuto de forma irregular: Torpedo, Belicoso, Pirámide, Perfecto, Culebra."],
+  ["Box-pressed", "Charuto prensado em caixa, de secção quadrada."],
+  ["Corojo / Criollo / Habano", "Variedades de semente de tabaco de origem cubana, muito usadas em capas e tripas."],
+  ["Connecticut Shade", "Capa clara cultivada sob pano (sombra), suave e cremosa; hoje muito cultivada no Equador."],
+  ["Connecticut Broadleaf", "Capa escura e grossa cultivada ao sol, típica de Maduros."],
+  ["Claro, Colorado, Maduro, Oscuro", "Cores da capa, da mais clara à mais escura; as escuras tendem a ser mais doces e terrosas."],
+  ["Primings", "Posição/ordem de colheita das folhas na planta, de baixo para cima."],
+  ["Cura", "Secagem das folhas em casas de tabaco, onde perdem a clorofila e ganham cor."],
+  ["Fermentação (pilones)", "Pilhas de folhas que aquecem e libertam amónia; arredonda o sabor."],
+  ["Añejamiento", "Envelhecimento do tabaco ou dos charutos já feitos, para integrar sabores."],
+  ["Torcedor", "Pessoa que enrola os charutos à mão."],
+  ["Escogida", "Seleção e classificação das folhas por cor, tamanho e qualidade."],
+  ["Cabeça, pé, gorro (cap)", "Cabeça: ponta que vai à boca, fechada pelo gorro. Pé: ponta que se acende."],
+  ["Anilha", "Etiqueta à volta do charuto com a marca."],
+  ["Tiragem", "Facilidade com que o fumo passa; nem presa nem aberta demais."],
+  ["Combustão / túnel / canoa", "Como o charuto arde: túnel é arder só por dentro; canoa é arder só de um lado."],
+  ["Retrohale", "Expirar parte do fumo pelo nariz para sentir aromas que a boca não apanha."],
+  ["Terços", "Divisão de uma fumada em início, meio e fim; os sabores costumam evoluir entre terços."],
+  ["Força vs corpo vs sabor", "Força: efeito da nicotina. Corpo: densidade/peso do fumo na boca. Sabor: intensidade aromática. São independentes."],
+  ["Humidor", "Caixa ou armário com humidade controlada (65–70%) para guardar charutos."],
+  ["Boveda", "Pacote de humidade de duas vias que mantém uma humidade relativa fixa (62, 65, 69%…)."],
+  ["Tupperdor", "Caixa hermética usada como humidor barato, com Boveda."],
+  ["Lasioderma (escaravelho do tabaco)", "Praga que faz pequenos furos; prospera acima de ~24 °C com humidade alta."],
+  ["Bloom (plume)", "Pó cristalino de óleos à superfície da capa; ao contrário do bolor, limpa-se sem manchas."],
+  ["Habanos Specialist / La Casa del Habano", "Lojas autorizadas pela Habanos S.A. para vender charutos cubanos com garantia."],
+  ["Edición Limitada", "Lançamento anual da Habanos com folhas envelhecidas e capa normalmente mais escura."],
+  ["Edición Regional", "Vitola feita para um mercado específico (ex.: Portugal, Espanha, França), com anilha própria."],
+  ["Gran Reserva / Reserva", "Charutos com tabaco envelhecido vários anos antes de enrolar."],
+  ["Totalmente a mano", "Marca oficial de charutos cubanos feitos inteiramente à mão."],
+  ["Tubo", "Charuto vendido num tubo individual (alumínio ou vidro), útil para transporte."],
+];
+function setupGlossary() {
+  const draw = () => {
+    const q = $("#glq").value.trim().toLowerCase();
+    const l = GLOSSARY.filter(([t, d]) => !q || (t + " " + d).toLowerCase().includes(q));
+    $("#glOut").innerHTML = l.map(([t, d]) => `<div class="item"><b>${esc(t)}</b><div class="sub">${esc(d)}</div></div>`).join("") || "<p class='muted'>Sem resultados.</p>";
+  };
+  $("#glq").addEventListener("input", draw); draw();
 }
 
 /** "ROS ABR 24" -> fábrica (código), mês, ano, idade. */
@@ -266,25 +505,91 @@ function renderHomeAdvice() {
   $("#homeAdvice").innerHTML = `<p>${MONTH_PT[m][0].toUpperCase() + MONTH_PT[m].slice(1)} em ${esc(HOME.place)}: ${t} °C e ${rh}% de humidade relativa em média (NASA POWER).</p><ul>${tips.map(x => `<li>${x}</li>`).join("")}</ul>`;
 }
 
+/* ---------- Prova guiada e roda de sabores ---------- */
+const WHEEL = [
+  ["Terra", "#8a6a4a", ["terra", "cogumelo", "mineral", "couro", "tabaco cru"]],
+  ["Madeira", "#a0763c", ["cedro", "carvalho", "madeira", "lápis"]],
+  ["Especiarias", "#c0532c", ["pimenta preta", "pimenta branca", "canela", "noz-moscada", "cravinho", "especiarias"]],
+  ["Torrados", "#5b3a26", ["café", "cacau", "chocolate negro", "pão torrado", "tostado"]],
+  ["Doce", "#d4a85a", ["mel", "caramelo", "baunilha", "açúcar mascavado", "melaço", "doçura"]],
+  ["Frutos secos", "#b28b5e", ["amêndoa", "avelã", "noz", "amendoim", "frutos secos", "nozes"]],
+  ["Fruta", "#9e3d48", ["frutos vermelhos", "passas", "figo", "citrinos", "cereja"]],
+  ["Cremoso", "#e2cfa6", ["creme", "manteiga", "natas", "leite"]],
+  ["Ervas e flores", "#7f9a5a", ["feno", "ervas", "chá", "flores", "relva"]],
+];
+const G = { third: 1, cat: null, picks: { 1: [], 2: [], 3: [] } };
+
+function drawWheel() {
+  const R = 92, r0 = 34, cx = 100, cy = 100, n = WHEEL.length;
+  const arc = (a0, a1, ro, ri) => {
+    const p = (a, r) => [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+    const [x0, y0] = p(a0, ro), [x1, y1] = p(a1, ro), [x2, y2] = p(a1, ri), [x3, y3] = p(a0, ri);
+    return `M${x0},${y0} A${ro},${ro} 0 0 1 ${x1},${y1} L${x2},${y2} A${ri},${ri} 0 0 0 ${x3},${y3} Z`;
+  };
+  $("#wheel").innerHTML = `<svg width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Roda de sabores">${WHEEL.map(([name, col], i) => {
+    const a0 = -Math.PI / 2 + i * 2 * Math.PI / n, a1 = a0 + 2 * Math.PI / n, am = (a0 + a1) / 2;
+    const cnt = Object.values(G.picks).flat().filter(f => WHEEL[i][2].includes(f)).length;
+    return `<g data-wc="${i}" style="cursor:pointer"><path d="${arc(a0, a1, R, r0)}" fill="${col}" stroke="#1b120d" stroke-width="2" opacity="${G.cat === i ? 1 : .78}"/>
+      <text x="${cx + 64 * Math.cos(am)}" y="${cy + 64 * Math.sin(am)}" text-anchor="middle" dominant-baseline="middle" font-size="9" fill="#1b120d" style="pointer-events:none">${esc(name.split(" ")[0])}${cnt ? " •" + cnt : ""}</text></g>`;
+  }).join("")}<circle cx="${cx}" cy="${cy}" r="${r0 - 2}" fill="#26180f"/><text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="#d4a85a">${G.third}.º terço</text></svg>`;
+  $("#wheel").querySelectorAll("[data-wc]").forEach(g => g.onclick = () => { G.cat = +g.dataset.wc; drawWheel(); drawNotes(); });
+}
+function drawNotes() {
+  if (G.cat !== null) {
+    const [name, col, notes] = WHEEL[G.cat];
+    $("#wheelNotes").innerHTML = `<b>${esc(name)}</b><br>` + notes.map(f => `<button class="tag" data-gf="${esc(f)}" style="cursor:pointer;${G.picks[G.third].includes(f) ? `background:${col};color:#1b120d;border-color:${col}` : "background:none"}">${esc(f)}</button>`).join("");
+    $("#wheelNotes").querySelectorAll("[data-gf]").forEach(b => b.onclick = e => {
+      e.preventDefault(); const f = b.dataset.gf, l = G.picks[G.third], i = l.indexOf(f);
+      i >= 0 ? l.splice(i, 1) : l.push(f); drawWheel(); drawNotes();
+    });
+  }
+  $("#gPicked").innerHTML = [1, 2, 3].map(t => `<div class="sub"><b>${t}.º terço:</b> ${G.picks[t].length ? G.picks[t].map(esc).join(", ") : "—"}</div>`).join("");
+}
+function setupGuided() {
+  document.querySelectorAll('input[name="gThird"]').forEach(r => r.addEventListener("change", () => { G.third = +r.value; drawWheel(); drawNotes(); }));
+  drawWheel(); drawNotes();
+}
+function collectGuided() {
+  const g = { thirds: { ...G.picks }, draw: +$("#gDraw").value || null, burn: +$("#gBurn").value || null, ash: +$("#gAsh").value || null,
+              strength: +$("#gStr").value || null, retro: $("#gRetro").value.trim() || null };
+  const any = Object.values(g.thirds).some(l => l.length) || g.draw || g.burn || g.ash || g.strength || g.retro;
+  return any ? g : null;
+}
+function resetGuided() {
+  G.picks = { 1: [], 2: [], 3: [] }; G.cat = null; G.third = 1;
+  document.querySelector('input[name="gThird"][value="1"]').checked = true;
+  ["#gDraw", "#gBurn", "#gAsh", "#gStr", "#gRetro"].forEach(i => $(i).value = "");
+  $("#wheelNotes").textContent = "Toca numa família de sabores."; drawWheel(); drawNotes();
+}
+function guidedSummary(g) {
+  if (!g) return "";
+  const t = [1, 2, 3].filter(i => (g.thirds[i] || []).length).map(i => `${i}.º: ${g.thirds[i].join(", ")}`).join(" · ");
+  const c = [["tiragem", g.draw], ["combustão", g.burn], ["cinza", g.ash], ["força", g.strength]].filter(x => x[1]).map(x => `${x[0]} ${x[1]}/5`).join(" · ");
+  return `<div class="sub">${t ? "🌀 " + esc(t) : ""}${c ? (t ? "<br>" : "") + "🔧 " + esc(c) : ""}${g.retro ? "<br>👃 " + esc(g.retro) : ""}</div>`;
+}
+
 /* ---------- Diário: catálogo oficial, partilha ---------- */
 function setupJournal() {
   $("#jSave").onclick = () => {
     const other = $("#jOther").value.trim();
     const l = lsGet(JKEY, []);
+    const guided = collectGuided();
     l.unshift({ date: today(), cigar: other ? "fr:" + other : $("#jCigar").value, drink: $("#jDrink").value.trim(),
-      rating: +$("#jRating").value, notes: $("#jNotes").value.trim() });
+      rating: +$("#jRating").value, notes: $("#jNotes").value.trim(), ...(guided ? { guided } : {}) });
     lsSet(JKEY, l);
     ["#jNotes", "#jDrink", "#jOther"].forEach(i => $(i).value = "");
+    resetGuided(); $("#guided").open = false;
     renderJournal();
   };
   $("#jExport").onclick = () => download("diario-charutos.json", lsGet(JKEY, []));
+  setupGuided();
   renderJournal();
 }
 
 function renderJournal() {
   const l = lsGet(JKEY, []);
   $("#jList").innerHTML = l.map((e, i) => `<div class="item"><b>${esc(displayName(e.cigar))}</b> · ${"★".repeat(e.rating)}${"☆".repeat(5 - e.rating)}
-    <span class="muted">· ${esc(e.date)}${e.drink ? " · " + esc(e.drink) : ""}</span><div>${esc(e.notes)}</div>
+    <span class="muted">· ${esc(e.date)}${e.drink ? " · " + esc(e.drink) : ""}</span><div>${esc(e.notes)}</div>${guidedSummary(e.guided)}
     <div class="row" style="margin-top:6px"><button class="btn sm ghost" data-share="${i}">Partilhar</button><button class="btn sm ghost" data-jdel="${i}">Apagar</button></div></div>`).join("")
     || "<p class='muted'>Ainda sem provas registadas.</p>";
   $("#jList").querySelectorAll("[data-share]").forEach(b => b.onclick = () => shareNote(l[+b.dataset.share], b));
@@ -350,6 +655,10 @@ function buildProfile(entries) {
   for (const e of entries) {
     const w = (e.rating || 3) - 3; // 5★ = +2 … 1★ = -2
     P.tasted.add(e.cigar); P.n++;
+    if (e.guided) {  // sabores sentidos na prova guiada contam a dobrar: são observação tua, não descrição do fabricante
+      Object.values(e.guided.thirds || {}).flat().forEach(f => add(P.flavor, f, w * 2));
+      if (e.guided.strength && w) P.strength.push([e.guided.strength, w]);
+    }
     if (e.cigar.startsWith("fr:")) {
       const x = FR_BY_LABEL && FR_BY_LABEL.get(e.cigar.slice(3));
       if (x) { add(P.brand, x.brand, w); add(P.vit, vitClass(x.vitola), w); if (w > 0 && x.unit_eur) P.price.push(x.unit_eur); }

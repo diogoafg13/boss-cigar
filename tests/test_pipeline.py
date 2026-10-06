@@ -275,3 +275,49 @@ def test_price_summary_excludes_anomalies():
     ]
     s = summarize_prices(items, [{"date": "2025-01-01", "edition": "x", "prices": {}}], [])
     assert s["n_changed"] == 1 and s["n_anomalies"] == 1 and s["up"][0]["pct"] == 10.0
+
+
+# --- Espanha (CMT), comparação e feed ----------------------------------------
+from bosscigar.sources import cmt_es  # noqa: E402
+from bosscigar import feed  # noqa: E402
+
+ES_CSV = """Marca;Expendeduría Euros/Cajetilla;Con Recargo Euros/Cajetilla
+COHIBA Robustos (25);80,5;92,6
+MONTECRISTO Montecristo Nº 2 (10);25,8;29,65
+MONTECRISTO Petit Nº 2 (25);18,3;21,05
+3 TERCIOS Robusto 5 1/4x54 (20);3,6;4,15
+ROMEO Y JULIETA Churchills Tubo (3);30;34,5
+PARTAGAS Serie P Nº 2 Serie Sevilla (el envase de 21);577,5;664,1
+A.FLORES A.Flores El Vinyet RC52 Robusto Clasico (10);8,5;9,8
+"""
+
+
+def test_cmt_parse():
+    items = {i["label"]: i for i in cmt_es.parse_csv(ES_CSV)}
+    assert items["Cohiba Robustos"]["brand"] == "Cohiba" and items["Cohiba Robustos"]["pack_size"] == 25
+    assert items["Montecristo Nº 2"]["unit_eur"] == 25.8          # marca repetida no nome não duplica
+    assert items["3 Tercios Robusto 5 1/4x54"]["brand"] == "3 Tercios"
+    assert items["Romeo y Julieta Churchills Tubo"]["brand"] == "Romeo y Julieta"
+    sev = items["Partagas Serie P Nº 2 Serie Sevilla"]
+    assert sev["pack_eur"] == 577.5 and sev["unit_eur"] == 27.5      # "el envase de 21": preço do conjunto
+    assert items["A.Flores El Vinyet RC52 Robusto Clasico"]["brand"] == "A.Flores"
+
+
+def test_compare_fr_es():
+    fr = douane_fr.parse_table(FR_ROWS)["items"]
+    es = cmt_es.parse_csv(ES_CSV)
+    rows = {r["label"]: r for r in cmt_es.compare_fr_es(fr, es)}
+    mc = next(r for r in rows.values() if r["fr_label"] == "Montecristo n°2")
+    assert (mc["fr"], mc["es"], mc["diff_pct"]) == (29.8, 25.8, -13.4)
+    assert not any("Petit" in r["es_label"] and "n°2" in r["fr_label"] and "Petit" not in r["fr_label"] for r in rows.values())
+
+
+def test_feed_diff_and_xml():
+    prev = {"date": "2026-09-01", "prices": {"a|10": 10.0, "b|10": 5.0, "x|10": 1.0}, "labels": {"a|10": ["A Robusto", 10, False], "b|10": ["B Toro", 10, False], "x|10": ["X Corona", 10, False]}}
+    cur = {"date": "2026-11-01", "prices": {"a|10": 11.0, "b|10": 4.5, "n|10": 7.0}, "labels": {"n|10": ["N Novo", 10, False]}}
+    d = feed.diff_snapshots(prev, cur)
+    assert [u["label"] for u in d["up"]] == ["A Robusto"] and d["down"][0]["pct"] == -10.0
+    assert d["new"] == ["N Novo"] and d["removed"] == ["X Corona"]
+    import xml.etree.ElementTree as ET
+    root = ET.fromstring(feed.build_feed([prev, cur], []))
+    assert len(root.findall("{http://www.w3.org/2005/Atom}entry")) == 1
