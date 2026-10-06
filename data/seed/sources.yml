@@ -1,0 +1,5 @@
+# URLs de recurso para fontes cuja descoberta automática pode falhar.
+# A página de dados abertos da douane bloqueia alguns IPs; se o pipeline marcar
+# douane_fr como CACHE durante muito tempo, atualizar este URL com o .ods mais recente de:
+# https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures
+douane_fr_ods: "https://www.douane.gouv.fr/sites/default/files/2026-10/05/Maquette%20JORF%201er%20novembre%202026_0.ods"

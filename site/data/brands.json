@@ -8,7 +8,8 @@
    "manufacturer": "ITC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "777",
@@ -18,35 +19,40 @@
     "Nicarágua",
     "Honduras"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "1881",
    "manufacturer": "Tabacalera Incorporada",
    "notes": "Created in 1981 to celebrate the company's centennial. Philippine, Brazilian and Indonesian tobacco.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "5 Vegas",
    "manufacturer": "Cigars International",
    "notes": "1990s brand now wholly owned; various manufacturers",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "898 Collection",
    "manufacturer": "Owned by Mike's Cigars",
    "notes": "Wholly owned; various manufacturers",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "1881 Perique",
    "manufacturer": "Tabacalera Incorporada",
    "notes": "Marketed as a different blend of the 1881 cigar, using 15-year-old Brazilian and Philippine tobacco, as well as Louisiana Perique tobacco.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "AJ Fernandez",
@@ -55,42 +61,52 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Adan y Eva",
    "manufacturer": "Cuban Desire Corporation (Carlos Fleitas)",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Alec Bradley",
    "manufacturer": "Alec Bradley",
    "notes": "Contracts with various factories for manufacture.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 24,
+    "min": 8.0,
+    "max": 29.0
+   }
   },
   {
    "brand": "Alhambra",
    "manufacturer": "Tabacalera Incorporada",
    "notes": "Founded in 1912. Once a competing brand to Tabacalera, later purchased by the company in the 1970s. Philippine and Indonesian tobacco.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "American Rebel",
    "manufacturer": "Stogiebird",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Aristoff",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Arsen",
@@ -99,7 +115,8 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Arturo Fuente",
@@ -108,14 +125,24 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 182,
+    "min": 5.5,
+    "max": 140.0
+   }
   },
   {
    "brand": "Ashton",
    "manufacturer": "Arturo Fuente",
    "notes": "Philadelphia, Pennsylvania",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 12,
+    "min": 16.5,
+    "max": 40.0
+   }
   },
   {
    "brand": "AVO",
@@ -124,7 +151,12 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 7,
+    "min": 14.5,
+    "max": 17.5
+   }
   },
   {
    "brand": "Baccarat",
@@ -133,35 +165,40 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Backwoods Smokes",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Bahman",
    "manufacturer": "ITC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Ben-Hur Cigars",
    "manufacturer": "Wm. Tegge & Co.",
    "notes": "Detroit, Michigan",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Black & Mild",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Blackbird Cigar Co.",
@@ -170,7 +207,8 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Bolívar",
@@ -179,21 +217,28 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 9,
+    "min": 11.5,
+    "max": 105.0
+   }
   },
   {
    "brand": "Bongani",
    "manufacturer": "Bongani Cigars; distributed by Boutique Stogies Ltd in the USA",
    "notes": "The first fully-African cigar brand, made in Mozambique using African tobacco. \"Bongani\" means \"Be Grateful\" in the Zulu language.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Cabaiguan",
    "manufacturer": "owned by Tatuaje Cigars, Inc.",
    "notes": "in consultation with Jaime Garcia, the son of José \"Pepin\" Garcia",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Cain",
@@ -202,7 +247,12 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 3,
+    "min": 9.0,
+    "max": 11.0
+   }
   },
   {
    "brand": "Camacho",
@@ -211,7 +261,12 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 11,
+    "min": 5.0,
+    "max": 15.0
+   }
   },
   {
    "brand": "Carlos Toraño",
@@ -220,7 +275,8 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Chaman",
@@ -229,7 +285,8 @@
    "countries": [
     "Costa Rica"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Cigar Jesus",
@@ -238,7 +295,8 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Cohiba",
@@ -247,14 +305,20 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 59,
+    "min": 2.95,
+    "max": 1000.0
+   }
   },
   {
    "brand": "El Credito - Altadis",
    "manufacturer": "General Cigar",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Cuaba",
@@ -263,14 +327,20 @@
    "countries": [
     "Cuba"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 6,
+    "min": 11.5,
+    "max": 30.4
+   }
   },
   {
    "brand": "Cuesta-Rey",
    "manufacturer": "J.C. Newman",
    "notes": "El Reloj Factory",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Dannemann",
@@ -279,14 +349,20 @@
    "countries": [
     "Alemanha"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": null
   },
   {
    "brand": "Davidoff",
    "manufacturer": "Davidoff",
    "notes": "Imperial Tobacco",
    "countries": [],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 123,
+    "min": 2.6,
+    "max": 750.0
+   }
   },
   {
    "brand": "Diamond Crown",
@@ -295,14 +371,20 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Diesel",
    "manufacturer": "A. J. Fernandez Cigars",
    "notes": "Previously exclusive to Cigars International",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 4,
+    "min": 12.5,
+    "max": 14.0
+   }
   },
   {
    "brand": "Diplomáticos",
@@ -311,7 +393,12 @@
    "countries": [
     "Cuba"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 2,
+    "min": 15.9,
+    "max": 18.4
+   }
   },
   {
    "brand": "Djarum",
@@ -320,7 +407,8 @@
    "countries": [
     "Indonésia"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Djarum Black",
@@ -329,21 +417,24 @@
    "countries": [
     "Estados Unidos"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Don Alfredo",
    "manufacturer": "Dunhill",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Don Cándido",
    "manufacturer": "Dunhill",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Don Diego",
@@ -352,14 +443,16 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Don Juan Urquijo",
    "manufacturer": "Tabacalera Incorporada",
    "notes": "A blend of Philippine, Brazilian, Connecticut, and Nicaraguan tobacco.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Don Pepin Garcia",
@@ -368,7 +461,12 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 6,
+    "min": 18.0,
+    "max": 20.5
+   }
   },
   {
    "brand": "Don Tomas",
@@ -377,42 +475,52 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 31,
+    "min": 3.6,
+    "max": 10.4
+   }
   },
   {
    "brand": "Dunhill",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Dutch Masters",
    "manufacturer": "Altadis",
    "notes": "Introduced in 1912",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "DUX",
    "manufacturer": "Altadis",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "East Coast Rollers",
    "manufacturer": "Famous Smoke Shop",
    "notes": "Exclusive to online store",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "El Sol Cigars",
    "manufacturer": "El Sol Cigars",
    "notes": "The 2nd oldest cigar manufacturer in Ybor City, Florida",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Ernesto Perez-Carrillo",
@@ -421,28 +529,36 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Familija Cigars",
    "manufacturer": "",
    "notes": "Australian-owned and curates premium blends",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Farvardin",
    "manufacturer": "Iranian Tobacco Company",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Flor De Las Antillas",
    "manufacturer": "Don Pepin Garcia",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 3,
+    "min": 15.5,
+    "max": 16.5
+   }
   },
   {
    "brand": "La Flor de la Isabela",
@@ -451,14 +567,16 @@
    "countries": [
     "Filipinas"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Flor del Punto",
    "manufacturer": "Dunhill",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Flor de Selva",
@@ -467,7 +585,12 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 245,
+    "min": 1.55,
+    "max": 145.0
+   }
   },
   {
    "brand": "La Flor Dominicana",
@@ -476,7 +599,12 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 5,
+    "min": 14.0,
+    "max": 27.0
+   }
   },
   {
    "brand": "Fonseca",
@@ -485,7 +613,12 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 4,
+    "min": 6.0,
+    "max": 12.4
+   }
   },
   {
    "brand": "Fuente",
@@ -494,35 +627,44 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Fuente Fuente Opus X",
    "manufacturer": "Arturo Fuente",
    "notes": "Made by Tabacalera A. Fuente",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 31,
+    "min": 65.0,
+    "max": 201.0
+   }
   },
   {
    "brand": "Fumadores",
    "manufacturer": "",
    "notes": "premium cigar blended and made by José \"Pepin\" García",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Game",
    "manufacturer": "Swedish Match",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Garcia Y Vega",
    "manufacturer": "Swedish Match",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Gispert",
@@ -531,7 +673,8 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "La Gloria Cubana",
@@ -540,7 +683,12 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 2,
+    "min": 12.1,
+    "max": 20.2
+   }
   },
   {
    "brand": "The Griffins",
@@ -549,14 +697,20 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Guantanamera",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 6,
+    "min": 2.4,
+    "max": 3.8
+   }
   },
   {
    "brand": "H. Upmann",
@@ -565,28 +719,36 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 25,
+    "min": 8.0,
+    "max": 275.0
+   }
   },
   {
    "brand": "Hamlet (cigar)",
    "manufacturer": "Gallaher Group division of Japan Tobacco",
    "notes": "Hamlet cigars were first launched in the UK in 1964",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Havana Soul",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Helix",
    "manufacturer": "General Cigar Co.",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Henry Clay",
@@ -595,21 +757,24 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Hestia Tobacco",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "HOMA",
    "manufacturer": "ITC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Hoyo de Monterrey",
@@ -618,7 +783,12 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 33,
+    "min": 9.1,
+    "max": 150.0
+   }
   },
   {
    "brand": "HPC",
@@ -627,21 +797,28 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 17,
+    "min": 11.5,
+    "max": 20.9
+   }
   },
   {
    "brand": "Indian Tabac",
    "manufacturer": "Rocky Patel",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "J.R. Tobacco",
    "manufacturer": "Altadis",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Joya de Nicaragua",
@@ -650,21 +827,28 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 9,
+    "min": 12.5,
+    "max": 20.0
+   }
   },
   {
    "brand": "Juan López (cigar brand)|Juan López",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "King Edward The Seventh (cigar brand)|King Edward the Seventh",
    "manufacturer": "Swisher International",
    "notes": "Jacksonville, Florida",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Lars Tetens Cigars|Lars Tetens",
@@ -674,14 +858,16 @@
     "República Dominicana",
     "México"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Loeser & Wolff",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Macanudo",
@@ -690,35 +876,44 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 35,
+    "min": 3.0,
+    "max": 21.5
+   }
   },
   {
    "brand": "Maker's Mark",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Marsh Wheeling",
    "manufacturer": "National Cigar Corp.",
    "notes": "\"stogies\"",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Maximus",
    "manufacturer": "J.C. Newman",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Maxum",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Montesino",
@@ -727,7 +922,8 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Montecristo",
@@ -736,14 +932,20 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 58,
+    "min": 2.55,
+    "max": 650.0
+   }
   },
   {
    "brand": "Morro Castle",
    "manufacturer": "A. J. Fernandez Cigars",
    "notes": "Exclusive to Cigars International",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "My Father",
@@ -752,21 +954,28 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 12,
+    "min": 16.8,
+    "max": 25.0
+   }
   },
   {
    "brand": "Nat Sherman",
    "manufacturer": "Nat Sherman",
    "notes": "Has used various makers over time",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Nicoya Cigars",
    "manufacturer": "Nicoya Cigars",
    "notes": "Australia's only cigar company, founded in 2015 by Gerard Hayes.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Nub",
@@ -775,14 +984,20 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 12,
+    "min": 11.5,
+    "max": 14.5
+   }
   },
   {
    "brand": "Old Henry",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Oliva",
@@ -791,7 +1006,12 @@
    "countries": [
     "Bélgica"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 47,
+    "min": 2.5,
+    "max": 45.0
+   }
   },
   {
    "brand": "Oliveros",
@@ -800,21 +1020,28 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Pacemaker",
    "manufacturer": "Waitt & Bond",
    "notes": "Newark, NJ",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Padilla",
    "manufacturer": "Padilla",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 9,
+    "min": 6.0,
+    "max": 16.0
+   }
   },
   {
    "brand": "Padrón",
@@ -823,7 +1050,12 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 33,
+    "min": 16.0,
+    "max": 125.0
+   }
   },
   {
    "brand": "La Palina",
@@ -832,7 +1064,8 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Partagás",
@@ -841,35 +1074,48 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 47,
+    "min": 3.1,
+    "max": 260.0
+   }
   },
   {
    "brand": "Paul Garmirian",
    "manufacturer": "Davidoff",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "La Paz",
    "manufacturer": "Swedish Match",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 1,
+    "min": 3.5,
+    "max": 3.5
+   }
   },
   {
    "brand": "Perdomo",
    "manufacturer": "Tabacalera Perdomo",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Phillies",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Piloto Cigars Inc.",
@@ -878,7 +1124,8 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Plasencia",
@@ -887,28 +1134,40 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 46,
+    "min": 4.4,
+    "max": 29.8
+   }
   },
   {
    "brand": "Playboy",
    "manufacturer": "Altadis",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Por Larrañaga",
    "manufacturer": "Altadis",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 5,
+    "min": 8.2,
+    "max": 33.5
+   }
   },
   {
    "brand": "PROPIO",
    "manufacturer": "Achievement Cigar Company Inc",
    "notes": "Ecuadoran Vintage and Cuban Vintage Tobacco",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Punch",
@@ -917,14 +1176,24 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 9,
+    "min": 11.0,
+    "max": 69.0
+   }
   },
   {
    "brand": "Quai d'Orsay",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 13,
+    "min": 15.8,
+    "max": 98.0
+   }
   },
   {
    "brand": "Quesada",
@@ -933,14 +1202,20 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Quintero",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 8,
+    "min": 4.0,
+    "max": 6.8
+   }
   },
   {
    "brand": "Ramón Allones",
@@ -949,21 +1224,28 @@
    "countries": [
     "Cuba"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 5,
+    "min": 19.0,
+    "max": 48.0
+   }
   },
   {
    "brand": "El Rey del Mundo",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "El Rico Habano",
    "manufacturer": "General Cigar Company",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Ritmeester",
@@ -972,14 +1254,20 @@
    "countries": [
     "Países Baixos"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Rocky Patel",
    "manufacturer": "Rocky Patel",
    "notes": "",
    "countries": [],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 45,
+    "min": 3.4,
+    "max": 150.0
+   }
   },
   {
    "brand": "Romeo y Julieta",
@@ -988,49 +1276,64 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 45,
+    "min": 7.7,
+    "max": 195.0
+   }
   },
   {
    "brand": "Royal Dutch Cigars",
    "manufacturer": "Ritmeester",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Royal Jamaican",
    "manufacturer": "Altadis",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Saint Luis Rey (cigar)",
    "manufacturer": "Altadis",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "San Bosco",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "San Cristóbal de la Habana",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 6,
+    "min": 11.1,
+    "max": 205.0
+   }
   },
   {
    "brand": "San Lotano",
    "manufacturer": "A. J. Fernandez Cigars",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "San Miguel",
@@ -1039,28 +1342,36 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Sancho Panza",
    "manufacturer": "General Cigar Co.",
    "notes": "",
    "countries": [],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 2,
+    "min": 12.0,
+    "max": 20.7
+   }
   },
   {
    "brand": "Sancti Spiritus (cigar)",
    "manufacturer": "",
    "notes": "José \"Pepin\" Garcia and is manufactured at the El Rey de los Habanos factory in the Little Havana section of Miami, Florida",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Siglo (cigar brand)|Siglo",
    "manufacturer": "Altadis",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Star Cigar",
@@ -1069,7 +1380,8 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Swag",
@@ -1078,7 +1390,8 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Swisher",
@@ -1087,14 +1400,16 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Tabacalera",
    "manufacturer": "Tabacalera Incorporada",
    "notes": "Flagship brand of Tabacalera Incorporada. Formerly known as La Flor de la Isabela. Philippine and Indonesian tobacco",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Tatuaje",
@@ -1103,49 +1418,64 @@
    "countries": [
     "Nicarágua"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 9,
+    "min": 13.5,
+    "max": 24.0
+   }
   },
   {
    "brand": "The Burndown Podcast",
    "manufacturer": "Blackbird Cigar Co.",
    "notes": "Available at Flying Cigar Co.",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Tierra del Sol",
    "manufacturer": "Tabacalera Perdomo",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Tiparillo",
    "manufacturer": "SMCI HOLDING, INC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "TIR",
    "manufacturer": "ITC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Toraño",
    "manufacturer": "Toraño Cigars purchased by General Cigar Co.",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Toscano",
    "manufacturer": "Manifatture Sigaro Toscano",
    "notes": "Original full-length Italian cigars",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 4,
+    "min": 2.2,
+    "max": 3.22
+   }
   },
   {
    "brand": "Trinidad",
@@ -1154,14 +1484,20 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": true
+   "inDb": true,
+   "fr": {
+    "n": 18,
+    "min": 2.8,
+    "max": 4090.0
+   }
   },
   {
    "brand": "T4",
    "manufacturer": "ITC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Vegafina",
@@ -1170,14 +1506,24 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 25,
+    "min": 3.7,
+    "max": 17.65
+   }
   },
   {
    "brand": "Vegas Robaina",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 2,
+    "min": 18.9,
+    "max": 25.5
+   }
   },
   {
    "brand": "Vegueros",
@@ -1186,7 +1532,12 @@
    "countries": [
     "Cuba"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 10,
+    "min": 9.2,
+    "max": 13.4
+   }
   },
   {
    "brand": "Villa Zamorano",
@@ -1195,14 +1546,20 @@
    "countries": [
     "Honduras"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 128,
+    "min": 2.0,
+    "max": 10.0
+   }
   },
   {
    "brand": "White Owl",
    "manufacturer": "",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Willem II",
@@ -1211,7 +1568,8 @@
    "countries": [
     "Países Baixos"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Windsor",
@@ -1220,7 +1578,8 @@
    "countries": [
     "México"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Wolf & Eagles",
@@ -1229,14 +1588,16 @@
    "countries": [
     "Indonésia"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Zar",
    "manufacturer": "ITC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   },
   {
    "brand": "Zino",
@@ -1245,14 +1606,20 @@
    "countries": [
     "República Dominicana"
    ],
-   "inDb": false
+   "inDb": false,
+   "fr": {
+    "n": 14,
+    "min": 5.9,
+    "max": 9.9
+   }
   },
   {
    "brand": "Zica",
    "manufacturer": "ITC",
    "notes": "",
    "countries": [],
-   "inDb": false
+   "inDb": false,
+   "fr": null
   }
  ]
 }

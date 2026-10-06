@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-05T23:06:57+00:00",
+ "built_at": "2026-10-06T11:49:57+00:00",
  "version": "0.1.0",
  "mode": "cache",
  "sources": {
@@ -8,13 +8,16 @@
   "wikidata": "PARCIAL",
   "nasa_power": "CACHE",
   "faostat": "CACHE",
-  "openstreetmap": "ERRO"
+  "openstreetmap": "ERRO",
+  "douane_fr": "CACHE"
  },
+ "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
  "counts": {
   "cigars": 28,
   "regions": 12,
   "brands_catalog": 159,
-  "shops": 0
+  "shops": 0,
+  "fr_references": 3720
  },
  "quality": {
   "verified_share": 0.107,
@@ -45,6 +48,11 @@
    "source": "OpenStreetMap",
    "license": "ODbL",
    "url": "https://www.openstreetmap.org/copyright"
+  },
+  {
+   "source": "Douane française — nomenclature des prix des tabacs",
+   "license": "Informação pública reutilizável (CRPA art. L321-1), com menção da fonte",
+   "url": "https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures"
   }
  ]
 }

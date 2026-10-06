@@ -39,8 +39,20 @@ def build_report(con: duckdb.DuckDBPyConnection) -> dict:
         "SELECT DISTINCT c.brand FROM cigars c WHERE NOT EXISTS (SELECT 1 FROM wp_brands w "
         "WHERE lower(strip_accents(w.brand)) = lower(strip_accents(c.brand))) ORDER BY 1")] if n_wp else []
 
+    fr_total, fr_cig, fr_brand_cat, fr_brand_inf, fr_bad = q(
+        "SELECT count(*), count(*) FILTER (WHERE NOT cigarillo), "
+        "count(*) FILTER (WHERE NOT cigarillo AND brand_source = 'catálogo'), "
+        "count(*) FILTER (WHERE NOT cigarillo AND brand_source = 'inferida'), "
+        "count(*) FILTER (WHERE pack_size > 0 AND unit_eur IS NOT NULL AND pack_eur IS NOT NULL "
+        "AND abs(unit_eur * pack_size - pack_eur) > 0.06 * pack_eur) FROM fr_cigars")[0]
+
     return {
         "cigars": n_cigars,
+        "fr_references": fr_total,
+        "fr_cigars_excluding_cigarillos": fr_cig,
+        "fr_brand_from_catalog": fr_brand_cat,
+        "fr_brand_inferred": fr_brand_inf,
+        "fr_price_inconsistencies": fr_bad,
         "brands_in_open_catalog": n_wp,
         "brands_not_in_wikipedia_list": missing_in_wp,
         "shops_pt": q("SELECT count(*) FROM shops")[0][0],

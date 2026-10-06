@@ -19,10 +19,17 @@ data/seed/*.yml ─► validação (pydantic) ─► fontes abertas ─► Parqu
 | Temperatura, chuva e humidade por zona de cultivo | [NASA POWER](https://power.larc.nasa.gov/) (climatologia) | Domínio público |
 | Produção de tabaco por país desde 2000 | [FAOSTAT](https://www.fao.org/faostat/) (item 826) | CC BY 4.0 |
 | Tabacarias em Portugal | [OpenStreetMap](https://www.openstreetmap.org/) via Overpass | ODbL |
+| **~3 400 charutos à venda em França: nome, vitola, embalagem, preço oficial** (mensal) | [Douane — nomenclature des prix des tabacs](https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures) (ODS) | Informação pública reutilizável (CRPA art. L321-1), com menção da fonte |
+
+A nomenclatura francesa é a maior lista oficial e aberta de charutos que encontrei. Não traz força, capa nem sabores, mas traz o nome comercial exato de cada referência, o formato, a embalagem e o preço homologado. O pipeline:
+- atribui a marca pelo catálogo da Wikipédia ou, se não estiver lá, infere-a do início do nome quando há pelo menos 3 referências (assinalada como *inferida*);
+- deteta vitola e medidas no nome quando existem;
+- liga cada ficha do seed às referências francesas (o nome tem de começar por marca + linha), mostrando o preço oficial;
+- se a página da douane bloquear o pedido, usa o URL em `data/seed/sources.yml` e, em último caso, a cache.
 
 ### O que não tem fonte aberta
 
-Não existe nenhuma base de dados aberta com força, capa e sabores por linha de charuto. Os sites que têm esses dados (revistas, lojas, agregadores) não têm licença aberta, e o projeto [cigarspace](https://github.com/sw3rm-labs/cigarspace) é não comercial e alimenta-se de catálogos de lojas. Por isso:
+Não existe nenhuma base de dados aberta com força, capa e sabores por linha de charuto (a nomenclatura francesa tem nomes e preços, mas não perfil). Os sites que têm esses dados (revistas, lojas, agregadores) não têm licença aberta, e o projeto [cigarspace](https://github.com/sw3rm-labs/cigarspace) é não comercial e alimenta-se de catálogos de lojas. Por isso:
 
 - **Força, capa, vitola e sabores** ficam no seed curado. Um campo só conta como verificado (`verified_fields`) se tiver uma fonte citada em `sources`.
 - **Harmonizações** são calculadas por regras explícitas (`src/bosscigar/pairing.py`, publicadas no site), em vez de afirmações por charuto impossíveis de verificar.

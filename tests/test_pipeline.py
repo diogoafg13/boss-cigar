@@ -171,3 +171,68 @@ def test_build_offline_end_to_end(tmp_path, monkeypatch):
     assert (tmp_path / "clean" / "cigars.parquet").exists()
     q = json.loads((tmp_path / "site" / "quality.json").read_text(encoding="utf-8"))
     assert q["regions_without_climate"]  # sem cache, nenhuma região tem clima
+
+
+# --- Douane FR -------------------------------------------------------------
+from bosscigar.sources import douane_fr  # noqa: E402
+
+FR_ROWS = [
+    ["Arrêté du 29 septembre 2026, applicable au 1er novembre 2026", "", "", "", "", ""],
+    ["FOURNISSEUR : LOGISTA France n°01", "", "", "", "", ""],
+    ["FABRICANT : X", "", "", "", "", ""],
+    ["Cigares et cigarillos", "", "", "", "", ""],
+    ["Cohiba Robustos (5 étuis de 3), en 3 cigares", "", 82, 246, "Sans changement", "Sans changement"],
+    ["Cohiba Siglo VI (tube - 5 étuis de 3), en 3 cigares", "", "", 351, "", "Sans changement"],
+    ["Montecristo Petit n°2, en 25 cigares", "", 22.5, 562.5, "Sans changement", "Sans changement"],
+    ["Montecristo n°2, en 25 cigares", "", 29.8, 745, "Sans changement", "Sans changement"],
+    ["Alec Bradley Chunk XL, en 20 cigares", "", 10, 200, 10.5, 210],
+    ["Alec Bradley Old LE, en 10 cigares", "", 29, 290, "Retrait", "Retrait"],
+    ["", "Casa de Nicaragua Robusto, en 10 cigares", "", "", 5, 50],
+    ["Davidoff mini cigarillos gold, en 20 cigares", "", "", 26, "", "Sans changement"],
+    ["Eiroa Classique Robusto 50 x 5, en 20 cigares", "", 18, 360, "Sans changement", "Sans changement"],
+    ["Cigarettes", "", "", "", "", ""],
+    ["Marlboro, en 20 unités", "", 0.6, 12, "Sans changement", "Sans changement"],
+]
+
+
+def _fr_items():
+    return douane_fr.parse_table(FR_ROWS)
+
+
+def test_douane_parse_prices_and_sections():
+    out = _fr_items()
+    assert out["edition"].startswith("Arrêté du 29 septembre 2026")
+    by = {i["label"]: i for i in out["items"]}
+    assert "Marlboro" not in " ".join(by)                     # secção de cigarros fica de fora
+    assert "Alec Bradley Old LE" not in by                     # "Retrait" excluído
+    assert by["Alec Bradley Chunk XL"]["unit_eur"] == 10.5     # preço novo prevalece
+    assert by["Cohiba Robustos (5 étuis de 3)"]["pack_size"] == 3  # vende-se o estojo de 3
+    assert by["Cohiba Siglo VI (tube - 5 étuis de 3)"]["unit_eur"] == 117.0  # 351 / 3
+    assert by["Casa de Nicaragua Robusto"]["new"] is True
+    assert by["Davidoff mini cigarillos gold"]["cigarillo"] is True
+    e = by["Eiroa Classique Robusto 50 x 5"]
+    assert (e["vitola"], e["length_in"], e["ring"]) == ("Robusto", 5.0, 50)
+
+
+def test_douane_brand_match_and_inference():
+    items = _fr_items()["items"] + [{"label": f"Eiroa Linha {i}", "cigarillo": False} for i in range(2)]
+    douane_fr.match_brands(items, ["Cohiba", "Montecristo", "Davidoff", "H. Upmann"])
+    by = {i["label"]: i for i in items}
+    assert by["Cohiba Robustos (5 étuis de 3)"]["brand"] == "Cohiba"
+    assert by["Cohiba Robustos (5 étuis de 3)"]["brand_source"] == "catálogo"
+    assert by["Eiroa Classique Robusto 50 x 5"]["brand"] == "Eiroa"     # 3 referências -> inferida
+    assert by["Eiroa Classique Robusto 50 x 5"]["brand_source"] == "inferida"
+    assert by["Alec Bradley Chunk XL"]["brand"] is None                 # só 1 referência: não infere
+    hu = [{"label": "H.Upmann Magnum 50", "cigarillo": False}]
+    douane_fr.match_brands(hu, ["H. Upmann"])
+    assert hu[0]["brand"] == "H. Upmann"
+
+
+def test_douane_link_seed_is_anchored():
+    items = _fr_items()["items"]
+    douane_fr.match_brands(items, ["Montecristo", "Cohiba"])
+    seed = [Cigar(**{**BASE, "id": "mc2", "brand": "Montecristo", "line": "No. 2"}),
+            Cigar(**{**BASE, "id": "cr", "brand": "Cohiba", "line": "Robusto"})]
+    links = douane_fr.link_seed(items, seed)
+    assert [i["label"] for i in links["mc2"]] == ["Montecristo n°2"]   # não apanha "Petit n°2"
+    assert links["cr"][0]["label"].startswith("Cohiba Robustos")       # plural tolerado

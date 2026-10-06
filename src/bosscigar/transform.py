@@ -19,7 +19,8 @@ def _insert(con: duckdb.DuckDBPyConnection, sql: str, rows: list) -> None:
 
 def write_clean(regions: list[Region], cigars: list[Cigar], climate: dict, brand_facts: dict,
                 out_dir: Path = CLEAN_DIR, wp_brands: list[dict] | None = None,
-                tobacco: dict | None = None, shops: list[dict] | None = None) -> duckdb.DuckDBPyConnection:
+                tobacco: dict | None = None, shops: list[dict] | None = None,
+                fr_items: list[dict] | None = None) -> duckdb.DuckDBPyConnection:
     out_dir.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect()
 
@@ -67,7 +68,15 @@ def write_clean(regions: list[Region], cigars: list[Cigar], climate: dict, brand
     _insert(con, "INSERT INTO shops VALUES (?,?,?,?,?,?)",
             [(s["name"], s["kind"], s["lat"], s["lng"], s["city"], s["osm"]) for s in (shops or [])])
 
+    con.execute("""CREATE TABLE fr_cigars(label VARCHAR, brand VARCHAR, brand_source VARCHAR, vitola VARCHAR,
+                   length_in DOUBLE, ring INTEGER, pack_size INTEGER, unit_eur DOUBLE, pack_eur DOUBLE,
+                   cigarillo BOOLEAN, sampler BOOLEAN, supplier VARCHAR)""")
+    _insert(con, "INSERT INTO fr_cigars VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+            [(i["label"], i.get("brand"), i.get("brand_source"), i.get("vitola"), i.get("length_in"), i.get("ring"),
+              i.get("pack_size"), i.get("unit_eur"), i.get("pack_eur"), i.get("cigarillo"), i.get("sampler"), i.get("supplier"))
+             for i in (fr_items or [])])
+
     for table in ("regions", "cigars", "cigar_flavors", "cigar_pairings", "climate", "brand_facts",
-                  "wp_brands", "tobacco_production", "shops"):
+                  "wp_brands", "tobacco_production", "shops", "fr_cigars"):
         con.execute(f"COPY {table} TO '{out_dir / (table + '.parquet')}' (FORMAT PARQUET)")
     return con

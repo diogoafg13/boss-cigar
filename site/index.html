@@ -60,6 +60,7 @@
 <nav id="tabs">
   <button data-tab="catalog" class="active">Catálogo</button>
   <button data-tab="mapview">Mapa</button>
+  <button data-tab="frcat">Preços oficiais</button>
   <button data-tab="brands">Marcas</button>
   <button data-tab="producers">Países produtores</button>
   <button data-tab="shops">Onde comprar</button>
@@ -90,6 +91,22 @@
   <section id="mapview">
     <p class="muted">Cada ponto é uma zona de cultivo, com clima médio 2015–2024 quando disponível. Clica para ver os charutos.</p>
     <div id="map"></div>
+  </section>
+
+  <section id="frcat">
+    <div class="panel"><h2 style="margin-top:0">Catálogo oficial de preços (França)</h2>
+      <p class="muted">Todas as referências de charutos homologadas para venda em França continental, com o preço oficial de venda ao público. Fonte: <a href="https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures" target="_blank" rel="noopener">Direction générale des douanes</a>, <span id="frEdition"></span>. Os preços em Portugal são diferentes; serve para comparar marcas e formatos.</p>
+      <div class="filters">
+        <input id="fq" type="search" placeholder="Pesquisar nome ou marca…">
+        <select id="fBrand"><option value="">Todas as marcas</option></select>
+        <select id="fVit"><option value="">Qualquer vitola</option></select>
+        <select id="fMax"><option value="">Qualquer preço</option><option value="5">até 5 €</option><option value="10">até 10 €</option><option value="20">até 20 €</option><option value="40">até 40 €</option></select>
+        <select id="fKind"><option value="cig">Só charutos</option><option value="all">Charutos e cigarilhas</option><option value="cgl">Só cigarilhas</option></select>
+        <select id="fSortP"><option value="name">Ordenar: nome</option><option value="pa">Preço ↑</option><option value="pd">Preço ↓</option></select>
+      </div>
+      <p class="warn">A marca vem do catálogo da Wikipédia ou, se lá não estiver, é <i>inferida</i> do início do nome (assinalada com *). "Cigarilha" é uma heurística (nome ou preço inferior a 1,50 €).</p>
+      <p class="muted" id="fCount"></p></div>
+    <div class="panel" style="overflow-x:auto"><table id="fTable"></table><div class="row" style="margin-top:10px"><button class="btn ghost sm" id="fMore">Mostrar mais</button></div></div>
   </section>
 
   <section id="brands">
@@ -188,6 +205,7 @@
         <li><b>NASA POWER</b> (domínio público): temperatura, chuva e humidade por zona de cultivo.</li>
         <li><b>FAOSTAT</b> (CC BY 4.0): produção de tabaco por país.</li>
         <li><b>OpenStreetMap</b> (ODbL): tabacarias em Portugal.</li>
+        <li><b>Alfândega francesa</b> (informação pública reutilizável): nomenclatura oficial com milhares de referências de charutos, formatos e preços, atualizada todos os meses.</li>
       </ul>
       <p><b>O que não tem fonte aberta:</b> força, capa e sabores de cada linha. Esses dados são curados à mão e só contam como verificados quando têm uma fonte citada. As harmonizações são calculadas por regra.</p>
       <div id="srcStatus"></div>
@@ -237,6 +255,7 @@ function setupTabs() {
     if (b.dataset.tab === "journal") renderJournal();
     if (b.dataset.tab === "humidor") renderHumidor();
     if (b.dataset.tab === "shops") initShops();
+    if (b.dataset.tab === "frcat") initFr();
     scrollTo(0, 0);
   }));
 }
@@ -300,6 +319,7 @@ function openDetail(id) {
     <p><b>Vitola:</b> ${esc(c.vitola)}<br><b>Capa:</b> ${esc(c.wrapper)}</p><p>${esc(c.notes)}</p>
     <p><b>Sabores:</b> ${c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("")}</p>
     <p><b>Bebidas:</b> ${esc(c.pairings.drinks.join(", "))}<br><b>Comida:</b> ${esc(c.pairings.food.join(", "))}<br><span class="warn">Sugestão por regra: ${esc((c.pairings.why || []).join(" "))}</span></p>
+    ${c.priceFR ? `<p><b>Preço oficial em França:</b> ${c.priceFR.min === c.priceFR.max ? eur(c.priceFR.min) : eur(c.priceFR.min) + " – " + eur(c.priceFR.max)} por unidade<br><span class="sub">${c.priceFR.refs.slice(0, 4).map(r => esc(r.label) + (r.pack_size ? " (" + r.pack_size + ")" : "") + ": " + eur(r.unit_eur)).join(" · ")}</span><br><span class="warn">Douane FR · ${esc(c.priceFR.edition || "")}</span></p>` : ""}
     ${ver}${bf}${c.wikipedia ? `<p class="sub">Wikipédia: ${esc(c.wikipedia.manufacturer || "—")}${c.wikipedia.notes ? " · " + esc(c.wikipedia.notes) : ""} · <a href="https://en.wikipedia.org/wiki/List_of_cigar_brands" target="_blank" rel="noopener">CC BY-SA</a></p>` : ""}${r ? `<p class="muted">${esc(r.note)}</p>${climateHTML(r)}` : ""}
     <div class="row" style="margin-top:12px"><button class="btn" id="dLog">Registar prova</button><button class="btn ghost" id="dHum">+ Humidor</button><button class="btn ghost" id="dClose">Fechar</button></div>`;
   d.showModal();
@@ -435,6 +455,32 @@ function renderJournal() {
 }
 function download(fn, data) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" })); a.download = fn; a.click(); URL.revokeObjectURL(a.href); }
 
+const eur = v => v == null ? "—" : v.toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+let FR = null, FR_LIMIT = 100, FR_PENDING = null;
+function initFr() {
+  if (FR) { applyPending(); return renderFr(); }
+  fetch("data/fr_catalog.json").then(r => r.json()).then(d => {
+    FR = d.rows.map(r => Object.fromEntries(d.fields.map((k, i) => [k, r[i]])));
+    $("#frEdition").textContent = d.edition || "";
+    unique(FR.filter(x => x.brand && !x.cigarillo).map(x => x.brand)).forEach(b => $("#fBrand").insertAdjacentHTML("beforeend", `<option>${esc(b)}</option>`));
+    unique(FR.filter(x => x.vitola).map(x => x.vitola)).forEach(v => $("#fVit").insertAdjacentHTML("beforeend", `<option>${esc(v)}</option>`));
+    ["#fq","#fBrand","#fVit","#fMax","#fKind","#fSortP"].forEach(i => $(i).addEventListener("input", () => { FR_LIMIT = 100; renderFr(); }));
+    $("#fMore").onclick = () => { FR_LIMIT += 200; renderFr(); };
+    applyPending(); renderFr();
+  }).catch(() => { $("#fCount").textContent = "Catálogo indisponível."; });
+}
+function applyPending() { if (FR_PENDING) { $("#fBrand").value = FR_PENDING; FR_PENDING = null; FR_LIMIT = 100; } }
+function renderFr() {
+  const q = $("#fq").value.trim().toLowerCase(), br = $("#fBrand").value, vi = $("#fVit").value, mx = +$("#fMax").value || 0, kind = $("#fKind").value, so = $("#fSortP").value;
+  let l = FR.filter(x => (kind === "all" || (kind === "cig" ? !x.cigarillo : x.cigarillo)) && (!br || x.brand === br) && (!vi || x.vitola === vi)
+    && (!mx || (x.unit_eur != null && x.unit_eur <= mx)) && (!q || (x.label + " " + (x.brand || "")).toLowerCase().includes(q)));
+  l.sort(so === "pa" ? (a, b) => (a.unit_eur ?? 1e9) - (b.unit_eur ?? 1e9) : so === "pd" ? (a, b) => (b.unit_eur ?? -1) - (a.unit_eur ?? -1) : (a, b) => a.label.localeCompare(b.label, "pt"));
+  $("#fCount").textContent = `${l.length} referência(s)` + (l.length > FR_LIMIT ? ` · a mostrar ${FR_LIMIT}` : "");
+  $("#fTable").innerHTML = "<tr><th>Referência</th><th>Marca</th><th>Vitola</th><th>Medidas</th><th>Embalagem</th><th>€/unidade</th><th>€/embalagem</th></tr>" + l.slice(0, FR_LIMIT).map(x =>
+    `<tr><td>${esc(x.label)}${x.new ? ' <span class="badge ok">novo</span>' : ""}${x.sampler ? ' <span class="badge warn">sortido</span>' : ""}</td><td>${esc(x.brand || "—")}${x.brand_source === "inferida" ? "*" : ""}</td><td>${esc(x.vitola || "—")}</td><td class="sub">${x.ring ? x.length_in + '" × ' + x.ring : "—"}</td><td>${x.pack_size || "—"}</td><td>${eur(x.unit_eur)}</td><td class="sub">${eur(x.pack_eur)}</td></tr>`).join("");
+  $("#fMore").style.display = l.length > FR_LIMIT ? "" : "none";
+}
+
 let BRANDS = [];
 function setupBrands() {
   fetch("data/brands.json").then(r => r.json()).then(d => { BRANDS = d.brands || []; renderBrands(); }).catch(() => { $("#bCount").textContent = "Catálogo indisponível."; });
@@ -444,8 +490,9 @@ function renderBrands() {
   const q = $("#bq").value.trim().toLowerCase(), only = $("#bOnly").value;
   const l = BRANDS.filter(b => (!only || b.inDb) && (!q || (b.brand + " " + b.manufacturer + " " + b.notes).toLowerCase().includes(q)));
   $("#bCount").textContent = `${l.length} de ${BRANDS.length} marcas`;
-  $("#bTable").innerHTML = "<tr><th>Marca</th><th>Fabricante</th><th>Notas</th><th>Países mencionados</th></tr>" + l.map(b =>
-    `<tr><td>${esc(b.brand)}${b.inDb ? ' <span class="badge ok">ficha</span>' : ""}</td><td>${esc(b.manufacturer)}</td><td class="sub">${esc(b.notes)}</td><td class="sub">${esc(b.countries.join(", "))}</td></tr>`).join("");
+  $("#bTable").innerHTML = "<tr><th>Marca</th><th>Fabricante</th><th>Notas</th><th>Países mencionados</th><th>Em França</th></tr>" + l.map(b =>
+    `<tr><td>${esc(b.brand)}${b.inDb ? ' <span class="badge ok">ficha</span>' : ""}</td><td>${esc(b.manufacturer)}</td><td class="sub">${esc(b.notes)}</td><td class="sub">${esc(b.countries.join(", "))}</td><td class="sub">${b.fr ? `<a href="#" data-frb="${esc(b.brand)}">${b.fr.n} ref.</a> · ${eur(b.fr.min)}–${eur(b.fr.max)}` : "—"}</td></tr>`).join("");
+  $("#bTable").querySelectorAll("[data-frb]").forEach(a => a.onclick = e => { e.preventDefault(); goTab("frcat"); FR_PENDING = a.dataset.frb; initFr(); });
 }
 
 const FAO_NAMES = { "Cuba": "Cuba", "República Dominicana": "Dominican Republic", "Nicarágua": "Nicaragua", "Honduras": "Honduras",
@@ -510,6 +557,7 @@ function renderSources() {
       <li>Regiões sem clima: ${q.regions_without_climate.length} · sem charutos: ${q.regions_without_cigars.length}</li>
       <li>Divergências de país face ao Wikidata: ${q.country_mismatch_vs_wikidata.length}</li>
       <li>Marcas no catálogo aberto (Wikipédia): ${q.brands_in_open_catalog} · marcas da base que lá não constam: ${q.brands_not_in_wikipedia_list.length ? esc(q.brands_not_in_wikipedia_list.join(", ")) : "nenhuma"}</li>
+      <li>Catálogo oficial francês: ${q.fr_cigars_excluding_cigarillos} charutos (+ ${q.fr_references - q.fr_cigars_excluding_cigarillos} cigarilhas); marca do catálogo ${q.fr_brand_from_catalog}, inferida ${q.fr_brand_inferred}; preços incoerentes ${q.fr_price_inconsistencies}</li>
       <li>Países com dados FAOSTAT: ${q.tobacco_countries} · tabacarias OSM em Portugal: ${q.shops_pt}</li></ul>`;
   }).catch(() => { $("#qualOut").textContent = "Relatório indisponível."; });
 }

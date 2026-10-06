@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-10-05T23:06:57+00:00",
+  "built_at": "2026-10-06T11:49:57+00:00",
   "version": "0.1.0",
   "mode": "cache",
   "sources": {
@@ -9,13 +9,16 @@
    "wikidata": "PARCIAL",
    "nasa_power": "CACHE",
    "faostat": "CACHE",
-   "openstreetmap": "ERRO"
+   "openstreetmap": "ERRO",
+   "douane_fr": "CACHE"
   },
+  "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
   "counts": {
    "cigars": 28,
    "regions": 12,
    "brands_catalog": 159,
-   "shops": 0
+   "shops": 0,
+   "fr_references": 3720
   },
   "quality": {
    "verified_share": 0.107,
@@ -46,6 +49,11 @@
     "source": "OpenStreetMap",
     "license": "ODbL",
     "url": "https://www.openstreetmap.org/copyright"
+   },
+   {
+    "source": "Douane française — nomenclature des prix des tabacs",
+    "license": "Informação pública reutilizável (CRPA art. L321-1), com menção da fonte",
+    "url": "https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures"
    }
   ]
  },
@@ -779,6 +787,31 @@
      "Cuba"
     ]
    },
+   "priceFR": {
+    "min": 110.0,
+    "max": 117.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Cohiba Siglo VI",
+      "pack_size": 10,
+      "unit_eur": 110.0,
+      "pack_eur": 1100.0
+     },
+     {
+      "label": "Cohiba Siglo VI",
+      "pack_size": 25,
+      "unit_eur": 110.0,
+      "pack_eur": 2750.0
+     },
+     {
+      "label": "Cohiba Siglo VI (tube - 5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 117.0,
+      "pack_eur": 351.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
     "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in the Dominican Republic",
@@ -830,6 +863,31 @@
      "Cuba"
     ]
    },
+   "priceFR": {
+    "min": 29.8,
+    "max": 29.8,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Montecristo n°2 (5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 29.8,
+      "pack_eur": 89.4
+     },
+     {
+      "label": "Montecristo n°2",
+      "pack_size": 10,
+      "unit_eur": 29.8,
+      "pack_eur": 298.0
+     },
+     {
+      "label": "Montecristo n°2",
+      "pack_size": 25,
+      "unit_eur": 29.8,
+      "pack_eur": 745.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. Altadis",
     "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
@@ -871,6 +929,31 @@
     ],
     "why": [
      "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
+    ]
+   },
+   "priceFR": {
+    "min": 23.8,
+    "max": 27.7,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Partagas Serie D n°4",
+      "pack_size": 10,
+      "unit_eur": 23.8,
+      "pack_eur": 238.0
+     },
+     {
+      "label": "Partagas Serie D n°4",
+      "pack_size": 25,
+      "unit_eur": 23.8,
+      "pack_eur": 595.0
+     },
+     {
+      "label": "Partagas Serie D N°4 (tube - 5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 27.7,
+      "pack_eur": 83.1
+     }
     ]
    },
    "wikipedia": {
@@ -920,6 +1003,37 @@
     "inception_year": null,
     "countries": []
    },
+   "priceFR": {
+    "min": 34.5,
+    "max": 37.5,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Romeo y Julieta Churchills",
+      "pack_size": 25,
+      "unit_eur": 34.5,
+      "pack_eur": 862.5
+     },
+     {
+      "label": "Romeo y Julieta Churchills (tube - 5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 37.5,
+      "pack_eur": 112.5
+     },
+     {
+      "label": "Romeo y Julieta Churchills (tube)",
+      "pack_size": 10,
+      "unit_eur": 37.5,
+      "pack_eur": 375.0
+     },
+     {
+      "label": "Romeo y Julieta Churchills (tube)",
+      "pack_size": 25,
+      "unit_eur": 37.5,
+      "pack_eur": 937.5
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. Altadis",
     "notes": "Cuban, and non-Cuban produced in the Dominican Republic",
@@ -958,6 +1072,43 @@
     ],
     "why": [
      "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
+   "priceFR": {
+    "min": 27.2,
+    "max": 275.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "H.Upmann Magnum 50",
+      "pack_size": 10,
+      "unit_eur": 27.2,
+      "pack_eur": 272.0
+     },
+     {
+      "label": "H.Upmann Magnum 50",
+      "pack_size": 25,
+      "unit_eur": 27.2,
+      "pack_eur": 680.0
+     },
+     {
+      "label": "H.Upmann Magnum 50 (tube - 5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 31.2,
+      "pack_eur": 93.6
+     },
+     {
+      "label": "H.Upmann Magnum 50 Gran Reserva, (coffret)",
+      "pack_size": 15,
+      "unit_eur": 240.0,
+      "pack_eur": 3600.0
+     },
+     {
+      "label": "H.Upmann Magnum 50 Gran Reserva, (coffret spécial)",
+      "pack_size": 3,
+      "unit_eur": 275.0,
+      "pack_eur": 825.0
+     }
     ]
    },
    "wikipedia": {
@@ -1050,6 +1201,19 @@
      "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra."
     ]
    },
+   "priceFR": {
+    "min": 46.0,
+    "max": 46.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Padron 1926, N°9 (Coffret)",
+      "pack_size": 10,
+      "unit_eur": 46.0,
+      "pack_eur": 460.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "",
     "notes": "Nicaragua",
@@ -1096,6 +1260,31 @@
     "url": "https://www.wikidata.org/wiki/Q4801736",
     "inception_year": null,
     "countries": []
+   },
+   "priceFR": {
+    "min": 16.0,
+    "max": 16.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Arturo Fuente Hemingway short-story",
+      "pack_size": 25,
+      "unit_eur": 16.0,
+      "pack_eur": 400.0
+     },
+     {
+      "label": "Arturo Fuente Hemingway Short Story (4 x 49)",
+      "pack_size": 15,
+      "unit_eur": 16.0,
+      "pack_eur": 240.0
+     },
+     {
+      "label": "Arturo Fuente Hemingway Short Story (4 x 49)",
+      "pack_size": 25,
+      "unit_eur": 16.0,
+      "pack_eur": 400.0
+     }
+    ]
    },
    "wikipedia": {
     "manufacturer": "Arturo Fuente",
@@ -1145,6 +1334,61 @@
     "url": "https://www.wikidata.org/wiki/Q4801736",
     "inception_year": null,
     "countries": []
+   },
+   "priceFR": {
+    "min": 41.0,
+    "max": 140.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Arturo Fuente Opus X Perfection #4",
+      "pack_size": 42,
+      "unit_eur": 41.0,
+      "pack_eur": 1722.0
+     },
+     {
+      "label": "Arturo Fuente Opus X Pussy Cats",
+      "pack_size": 39,
+      "unit_eur": 42.0,
+      "pack_eur": 1638.0
+     },
+     {
+      "label": "Arturo Fuente Opus X Belicoso XXX",
+      "pack_size": 42,
+      "unit_eur": 43.0,
+      "pack_eur": 1806.0
+     },
+     {
+      "label": "Arturo Fuente opus X Fuente Fuente",
+      "pack_size": 32,
+      "unit_eur": 46.0,
+      "pack_eur": 1472.0
+     },
+     {
+      "label": "Arturo Fuente Opus X robusto",
+      "pack_size": 29,
+      "unit_eur": 55.0,
+      "pack_eur": 1595.0
+     },
+     {
+      "label": "Arturo Fuente Opus X perfection X",
+      "pack_size": 32,
+      "unit_eur": 56.0,
+      "pack_eur": 1792.0
+     },
+     {
+      "label": "Arturo Fuente Opus X Double-Robusto",
+      "pack_size": 42,
+      "unit_eur": 58.0,
+      "pack_eur": 2436.0
+     },
+     {
+      "label": "Arturo Fuente Opus X Res du château",
+      "pack_size": 32,
+      "unit_eur": 59.0,
+      "pack_eur": 1888.0
+     }
+    ]
    },
    "wikipedia": {
     "manufacturer": "Arturo Fuente",
@@ -1197,6 +1441,43 @@
     "inception_year": 1875,
     "countries": [
      "Suíça"
+    ]
+   },
+   "priceFR": {
+    "min": 18.0,
+    "max": 20.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Davidoff Signature 2000",
+      "pack_size": 10,
+      "unit_eur": 18.0,
+      "pack_eur": 180.0
+     },
+     {
+      "label": "Davidoff Signature 2000",
+      "pack_size": 25,
+      "unit_eur": 18.0,
+      "pack_eur": 450.0
+     },
+     {
+      "label": "Davidoff Signature 2000",
+      "pack_size": 5,
+      "unit_eur": 18.0,
+      "pack_eur": 90.0
+     },
+     {
+      "label": "Davidoff Signature 2000 Tubos",
+      "pack_size": 20,
+      "unit_eur": 20.0,
+      "pack_eur": 400.0
+     },
+     {
+      "label": "Davidoff Signature 2000 Tubos",
+      "pack_size": 4,
+      "unit_eur": 20.0,
+      "pack_eur": 80.0
+     }
     ]
    },
    "wikipedia": {
@@ -1354,6 +1635,61 @@
     "inception_year": 1995,
     "countries": []
    },
+   "priceFR": {
+    "min": 20.0,
+    "max": 26.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Oliva Serie V Melanio Maduro Robusto",
+      "pack_size": 10,
+      "unit_eur": 20.0,
+      "pack_eur": 200.0
+     },
+     {
+      "label": "Oliva Serie V Melanio Robusto (coffret)",
+      "pack_size": 10,
+      "unit_eur": 20.5,
+      "pack_eur": 205.0
+     },
+     {
+      "label": "Oliva Série V Mélanio Edition Limitée Robusto Extra 5X54",
+      "pack_size": 10,
+      "unit_eur": 23.0,
+      "pack_eur": 230.0
+     },
+     {
+      "label": "Oliva Serie V Mélanio Figurino \"Edition Limitée 2023\" (coffret)",
+      "pack_size": 10,
+      "unit_eur": 23.0,
+      "pack_eur": 230.0
+     },
+     {
+      "label": "Oliva Série V Mélanio Gran Toro « Edition Limitée 2024 »",
+      "pack_size": 10,
+      "unit_eur": 23.0,
+      "pack_eur": 230.0
+     },
+     {
+      "label": "Oliva Serie V Mélanio Gran Toro Edition Limitée 2024 (Coffrte)",
+      "pack_size": 10,
+      "unit_eur": 23.0,
+      "pack_eur": 230.0
+     },
+     {
+      "label": "Oliva Série V Mélanio Edition Limitée 2026 Perfecto (Coffret)",
+      "pack_size": 10,
+      "unit_eur": 24.0,
+      "pack_eur": 240.0
+     },
+     {
+      "label": "Oliva Serie V Melanio Figurado (coffret)",
+      "pack_size": 10,
+      "unit_eur": 25.0,
+      "pack_eur": 250.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "",
     "notes": "J. Cortès Cigars N.V., a private, family-owned business based in Zwevegem, Belgium (2016)",
@@ -1451,6 +1787,31 @@
      "Charutos fortes: bebidas com estrutura para acompanhar a intensidade.",
      "Capa escura: doçura e cacau ligam com bebidas de caramelo e torra.",
      "Capa clara: notas cremosas ligam com bebidas suaves."
+    ]
+   },
+   "priceFR": {
+    "min": 22.0,
+    "max": 24.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Liga Privada N°9  Robusto (Coffret)",
+      "pack_size": 24,
+      "unit_eur": 22.0,
+      "pack_eur": 528.0
+     },
+     {
+      "label": "Liga Privada N°9  Toro (Coffret)",
+      "pack_size": 24,
+      "unit_eur": 23.0,
+      "pack_eur": 552.0
+     },
+     {
+      "label": "Liga Privada N°9 Flyng Pig  (Coffret)",
+      "pack_size": 12,
+      "unit_eur": 24.0,
+      "pack_eur": 288.0
+     }
     ]
    }
   },
@@ -1646,6 +2007,25 @@
     "inception_year": 1961,
     "countries": []
    },
+   "priceFR": {
+    "min": 14.0,
+    "max": 15.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Camacho Connecticut Robusto (coffret)",
+      "pack_size": 20,
+      "unit_eur": 14.0,
+      "pack_eur": 280.0
+     },
+     {
+      "label": "Camacho Connecticut Toro",
+      "pack_size": 4,
+      "unit_eur": 15.0,
+      "pack_eur": 60.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "Oettinger Davidoff Group",
     "notes": "Honduras",
@@ -1785,6 +2165,31 @@
      "Cuba"
     ]
    },
+   "priceFR": {
+    "min": 82.0,
+    "max": 90.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Cohiba Robustos (5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 82.0,
+      "pack_eur": 246.0
+     },
+     {
+      "label": "Cohiba Robustos",
+      "pack_size": 25,
+      "unit_eur": 82.0,
+      "pack_eur": 2050.0
+     },
+     {
+      "label": "Cohiba Robustos (tube - 5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 90.0,
+      "pack_eur": 270.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
     "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in the Dominican Republic",
@@ -1828,6 +2233,25 @@
      "Charutos fortes: bebidas com estrutura para acompanhar a intensidade."
     ]
    },
+   "priceFR": {
+    "min": 19.2,
+    "max": 22.9,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Bolivar Royal Coronas",
+      "pack_size": 25,
+      "unit_eur": 19.2,
+      "pack_eur": 480.0
+     },
+     {
+      "label": "Bolivar Royal Coronas (tube)",
+      "pack_size": 10,
+      "unit_eur": 22.9,
+      "pack_eur": 229.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. General Cigar Co.",
     "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in the Dominican Republic",
@@ -1869,6 +2293,37 @@
      "Corpo médio: bebidas envelhecidas de intensidade semelhante."
     ]
    },
+   "priceFR": {
+    "min": 22.0,
+    "max": 25.1,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Hoyo de Monterrey Epicure n°2 (5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 22.0,
+      "pack_eur": 66.0
+     },
+     {
+      "label": "Hoyo de Monterrey Epicure n°2",
+      "pack_size": 25,
+      "unit_eur": 22.0,
+      "pack_eur": 550.0
+     },
+     {
+      "label": "Hoyo de Monterrey Epicure n°2",
+      "pack_size": 50,
+      "unit_eur": 22.0,
+      "pack_eur": 1100.0
+     },
+     {
+      "label": "Hoyo de Monterrey Epicure N°2 (tube - 5 étuis de 3)",
+      "pack_size": 3,
+      "unit_eur": 25.1,
+      "pack_eur": 75.3
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
     "notes": "Dueling Cuban and non-Cuban brands; non-Cuban made in Honduras",
@@ -1908,6 +2363,19 @@
     ],
     "why": [
      "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
+   "priceFR": {
+    "min": 68.0,
+    "max": 68.0,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Trinidad Fundadores",
+      "pack_size": 24,
+      "unit_eur": 68.0,
+      "pack_eur": 1632.0
+     }
     ]
    },
    "wikipedia": {
@@ -2000,6 +2468,19 @@
     "inception_year": null,
     "countries": []
    },
+   "priceFR": {
+    "min": 18.4,
+    "max": 18.4,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Diplomaticos n°2",
+      "pack_size": 25,
+      "unit_eur": 18.4,
+      "pack_eur": 460.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "",
     "notes": "Cuba",
@@ -2039,6 +2520,19 @@
     ],
     "why": [
      "Corpo médio: bebidas envelhecidas de intensidade semelhante."
+    ]
+   },
+   "priceFR": {
+    "min": 20.7,
+    "max": 20.7,
+    "edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
+    "refs": [
+     {
+      "label": "Sancho Panza Belicosos",
+      "pack_size": 25,
+      "unit_eur": 20.7,
+      "pack_eur": 517.5
+     }
     ]
    },
    "wikipedia": {
