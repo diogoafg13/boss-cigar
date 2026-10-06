@@ -665,7 +665,7 @@ function buildProfile(entries) {
       continue;
     }
     const c = cig(e.cigar); if (!c) continue;
-    if (w !== 0) P.strength.push([c.strength, w]);
+    if (w !== 0 && c.strength) P.strength.push([c.strength, w]);
     add(P.wrap, wrapperClass(c.wrapper), w); add(P.country, c.country, w); add(P.brand, c.brand, w); add(P.vit, vitClass(c.vitola), w);
     c.flavors.forEach(f => add(P.flavor, f, w));
     if (w > 0 && c.priceFR && c.priceFR.min) P.price.push(c.priceFR.min);
@@ -679,7 +679,7 @@ const topKeys = (o, n = 3) => Object.entries(o).filter(([, v]) => v > 0).sort((a
 
 function scoreSeed(c, P) {
   let s = 0; const why = [];
-  if (P.prefStrength) { const d = Math.abs(c.strength - P.prefStrength); s += 2 - d; if (d < 0.75) why.push(`força ${STRENGTH[c.strength].toLowerCase()}`); }
+  if (P.prefStrength && c.strength) { const d = Math.abs(c.strength - P.prefStrength); s += 2 - d; if (d < 0.75) why.push(`força ${STRENGTH[c.strength].toLowerCase()}`); }
   const wc = wrapperClass(c.wrapper); if (P.wrap[wc]) { s += Math.sign(P.wrap[wc]) * Math.min(2, Math.abs(P.wrap[wc])); if (P.wrap[wc] > 0) why.push(`capa ${wc}`); }
   if (P.country[c.country]) { s += Math.sign(P.country[c.country]) * Math.min(1.5, Math.abs(P.country[c.country])); if (P.country[c.country] > 0) why.push(c.country); }
   if (P.brand[c.brand]) { s += Math.sign(P.brand[c.brand]) * 1; if (P.brand[c.brand] > 0) why.push(`gostas de ${c.brand}`); }

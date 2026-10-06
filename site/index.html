@@ -342,7 +342,8 @@ function setupTabs() {
 }
 const goTab = t => document.querySelector(`[data-tab="${t}"]`).click();
 
-const meter = n => `<span class="meter" title="${STRENGTH[n]}">${[1,2,3,4,5].map(i => `<i class="${i<=n?"on":""}"></i>`).join("")}</span>`;
+const meter = n => n ? `<span class="meter" title="${STRENGTH[n]}">${[1,2,3,4,5].map(i => `<i class="${i<=n?"on":""}"></i>`).join("")}</span>` : `<span class="meter" title="Força sem fonte">${[1,2,3,4,5].map(() => `<i style="opacity:.35"></i>`).join("")}</span>`;
+const strengthTxt = n => n ? STRENGTH[n] : "força sem dado";
 const favs = () => lsGet("bc-favs", []);
 const isVer = c => (c.verifiedFields || []).length > 0;
 
@@ -352,9 +353,9 @@ function cardHTML(c) {
     <button class="fav ${on?"on":""}" data-fav="${c.id}" aria-label="Favorito">${on?"★":"☆"}</button>
     <h3>${esc(c.brand)} — ${esc(c.line)}</h3>
     <div class="sub">${esc(c.country)} · ${esc(c.vitola)}</div>
-    ${meter(c.strength)} <span class="sub">${STRENGTH[c.strength]}</span>
+    ${meter(c.strength)} <span class="sub">${strengthTxt(c.strength)}</span>
     ${isVer(c) ? '<span class="badge ok">verificado</span>' : '<span class="badge warn">por confirmar</span>'}<br>
-    ${c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("")}</article>`;
+    ${c.flavors.length ? c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("") : `<span class="sub">sabores por confirmar</span>`}</article>`;
 }
 function bindCards(root) {
   root.querySelectorAll(".card").forEach(el => el.addEventListener("click", () => openDetail(el.dataset.id)));
@@ -376,7 +377,7 @@ function renderCatalog() {
     if (only === "ver" && !isVer(c)) return false;
     if (!q) return true;
     return [c.brand, c.line, c.country, c.wrapper, ...c.flavors, ...c.pairings.drinks, ...c.pairings.food].join(" ").toLowerCase().includes(q);
-  }).sort((a, b) => sort === "strength" ? a.strength - b.strength : (a[sort] || "").localeCompare(b[sort] || "", "pt"));
+  }).sort((a, b) => sort === "strength" ? (a.strength ?? 9) - (b.strength ?? 9) : (a[sort] || "").localeCompare(b[sort] || "", "pt"));
   $("#count").textContent = `${list.length} charuto(s)`;
   $("#cards").innerHTML = list.map(cardHTML).join("") || "<p class='muted'>Sem resultados.</p>";
   bindCards($("#cards"));
@@ -396,9 +397,9 @@ function openDetail(id) {
     : `<p><span class="badge warn">por confirmar</span> <span class="sub">dados indicativos, ainda sem fonte</span></p>`;
   const bf = c.brandFacts ? `<p class="sub">Marca (Wikidata): ${c.brandFacts.inception_year ? "fundada em " + c.brandFacts.inception_year : "ano desconhecido"}${c.brandFacts.countries?.length ? " · " + esc(c.brandFacts.countries.join(", ")) : ""} · <a href="${esc(c.brandFacts.url)}" target="_blank" rel="noopener">fonte</a></p>` : "";
   d.innerHTML = `<h2 style="margin-top:0">${esc(name(c))}</h2>
-    <p class="muted">${esc(c.country)}${r ? " · " + esc(r.name) : ""}</p>${meter(c.strength)} ${STRENGTH[c.strength]}
+    <p class="muted">${esc(c.country)}${r ? " · " + esc(r.name) : ""}</p>${meter(c.strength)} ${strengthTxt(c.strength)}
     <p><b>Vitola:</b> ${esc(c.vitola)}<br><b>Capa:</b> ${esc(c.wrapper)}</p><p>${esc(c.notes)}</p>
-    <p><b>Sabores:</b> ${c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("")}</p>
+    <p><b>Sabores:</b> ${c.flavors.length ? c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("") : '<span class="sub">ainda sem fonte</span>'}</p>
     <p><b>Bebidas:</b> ${esc(c.pairings.drinks.join(", "))}<br><b>Comida:</b> ${esc(c.pairings.food.join(", "))}<br><span class="warn">Sugestão por regra: ${esc((c.pairings.why || []).join(" "))}</span></p>
     ${c.priceFR ? `<p><b>Preço oficial em França:</b> ${c.priceFR.min === c.priceFR.max ? eur(c.priceFR.min) : eur(c.priceFR.min) + " – " + eur(c.priceFR.max)} por unidade<br><span class="sub">${c.priceFR.refs.slice(0, 4).map(r => esc(r.label) + (r.pack_size ? " (" + r.pack_size + ")" : "") + ": " + eur(r.unit_eur)).join(" · ")}</span><br><span class="warn">Douane FR · ${esc(c.priceFR.edition || "")}</span></p>` : ""}
     ${window.afDetail ? afDetail(c) : ""}
@@ -444,8 +445,8 @@ function renderCompare() {
   const reg = c => DB.regions.find(r => r.id === c.region);
   $("#cmpOut").innerHTML = `<div class="panel"><table><tr><th></th><th>${esc(name(a))}</th><th>${esc(name(b))}</th></tr>
     ${row("País", c => esc(c.country))}${row("Zona", c => esc(reg(c)?.name || "—"))}
-    ${row("Força", c => meter(c.strength) + " " + STRENGTH[c.strength])}${row("Vitola", c => esc(c.vitola))}${row("Capa", c => esc(c.wrapper))}
-    ${row("Sabores", c => c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join(""))}
+    ${row("Força", c => meter(c.strength) + " " + strengthTxt(c.strength))}${row("Vitola", c => esc(c.vitola))}${row("Capa", c => esc(c.wrapper))}
+    ${row("Sabores", c => c.flavors.length ? c.flavors.map(f => `<span class="tag">${esc(f)}</span>`).join("") : "—")}
     ${row("Bebidas", c => esc(c.pairings.drinks.join(", ")))}${row("Comida", c => esc(c.pairings.food.join(", ")))}
     ${row("Clima da zona", c => { const k = reg(c)?.climate; return k ? `${k.temp_c_annual} °C · ${k.rain_mm_annual} mm${k.rh_pct_annual ? " · " + k.rh_pct_annual + "% HR" : ""}` : "—"; })}
     ${row("Dados", c => isVer(c) ? '<span class="badge ok">verificado</span>' : '<span class="badge warn">por confirmar</span>')}</table></div>`;
@@ -510,7 +511,7 @@ let qz = { n: 0, score: 0, total: 8 };
 function newQuiz() { qz = { n: 0, score: 0, total: 8 }; nextQ(); }
 function nextQ() {
   if (qz.n >= qz.total) { $("#quiz").innerHTML = `<p>Pontuação: <b>${qz.score}/${qz.total}</b></p><button class="btn" id="qAgain">Jogar outra vez</button>`; $("#qAgain").onclick = newQuiz; return; }
-  const c = DB.cigars[Math.floor(Math.random() * DB.cigars.length)], kind = Math.random() < .5 ? "country" : "strength";
+  const c = DB.cigars[Math.floor(Math.random() * DB.cigars.length)], kind = c.strength && Math.random() < .5 ? "strength" : "country";
   let q, opts, ans;
   if (kind === "country") { q = `De que país é o ${name(c)}?`; opts = unique(DB.cigars.map(x => x.country)); ans = c.country; }
   else { q = `Qual a força de ${name(c)}?`; opts = STRENGTH.slice(1); ans = STRENGTH[c.strength]; }

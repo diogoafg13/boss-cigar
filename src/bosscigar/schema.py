@@ -27,10 +27,10 @@ class Cigar(BaseModel):
     line: str
     country: str
     region: str
-    strength: int = Field(ge=1, le=5)
+    strength: int | None = Field(default=None, ge=1, le=5)  # None = sem fonte; não se inventa
     vitola: str
     wrapper: str
-    flavors: list[str] = Field(min_length=1)
+    flavors: list[str] = Field(default_factory=list)
     notes: str = ""
     verified_fields: list[str] = Field(default_factory=list)
     sources: list[Source] = Field(default_factory=list)

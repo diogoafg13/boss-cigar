@@ -4,7 +4,7 @@
   country: Cuba
   region: vuelta-abajo
   strength: 4
-  vitola: Gran Corona 5 5/8 x 52
+  vitola: Cañonazo 5 7/8 x 52
   wrapper: Cubano
   flavors:
   - cedro
@@ -12,15 +12,19 @@
   - creme
   - especiarias
   notes: Uma das linhas cubanas mais prestigiadas, com fermentação extra de uma das folhas do blend.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Wikipédia — Cohiba (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Cohiba_(cigar_brand)
 - id: montecristo-no-2
   brand: Montecristo
   line: No. 2
   country: Cuba
   region: vuelta-abajo
   strength: 4
-  vitola: Torpedo 6 1/8 x 52
+  vitola: Pirámide 6 1/8 x 52
   wrapper: Cubano
   flavors:
   - madeira
@@ -28,8 +32,12 @@
   - pimenta
   - cacau
   notes: O torpedo cubano de referência; muito procurado em todo o mundo.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Cigar Journal — Montecristo No. 2 (156 mm × 52, Pirámides)
+    url: https://www.cigarjournal.com/tabacalera-presents-tauromaquia-y-mazzantini-montecristo-no-2/
 - id: partagas-serie-d-no-4
   brand: Partagás
   line: Serie D No. 4
@@ -44,15 +52,19 @@
   - couro
   - especiarias
   notes: Robusto cubano muito popular, conhecido pelo carácter forte e terroso.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Wikipédia — Partagás (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Partag%C3%A1s
 - id: romeo-churchill
   brand: Romeo y Julieta
   line: Churchill
   country: Cuba
   region: vuelta-abajo
   strength: 3
-  vitola: Churchill 7 x 47
+  vitola: Julieta No. 2 (Churchill) 7 x 47
   wrapper: Cubano
   flavors:
   - cedro
@@ -60,62 +72,78 @@
   - mel
   - madeira
   notes: Clássico de corpo médio, elegante e fácil de apreciar.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Wikipédia — Romeo y Julieta (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Romeo_y_Julieta_(cigar)
 - id: h-upmann-magnum-50
   brand: H. Upmann
   line: Magnum 50
   country: Cuba
   region: vuelta-abajo
   strength: 3
-  vitola: Robusto Extra 5 x 50
+  vitola: Doble Robusto 6 1/4 x 50
   wrapper: Cubano
   flavors:
   - cedro
   - especiarias doces
   - amêndoa
-  notes: Corpo médio, suave e aveludado; boa porta de entrada para os cubanos.
-  verified_fields: []
-  sources: []
+  notes: Vitola de galera "Double Robustos", lançada em 2008. A força e os sabores ainda estão por confirmar.
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Wikipédia — H. Upmann (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/H._Upmann
 - id: padron-1964-anniversary
   brand: Padrón
   line: 1964 Anniversary Series
   country: Nicarágua
   region: esteli
   strength: 4
-  vitola: Exclusivo 5 3/8 x 50
+  vitola: Exclusivo (box-pressed) 5 1/2 x 50
   wrapper: Nicaraguense (Natural ou Maduro)
   flavors:
   - cacau
   - café
   - nozes
   - especiarias
-  notes: Tabaco envelhecido em fábrica; muito equilibrado para a força que tem.
-  verified_fields: []
-  sources: []
+  notes: 'Puro nicaraguense box-pressed. A força está por confirmar: as fontes divergem.'
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Neptune Cigar — Padrón 1964 Anniversary Exclusivo (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/padron-1964-anniversary-exclusivo
 - id: padron-1926-no-9
   brand: Padrón
   line: 1926 Serie No. 9
   country: Nicarágua
   region: esteli
   strength: 4
-  vitola: Belicoso 5 1/2 x 52
+  vitola: Robusto (box-pressed) 5 1/4 x 56
   wrapper: Nicaraguense (Natural ou Maduro)
   flavors:
   - café
   - terra
   - cacau
   - pimenta
-  notes: Linha de topo da casa Padrón, com complexidade e persistência notáveis.
-  verified_fields: []
-  sources: []
+  notes: Charuto do ano 2007 da Cigar Aficionado.
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Neptune Cigar — Padrón 1926 Serie No. 9 (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/padron-1926-serie-no-9
 - id: fuente-hemingway-short-story
   brand: Arturo Fuente
   line: Hemingway Short Story
   country: República Dominicana
   region: cibao
   strength: 3
-  vitola: Perfecto 4 x 48
+  vitola: Perfecto 4 x 49
   wrapper: Cameroon
   flavors:
   - especiarias
@@ -123,8 +151,14 @@
   - creme
   - mel
   notes: Perfecto curto de fumada suave e doce; ideal para uma pausa de cerca de 45 minutos.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Arturo Fuente Hemingway Short Story (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/arturo-fuente-hemingway-short-story
 - id: fuente-opus-x
   brand: Arturo Fuente
   line: OpusX
@@ -139,15 +173,21 @@
   - frutos secos
   - especiarias doces
   notes: Raro e muito procurado; pioneiro em capas dominicanas de alta qualidade.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Arturo Fuente Opus X Robusto (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/arturo-fuente-opus-x-robusto
 - id: davidoff-signature-2000
   brand: Davidoff
   line: Signature 2000
   country: República Dominicana
   region: cibao
-  strength: 2
-  vitola: Petit Corona 5 x 43
+  strength: 1
+  vitola: Corona 5 x 43
   wrapper: Connecticut (Equador)
   flavors:
   - creme
@@ -155,8 +195,14 @@
   - madeira clara
   - mel
   notes: Elegante e suave; excelente para manhãs ou depois de uma refeição leve.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  - wrapper
+  sources:
+  - title: Cigar Chief — Davidoff Signature 2000
+    url: https://cigarchief.com/shop/davidoff-signature-2000/
 - id: davidoff-primeros
   brand: Davidoff
   line: Primeros Classic
@@ -164,16 +210,20 @@
   region: cibao
   strength: 1
   vitola: Petit Panatela 4 1/8 x 34
-  wrapper: Connecticut (Equador)
+  wrapper: Connecticut
   flavors:
   - creme
   - madeira clara
   - nozes
-  notes: Fumada de cerca de 15 minutos; ideal para iniciantes e pausas curtas.
+  notes: Tripa curta; cerca de 15 minutos de fumada.
   verified_fields:
+  - country
   - vitola
+  - wrapper
   sources:
   - title: Neptune Cigar — Davidoff Dominican Primeros 4 1/8 x 34
+    url: https://www.neptunecigar.com/cigars/davidoff-dominican-primeros
+  - title: Neptune Cigar — Davidoff Dominican Primeros (ficha técnica)
     url: https://www.neptunecigar.com/cigars/davidoff-dominican-primeros
 - id: my-father-le-bijou-1922
   brand: My Father
@@ -181,63 +231,85 @@
   country: Nicarágua
   region: esteli
   strength: 5
-  vitola: Torpedo 6 1/8 x 52
-  wrapper: Habano Oscuro
+  vitola: Torpedo (box-pressed) 6 1/8 x 52
+  wrapper: Habano Oscuro (Nicarágua)
   flavors:
   - café
   - pimenta
   - cacau
   - terra
   notes: Linha intensa e rica, para fumadores com experiência.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Neptune Cigar — My Father Le Bijou 1922 Torpedo (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/my-father-le-bijou-1922-torpedo
 - id: oliva-serie-v-melanio
   brand: Oliva
   line: Serie V Melanio
   country: Nicarágua
-  region: esteli
-  strength: 4
-  vitola: Robusto 5 x 50
+  region: jalapa
+  strength: 3
+  vitola: Robusto 5 x 52
   wrapper: Sumatra (Equador)
   flavors:
   - cacau
   - café
   - pimenta
   - especiarias
-  notes: Muito bem pontuada pela imprensa especializada; força média-alta com bom equilíbrio.
-  verified_fields: []
-  sources: []
+  notes: Tripa envelhecida de Jalapa, capote nicaraguense.
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Oliva Serie V Melanio Robusto (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/oliva-serie-v-melanio-robusto
 - id: oliva-nub-connecticut
   brand: Oliva
   line: Nub Connecticut
   country: Nicarágua
   region: esteli
-  strength: 2
+  strength: 3
   vitola: Gordo 4 x 60
-  wrapper: Connecticut
+  wrapper: Connecticut Shade (Equador)
   flavors:
   - creme
   - nozes
   - amêndoa
   notes: Formato curto e grosso, concebido para fumada consistente do início ao fim.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Nub Connecticut 460 (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/nub-connecticut-460
 - id: drew-estate-liga-privada-no-9
   brand: Drew Estate
   line: Liga Privada No. 9
   country: Nicarágua
   region: esteli
   strength: 4
-  vitola: Robusto 5 x 52
-  wrapper: Connecticut Broadleaf
+  vitola: Robusto 5 x 54
+  wrapper: Connecticut Broadleaf (EUA)
   flavors:
   - cacau
   - terra
   - café
   - especiarias
   notes: Capa Broadleaf escura e brilhante; textura rica e muita fumaça.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Liga Privada No. 9 Robusto (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/liga-privada-no-9-robusto
 - id: don-pepin-blue
   brand: Don Pepín García
   line: Blue Label (Original)
@@ -251,8 +323,8 @@
   - madeira
   - especiarias
   - terra
-  notes: 'Puro nicaraguense: capa Corojo Oscuro, capote Criollo, tripa Criollo/Corojo. Classificado como
-    força plena numa análise consultada.'
+  notes: 'Puro nicaraguense: capa Corojo Oscuro, capote Criollo, tripa Criollo/Corojo. Classificado como força plena
+    numa análise consultada.'
   verified_fields:
   - wrapper
   - strength
@@ -262,19 +334,24 @@
     url: https://cigar-coop.com/2013/10/cigar-review-don-pepin-garcia-origina.html
 - id: macanudo-cafe
   brand: Macanudo
-  line: Café
+  line: Café Hyde Park
   country: República Dominicana
   region: cibao
   strength: 1
   vitola: Robusto 5 1/2 x 49
-  wrapper: Connecticut Shade
+  wrapper: Connecticut Shade (EUA)
   flavors:
   - creme
   - madeira clara
   - nozes
   notes: 'Uma das melhores portas de entrada: fácil, suave e acessível.'
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Macanudo Cafe Hyde Park (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/macanudo-cafe-hyde-park
 - id: rocky-patel-decade
   brand: Rocky Patel
   line: Decade
@@ -288,8 +365,7 @@
   - especiarias
   - cacau
   - couro
-  notes: Binder e tripa não são divulgados pela marca. A origem do tabaco (Honduras/Nicarágua) está por
-    confirmar.
+  notes: Binder e tripa não são divulgados pela marca. A origem do tabaco (Honduras/Nicarágua) está por confirmar.
   verified_fields:
   - wrapper
   sources:
@@ -302,43 +378,55 @@
   region: danli
   strength: 2
   vitola: Robusto 5 x 50
-  wrapper: Connecticut
+  wrapper: Connecticut Shade (Equador)
   flavors:
   - creme
   - madeira
   - nozes
   notes: Alternativa suave com tabaco hondurenho.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Camacho Connecticut Robusto (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/camacho-connecticut-robusto
 - id: te-amo-maduro
   brand: Te-Amo
-  line: Maduro
+  line: The Original San Andres
   country: México
   region: san-andres
   strength: 2
-  vitola: Toro 6 x 50
-  wrapper: Maduro mexicano
+  vitola: Toro 6 x 52
+  wrapper: Habano San Andrés (México)
   flavors:
   - cacau
   - doçura
   - café
   - terra suave
-  notes: Capa Maduro de San Andrés, doce e acessível.
-  verified_fields: []
-  sources: []
+  notes: Capa Habano de San Andrés e capote Negro San Andrés envelhecido. A força está por confirmar.
+  verified_fields:
+  - country
+  - vitola
+  - wrapper
+  sources:
+  - title: Neptune Cigar — Te Amo The Original San Andres Toro (ficha técnica)
+    url: https://www.neptunecigar.com/cigars/te-amo-the-original-san-andres-toro
 - id: dannemann-moods
   brand: Dannemann
   line: Moods
   country: Brasil
   region: bahia
   strength: 1
-  vitola: Petit Corona
+  vitola: Cigarilha (de máquina)
   wrapper: Brasileira
   flavors:
   - terra
   - doçura
   - cacau
-  notes: Representa a tradição de tabaco da Bahia, com notas doces e terrosas.
+  notes: Cigarilha de máquina, não é um charuto premium. Fica como referência de tabaco brasileiro; os dados estão
+    por confirmar.
   verified_fields: []
   sources: []
 - id: cohiba-robusto
@@ -355,8 +443,12 @@
   - creme
   - ervas
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Wikipédia — Cohiba (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Cohiba_(cigar_brand)
 - id: bolivar-royal-coronas
   brand: Bolívar
   line: Royal Coronas
@@ -370,9 +462,15 @@
   - pimenta
   - couro
   - cacau
-  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
-  verified_fields: []
-  sources: []
+  notes: A Wikipédia descreve o Bolívar cubano como "um dos charutos mais fortes e encorpados" de Havana, com muito
+    ligero na liga.
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  sources:
+  - title: Wikipédia — Bolívar (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Bol%C3%ADvar_(cigar_brand)
 - id: hoyo-epicure-no-2
   brand: Hoyo de Monterrey
   line: Epicure No. 2
@@ -387,15 +485,19 @@
   - creme
   - madeira
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
 - id: trinidad-fundadores
   brand: Trinidad
   line: Fundadores
   country: Cuba
   region: vuelta-abajo
   strength: 3
-  vitola: Laguito No. 1 7 1/2 x 40
+  vitola: Laguito Especial 7 1/2 x 40
   wrapper: Cubano
   flavors:
   - creme
@@ -403,8 +505,12 @@
   - nozes
   - especiarias doces
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
-  verified_fields: []
-  sources: []
+  verified_fields:
+  - country
+  - vitola
+  sources:
+  - title: Wikipédia — Trinidad (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Trinidad_(cigar)
 - id: ramon-allones-specially-selected
   brand: Ramón Allones
   line: Specially Selected
@@ -418,9 +524,14 @@
   - cedro
   - terra
   - couro
-  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
-  verified_fields: []
-  sources: []
+  notes: A Wikipédia descreve os Ramón Allones cubanos como de força média-alta a forte.
+  verified_fields:
+  - country
+  - strength
+  - vitola
+  sources:
+  - title: Wikipédia — Ramón Allones (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Ram%C3%B3n_Allones
 - id: diplomaticos-no-2
   brand: Diplomáticos
   line: No. 2
@@ -453,3 +564,277 @@
   notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
   verified_fields: []
   sources: []
+- id: cohiba-siglo-ii
+  brand: Cohiba
+  line: Siglo II
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Mareva 5 1/8 x 42
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Cohiba (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Cohiba_(cigar_brand)
+- id: partagas-serie-d-no-5
+  brand: Partagás
+  line: Serie D No. 5
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Petit Robusto 4 3/8 x 50
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Partagás (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Partag%C3%A1s
+- id: partagas-lusitanias
+  brand: Partagás
+  line: Lusitanias
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Prominente (Double Corona) 7 5/8 x 49
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Partagás (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Partag%C3%A1s
+- id: partagas-serie-p-no-2
+  brand: Partagás
+  line: Serie P No. 2
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Pirámide 6 1/8 x 52
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Partagás (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Partag%C3%A1s
+- id: romeo-short-churchill
+  brand: Romeo y Julieta
+  line: Short Churchill
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Robusto 4 7/8 x 50
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Romeo y Julieta (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Romeo_y_Julieta_(cigar)
+- id: romeo-wide-churchill
+  brand: Romeo y Julieta
+  line: Wide Churchill
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Montesco 5 1/8 x 55
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Romeo y Julieta (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Romeo_y_Julieta_(cigar)
+- id: h-upmann-half-corona
+  brand: H. Upmann
+  line: Half Corona
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Petit Corona 3 1/2 x 44
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — H. Upmann (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/H._Upmann
+- id: h-upmann-magnum-46
+  brand: H. Upmann
+  line: Magnum 46
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Corona Gorda 5 5/8 x 46
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — H. Upmann (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/H._Upmann
+- id: h-upmann-connoisseur-no-1
+  brand: H. Upmann
+  line: Connossieur No. 1
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Hermoso No. 4 (Corona Extra) 5 x 48
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — H. Upmann (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/H._Upmann
+- id: bolivar-belicosos-finos
+  brand: Bolívar
+  line: Belicosos Finos
+  country: Cuba
+  region: vuelta-abajo
+  strength: 5
+  vitola: Campana 5 1/2 x 52
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista de vitolas da marca. Força: o Bolívar cubano é descrito como um dos Havanas
+    mais fortes.'
+  verified_fields:
+  - vitola
+  - country
+  - strength
+  sources:
+  - title: Wikipédia — Bolívar (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Bol%C3%ADvar_(cigar_brand)
+- id: bolivar-coronas-gigantes
+  brand: Bolívar
+  line: Coronas Gigantes
+  country: Cuba
+  region: vuelta-abajo
+  strength: 5
+  vitola: Julieta No. 2 (Churchill) 7 x 47
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista de vitolas da marca. Força: o Bolívar cubano é descrito como um dos Havanas
+    mais fortes.'
+  verified_fields:
+  - vitola
+  - country
+  - strength
+  sources:
+  - title: Wikipédia — Bolívar (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Bol%C3%ADvar_(cigar_brand)
+- id: hoyo-epicure-no-1
+  brand: Hoyo de Monterrey
+  line: Epicure No. 1
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Corona Gorda 5 5/8 x 46
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
+- id: hoyo-epicure-especial
+  brand: Hoyo de Monterrey
+  line: Epicure Especial
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Gordito (Robusto Extra) 5 1/2 x 50
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
+- id: hoyo-double-coronas
+  brand: Hoyo de Monterrey
+  line: Double Coronas
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Prominente 7 5/8 x 49
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
+- id: trinidad-reyes
+  brand: Trinidad
+  line: Reyes
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Reyes 4 3/8 x 40
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Trinidad (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Trinidad_(cigar)
+- id: trinidad-coloniales
+  brand: Trinidad
+  line: Coloniales
+  country: Cuba
+  region: vuelta-abajo
+  strength: null
+  vitola: Colonial 5 1/4 x 44
+  wrapper: Cubano
+  flavors: []
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
+    ainda sem fonte.'
+  verified_fields:
+  - vitola
+  - country
+  sources:
+  - title: Wikipédia — Trinidad (lista de vitolas)
+    url: https://en.wikipedia.org/wiki/Trinidad_(cigar)

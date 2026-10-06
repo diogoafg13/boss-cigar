@@ -22,7 +22,8 @@ def build_report(con: duckdb.DuckDBPyConnection) -> dict:
         "SELECT r.id FROM regions r LEFT JOIN climate c ON c.region_id = r.id WHERE c.region_id IS NULL ORDER BY 1")]
     no_wikidata = [r[0] for r in q(
         "SELECT DISTINCT c.brand FROM cigars c LEFT JOIN brand_facts b ON b.brand = c.brand WHERE b.brand IS NULL ORDER BY 1")]
-    strength_dist = {int(k): v for k, v in q("SELECT strength, count(*) FROM cigars GROUP BY 1 ORDER BY 1")}
+    strength_dist = {(str(int(k)) if k is not None else "sem dado"): v for k, v in q("SELECT strength, count(*) FROM cigars GROUP BY 1 ORDER BY 1 NULLS LAST")}
+    n_no_strength = strength_dist.get("sem dado", 0)
     unverified = [r[0] for r in q("SELECT id FROM cigars WHERE n_verified = 0 ORDER BY 1")]
     thin = [r[0] for r in q(
         "SELECT c.id FROM cigars c LEFT JOIN cigar_flavors f ON f.cigar_id = c.id GROUP BY c.id HAVING count(f.flavor) < 3 ORDER BY 1")]
@@ -61,6 +62,7 @@ def build_report(con: duckdb.DuckDBPyConnection) -> dict:
         "verified_share": round(n_verified / n_cigars, 3) if n_cigars else 0,
         "cigars_with_verified_fields": n_verified,
         "strength_distribution": strength_dist,
+        "cigars_without_strength": n_no_strength,
         "regions_without_cigars": empty_regions,
         "regions_without_climate": no_climate,
         "brands_without_wikidata": no_wikidata,

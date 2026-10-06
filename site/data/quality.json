@@ -1,5 +1,5 @@
 {
- "cigars": 28,
+ "cigars": 44,
  "fr_references": 3720,
  "fr_cigars_excluding_cigarillos": 3382,
  "fr_brand_from_catalog": 2232,
@@ -13,21 +13,22 @@
  "shops_pt": 149,
  "tobacco_countries": 142,
  "regions": 12,
- "verified_share": 0.107,
- "cigars_with_verified_fields": 3,
+ "verified_share": 0.932,
+ "cigars_with_verified_fields": 41,
  "strength_distribution": {
-  "1": 3,
-  "2": 4,
-  "3": 8,
-  "4": 9,
-  "5": 4
+  "1": 4,
+  "2": 2,
+  "3": 10,
+  "4": 8,
+  "5": 6,
+  "sem dado": 14
  },
+ "cigars_without_strength": 14,
  "regions_without_cigars": [
   "cameroon",
   "condega",
   "connecticut",
   "ecuador",
-  "jalapa",
   "ometepe"
  ],
  "regions_without_climate": [],
@@ -44,7 +45,24 @@
   "Te-Amo",
   "Trinidad"
  ],
- "cigars_with_fewer_than_3_flavors": [],
+ "cigars_with_fewer_than_3_flavors": [
+  "bolivar-belicosos-finos",
+  "bolivar-coronas-gigantes",
+  "cohiba-siglo-ii",
+  "h-upmann-connoisseur-no-1",
+  "h-upmann-half-corona",
+  "h-upmann-magnum-46",
+  "hoyo-double-coronas",
+  "hoyo-epicure-especial",
+  "hoyo-epicure-no-1",
+  "partagas-lusitanias",
+  "partagas-serie-d-no-5",
+  "partagas-serie-p-no-2",
+  "romeo-short-churchill",
+  "romeo-wide-churchill",
+  "trinidad-coloniales",
+  "trinidad-reyes"
+ ],
  "country_mismatch_vs_wikidata": [
   {
    "id": "davidoff-signature-2000",
@@ -69,30 +87,8 @@
   }
  ],
  "unverified_cigars": [
-  "bolivar-royal-coronas",
-  "camacho-connecticut",
-  "cohiba-robusto",
-  "cohiba-siglo-vi",
   "dannemann-moods",
-  "davidoff-signature-2000",
   "diplomaticos-no-2",
-  "drew-estate-liga-privada-no-9",
-  "fuente-hemingway-short-story",
-  "fuente-opus-x",
-  "h-upmann-magnum-50",
-  "hoyo-epicure-no-2",
-  "macanudo-cafe",
-  "montecristo-no-2",
-  "my-father-le-bijou-1922",
-  "oliva-nub-connecticut",
-  "oliva-serie-v-melanio",
-  "padron-1926-no-9",
-  "padron-1964-anniversary",
-  "partagas-serie-d-no-4",
-  "ramon-allones-specially-selected",
-  "romeo-churchill",
-  "sancho-panza-belicosos",
-  "te-amo-maduro",
-  "trinidad-fundadores"
+  "sancho-panza-belicosos"
  ]
 }

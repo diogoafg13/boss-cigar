@@ -104,11 +104,15 @@ O PDF do guia vai em `site/docs/do-zero-ao-expert-livro-do-charuto.pdf`.
 
 ## Estado dos dados
 
-Os 28 charutos foram compilados de conhecimento geral. Só os campos com `verified_fields` foram confirmados numa fonte; o resto aparece no site como **por confirmar**. Prioridade do roadmap: verificar linha a linha.
+44 fichas, das quais 41 têm campos confirmados numa fonte citada (`verified_fields` + `sources`): medidas e vitola de galera (Wikipédia, listas de vitolas das marcas cubanas), capa, país e força (fichas técnicas dos fabricantes/retalhistas). A verificação corrigiu medidas erradas (ex.: H. Upmann Magnum 50, Cohiba Siglo VI, Padrón 1926 No. 9, Oliva Melanio, Liga Privada No. 9).
+
+- **Força** só é preenchida quando há fonte; 14 fichas mostram "força sem dado".
+- **Sabores** das fichas originais continuam por confirmar (não há fonte aberta); as fichas novas não têm sabores inventados.
+- Os sabores sentidos por cada utilizador (prova guiada) ficam no browser dele e alimentam as recomendações.
 
 ## Roadmap
 
-- [ ] Verificar os restantes charutos contra fontes públicas (fabricantes, Habanos S.A., Cigar Coop, Halfwheel)
+- [ ] Força das fichas cubanas sem fonte (procurar classificação oficial de intensidade da Habanos)
 - [ ] Fotos de anilhas e vitolas (apenas com licença livre)
 - [ ] Notas de prova partilhadas entre utilizadores (exige backend; ex.: GitHub Discussions via giscus)
 - [ ] Notificação de dados desatualizados (campos sem verificação há mais de N meses)

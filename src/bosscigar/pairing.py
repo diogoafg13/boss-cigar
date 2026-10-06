@@ -25,15 +25,18 @@ WRAPPER_RULES = [
 ]
 
 
-def suggest(strength: int, wrapper: str) -> dict:
+def suggest(strength: int | None, wrapper: str) -> dict:
     drinks, food, why = [], [], []
     for lo, hi, d, f, w in RULES:
-        if lo <= strength <= hi:
+        if strength is not None and lo <= strength <= hi:
             drinks += d; food += f; why.append(w)
     wl = (wrapper or "").lower()
     for keys, d, f, w in WRAPPER_RULES:
         if any(k in wl for k in keys):
             drinks += d; food += f; why.append(w)
+    if strength is None and not drinks:
+        drinks, food = ["Porto Tawny 10 anos", "Rum añejo", "Café"], ["Frutos secos", "Chocolate negro"]
+        why.append("Força ainda sem fonte: sugestões versáteis, que acompanham bem a maioria dos charutos.")
     dedup = lambda xs: list(dict.fromkeys(xs))
     return {"drinks": dedup(drinks), "food": dedup(food), "why": why}
 
