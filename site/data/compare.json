@@ -378,7 +378,7 @@
    "label": "Bolivar Belicosos Finos",
    "fr_label": "Bolivar Belicosos Finos",
    "es_label": "Bolivar Belicosos Finos",
-   "brand": "Bolivar",
+   "brand": "Bolívar",
    "fr": 22.3,
    "es": 18.2,
    "diff_pct": -18.4
@@ -387,7 +387,7 @@
    "label": "Bolivar Petit Coronas",
    "fr_label": "Bolivar Petit Coronas",
    "es_label": "Bolivar Petit Coronas",
-   "brand": "Bolivar",
+   "brand": "Bolívar",
    "fr": 13.5,
    "es": 10.6,
    "diff_pct": -21.5
@@ -396,7 +396,7 @@
    "label": "Bolivar Royal Coronas",
    "fr_label": "Bolivar Royal Coronas",
    "es_label": "Bolivar Royal Coronas",
-   "brand": "Bolivar",
+   "brand": "Bolívar",
    "fr": 19.2,
    "es": 19.6,
    "diff_pct": 2.1
@@ -2403,7 +2403,7 @@
    "label": "Partagas Lusitanias",
    "fr_label": "Partagas Lusitanias",
    "es_label": "Partagas Lusitanias",
-   "brand": "Partagás",
+   "brand": "Partagas",
    "fr": 35.6,
    "es": 32.2,
    "diff_pct": -9.6
@@ -2412,7 +2412,7 @@
    "label": "Partagas Maduro N°1",
    "fr_label": "Partagas Maduro N°1",
    "es_label": "Partagas Maduro Nº 1",
-   "brand": "Partagás",
+   "brand": "Partagas",
    "fr": 25.7,
    "es": 23.0,
    "diff_pct": -10.5
@@ -2421,7 +2421,7 @@
    "label": "Partagas Maduro N°2",
    "fr_label": "Partagas Maduro N°2",
    "es_label": "Partagas Maduro nº 2",
-   "brand": "Partagás",
+   "brand": "Partagas",
    "fr": 26.4,
    "es": 23.2,
    "diff_pct": -12.1
@@ -2430,7 +2430,7 @@
    "label": "Partagás Cedros Año Chino",
    "fr_label": "Partagas Cedros (año chino)",
    "es_label": "Partagás Cedros Año Chino",
-   "brand": "Partagás",
+   "brand": "Partagas",
    "fr": 81.0,
    "es": 64.0,
    "diff_pct": -21.0
@@ -2835,7 +2835,7 @@
    "label": "San Cristobal de la Habana El Principe",
    "fr_label": "San Cristobal de la Habana El Principe",
    "es_label": "San Cristobal de la Habana El Principe",
-   "brand": "San Cristobal de la Habana",
+   "brand": "San Cristóbal de la Habana",
    "fr": 11.1,
    "es": 7.25,
    "diff_pct": -34.7
@@ -2844,7 +2844,7 @@
    "label": "San Cristobal de la Habana La Fuerza",
    "fr_label": "San Cristobal de la Habana La Fuerza",
    "es_label": "San Cristobal de la Habana La Fuerza",
-   "brand": "San Cristobal de la Habana",
+   "brand": "San Cristóbal de la Habana",
    "fr": 22.0,
    "es": 12.3,
    "diff_pct": -44.1
