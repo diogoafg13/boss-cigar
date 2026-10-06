@@ -73,7 +73,7 @@ Nota: a Wikipédia e o Overpass limitam pedidos por IP. O que falhar numa execu�
 
 1. Criar o repositório `boss-cigar` e fazer push para `main`.
 2. Settings → Pages → Source: **GitHub Actions**.
-3. Settings → Actions → General → Workflow permissions: **Read and write** (o workflow guarda `data/cache` e `data/clean`).
+3. Settings → Actions → General → Workflow permissions: **Read and write** (o workflow guarda `data/cache` e `data/clean` com commits do `boss-cigar-bot`, para a próxima execução ter sempre a última versão de cada fonte).
 4. O workflow `build-and-deploy` corre a cada push, à segunda-feira e manualmente (Actions → Run workflow).
 
 ## Adicionar ou corrigir um charuto
