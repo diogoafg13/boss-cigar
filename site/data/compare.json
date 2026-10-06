@@ -378,7 +378,7 @@
    "label": "Bolivar Belicosos Finos",
    "fr_label": "Bolivar Belicosos Finos",
    "es_label": "Bolivar Belicosos Finos",
-   "brand": "Bolivar",
+   "brand": "Bolívar",
    "fr": 22.3,
    "es": 18.2,
    "diff_pct": -18.4
@@ -387,7 +387,7 @@
    "label": "Bolivar Petit Coronas",
    "fr_label": "Bolivar Petit Coronas",
    "es_label": "Bolivar Petit Coronas",
-   "brand": "Bolivar",
+   "brand": "Bolívar",
    "fr": 13.5,
    "es": 10.6,
    "diff_pct": -21.5
@@ -396,7 +396,7 @@
    "label": "Bolivar Royal Coronas",
    "fr_label": "Bolivar Royal Coronas",
    "es_label": "Bolivar Royal Coronas",
-   "brand": "Bolivar",
+   "brand": "Bolívar",
    "fr": 19.2,
    "es": 19.6,
    "diff_pct": 2.1
@@ -2592,7 +2592,7 @@
    "label": "Quai D'Orsay Especial D'Orsay",
    "fr_label": "Quai D'Orsay Especial D'Orsay",
    "es_label": "Quai D'Orsay Especial D'Orsay",
-   "brand": "Quai d'Orsay",
+   "brand": "Quai D'Orsay",
    "fr": 59.0,
    "es": 50.0,
    "diff_pct": -15.3
@@ -2601,7 +2601,7 @@
    "label": "Quai D'Orsay Imperiales TR",
    "fr_label": "Quai d'Orsay Imperiales (TR)",
    "es_label": "Quai D'Orsay Imperiales TR",
-   "brand": "Quai d'Orsay",
+   "brand": "Quai D'Orsay",
    "fr": 98.0,
    "es": 72.1,
    "diff_pct": -26.4
@@ -2610,7 +2610,7 @@
    "label": "Quai D'Orsay N°50",
    "fr_label": "Quai D'Orsay N°50",
    "es_label": "Quai D'Orsay No. 50",
-   "brand": "Quai d'Orsay",
+   "brand": "Quai D'Orsay",
    "fr": 16.0,
    "es": 14.8,
    "diff_pct": -7.5
@@ -2619,7 +2619,7 @@
    "label": "Quai d'Orsay N°52",
    "fr_label": "Quai d'Orsay N°52",
    "es_label": "Quai D'Orsay No. 52",
-   "brand": "Quai d'Orsay",
+   "brand": "Quai D'Orsay",
    "fr": 24.0,
    "es": 22.7,
    "diff_pct": -5.4
@@ -2628,7 +2628,7 @@
    "label": "Quai D'Orsay N°54",
    "fr_label": "Quai D'Orsay N°54",
    "es_label": "Quai D'Orsay No. 54",
-   "brand": "Quai d'Orsay",
+   "brand": "Quai D'Orsay",
    "fr": 22.0,
    "es": 21.0,
    "diff_pct": -4.5
@@ -2646,7 +2646,7 @@
    "label": "Ramon Allones Allones N°3",
    "fr_label": "Ramon Allones Allones N°3",
    "es_label": "Ramón Allones Allones No.3",
-   "brand": "Ramon Allones",
+   "brand": "Ramón Allones",
    "fr": 23.0,
    "es": 22.2,
    "diff_pct": -3.5
@@ -2655,7 +2655,7 @@
    "label": "Ramon Allones Gigantes",
    "fr_label": "Ramon Allones Gigantes",
    "es_label": "Ramon Allones Gigantes",
-   "brand": "Ramon Allones",
+   "brand": "Ramón Allones",
    "fr": 29.7,
    "es": 20.0,
    "diff_pct": -32.7

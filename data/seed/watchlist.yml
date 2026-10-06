@@ -1,0 +1,8 @@
+# Referências que queres acompanhar nas notificações push (texto que aparece no nome, sem distinção de maiúsculas).
+# Só é usado se o secret NTFY_TOPIC estiver definido no repositório.
+refs:
+  - Montecristo n°2
+  - Montecristo Nº 2
+  - Cohiba Robusto
+  - Padron 1964
+  - Hemingway

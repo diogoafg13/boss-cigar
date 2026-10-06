@@ -3,7 +3,7 @@
   line: Siglo VI
   country: Cuba
   region: vuelta-abajo
-  strength: 4
+  strength: 3
   vitola: Cañonazo 5 7/8 x 52
   wrapper: Cubano
   flavors:
@@ -11,13 +11,18 @@
   - café
   - creme
   - especiarias
-  notes: Uma das linhas cubanas mais prestigiadas, com fermentação extra de uma das folhas do blend.
+  notes: 'Uma das linhas cubanas mais prestigiadas, com fermentação extra de uma das folhas do blend. Intensidade
+    oficial Habanos: Medium (Cohiba Línea 1492).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Wikipédia — Cohiba (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Cohiba_(cigar_brand)
+  - &id001
+    title: Habanos S.A. — Strengths (classificação oficial de intensidade)
+    url: https://www.habanos.com/en/strengths/
 - id: montecristo-no-2
   brand: Montecristo
   line: No. 2
@@ -31,13 +36,16 @@
   - terra
   - pimenta
   - cacau
-  notes: O torpedo cubano de referência; muito procurado em todo o mundo.
+  notes: 'O torpedo cubano de referência; muito procurado em todo o mundo. Intensidade oficial Habanos: Medium to
+    Full (Montecristo).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Cigar Journal — Montecristo No. 2 (156 mm × 52, Pirámides)
     url: https://www.cigarjournal.com/tabacalera-presents-tauromaquia-y-mazzantini-montecristo-no-2/
+  - *id001
 - id: partagas-serie-d-no-4
   brand: Partagás
   line: Serie D No. 4
@@ -51,13 +59,16 @@
   - pimenta
   - couro
   - especiarias
-  notes: Robusto cubano muito popular, conhecido pelo carácter forte e terroso.
+  notes: 'Robusto cubano muito popular, conhecido pelo carácter forte e terroso. Intensidade oficial Habanos: Full
+    (Partagás Línea Series).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Wikipédia — Partagás (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Partag%C3%A1s
+  - *id001
 - id: romeo-churchill
   brand: Romeo y Julieta
   line: Churchill
@@ -71,32 +82,37 @@
   - nozes
   - mel
   - madeira
-  notes: Clássico de corpo médio, elegante e fácil de apreciar.
+  notes: 'Clássico de corpo médio, elegante e fácil de apreciar. Intensidade oficial Habanos: Medium (Romeo y Julieta).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Wikipédia — Romeo y Julieta (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Romeo_y_Julieta_(cigar)
+  - *id001
 - id: h-upmann-magnum-50
   brand: H. Upmann
   line: Magnum 50
   country: Cuba
   region: vuelta-abajo
-  strength: 3
+  strength: 4
   vitola: Doble Robusto 6 1/4 x 50
   wrapper: Cubano
   flavors:
   - cedro
   - especiarias doces
   - amêndoa
-  notes: Vitola de galera "Double Robustos", lançada em 2008. A força e os sabores ainda estão por confirmar.
+  notes: 'Vitola de galera "Double Robustos", lançada em 2008. Os sabores ainda estão por confirmar. Intensidade
+    oficial Habanos: Medium to Full (H. Upmann Línea Magnum).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Wikipédia — H. Upmann (lista de vitolas)
     url: https://en.wikipedia.org/wiki/H._Upmann
+  - *id001
 - id: padron-1964-anniversary
   brand: Padrón
   line: 1964 Anniversary Series
@@ -442,13 +458,16 @@
   - café
   - creme
   - ervas
-  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  notes: 'Linha cubana clássica. Perfil e força indicativos, por confirmar. Intensidade oficial Habanos: Medium
+    to Full (Cohiba Línea Clásica).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Wikipédia — Cohiba (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Cohiba_(cigar_brand)
+  - *id001
 - id: bolivar-royal-coronas
   brand: Bolívar
   line: Royal Coronas
@@ -462,8 +481,8 @@
   - pimenta
   - couro
   - cacau
-  notes: A Wikipédia descreve o Bolívar cubano como "um dos charutos mais fortes e encorpados" de Havana, com muito
-    ligero na liga.
+  notes: 'A Wikipédia descreve o Bolívar cubano como "um dos charutos mais fortes e encorpados" de Havana, com muito
+    ligero na liga. Intensidade oficial Habanos: Full (Bolívar).'
   verified_fields:
   - country
   - strength
@@ -471,12 +490,13 @@
   sources:
   - title: Wikipédia — Bolívar (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Bol%C3%ADvar_(cigar_brand)
+  - *id001
 - id: hoyo-epicure-no-2
   brand: Hoyo de Monterrey
   line: Epicure No. 2
   country: Cuba
   region: vuelta-abajo
-  strength: 3
+  strength: 1
   vitola: Robusto 4 7/8 x 50
   wrapper: Cubano
   flavors:
@@ -484,13 +504,16 @@
   - cacau
   - creme
   - madeira
-  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  notes: 'Linha cubana clássica. Perfil e força indicativos, por confirmar. Intensidade oficial Habanos: Light (Hoyo
+    de Monterrey Línea Epicure).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
+  - *id001
 - id: trinidad-fundadores
   brand: Trinidad
   line: Fundadores
@@ -504,19 +527,22 @@
   - cedro
   - nozes
   - especiarias doces
-  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
+  notes: 'Linha cubana clássica. Perfil e força indicativos, por confirmar. Intensidade oficial Habanos: Medium
+    (Trinidad).'
   verified_fields:
   - country
+  - strength
   - vitola
   sources:
   - title: Wikipédia — Trinidad (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Trinidad_(cigar)
+  - *id001
 - id: ramon-allones-specially-selected
   brand: Ramón Allones
   line: Specially Selected
   country: Cuba
   region: vuelta-abajo
-  strength: 4
+  strength: 5
   vitola: Robusto 4 7/8 x 50
   wrapper: Cubano
   flavors:
@@ -524,7 +550,8 @@
   - cedro
   - terra
   - couro
-  notes: A Wikipédia descreve os Ramón Allones cubanos como de força média-alta a forte.
+  notes: 'A Wikipédia descreve os Ramón Allones cubanos como de força média-alta a forte. Intensidade oficial Habanos:
+    Full (Ramón Allones).'
   verified_fields:
   - country
   - strength
@@ -532,12 +559,13 @@
   sources:
   - title: Wikipédia — Ramón Allones (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Ram%C3%B3n_Allones
+  - *id001
 - id: diplomaticos-no-2
   brand: Diplomáticos
   line: No. 2
   country: Cuba
   region: vuelta-abajo
-  strength: 3
+  strength: 4
   vitola: Pirámide 6 1/8 x 52
   wrapper: Cubano
   flavors:
@@ -545,9 +573,13 @@
   - creme
   - nozes
   - especiarias doces
-  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
-  verified_fields: []
-  sources: []
+  notes: 'Linha cubana clássica. Perfil e força indicativos, por confirmar. Intensidade oficial Habanos: Medium
+    to Full (Diplomáticos).'
+  verified_fields:
+  - country
+  - strength
+  sources:
+  - *id001
 - id: sancho-panza-belicosos
   brand: Sancho Panza
   line: Belicosos
@@ -561,43 +593,51 @@
   - terra
   - especiarias
   - creme
-  notes: Linha cubana clássica. Perfil e força indicativos, por confirmar.
-  verified_fields: []
-  sources: []
+  notes: 'Linha cubana clássica. Perfil e força indicativos, por confirmar. Intensidade oficial Habanos: Medium
+    (Sancho Panza).'
+  verified_fields:
+  - country
+  - strength
+  sources:
+  - *id001
 - id: cohiba-siglo-ii
   brand: Cohiba
   line: Siglo II
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 3
   vitola: Mareva 5 1/8 x 42
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Medium (Cohiba Línea 1492).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Cohiba (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Cohiba_(cigar_brand)
+  - *id001
 - id: partagas-serie-d-no-5
   brand: Partagás
   line: Serie D No. 5
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 5
   vitola: Petit Robusto 4 3/8 x 50
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Full (Partagás Línea Series).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Partagás (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Partag%C3%A1s
+  - *id001
 - id: partagas-lusitanias
   brand: Partagás
   line: Lusitanias
@@ -620,52 +660,58 @@
   line: Serie P No. 2
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 5
   vitola: Pirámide 6 1/8 x 52
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Full (Partagás Línea Series).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Partagás (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Partag%C3%A1s
+  - *id001
 - id: romeo-short-churchill
   brand: Romeo y Julieta
   line: Short Churchill
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 3
   vitola: Robusto 4 7/8 x 50
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Medium (Romeo y Julieta).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Romeo y Julieta (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Romeo_y_Julieta_(cigar)
+  - *id001
 - id: romeo-wide-churchill
   brand: Romeo y Julieta
   line: Wide Churchill
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 3
   vitola: Montesco 5 1/8 x 55
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Medium (Romeo y Julieta).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Romeo y Julieta (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Romeo_y_Julieta_(cigar)
+  - *id001
 - id: h-upmann-half-corona
   brand: H. Upmann
   line: Half Corona
@@ -688,18 +734,20 @@
   line: Magnum 46
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 4
   vitola: Corona Gorda 5 5/8 x 46
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Medium to Full (H. Upmann Línea Magnum).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — H. Upmann (lista de vitolas)
     url: https://en.wikipedia.org/wiki/H._Upmann
+  - *id001
 - id: h-upmann-connoisseur-no-1
   brand: H. Upmann
   line: Connossieur No. 1
@@ -726,15 +774,15 @@
   vitola: Campana 5 1/2 x 52
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista de vitolas da marca. Força: o Bolívar cubano é descrito como um dos Havanas
-    mais fortes.'
+  notes: 'Ficha criada a partir da lista de vitolas da marca. Intensidade oficial Habanos: Full (Bolívar).'
   verified_fields:
-  - vitola
   - country
   - strength
+  - vitola
   sources:
   - title: Wikipédia — Bolívar (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Bol%C3%ADvar_(cigar_brand)
+  - *id001
 - id: bolivar-coronas-gigantes
   brand: Bolívar
   line: Coronas Gigantes
@@ -744,97 +792,107 @@
   vitola: Julieta No. 2 (Churchill) 7 x 47
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista de vitolas da marca. Força: o Bolívar cubano é descrito como um dos Havanas
-    mais fortes.'
+  notes: 'Ficha criada a partir da lista de vitolas da marca. Intensidade oficial Habanos: Full (Bolívar).'
   verified_fields:
-  - vitola
   - country
   - strength
+  - vitola
   sources:
   - title: Wikipédia — Bolívar (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Bol%C3%ADvar_(cigar_brand)
+  - *id001
 - id: hoyo-epicure-no-1
   brand: Hoyo de Monterrey
   line: Epicure No. 1
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 1
   vitola: Corona Gorda 5 5/8 x 46
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Light (Hoyo de Monterrey Línea Epicure).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
+  - *id001
 - id: hoyo-epicure-especial
   brand: Hoyo de Monterrey
   line: Epicure Especial
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 1
   vitola: Gordito (Robusto Extra) 5 1/2 x 50
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Light (Hoyo de Monterrey Línea Epicure).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
+  - *id001
 - id: hoyo-double-coronas
   brand: Hoyo de Monterrey
   line: Double Coronas
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 1
   vitola: Prominente 7 5/8 x 49
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Light (Hoyo de Monterrey).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Hoyo de Monterrey (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Hoyo_de_Monterrey
+  - *id001
 - id: trinidad-reyes
   brand: Trinidad
   line: Reyes
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 3
   vitola: Reyes 4 3/8 x 40
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Medium (Trinidad).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Trinidad (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Trinidad_(cigar)
+  - *id001
 - id: trinidad-coloniales
   brand: Trinidad
   line: Coloniales
   country: Cuba
   region: vuelta-abajo
-  strength: null
+  strength: 3
   vitola: Colonial 5 1/4 x 44
   wrapper: Cubano
   flavors: []
-  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; força e sabores
-    ainda sem fonte.'
+  notes: 'Ficha criada a partir da lista oficial de vitolas da marca: medidas e país confirmados; sabores ainda
+    sem fonte. Intensidade oficial Habanos: Medium (Trinidad).'
   verified_fields:
-  - vitola
   - country
+  - strength
+  - vitola
   sources:
   - title: Wikipédia — Trinidad (lista de vitolas)
     url: https://en.wikipedia.org/wiki/Trinidad_(cigar)
+  - *id001

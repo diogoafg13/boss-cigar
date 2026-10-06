@@ -66,6 +66,8 @@ window.afInit = function () {
 /* ---------- ficha: preço oficial e evolução ---------- */
 window.afDetail = function (c) {
   let out = "";
+  if (c.pairings && c.pairings.ptWines) out += `<p><b>Vinho português:</b> ${esc(c.pairings.ptWines.join(", "))}<br><span class="warn">${esc((c.pairings.ptWhy || []).join(" "))}</span></p>`;
+  out += `<p><a href="#" onclick="event.preventDefault();document.getElementById('detail').close();openBrand(${JSON.stringify(c.brand).replace(/"/g, "&quot;")})">Ver a página da marca ${esc(c.brand)} →</a></p>`;
   const h = c.priceFR && c.priceFR.hist;
   if (h) out += `<p class="sub">Evolução do preço oficial em França: ${histSpark(h, 140, 30)} ${pct(histPct(h))} desde ${esc(h[0][0])}</p>`;
   if (c.priceES) {
@@ -754,3 +756,212 @@ function renderStats(entries) {
       <div><b>Melhores acompanhamentos (4–5★)</b><ol>${drinks.map(([k, v]) => `<li>${esc(k)} (${v})</li>`).join("") || "<li class='muted'>—</li>"}</ol></div>
       <div><b>5 estrelas</b><ol>${best.map(e => `<li>${esc(displayName(e.cigar))}</li>`).join("") || "<li class='muted'>—</li>"}</ol></div></div>`;
 }
+
+/* =====================================================================
+   Navegação em grupos, pesquisa global, páginas de marca, livro
+   ===================================================================== */
+const GROUPS = [
+  ["Descobrir", ["catalog", "compare", "pairing", "vitolas", "mapview", "producers"]],
+  ["Comprar", ["frcat", "brands", "shops"]],
+  ["O meu", ["me", "humidor", "journal"]],
+  ["Aprender", ["guide", "guides", "tools", "sources"]],
+];
+const groupOf = tab => (GROUPS.find(g => g[1].includes(tab)) || [null])[0];
+let CUR_GROUP = "Descobrir";
+
+function showGroup(name, activate) {
+  CUR_GROUP = name;
+  document.querySelectorAll("#groups button").forEach(b => b.classList.toggle("active", b.dataset.group === name));
+  const tabs = (GROUPS.find(g => g[0] === name) || [, []])[1];
+  document.querySelectorAll("#subtabs > button[data-tab]").forEach(b => b.style.display = tabs.includes(b.dataset.tab) ? "" : "none");
+  if (activate) { const cur = document.querySelector("#subtabs > button.active"); if (!cur || !tabs.includes(cur.dataset.tab)) goTab(tabs[0]); }
+}
+let LAST_TAB = "catalog";
+function setupGroups() {
+  const nav = $("#tabs");
+  const bar = document.createElement("div");
+  bar.id = "groups"; bar.style.cssText = "display:flex;gap:6px;justify-content:center;flex-wrap:wrap;width:100%;margin-bottom:6px";
+  bar.innerHTML = GROUPS.map(([g]) => `<button data-group="${g}" style="font-weight:bold">${g}</button>`).join("");
+  nav.prepend(bar);
+  nav.style.flexDirection = "column"; nav.style.alignItems = "center";
+  const row = document.createElement("div"); row.id = "subtabs";
+  row.style.cssText = "display:flex;gap:6px;justify-content:center;flex-wrap:wrap";
+  [...nav.querySelectorAll(":scope > button[data-tab]")].forEach(b => row.appendChild(b));
+  nav.appendChild(row);
+  // os botões passaram para #subtabs; o seletor "#tabs > button" deixa de os apanhar
+  bar.querySelectorAll("button").forEach(b => b.onclick = () => showGroup(b.dataset.group, true));
+  row.querySelectorAll("button[data-tab]").forEach(b => b.addEventListener("click", () => {
+    LAST_TAB = b.dataset.tab;
+    showGroup(groupOf(b.dataset.tab) || CUR_GROUP, false);  // o código antigo dos separadores limpa o destaque do grupo
+  }));
+  showGroup(CUR_GROUP, false);
+}
+/* ---------- Pesquisa global ---------- */
+const fold = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+let GS_TIMER = null, BRAND_NAMES = null;
+const SECTIONS = { catalog: "Catálogo", compare: "Comparador", pairing: "Harmonizador", vitolas: "Vitolas", mapview: "Mapa", producers: "Países produtores",
+  frcat: "Preços oficiais", brands: "Marcas", shops: "Onde comprar", me: "Para mim", humidor: "Humidor", journal: "Diário",
+  guide: "Livro", guides: "Guias", tools: "Ferramentas", sources: "Fontes" };
+
+function allBrandNames() {
+  if (BRAND_NAMES) return BRAND_NAMES;
+  const set = new Map();
+  const add = b => { if (b && !set.has(fold(b))) set.set(fold(b), b); };
+  DB.cigars.forEach(c => add(c.brand));
+  (BRANDS || []).forEach(b => add(b.brand));
+  ["fr", "es"].forEach(k => (CATS[k] || []).forEach(x => x.brand && x.brand_source !== "inferida" && add(x.brand)));
+  BRAND_NAMES = [...set.values()];
+  return BRAND_NAMES;
+}
+
+function setupGlobalSearch() {
+  const box = $("#gs"), out = $("#gsOut");
+  const hide = () => { out.style.display = "none"; };
+  document.addEventListener("click", e => { if (!$("#gsBox").contains(e.target)) hide(); });
+  box.addEventListener("keydown", e => { if (e.key === "Escape") { box.value = ""; hide(); } });
+  box.addEventListener("focus", () => { Promise.all([loadCat("fr").catch(() => []), loadCat("es").catch(() => [])]).then(() => { BRAND_NAMES = null; }); });
+  box.addEventListener("input", () => { clearTimeout(GS_TIMER); GS_TIMER = setTimeout(run, 150); });
+  function run() {
+    const q = fold(box.value.trim());
+    if (q.length < 2) { hide(); return; }
+    const words = q.split(/\s+/), hit = s => { const f = fold(s); return words.every(w => f.includes(w)); };
+    const groups = [];
+    const cig = DB.cigars.filter(c => hit(`${c.brand} ${c.line} ${c.country} ${c.vitola} ${c.wrapper} ${c.flavors.join(" ")}`)).slice(0, 6);
+    if (cig.length) groups.push(["Fichas", cig.map(c => ({ t: name(c), s: `${c.country} · ${c.vitola}`, go: () => openDetail(c.id) }))]);
+    const br = allBrandNames().filter(b => hit(b)).slice(0, 6);
+    if (br.length) groups.push(["Marcas", br.map(b => ({ t: b, s: "página da marca", go: () => openBrand(b) }))]);
+    for (const [k, flag] of [["fr", "🇫🇷"], ["es", "🇪🇸"]]) {
+      const l = (CATS[k] || []).filter(x => !x.cigarillo && hit(`${x.label} ${x.brand || ""}`)).slice(0, 5);
+      if (l.length) groups.push([`Preços oficiais ${flag}`, l.map(x => ({ t: x.label, s: `${eur(x.unit_eur)}${x.pack_size ? " · emb. " + x.pack_size : ""}`, go: () => {
+        goTab("frcat"); $("#fCountryP").value = k; CAT_COUNTRY = k; initFr(); setTimeout(() => { $("#fq").value = x.label; FR_LIMIT = 100; renderFr(); }, 400); } }))]);
+    }
+    const gl = GLOSSARY.filter(([t, d]) => hit(t) || (q.length > 3 && hit(d))).slice(0, 4);
+    if (gl.length) groups.push(["Glossário", gl.map(([t, d]) => ({ t, s: d.slice(0, 70) + (d.length > 70 ? "…" : ""), go: () => { goTab("guides"); $("#glq").value = t.split(" (")[0]; $("#glq").dispatchEvent(new Event("input")); $("#glq").scrollIntoView({ block: "center" }); } }))]);
+    const sec = Object.entries(SECTIONS).filter(([, v]) => hit(v)).slice(0, 4);
+    if (sec.length) groups.push(["Secções", sec.map(([k, v]) => ({ t: v, s: "abrir", go: () => goTab(k) }))]);
+    const items = [];
+    out.innerHTML = groups.length ? groups.map(([g, l]) => `<div class="sub" style="margin:6px 4px 2px;color:var(--gold)">${esc(g)}</div>` + l.map(it => { items.push(it); return `<div class="gsItem" data-i="${items.length - 1}" style="padding:6px 8px;border-radius:8px;cursor:pointer"><b>${esc(it.t)}</b> <span class="sub">${esc(it.s)}</span></div>`; }).join("")).join("")
+      : "<p class='muted' style='margin:6px'>Sem resultados.</p>";
+    out.style.display = "";
+    out.querySelectorAll(".gsItem").forEach(el => {
+      el.onmouseenter = () => el.style.background = "var(--panel2)"; el.onmouseleave = () => el.style.background = "";
+      el.onclick = () => { hide(); items[+el.dataset.i].go(); };
+    });
+  }
+}
+
+/* ---------- Página de marca ---------- */
+function openBrand(brand) {
+  document.querySelectorAll("#subtabs > button").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll("main > section").forEach(s => s.classList.toggle("active", s.id === "brandpage"));
+  scrollTo(0, 0);
+  $("#brandOut").innerHTML = "<p class='muted'>A carregar…</p>";
+  Promise.all([loadCat("fr").catch(() => []), loadCat("es").catch(() => []), PRICES ? Promise.resolve() : fetch("data/prices.json").then(r => r.json()).then(p => PRICES = p).catch(() => {}),
+               COMPARE ? Promise.resolve() : fetch("data/compare.json").then(r => r.json()).then(c => COMPARE = c).catch(() => {})]).then(() => {
+    const fb = fold(brand);
+    const same = b => b && fold(b) === fb;
+    const fichas = DB.cigars.filter(c => same(c.brand));
+    const wp = (BRANDS || []).find(b => same(b.brand));
+    const facts = (fichas.find(c => c.brandFacts) || {}).brandFacts;
+    const fr = (CATS.fr || []).filter(x => same(x.brand) && !x.cigarillo), es = (CATS.es || []).filter(x => same(x.brand) && !x.cigarillo);
+    const range = l => { const p = l.map(x => x.unit_eur).filter(v => v != null); return p.length ? `${eur(Math.min(...p))} – ${eur(Math.max(...p))}` : "—"; };
+    const trend = PRICES && PRICES.brands.find(b => same(b.brand));
+    const cmp = COMPARE ? COMPARE.rows.filter(r => same(r.brand)) : [];
+    const cmpMed = cmp.length ? [...cmp.map(r => r.diff_pct)].sort((a, b) => a - b)[Math.floor(cmp.length / 2)] : null;
+    const table = (l, flag) => l.length ? `<details><summary style="cursor:pointer">${flag} ${l.length} referências · ${range(l)} por unidade</summary><div style="overflow-x:auto"><table><tr><th>Referência</th><th>Vitola</th><th>Emb.</th><th>€/unidade</th></tr>${[...l].sort((a, b) => (a.unit_eur ?? 1e9) - (b.unit_eur ?? 1e9)).slice(0, 60).map(x => `<tr><td>${esc(x.label)}${x.special ? ` <span class="badge warn">${esc(x.special)}</span>` : ""}</td><td>${esc(x.vitola || "—")}</td><td>${x.pack_size || "—"}</td><td>${eur(x.unit_eur)}</td></tr>`).join("")}</table></div></details>` : `<p class="muted">${flag} sem referências.</p>`;
+    $("#brandOut").innerHTML = `<div class="panel"><button class="btn ghost sm" id="brandBack">← Voltar</button>
+        <h2 style="margin:10px 0 4px">${esc(brand)}</h2>
+        <p class="muted">${wp ? `Fabricante: ${esc(wp.manufacturer || "—")}${wp.notes ? " · " + esc(wp.notes) : ""} <span class="sub">(Wikipédia, CC BY-SA)</span>` : ""}
+        ${facts ? `<br>Wikidata: ${facts.inception_year ? "fundada em " + facts.inception_year : "ano desconhecido"}${facts.countries && facts.countries.length ? " · " + esc(facts.countries.join(", ")) : ""} · <a href="${esc(facts.url)}" target="_blank" rel="noopener">fonte</a>` : ""}</p>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">
+          ${[[fichas.length, "fichas no Boss Cigar"], [fr.length, "referências 🇫🇷"], [es.length, "referências 🇪🇸"],
+             [trend ? pct(trend.median_pct) : "—", "variação mediana 🇫🇷 (desde jan. 2025)"], [cmpMed != null ? pct(cmpMed) : "—", "Espanha face a França (mediana)"]]
+            .map(([v, l]) => `<div class="panel" style="margin:0;text-align:center"><div style="font-size:1.4rem;color:var(--gold)">${v}</div><div class="sub">${l}</div></div>`).join("")}</div></div>
+      ${fichas.length ? `<div class="panel"><h3 style="margin-top:0">Fichas</h3><div class="grid" id="brandCards">${fichas.map(cardHTML).join("")}</div></div>` : ""}
+      <div class="panel"><h3 style="margin-top:0">Catálogos oficiais</h3>${table(fr, "🇫🇷 França")}${table(es, "🇪🇸 Espanha")}</div>
+      ${cmp.length ? `<div class="panel" style="overflow-x:auto"><h3 style="margin-top:0">França vs Espanha</h3><table><tr><th>Referência</th><th>🇫🇷</th><th>🇪🇸</th><th>Dif.</th></tr>${cmp.slice(0, 30).map(r => `<tr><td>${esc(r.label)}</td><td>${eur(r.fr)}</td><td>${eur(r.es)}</td><td>${pct(r.diff_pct)}</td></tr>`).join("")}</table></div>` : ""}`;
+    $("#brandBack").onclick = () => goTab(LAST_TAB);
+    if ($("#brandCards")) bindCards($("#brandCards"));
+  });
+}
+window.openBrand = openBrand;
+
+/* ---------- Lojas: filtro de especialistas ---------- */
+const SPECIALIST = /habano|charut|\bcigars?\b|davidoff|\bpuros?\b/i;  // "cigarros" (PT) e "cigarette" são cigarros, não charutos
+function renderShops() {
+  if (!shopMap) {
+    shopMap = L.map("shopMap").setView([39.6, -8.2], 6);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "© OpenStreetMap contributors" }).addTo(shopMap);
+    shopLayer = L.layerGroup().addTo(shopMap);
+    $("#sKind").addEventListener("input", renderShops);
+  }
+  const q = $("#sq").value.trim().toLowerCase(), only = $("#sKind").value === "cig";
+  const isSpec = s => s.kind === "cigar" || SPECIALIST.test(s.name);
+  const l = SHOPS.filter(s => (!only || isSpec(s)) && (!q || (s.name + " " + (s.city || "")).toLowerCase().includes(q)));
+  shopLayer.clearLayers();
+  l.forEach(s => L.circleMarker([s.lat, s.lng], { radius: isSpec(s) ? 8 : 5, color: "#d4a85a", fillColor: isSpec(s) ? "#d4a85a" : "#e0703a", fillOpacity: .9, weight: 1 })
+    .addTo(shopLayer).bindPopup(`<b>${esc(s.name)}</b>${isSpec(s) ? " ⭐" : ""}<br>${esc([s.street, s.city].filter(Boolean).join(", "))}${s.opening_hours ? "<br><small>" + esc(s.opening_hours) + "</small>" : ""}${s.website ? `<br><a href="${esc(s.website)}" target="_blank" rel="noopener">site</a>` : ""} · <a href="${esc(s.osm)}" target="_blank" rel="noopener">OSM</a>`));
+  $("#shopList").innerHTML = SHOPS.length
+    ? `<p class="muted">${l.length} local(is)${only ? " especializados" : ""} · ⭐ = especialista em charutos</p>` + l.map(s => `<div class="item"><b>${esc(s.name)}</b>${isSpec(s) ? " ⭐" : ""} <span class="muted">· ${esc([s.street, s.city].filter(Boolean).join(", ") || "morada não indicada")}</span></div>`).join("")
+    : "<p class='muted'>Sem dados do OpenStreetMap neste build.</p>";
+}
+
+/* ---------- Livro: roteiro, vinhos portugueses, mapa de sabores ---------- */
+const ROADMAP = [
+  ["Fase 1 — Fundação", "Charutos suaves, 5–10 fumadas. Aprender corte, lume e ritmo; vocabulário base (cremoso, cedro, feno).",
+    ["Macanudo Café", "Perdomo Champagne", "Oliva Connecticut Reserve", "Arturo Fuente Chateau Fuente", "Montecristo White", "Davidoff Signature"]],
+  ["Fase 2 — Médios e primeiros cubanos", "10–20 fumadas. Reconhecer origens, distinguir força de corpo.",
+    ["Arturo Fuente Hemingway Short Story", "Oliva Serie G", "Undercrown Shade", "Plasencia Alma del Campo", "E.P. Carrillo Encore", "Montecristo No. 4", "Hoyo de Monterrey Epicure No. 2", "Romeo y Julieta Short Churchill", "H. Upmann Half Corona"]],
+  ["Fase 3 — Encorpados e maduros", "Aguentar e apreciar potência; dominar o retrohale; explorar capas escuras.",
+    ["Padrón 2000 Maduro", "Oliva Serie V", "My Father Le Bijou 1922", "Liga Privada No. 9", "Undercrown Maduro", "Aging Room Quattro", "Partagás Serie D No. 4", "Bolívar Belicosos Finos", "Ramón Allones Specially Selected"]],
+  ["Fase 4 — Referências absolutas", "Calibrar o topo da escala e afinar o julgamento.",
+    ["Padrón 1964 Anniversary", "Padrón 1926", "Fuente Fuente Opus X", "Davidoff Aniversario", "Cohiba Siglo VI", "Cohiba Robustos", "Trinidad Fundadores", "Montecristo No. 2", "My Father The Judge", "Plasencia Alma Fuerte"]],
+];
+const PT_WINES = [
+  ["Porto Tawny 10/20 anos", "A harmonização portuguesa canónica: frutos secos, caramelo e madeira a espelhar cacau e café de um maduro (San Andrés, Broadleaf, Padrón)."],
+  ["Porto Vintage / LBV", "Fruta negra e estrutura para nicaraguenses encorpados ou um Partagás cubano. Precisa de charuto com espinha."],
+  ["Porto Ruby / branco reserva", "Versátil e fresco com charutos médios frutados; o portonic funciona com um Connecticut numa tarde de verão."],
+  ["Madeira Bual / Malmsey", "A acidez corta a densidade do fumo; Malmsey com um oscuro é caramelo salgado líquido."],
+  ["Madeira Sercial / Verdelho", "Secos: para charutos suaves a médios."],
+  ["Moscatel de Setúbal", "Laranja confitada e mel: brilhante com capas Cameroon e Habanos adocicados (Hoyo, Por Larrañaga)."],
+];
+const FLAVOR_MAP = [
+  ["Cuba (Habanos)", "Twang, mel, cedro, couro fino, terra elegante, café claro", "Média (exceções fortes: Bolívar, Partagás)"],
+  ["Nicarágua", "Pimenta, terra doce, cacau, café, açúcar mascavado", "Média-alta a alta"],
+  ["Rep. Dominicana", "Cremoso, pão torrado, amêndoa, cedro claro, flor", "Suave a média (exceções: LFD, Opus X)"],
+  ["Honduras", "Terra funda, couro, especiaria rústica, madeira", "Média-alta"],
+  ["Capa Connecticut Shade", "Natas, feno, manteiga, pimenta branca leve", "Ligeira"],
+  ["Capa Connecticut Broadleaf", "Chocolate, café, terra doce, melaço", "Média"],
+  ["Capa San Andrés (México)", "Chocolate negro, brownie, terra húmida, mineral", "Média"],
+  ["Capa Cameroon", "Doce-picante, pão de especiarias, madeira doce", "Média"],
+  ["Capa Habano (Equador/Nicarágua)", "Especiaria, madeira, fruto seco, mais mordida", "Média-alta"],
+  ["Capa Sumatra", "Doce especiado, cedro, chá", "Média"],
+  ["Brasil (Mata Fina / Arapiraca)", "Café, cacau, doçura escura suave", "Média"],
+];
+function setupBook() {
+  const done = () => lsGet("bc-roadmap", []);
+  const draw = () => {
+    const d = done();
+    $("#roadmap").innerHTML = ROADMAP.map(([t, txt, items], pi) => {
+      const n = items.filter(x => d.includes(x)).length;
+      return `<details ${pi === 0 || (n > 0 && n < items.length) ? "open" : ""} style="margin-bottom:8px"><summary style="cursor:pointer"><b>${esc(t)}</b> <span class="sub">${n}/${items.length}</span>
+        <span style="display:inline-block;width:90px;height:6px;background:var(--line);border-radius:3px;vertical-align:middle;margin-left:6px"><span style="display:block;height:6px;width:${Math.round(n / items.length * 100)}%;background:var(--ember);border-radius:3px"></span></span></summary>
+        <p class="sub">${esc(txt)}</p>${items.map(x => `<label style="display:flex;gap:8px;align-items:center;padding:3px 0"><input type="checkbox" data-rm="${esc(x)}" ${d.includes(x) ? "checked" : ""} style="width:auto"> <a href="#" data-rq="${esc(x)}">${esc(x)}</a></label>`).join("")}</details>`;
+    }).join("") + `<p class="warn">Método: mesmo charuto em dias diferentes; depois dois da mesma vitola e origens diferentes; uma variável de cada vez. Provar às cegas com amigos é o exame final.</p>`;
+    $("#roadmap").querySelectorAll("[data-rm]").forEach(cb => cb.onchange = () => { let l = done(); l = cb.checked ? [...new Set([...l, cb.dataset.rm])] : l.filter(x => x !== cb.dataset.rm); lsSet("bc-roadmap", l); draw(); });
+    $("#roadmap").querySelectorAll("[data-rq]").forEach(a => a.onclick = e => { e.preventDefault(); $("#gs").value = a.dataset.rq; $("#gs").focus(); $("#gs").dispatchEvent(new Event("input")); scrollTo(0, 0); });
+  };
+  draw();
+  $("#ptWines").innerHTML = `<div class="grid">${PT_WINES.map(([t, d]) => `<div class="panel" style="margin:0"><b>${esc(t)}</b><div class="sub">${esc(d)}</div></div>`).join("")}</div>`;
+  $("#flavorMap").innerHTML = `<table><tr><th>Origem / capa</th><th>Perfil típico</th><th>Força típica</th></tr>${FLAVOR_MAP.map(r => `<tr><td>${esc(r[0])}</td><td class="sub">${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join("")}</table>`;
+}
+
+/* ---------- arranque desta parte ---------- */
+(function bootExtras() {
+  const start = () => {
+    if (!DB.cigars.length) return setTimeout(start, 100);
+    setupGroups(); setupGlobalSearch(); setupBook();
+    if (!SYNC_KEYS.includes("bc-roadmap")) SYNC_KEYS.push("bc-roadmap");
+  };
+  start();
+})();

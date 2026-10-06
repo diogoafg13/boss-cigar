@@ -321,3 +321,27 @@ def test_feed_diff_and_xml():
     import xml.etree.ElementTree as ET
     root = ET.fromstring(feed.build_feed([prev, cur], []))
     assert len(root.findall("{http://www.w3.org/2005/Atom}entry")) == 1
+
+
+# --- Notificações e vinhos portugueses ---------------------------------------
+from bosscigar import notify  # noqa: E402
+
+
+def test_pt_wines_rules():
+    s = pairing.suggest(5, "Maduro")
+    assert "Porto Vintage / LBV" in s["ptWines"] and "Madeira Malmsey" in s["ptWines"]
+    assert "Moscatel de Setúbal" in pairing.suggest(3, "Cameroon")["ptWines"]
+    assert pairing.suggest(None, "Cubano")["ptWines"] == ["Porto Tawny 10 anos"]
+
+
+def test_notify_dry_run(tmp_path, monkeypatch):
+    prev = {"date": "2026-09-01", "prices": {"a|10": 10.0}, "labels": {"a|10": ["Montecristo n°2", 10, False]}}
+    cur = {"date": "2026-11-01", "prices": {"a|10": 11.0}, "labels": {}}
+    fp = tmp_path / "feed.xml"
+    fp.write_text(feed.build_feed([prev, cur], []), encoding="utf-8")
+    monkeypatch.setattr(notify, "STATE", tmp_path / "sent.json")
+    monkeypatch.setattr(notify, "watchlist", lambda: ["montecristo n°2"])
+    e = notify.entries(fp)[0]
+    assert "Montecristo n°2" in notify.message(e, ["montecristo n°2"])
+    assert len(notify.send_new("t", feed_path=fp, dry=True)) == 1
+    assert notify.send_new("t", feed_path=fp, dry=True) == []  # não repete

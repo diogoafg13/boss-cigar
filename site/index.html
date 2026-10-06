@@ -60,6 +60,9 @@
   <button id="langBtn" class="btn ghost sm" style="position:absolute;right:16px;top:16px" aria-label="Language">EN</button>
   <h1>🚬 Boss Cigar</h1>
   <p>Base de dados de charutos com fontes abertas · terroir · produção por país · onde comprar · humidor · diário de provas</p>
+
+  <div id="gsBox" style="max-width:520px;margin:12px auto 0;position:relative"><input id="gs" type="search" placeholder="🔎 Pesquisar tudo: charutos, marcas, preços oficiais, glossário…" autocomplete="off" aria-label="Pesquisa global">
+    <div id="gsOut" class="panel" style="display:none;position:absolute;left:0;right:0;top:44px;z-index:2000;max-height:60vh;overflow:auto;text-align:left;padding:8px"></div></div>
 </header>
 
 <nav id="tabs">
@@ -77,7 +80,7 @@
   <button data-tab="tools">Ferramentas</button>
   <button data-tab="guides">Guias</button>
   <button data-tab="journal">Diário</button>
-  <button data-tab="guide">Guia PDF</button>
+  <button data-tab="guide">Livro</button>
   <button data-tab="sources">Fontes</button>
 </nav>
 
@@ -181,7 +184,8 @@
   <section id="shops">
     <div class="panel"><h2 style="margin-top:0">Tabacarias em Portugal</h2>
       <p class="muted">Locais marcados no OpenStreetMap como tabacaria, loja de charutos ou sala de fumo (© OpenStreetMap contributors, ODbL). Os dados são da comunidade: podem faltar lojas ou haver informação desatualizada. Podes corrigir diretamente no OpenStreetMap.</p>
-      <input id="sq" type="search" placeholder="Filtrar por nome ou cidade…"></div>
+      <div class="filters"><input id="sq" type="search" placeholder="Filtrar por nome ou cidade…"><select id="sKind"><option value="">Todas as tabacarias</option><option value="cig">Só especialistas em charutos (Casa del Habano, etc.)</option></select></div>
+      <p class="warn">Em Portugal, o OpenStreetMap só identifica algumas lojas especializadas pelo nome (ex.: La Casa del Habano). Se conheces uma que falta, podes acrescentá-la no OpenStreetMap e aparece aqui no build seguinte.</p></div>
     <div id="shopMap" style="height:440px;border-radius:12px;border:1px solid var(--line);margin-bottom:14px"></div>
     <div id="shopList"></div>
   </section>
@@ -270,8 +274,17 @@
       <p>Guia em português: história, produção, identificação, degustação, harmonizações e armazenamento.</p>
       <div class="row"><a class="btn" href="docs/do-zero-ao-expert-livro-do-charuto.pdf" download>⬇ Descarregar PDF</a>
         <a class="btn ghost" href="docs/do-zero-ao-expert-livro-do-charuto.pdf" target="_blank" rel="noopener">Abrir no browser</a></div>
-      <p class="warn">Se der erro 404, o PDF ainda não foi adicionado à pasta <code>site/docs/</code>.</p></div>
+      <p class="warn">50 páginas, formato A5, pensado para ler no telemóvel ou no tablet (no iPhone: Partilhar → Livros). É um guia editorial do projeto: as fichas e os preços do site vêm das fontes citadas, não do livro.</p></div>
+    <div class="panel"><h2 style="margin-top:0">Roteiro de aprendizagem</h2>
+      <p class="muted">As quatro fases do capítulo 34. Marca o que já provaste; cada nome pesquisa as fichas e os catálogos oficiais. Regra de ouro: um charuto de cada vez, sempre com notas, nunca com pressa, nunca em jejum.</p>
+      <div id="roadmap"></div></div>
+    <div class="panel"><h2 style="margin-top:0">Porto, Madeira e Moscatel</h2>
+      <p class="muted">A vantagem portuguesa (capítulo 28). Estas sugestões aparecem também em cada ficha.</p><div id="ptWines"></div></div>
+    <div class="panel" style="overflow-x:auto"><h2 style="margin-top:0">Mapa de sabores por origem</h2>
+      <p class="muted">Perfis típicos (capítulo 23); há sempre exceções. Exercício: lê a ficha (capa, capote, tripa), prevê o perfil e confirma a fumar.</p><div id="flavorMap"></div></div>
   </section>
+
+  <section id="brandpage"><div id="brandOut"></div></section>
 
   <section id="sources">
     <div class="panel"><h2 style="margin-top:0">Origem e rigor dos dados</h2>

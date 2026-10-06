@@ -69,6 +69,13 @@ window.BC_EN = {
   "Sem leituras. O ideal é 65–70% de humidade e 16–21 °C.": "No readings. Ideal is 65–70% humidity and 16–21 °C.",
   "Faixa verde: 65–70%.": "Green band: 65–70%.", "Vazia. Usa ♡ no separador Preços oficiais.": "Empty. Use ♡ in the Official prices tab.",
   "Sem dados ainda: usa o Diário e o Humidor.": "No data yet: use the Journal and the Humidor.", "Provas por mês (últimos 12 meses)": "Tastings per month (last 12 months)",
+  "Descobrir": "Discover", "Comprar": "Buy", "O meu": "Mine", "Aprender": "Learn", "Livro": "Book",
+  "🔎 Pesquisar tudo: charutos, marcas, preços oficiais, glossário…": "🔎 Search everything: cigars, brands, official prices, glossary…",
+  "Fichas": "Profiles", "Glossário": "Glossary", "Secções": "Sections", "Sem resultados.": "No results.",
+  "Roteiro de aprendizagem": "Learning roadmap", "Porto, Madeira e Moscatel": "Port, Madeira and Moscatel", "Mapa de sabores por origem": "Flavour map by origin",
+  "Origem / capa": "Origin / wrapper", "Perfil típico": "Typical profile", "Força típica": "Typical strength",
+  "Todas as tabacarias": "All tobacco shops", "Só especialistas em charutos (Casa del Habano, etc.)": "Cigar specialists only (Casa del Habano, etc.)",
+  "← Voltar": "← Back", "Catálogos oficiais": "Official catalogues", "França vs Espanha": "France vs Spain", "Vinho português:": "Portuguese wine:",
 };
 (function () {
   const PL = { "Pesquisar marca, sabor, bebida…": 1 };

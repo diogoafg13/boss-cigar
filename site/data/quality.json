@@ -13,17 +13,17 @@
  "shops_pt": 149,
  "tobacco_countries": 142,
  "regions": 12,
- "verified_share": 0.932,
- "cigars_with_verified_fields": 41,
+ "verified_share": 0.977,
+ "cigars_with_verified_fields": 43,
  "strength_distribution": {
-  "1": 4,
+  "1": 8,
   "2": 2,
-  "3": 10,
-  "4": 8,
-  "5": 6,
-  "sem dado": 14
+  "3": 13,
+  "4": 9,
+  "5": 9,
+  "sem dado": 3
  },
- "cigars_without_strength": 14,
+ "cigars_without_strength": 3,
  "regions_without_cigars": [
   "cameroon",
   "condega",
@@ -87,8 +87,6 @@
   }
  ],
  "unverified_cigars": [
-  "dannemann-moods",
-  "diplomaticos-no-2",
-  "sancho-panza-belicosos"
+  "dannemann-moods"
  ]
 }

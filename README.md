@@ -67,6 +67,18 @@ Tudo o que é pessoal fica no browser (localStorage) e pode ser exportado em JSO
 - **Sincronização**: diário, humidor, higrómetro, favoritos, desejos e notas de amigos num Gist privado do utilizador (token guardado só no browser); a reposição junta sem apagar nada.
 - **Guias**: também calculadora de Boveda (regra do fabricante) e glossário pesquisável.
 - **Inglês**: botão EN/PT para a interface (menus, títulos, botões); os dados mantêm a língua de origem.
+- **Navegação**: 4 grupos (Descobrir, Comprar, O meu, Aprender) e pesquisa global no topo (fichas, marcas, preços oficiais FR/ES, glossário, secções).
+- **Páginas de marca**: fichas, referências e intervalos de preço em França e Espanha, variação de preço, comparação FR/ES, Wikipédia e Wikidata.
+- **Livro**: "Do Zero ao Expert" em PDF (`site/docs/`), roteiro de aprendizagem com progresso, vinhos portugueses (Porto, Madeira, Moscatel) e mapa de sabores por origem. É conteúdo editorial do projeto, não fonte de verificação.
+- **Lojas**: filtro de especialistas em charutos no mapa (identificados pelo nome no OpenStreetMap).
+
+## Notificações push (opcional)
+
+1. Instala a app [ntfy](https://ntfy.sh) no telemóvel e subscreve um tópico com um nome difícil de adivinhar (ex.: `boss-cigar-<algo-aleatório>`).
+2. No GitHub: Settings → Secrets and variables → Actions → New repository secret: `NTFY_TOPIC` = esse nome.
+3. Edita `data/seed/watchlist.yml` com as referências que queres destacar.
+
+A cada execução do workflow, cada entrada nova do feed (nova edição francesa ou alteração em Espanha) gera uma notificação. As referências da watchlist aparecem em destaque.
 
 ## Correr localmente
 
@@ -104,15 +116,14 @@ O PDF do guia vai em `site/docs/do-zero-ao-expert-livro-do-charuto.pdf`.
 
 ## Estado dos dados
 
-44 fichas, das quais 41 têm campos confirmados numa fonte citada (`verified_fields` + `sources`): medidas e vitola de galera (Wikipédia, listas de vitolas das marcas cubanas), capa, país e força (fichas técnicas dos fabricantes/retalhistas). A verificação corrigiu medidas erradas (ex.: H. Upmann Magnum 50, Cohiba Siglo VI, Padrón 1926 No. 9, Oliva Melanio, Liga Privada No. 9).
+44 fichas, das quais 43 têm campos confirmados numa fonte citada (`verified_fields` + `sources`): medidas e vitola de galera (Wikipédia, listas de vitolas das marcas cubanas), capa, país e força (fichas técnicas dos fabricantes/retalhistas). A verificação corrigiu medidas erradas (ex.: H. Upmann Magnum 50, Cohiba Siglo VI, Padrón 1926 No. 9, Oliva Melanio, Liga Privada No. 9).
 
-- **Força** só é preenchida quando há fonte; 14 fichas mostram "força sem dado".
+- **Força** só é preenchida quando há fonte. Nos Habanos usa-se a [classificação oficial de intensidade da Habanos S.A.](https://www.habanos.com/en/strengths/) por marca/linha; 3 fichas ficam "sem dado" (H. Upmann tem duas classificações e o Lusitanias não tem linha listada).
 - **Sabores** das fichas originais continuam por confirmar (não há fonte aberta); as fichas novas não têm sabores inventados.
 - Os sabores sentidos por cada utilizador (prova guiada) ficam no browser dele e alimentam as recomendações.
 
 ## Roadmap
 
-- [ ] Força das fichas cubanas sem fonte (procurar classificação oficial de intensidade da Habanos)
 - [ ] Fotos de anilhas e vitolas (apenas com licença livre)
 - [ ] Notas de prova partilhadas entre utilizadores (exige backend; ex.: GitHub Discussions via giscus)
 - [ ] Notificação de dados desatualizados (campos sem verificação há mais de N meses)
