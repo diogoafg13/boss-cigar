@@ -1269,7 +1269,7 @@
    "label": "Diplomaticos n°2",
    "fr_label": "Diplomaticos n°2",
    "es_label": "Diplomáticos Nº 2",
-   "brand": "Diplomaticos",
+   "brand": "Diplomáticos",
    "fr": 18.4,
    "es": 20.6,
    "diff_pct": 12.0
@@ -2403,7 +2403,7 @@
    "label": "Partagas Lusitanias",
    "fr_label": "Partagas Lusitanias",
    "es_label": "Partagas Lusitanias",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 35.6,
    "es": 32.2,
    "diff_pct": -9.6
@@ -2412,7 +2412,7 @@
    "label": "Partagas Maduro N°1",
    "fr_label": "Partagas Maduro N°1",
    "es_label": "Partagas Maduro Nº 1",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 25.7,
    "es": 23.0,
    "diff_pct": -10.5
@@ -2421,7 +2421,7 @@
    "label": "Partagas Maduro N°2",
    "fr_label": "Partagas Maduro N°2",
    "es_label": "Partagas Maduro nº 2",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 26.4,
    "es": 23.2,
    "diff_pct": -12.1
@@ -2430,7 +2430,7 @@
    "label": "Partagás Cedros Año Chino",
    "fr_label": "Partagas Cedros (año chino)",
    "es_label": "Partagás Cedros Año Chino",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 81.0,
    "es": 64.0,
    "diff_pct": -21.0
@@ -2646,7 +2646,7 @@
    "label": "Ramon Allones Allones N°3",
    "fr_label": "Ramon Allones Allones N°3",
    "es_label": "Ramón Allones Allones No.3",
-   "brand": "Ramon Allones",
+   "brand": "Ramón Allones",
    "fr": 23.0,
    "es": 22.2,
    "diff_pct": -3.5
@@ -2655,7 +2655,7 @@
    "label": "Ramon Allones Gigantes",
    "fr_label": "Ramon Allones Gigantes",
    "es_label": "Ramon Allones Gigantes",
-   "brand": "Ramon Allones",
+   "brand": "Ramón Allones",
    "fr": 29.7,
    "es": 20.0,
    "diff_pct": -32.7
