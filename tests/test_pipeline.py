@@ -329,3 +329,16 @@ def test_pt_wines_rules():
     assert "Porto Vintage / LBV" in s["ptWines"] and "Madeira Malmsey" in s["ptWines"]
     assert "Moscatel de Setúbal" in pairing.suggest(3, "Cameroon")["ptWines"]
     assert pairing.suggest(None, "Cubano")["ptWines"] == ["Porto Tawny 10 anos"]
+
+
+def test_history_keeps_each_seen_edition(tmp_path, monkeypatch):
+    monkeypatch.setattr(douane_fr, "CACHE_DIR", tmp_path)
+    monkeypatch.setattr(http, "CACHE_DIR", tmp_path)
+    monkeypatch.setattr(douane_fr, "archive_urls", lambda: [])
+    nov = {"edition": "Arrêté du 1 octobre 2026, applicable au 1er novembre 2026", "items": _fr_items()["items"]}
+    snaps, _ = douane_fr.price_history(nov)
+    assert [s["date"] for s in snaps] == ["2026-11-01"]
+    dec_items = [{**i, "unit_eur": (i["unit_eur"] or 0) + 1} for i in _fr_items()["items"]]
+    dec = {"edition": "Arrêté du 1 novembre 2026, applicable au 1er décembre 2026", "items": dec_items}
+    snaps, _ = douane_fr.price_history(dec)
+    assert [s["date"] for s in snaps] == ["2026-11-01", "2026-12-01"]  # novembro não se perde

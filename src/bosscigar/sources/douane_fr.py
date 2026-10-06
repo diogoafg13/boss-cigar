@@ -22,8 +22,8 @@ import unicodedata
 import requests
 import yaml
 
-from .. import SEED_DIR, USER_AGENT
-from .http import SourceError, fetch_with_cache
+from .. import CACHE_DIR, SEED_DIR, USER_AGENT
+from .http import SourceError, cache_read, cache_write, fetch_with_cache
 
 LISTING = "https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures"
 BASE = "https://www.douane.gouv.fr"
@@ -232,7 +232,15 @@ def price_history(current: dict) -> tuple[list[dict], str]:
         if data and data.get("date"):
             snaps.append(data)
     if current.get("items"):
-        snaps.append(snapshot(current))
+        cur = snapshot(current)
+        snaps.append(cur)
+        # guarda cada edição vista, para o histórico não depender da lista manual em sources.yml
+        if cur.get("date"):
+            cache_write(f"douane_fr_edition_{cur['date']}", cur)
+    for f in sorted(CACHE_DIR.glob("douane_fr_edition_*.json")):
+        data = cache_read(f.stem)
+        if data and data.get("date"):
+            snaps.append(data)
     by_date = {}
     for s in snaps:  # várias versões no mesmo mês (ex.: '_0'): fica a última lida
         by_date[s["date"]] = s
