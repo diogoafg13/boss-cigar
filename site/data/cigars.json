@@ -1,18 +1,19 @@
 {
  "meta": {
-  "built_at": "2026-10-06T22:56:51+00:00",
+  "built_at": "2026-10-07T15:14:16+00:00",
   "version": "0.1.0",
-  "mode": "auto",
+  "mode": "cache",
   "sources": {
    "seed": "ok",
-   "wikipedia": "ok",
-   "wikidata": "ok",
-   "nasa_power": "ok",
-   "faostat": "ok",
+   "wikipedia": "CACHE",
+   "wikidata": "CACHE",
+   "nasa_power": "CACHE",
+   "faostat": "CACHE",
    "openstreetmap": "CACHE",
-   "douane_fr": "ok",
-   "douane_fr_historico": "ok",
-   "cmt_espanha": "ok"
+   "douane_fr": "CACHE",
+   "douane_fr_historico": "CACHE",
+   "cmt_espanha": "CACHE",
+   "cmt_estancos": "CACHE"
   },
   "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
   "counts": {
@@ -63,6 +64,11 @@
     "source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — preços de labores",
     "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
     "url": "https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx"
+   },
+   {
+    "source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — red de expendedurías (estancos)",
+    "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
+    "url": "https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/Red-Expendedurias-y-PVR.aspx"
    }
   ]
  },
@@ -76,20 +82,7 @@
    "note": "Considerada a melhor zona de tabaco do mundo; terra de origem dos charutos cubanos de topo.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.3,
-     23.4,
-     24.4,
-     26.3,
-     27.7,
-     28.2,
-     28.7,
-     28.8,
-     28.0,
-     26.8,
-     24.5,
-     23.4
-    ],
+    "rain_mm_annual": 812.0,
     "rain_mm_monthly": [
      35.0,
      28.0,
@@ -104,6 +97,7 @@
      38.0,
      24.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      75.0,
      74.0,
@@ -118,10 +112,22 @@
      77.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 26.1,
-    "rain_mm_annual": 812.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.3,
+     23.4,
+     24.4,
+     26.3,
+     27.7,
+     28.2,
+     28.7,
+     28.8,
+     28.0,
+     26.8,
+     24.5,
+     23.4
+    ]
    }
   },
   {
@@ -133,20 +139,7 @@
    "note": "Capital do charuto nicaraguense; solo vulcânico, perfis ricos e picantes.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.6,
-     23.9,
-     25.4,
-     26.8,
-     25.6,
-     23.8,
-     23.8,
-     24.1,
-     23.5,
-     22.9,
-     22.2,
-     22.2
-    ],
+    "rain_mm_annual": 1257.0,
     "rain_mm_monthly": [
      4.0,
      4.0,
@@ -161,6 +154,7 @@
      42.0,
      17.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      70.0,
      63.0,
@@ -175,10 +169,22 @@
      83.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 23.9,
-    "rain_mm_annual": 1257.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.6,
+     23.9,
+     25.4,
+     26.8,
+     25.6,
+     23.8,
+     23.8,
+     24.1,
+     23.5,
+     22.9,
+     22.2,
+     22.2
+    ]
    }
   },
   {
@@ -190,20 +196,7 @@
    "note": "Vale mais fresco e húmido; tabaco tendencialmente mais suave e elegante.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     21.7,
-     22.9,
-     24.3,
-     26.0,
-     25.3,
-     23.6,
-     23.4,
-     23.7,
-     23.4,
-     22.6,
-     21.7,
-     21.5
-    ],
+    "rain_mm_annual": 1057.0,
     "rain_mm_monthly": [
      16.0,
      14.0,
@@ -218,6 +211,7 @@
      52.0,
      37.0
     ],
+    "rh_pct_annual": 75.0,
     "rh_pct_monthly": [
      72.0,
      66.0,
@@ -232,10 +226,22 @@
      82.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 23.3,
-    "rain_mm_annual": 1057.0,
-    "rh_pct_annual": 75.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     21.7,
+     22.9,
+     24.3,
+     26.0,
+     25.3,
+     23.6,
+     23.4,
+     23.7,
+     23.4,
+     22.6,
+     21.7,
+     21.5
+    ]
    }
   },
   {
@@ -247,20 +253,7 @@
    "note": "Região vizinha de Estelí, conhecida por tabaco com doçura e especiaria.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.0,
-     23.3,
-     24.8,
-     26.3,
-     25.3,
-     23.5,
-     23.4,
-     23.8,
-     23.3,
-     22.5,
-     21.7,
-     21.6
-    ],
+    "rain_mm_annual": 1158.0,
     "rain_mm_monthly": [
      8.0,
      8.0,
@@ -275,6 +268,7 @@
      43.0,
      26.0
     ],
+    "rh_pct_annual": 75.0,
     "rh_pct_monthly": [
      72.0,
      65.0,
@@ -289,10 +283,22 @@
      83.0,
      79.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 23.4,
-    "rain_mm_annual": 1158.0,
-    "rh_pct_annual": 75.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.0,
+     23.3,
+     24.8,
+     26.3,
+     25.3,
+     23.5,
+     23.4,
+     23.8,
+     23.3,
+     22.5,
+     21.7,
+     21.6
+    ]
    }
   },
   {
@@ -304,20 +310,7 @@
    "note": "Solo vulcânico numa ilha do Lago Nicarágua; tabaco intenso e terroso.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     26.8,
-     27.5,
-     28.4,
-     29.4,
-     29.0,
-     28.0,
-     27.8,
-     28.1,
-     27.8,
-     27.4,
-     27.0,
-     26.9
-    ],
+    "rain_mm_annual": 1430.0,
     "rain_mm_monthly": [
      2.0,
      2.0,
@@ -332,6 +325,7 @@
      133.0,
      9.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      72.0,
      67.0,
@@ -346,10 +340,22 @@
      79.0,
      76.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 27.9,
-    "rain_mm_annual": 1430.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     26.8,
+     27.5,
+     28.4,
+     29.4,
+     29.0,
+     28.0,
+     27.8,
+     28.1,
+     27.8,
+     27.4,
+     27.0,
+     26.9
+    ]
    }
   },
   {
@@ -361,20 +367,7 @@
    "note": "Coração da produção dominicana; blends equilibrados, cremosos e consistentes.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     23.0,
-     23.3,
-     23.9,
-     25.0,
-     25.9,
-     26.9,
-     26.9,
-     27.1,
-     27.1,
-     26.4,
-     24.8,
-     23.6
-    ],
+    "rain_mm_annual": 627.0,
     "rain_mm_monthly": [
      49.0,
      29.0,
@@ -389,6 +382,7 @@
      86.0,
      56.0
     ],
+    "rh_pct_annual": 76.0,
     "rh_pct_monthly": [
      79.0,
      76.0,
@@ -403,10 +397,22 @@
      80.0,
      81.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.3,
-    "rain_mm_annual": 627.0,
-    "rh_pct_annual": 76.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     23.0,
+     23.3,
+     23.9,
+     25.0,
+     25.9,
+     26.9,
+     26.9,
+     27.1,
+     27.1,
+     26.4,
+     24.8,
+     23.6
+    ]
    }
   },
   {
@@ -418,20 +424,7 @@
    "note": "Vale do Jamastrán; tabaco de corpo médio a forte, com muitas fábricas.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     21.0,
-     22.5,
-     24.0,
-     25.6,
-     24.6,
-     22.8,
-     22.7,
-     23.1,
-     22.7,
-     21.8,
-     20.8,
-     20.7
-    ],
+    "rain_mm_annual": 1121.0,
     "rain_mm_monthly": [
      12.0,
      10.0,
@@ -446,6 +439,7 @@
      48.0,
      38.0
     ],
+    "rh_pct_annual": 74.0,
     "rh_pct_monthly": [
      71.0,
      64.0,
@@ -460,10 +454,22 @@
      83.0,
      78.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 22.7,
-    "rain_mm_annual": 1121.0,
-    "rh_pct_annual": 74.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     21.0,
+     22.5,
+     24.0,
+     25.6,
+     24.6,
+     22.8,
+     22.7,
+     23.1,
+     22.7,
+     21.8,
+     20.8,
+     20.7
+    ]
    }
   },
   {
@@ -475,20 +481,7 @@
    "note": "Origem de capas escuras (Maduro e Sumatra), com doçura e notas de cacau.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     21.4,
-     22.1,
-     23.7,
-     26.3,
-     27.9,
-     27.8,
-     27.2,
-     27.3,
-     27.0,
-     26.1,
-     23.9,
-     22.4
-    ],
+    "rain_mm_annual": 2138.0,
     "rain_mm_monthly": [
      100.0,
      53.0,
@@ -503,6 +496,7 @@
      216.0,
      95.0
     ],
+    "rh_pct_annual": 82.0,
     "rh_pct_monthly": [
      86.0,
      86.0,
@@ -517,10 +511,22 @@
      84.0,
      86.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.3,
-    "rain_mm_annual": 2138.0,
-    "rh_pct_annual": 82.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     21.4,
+     22.1,
+     23.7,
+     26.3,
+     27.9,
+     27.8,
+     27.2,
+     27.3,
+     27.0,
+     26.1,
+     23.9,
+     22.4
+    ]
    }
   },
   {
@@ -532,20 +538,7 @@
    "note": "Cruz das Almas e arredores; tabaco Mata Fina, doce e terroso, muito usado em capas Maduro.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     26.9,
-     27.0,
-     27.0,
-     26.0,
-     24.6,
-     22.9,
-     22.1,
-     22.4,
-     23.8,
-     25.8,
-     26.8,
-     27.1
-    ],
+    "rain_mm_annual": 786.0,
     "rain_mm_monthly": [
      77.0,
      72.0,
@@ -560,6 +553,7 @@
      54.0,
      59.0
     ],
+    "rh_pct_annual": 73.0,
     "rh_pct_monthly": [
      68.0,
      69.0,
@@ -574,10 +568,22 @@
      66.0,
      66.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.2,
-    "rain_mm_annual": 786.0,
-    "rh_pct_annual": 73.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     26.9,
+     27.0,
+     27.0,
+     26.0,
+     24.6,
+     22.9,
+     22.1,
+     22.4,
+     23.8,
+     25.8,
+     26.8,
+     27.1
+    ]
    }
   },
   {
@@ -589,20 +595,7 @@
    "note": "Famoso pelas capas Connecticut cultivadas sob pano (shade-grown): suaves e cremosas.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     22.4,
-     22.1,
-     22.1,
-     22.4,
-     22.4,
-     22.3,
-     22.6,
-     23.3,
-     23.5,
-     23.1,
-     22.9,
-     22.8
-    ],
+    "rain_mm_annual": 1257.0,
     "rain_mm_monthly": [
      184.0,
      244.0,
@@ -617,6 +610,7 @@
      44.0,
      80.0
     ],
+    "rh_pct_annual": 76.0,
     "rh_pct_monthly": [
      80.0,
      86.0,
@@ -631,10 +625,22 @@
      68.0,
      73.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 22.7,
-    "rain_mm_annual": 1257.0,
-    "rh_pct_annual": 76.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     22.4,
+     22.1,
+     22.1,
+     22.4,
+     22.4,
+     22.3,
+     22.6,
+     23.3,
+     23.5,
+     23.1,
+     22.9,
+     22.8
+    ]
    }
   },
   {
@@ -646,20 +652,7 @@
    "note": "Origem histórica das capas Connecticut Shade e Broadleaf.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     -4.4,
-     -3.3,
-     1.1,
-     7.7,
-     14.1,
-     19.2,
-     22.9,
-     22.2,
-     18.3,
-     11.2,
-     4.7,
-     -0.8
-    ],
+    "rain_mm_annual": 1202.0,
     "rain_mm_monthly": [
      76.0,
      82.0,
@@ -674,6 +667,7 @@
      90.0,
      110.0
     ],
+    "rh_pct_annual": 80.0,
     "rh_pct_monthly": [
      89.0,
      88.0,
@@ -688,10 +682,22 @@
      82.0,
      87.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 9.5,
-    "rain_mm_annual": 1202.0,
-    "rh_pct_annual": 80.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     -4.4,
+     -3.3,
+     1.1,
+     7.7,
+     14.1,
+     19.2,
+     22.9,
+     22.2,
+     18.3,
+     11.2,
+     4.7,
+     -0.8
+    ]
    }
   },
   {
@@ -703,20 +709,7 @@
    "note": "Capas Cameroon: textura fina, notas de especiarias e doçura subtil.",
    "climate": {
     "period": "climatologia NASA POWER",
-    "temp_c_monthly": [
-     26.4,
-     26.9,
-     26.7,
-     26.7,
-     26.5,
-     25.5,
-     24.7,
-     24.5,
-     25.1,
-     25.6,
-     26.2,
-     26.4
-    ],
+    "rain_mm_annual": 2452.0,
     "rain_mm_monthly": [
      30.0,
      70.0,
@@ -731,6 +724,7 @@
      159.0,
      28.0
     ],
+    "rh_pct_annual": 88.0,
     "rh_pct_monthly": [
      81.0,
      84.0,
@@ -745,10 +739,22 @@
      88.0,
      83.0
     ],
+    "source": "NASA POWER",
     "temp_c_annual": 25.9,
-    "rain_mm_annual": 2452.0,
-    "rh_pct_annual": 88.0,
-    "source": "NASA POWER"
+    "temp_c_monthly": [
+     26.4,
+     26.9,
+     26.7,
+     26.7,
+     26.5,
+     25.5,
+     24.7,
+     24.5,
+     25.1,
+     25.6,
+     26.2,
+     26.4
+    ]
    }
   }
  ],

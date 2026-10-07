@@ -1,17 +1,18 @@
 {
- "built_at": "2026-10-06T22:56:51+00:00",
+ "built_at": "2026-10-07T15:14:16+00:00",
  "version": "0.1.0",
- "mode": "auto",
+ "mode": "cache",
  "sources": {
   "seed": "ok",
-  "wikipedia": "ok",
-  "wikidata": "ok",
-  "nasa_power": "ok",
-  "faostat": "ok",
+  "wikipedia": "CACHE",
+  "wikidata": "CACHE",
+  "nasa_power": "CACHE",
+  "faostat": "CACHE",
   "openstreetmap": "CACHE",
-  "douane_fr": "ok",
-  "douane_fr_historico": "ok",
-  "cmt_espanha": "ok"
+  "douane_fr": "CACHE",
+  "douane_fr_historico": "CACHE",
+  "cmt_espanha": "CACHE",
+  "cmt_estancos": "CACHE"
  },
  "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
  "counts": {
@@ -62,6 +63,11 @@
    "source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — preços de labores",
    "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
    "url": "https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx"
+  },
+  {
+   "source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — red de expendedurías (estancos)",
+   "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
+   "url": "https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/Red-Expendedurias-y-PVR.aspx"
   }
  ]
 }

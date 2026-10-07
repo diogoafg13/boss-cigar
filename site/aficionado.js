@@ -56,7 +56,7 @@ window.afInit = function () {
   setupSync();
   setupLang();
   document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => {
-    if (b.dataset.tab === "me") { loadFr().then(renderMe); renderWish(); }
+    if (b.dataset.tab === "me") loadFr().then(renderMe);
     if (b.dataset.tab === "humidor") loadFr().then(() => { renderHumidor(); renderHygro(); });
   }));
   openSharedNote();
@@ -100,7 +100,6 @@ function fillCatFilters() {
   if ([...$("#fVit").options].some(o => o.value === keepV)) $("#fVit").value = keepV;
   const m = CAT_META[CAT_COUNTRY];
   $("#frEdition").textContent = CAT_COUNTRY === "fr" ? `França: ${m.edition || ""}` : `Espanha: lista vigente recolhida a ${m.fetched || "?"} (${m.zone || ""})`;
-  $("#priceHist").style.display = CAT_COUNTRY === "fr" ? "" : "none";
 }
 
 function initFr() {
@@ -175,24 +174,7 @@ function toggleWish(k, x, country) {
   else l.unshift({ key: k, country, label: x.label, pack_size: x.pack_size || null, brand: x.brand || null, price: x.unit_eur, added: today() });
   lsSet(WKEY, l);
 }
-function renderWish() {
-  const l = lsGet(WKEY, []);
-  if (!l.length) { $("#wish").innerHTML = "<p class='muted'>Vazia. Usa ♡ no separador Preços oficiais.</p>"; return; }
-  Promise.all([loadCat("fr").catch(() => []), loadCat("es").catch(() => [])]).then(() => {
-    const find = w => (CATS[w.country] || []).find(x => wishKey(w.country, x) === w.key);
-    let alerts = 0;
-    $("#wish").innerHTML = `<table><tr><th></th><th>Referência</th><th>Quando juntaste</th><th>Agora</th><th>Estado</th><th></th></tr>${l.map((w, i) => {
-      const x = find(w), now = x ? x.unit_eur : null;
-      let st = "sem mudança";
-      if (!x) { st = "⚠ saiu do catálogo"; alerts++; }
-      else if (now != null && w.price != null && now !== w.price) { st = (now > w.price ? "⬆ subiu " : "⬇ desceu ") + pct(Math.round((now - w.price) / w.price * 1000) / 10); alerts++; }
-      return `<tr><td>${w.country === "es" ? "🇪🇸" : "🇫🇷"}</td><td>${esc(w.label)}${w.pack_size ? ` <span class="sub">(${w.pack_size})</span>` : ""}</td><td>${eur(w.price)} <span class="sub">${esc(w.added)}</span></td><td>${x ? eur(now) : "—"}</td><td>${st}</td>
-        <td style="white-space:nowrap"><button class="btn sm ghost" data-wh="${i}">+ Humidor</button> <button class="btn sm ghost" data-wd="${i}">✕</button></td></tr>`;
-    }).join("")}</table>${alerts ? `<p class="warn">${alerts} alerta(s) desde que juntaste estas referências.</p>` : ""}`;
-    $("#wish").querySelectorAll("[data-wd]").forEach(b => b.onclick = () => { const x = lsGet(WKEY, []); x.splice(+b.dataset.wd, 1); lsSet(WKEY, x); renderWish(); });
-    $("#wish").querySelectorAll("[data-wh]").forEach(b => b.onclick = () => { const w = l[+b.dataset.wh], x = find(w); goTab("humidor"); $("#hOther").value = w.label; $("#hPrice").value = x && x.unit_eur || w.price || ""; });
-  });
-}
+// renderWish: ver compra.js (lista de desejos + plano de compra)
 
 /* ---------- Sincronização via Gist privado ---------- */
 const SYNC_KEYS = ["bc-journal", "bc-humidor", "bc-hygro", "bc-favs", "bc-wish", "bc-friends", "bc-fake"];
@@ -761,9 +743,9 @@ function renderStats(entries) {
    Navegação em grupos, pesquisa global, páginas de marca, livro
    ===================================================================== */
 const GROUPS = [
-  ["Descobrir", ["catalog", "compare", "pairing", "vitolas", "mapview", "producers"]],
-  ["Comprar", ["frcat", "brands", "shops"]],
-  ["O meu", ["me", "humidor", "journal"]],
+  ["Descobrir", ["catalog", "mapview", "compare", "pairing", "vitolas", "producers"]],
+  ["Comprar", ["frcat", "wishlist", "frces", "pricehist", "shops", "brands"]],
+  ["O meu", ["me", "humidor", "journal", "sync"]],
   ["Aprender", ["guide", "guides", "tools", "sources"]],
 ];
 const groupOf = tab => (GROUPS.find(g => g[1].includes(tab)) || [null])[0];
@@ -799,8 +781,9 @@ function setupGroups() {
 /* ---------- Pesquisa global ---------- */
 const fold = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 let GS_TIMER = null, BRAND_NAMES = null;
-const SECTIONS = { catalog: "Catálogo", compare: "Comparador", pairing: "Harmonizador", vitolas: "Vitolas", mapview: "Mapa", producers: "Países produtores",
-  frcat: "Preços oficiais", brands: "Marcas", shops: "Onde comprar", me: "Para mim", humidor: "Humidor", journal: "Diário",
+const SECTIONS = { catalog: "Catálogo", compare: "Comparar fichas", pairing: "Harmonizador", vitolas: "Vitolas", mapview: "Mapa de origens", producers: "Países produtores",
+  frcat: "Preços oficiais", wishlist: "Lista de desejos e plano de compra", frces: "França vs Espanha", pricehist: "Evolução de preços", sync: "Sincronizar",
+  brands: "Marcas", shops: "Lojas em Portugal", me: "Recomendações", humidor: "Humidor", journal: "Diário",
   guide: "Livro", guides: "Guias", tools: "Ferramentas", sources: "Fontes" };
 
 function allBrandNames() {

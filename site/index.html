@@ -22,6 +22,11 @@
   nav button { background:var(--panel); color:var(--text); border:1px solid var(--line); padding:7px 12px; border-radius:999px; cursor:pointer; font:inherit; font-size:.92rem; }
   nav button.active { background:var(--gold); color:#2a1a0b; border-color:var(--gold); }
   main { max-width:1100px; margin:0 auto; padding:16px; }
+  #pageHead { margin:4px 0 14px; } #pageHead .crumb { font-size:1.05rem; } #pageHead .crumb a { color:var(--muted); text-decoration:none; }
+  #pageHead .crumb b { color:var(--gold); }
+  .wcount { background:#e0703a; color:#fff; border-radius:999px; padding:0 7px; margin-left:4px; font-size:.8rem; font-weight:bold; }
+  .wcount:empty { display:none; }
+  label.sub { display:flex; flex-direction:column; gap:3px; }
   section { display:none; } section.active { display:block; }
   .filters { display:grid; gap:8px; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); margin-bottom:12px; }
   input,select,textarea { width:100%; background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:9px 10px; font:inherit; }
@@ -67,24 +72,29 @@
 
 <nav id="tabs">
   <button data-tab="catalog" class="active">Catálogo</button>
-  <button data-tab="me">Para mim</button>
-  <button data-tab="mapview">Mapa</button>
-  <button data-tab="frcat">Preços oficiais</button>
-  <button data-tab="brands">Marcas</button>
-  <button data-tab="producers">Países produtores</button>
-  <button data-tab="shops">Onde comprar</button>
+  <button data-tab="mapview">Mapa de origens</button>
+  <button data-tab="compare">Comparar fichas</button>
   <button data-tab="pairing">Harmonizador</button>
-  <button data-tab="compare">Comparador</button>
   <button data-tab="vitolas">Vitolas</button>
+  <button data-tab="producers">Países produtores</button>
+  <button data-tab="frcat">Preços oficiais</button>
+  <button data-tab="wishlist">Lista de desejos</button>
+  <button data-tab="frces">França vs Espanha</button>
+  <button data-tab="pricehist">Evolução de preços</button>
+  <button data-tab="shops">Lojas em Portugal</button>
+  <button data-tab="brands">Marcas</button>
+  <button data-tab="me">Recomendações</button>
   <button data-tab="humidor">Humidor</button>
-  <button data-tab="tools">Ferramentas</button>
-  <button data-tab="guides">Guias</button>
   <button data-tab="journal">Diário</button>
+  <button data-tab="sync">Sincronizar</button>
   <button data-tab="guide">Livro</button>
+  <button data-tab="guides">Guias</button>
+  <button data-tab="tools">Ferramentas</button>
   <button data-tab="sources">Fontes</button>
 </nav>
 
 <main>
+  <div id="pageHead"></div>
   <section id="catalog" class="active">
     <div class="filters">
       <input id="q" type="search" placeholder="Pesquisar marca, sabor, bebida…">
@@ -104,17 +114,7 @@
       <div id="recoProfile"></div></div>
     <div class="panel"><h3 style="margin-top:0">Da base de dados</h3><div class="grid" id="recoSeed"></div></div>
     <div class="panel" style="overflow-x:auto"><h3 style="margin-top:0">Do catálogo oficial</h3><div id="recoFr"></div></div>
-    <div class="panel"><h2 style="margin-top:0">Lista de desejos</h2>
-      <p class="muted">Junta referências no separador "Preços oficiais" (♡). Avisa quando o preço muda ou a referência sai do catálogo. Para receber as novidades sem abrir o site, subscreve o <a href="feed.xml" target="_blank" rel="noopener">feed de preços (Atom/RSS)</a>.</p>
-      <div id="wish"></div></div>
     <div class="panel"><h2 style="margin-top:0">As minhas estatísticas</h2><div id="stats"></div></div>
-    <div class="panel"><h2 style="margin-top:0">Sincronizar entre dispositivos</h2>
-      <p class="muted">Guarda o diário, o humidor, o higrómetro, os favoritos, a lista de desejos e as notas de amigos num <b>Gist privado</b> da tua conta GitHub, e repõe-nos noutro telemóvel ou computador.</p>
-      <ol class="warn"><li>No GitHub: Settings → Developer settings → Personal access tokens → <b>Fine-grained token</b> com permissão <i>Gists: Read and write</i> (ou token clássico só com <i>gist</i>).</li>
-        <li>Cola o token aqui. Fica <b>apenas neste browser</b>; não é enviado para mais lado nenhum além da API do GitHub.</li></ol>
-      <div class="filters"><input id="syncToken" type="password" autocomplete="off" placeholder="Token do GitHub"><input id="syncGist" placeholder="ID do Gist (preenche-se sozinho)"></div>
-      <div class="row"><button class="btn sm" id="syncPush">Enviar para o Gist</button><button class="btn ghost sm" id="syncPull">Trazer do Gist (junta)</button><button class="btn ghost sm" id="syncForget">Esquecer token</button></div>
-      <div id="syncOut" class="muted" style="margin-top:8px"></div></div>
   </section>
 
   <section id="guides">
@@ -160,8 +160,6 @@
       </div>
       <p class="warn">A marca vem do catálogo da Wikipédia ou, se lá não estiver, é <i>inferida</i> do início do nome (assinalada com *). "Cigarilha" é uma heurística (nome ou preço inferior a 1,50 €).</p>
       <p class="muted" id="fCount"></p></div>
-    <div class="panel" id="cmpFrEs"></div>
-    <div class="panel" id="priceHist"></div>
     <div class="panel" style="overflow-x:auto"><table id="fTable"></table><div class="row" style="margin-top:10px"><button class="btn ghost sm" id="fMore">Mostrar mais</button></div></div>
   </section>
 
@@ -282,6 +280,32 @@
       <p class="muted">A vantagem portuguesa (capítulo 28). Estas sugestões aparecem também em cada ficha.</p><div id="ptWines"></div></div>
     <div class="panel" style="overflow-x:auto"><h2 style="margin-top:0">Mapa de sabores por origem</h2>
       <p class="muted">Perfis típicos (capítulo 23); há sempre exceções. Exercício: lê a ficha (capa, capote, tripa), prevê o perfil e confirma a fumar.</p><div id="flavorMap"></div></div>
+  </section>
+
+  <section id="frces">
+    <div class="panel" id="cmpFrEs"><p class="muted">A carregar a comparação…</p></div>
+  </section>
+
+  <section id="pricehist">
+    <div class="panel" id="priceHist"><p class="muted">A carregar o histórico…</p></div>
+  </section>
+
+  <section id="sync">
+    <div class="panel"><h2 style="margin-top:0">Sincronizar entre dispositivos</h2>
+      <p class="muted">Guarda o diário, o humidor, o higrómetro, os favoritos, a lista de desejos e as notas de amigos num <b>Gist privado</b> da tua conta GitHub, e repõe-nos noutro telemóvel ou computador.</p>
+      <ol class="warn"><li>No GitHub: Settings → Developer settings → Personal access tokens → <b>Fine-grained token</b> com permissão <i>Gists: Read and write</i> (ou token clássico só com <i>gist</i>).</li>
+        <li>Cola o token aqui. Fica <b>apenas neste browser</b>; não é enviado para mais lado nenhum além da API do GitHub.</li></ol>
+      <div class="filters"><input id="syncToken" type="password" autocomplete="off" placeholder="Token do GitHub"><input id="syncGist" placeholder="ID do Gist (preenche-se sozinho)"></div>
+      <div class="row"><button class="btn sm" id="syncPush">Enviar para o Gist</button><button class="btn ghost sm" id="syncPull">Trazer do Gist (junta)</button><button class="btn ghost sm" id="syncForget">Esquecer token</button></div>
+      <div id="syncOut" class="muted" style="margin-top:8px"></div></div>
+  </section>
+
+  <section id="wishlist">
+    <div class="panel"><h2 style="margin-top:0">Lista de desejos</h2>
+      <p class="muted">Junta referências com ♡ em <a href="#frcat">Preços oficiais</a>. Mudanças de preço também no <a href="feed.xml" target="_blank" rel="noopener">feed RSS</a>.</p>
+      <div id="wish"></div></div>
+    <div class="panel" id="planBox"></div>
+    <div class="panel" id="whereBox"></div>
   </section>
 
   <section id="brandpage"><div id="brandOut"></div></section>
@@ -660,5 +684,6 @@ function renderSources() {
 </script>
 <script src="i18n-en.js"></script>
 <script src="aficionado.js"></script>
+<script src="compra.js"></script>
 </body>
 </html>

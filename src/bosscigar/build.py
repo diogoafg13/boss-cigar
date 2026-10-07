@@ -14,6 +14,7 @@ from .seed import load_seed
 from .sources.douane_fr import (french_catalog, history_for, link_seed, match_brands, price_history,
                                  price_key, removed_since)
 from .sources.cmt_es import compare_fr_es, spanish_catalog
+from .sources.cmt_estancos import PAGE as ESTANCOS_PAGE, border_estancos
 from .sources.faostat import tobacco_production
 from .sources.nasapower import climate_for_regions
 from .sources.osm import shops_portugal
@@ -132,6 +133,9 @@ def build(verbose: bool = True) -> dict:
     tobacco, fao_status = tobacco_production()
     log(f"faostat: {fao_status} (ano {tobacco.get('latest_year')})")
 
+    estancos, est_status = border_estancos()
+    log(f"estancos fronteira: {est_status} ({sum(len(t['estancos']) for t in estancos['towns'])} em {len(estancos['towns'])} cidades)")
+
     shops, osm_status = shops_portugal()
     log(f"osm: {osm_status} ({len(shops)} locais)")
 
@@ -192,6 +196,7 @@ def build(verbose: bool = True) -> dict:
             "douane_fr": fr_status,
             "douane_fr_historico": hist_status,
             "cmt_espanha": es_status,
+            "cmt_estancos": est_status,
         },
         "douane_fr_edition": fr.get("edition"),
         "counts": {"cigars": len(cigars), "regions": len(regions), "brands_catalog": len(wp_brands),
@@ -210,6 +215,9 @@ def build(verbose: bool = True) -> dict:
             {"source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — preços de labores",
              "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
              "url": "https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx"},
+            {"source": "Origem dos dados: Ministerio de Hacienda (Comisionado para el Mercado de Tabacos) — red de expendedurías (estancos)",
+             "license": "Reutilização permitida, incluindo comercial, citando a fonte (Ley 37/2007, RD 1495/2011)",
+             "url": ESTANCOS_PAGE},
         ],
     }
 
@@ -238,6 +246,7 @@ def build(verbose: bool = True) -> dict:
                            "median_diff_pct": round(statistics.median([r["diff_pct"] for r in compare]), 1) if compare else None,
                            "es_cheaper": sum(1 for r in compare if r["diff_pct"] < 0), "rows": compare})
     write("home.json", {"place": HOME["name"], "climate": home_climate, "source": "NASA POWER"})
+    write("border.json", {**estancos, "source": "Origem dos dados: Ministerio de Hacienda (CMT) — Red de Expendedurías", "url": ESTANCOS_PAGE})
     write("shops.json", {"license": "ODbL — © OpenStreetMap contributors", "shops": shops})
     write("meta.json", meta)
     write("quality.json", report)

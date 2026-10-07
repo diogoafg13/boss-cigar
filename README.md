@@ -18,6 +18,7 @@ data/seed/*.yml ─► validação (pydantic) ─► fontes abertas ─► Parqu
 | Ano de fundação e país das marcas | [Wikidata](https://www.wikidata.org/) | CC0 |
 | Temperatura, chuva e humidade por zona de cultivo | [NASA POWER](https://power.larc.nasa.gov/) (climatologia) | Domínio público |
 | Produção de tabaco por país desde 2000 | [FAOSTAT](https://www.fao.org/faostat/) (item 826) | CC BY 4.0 |
+| Estancos nas cidades espanholas junto à fronteira (morada) | [Ministerio de Hacienda — CMT, Red de Expendedurías](https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/Red-Expendedurias-y-PVR.aspx) (CSV oficial) | Reutilização permitida citando "Origem dos dados: Ministerio de Hacienda" |
 | Tabacarias em Portugal | [OpenStreetMap](https://www.openstreetmap.org/) via Overpass | ODbL |
 | **~4 800 charutos à venda em Espanha: marca, nome, embalagem, preço oficial** (lista vigente) | [Ministerio de Hacienda — CMT, Precios de labores](https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/CMTabacos/Paginas/PreciosLabores.aspx) (exportação CSV do buscador oficial) | Reutilização permitida, incluindo comercial, citando "Origem dos dados: Ministerio de Hacienda" (Ley 37/2007) |
 | **~3 400 charutos à venda em França: nome, vitola, embalagem, preço oficial** (mensal) | [Douane — nomenclature des prix des tabacs](https://www.douane.gouv.fr/la-douane/opendata/categories/tabacs-manufactures) (ODS) | Informação pública reutilizável (CRPA art. L321-1), com menção da fonte |
@@ -56,18 +57,18 @@ Não existe nenhuma base de dados aberta com força, capa e sabores por linha de
 
 Tudo o que é pessoal fica no browser (localStorage) e pode ser exportado em JSON.
 
-- **Para mim**: perfil de palato a partir do Diário (força, capa, país, marca, vitola, preço), recomendações da base e do catálogo oficial com explicação, e estatísticas (provas por mês, marcas, acompanhamentos, valor do humidor).
+- **Recomendações**: perfil de palato a partir do Diário (força, capa, país, marca, vitola, preço), recomendações da base e do catálogo oficial com explicação, e estatísticas (provas por mês, marcas, acompanhamentos, valor do humidor).
 - **Humidor**: referências do catálogo oficial, preço pago, código da caixa Habanos (mês/ano de embalamento; os códigos de fábrica são secretos e não são interpretados), alertas de descanso e de envelhecimento, registo do higrómetro e conselhos para o clima de Lisboa no mês corrente (NASA POWER).
 - **Preços oficiais**: evolução de cada referência, edições especiais (limitadas, regionais, zodíaco, reservas, aniversários) detetadas no nome, referências retiradas.
 - **Guias**: checklist anti-falsificação (marcas oficiais da Habanos S.A.), descodificador do código da caixa, tempo de fumada estimado, franquias de viagem (Guia para Viajantes, Portal das Finanças, fev. 2026).
 - **Diário**: provas de qualquer referência do catálogo oficial, partilha de uma nota por link, importação do diário de um amigo.
 - **Offline**: PWA com service worker; instalável no telemóvel e usável sem rede.
-- **Lista de desejos**: ♡ em qualquer referência oficial (FR/ES); alerta quando o preço muda ou a referência sai do catálogo.
+- **Lista de desejos e plano de compra** (Comprar → Lista de desejos): ♡ em qualquer referência oficial (FR/ES), quantidades, custo total em Espanha e em França (com o par do outro país pela comparação), preço português opcional (Portugal não publica a tabela), contagem face aos 200 charutos indicativos da UE, custo da viagem até à cidade fronteiriça, regras (compra online transfronteiriça proibida a consumidores em Portugal, Lei 37/2007 art. 14.º-A; compra presencial em Espanha permitida) e onde comprar: estancos oficiais junto à fronteira e lojas especializadas em Portugal, por distância.
 - **Prova guiada**: sabores por terço numa roda de sabores, tiragem, combustão, cinza, força sentida e retrohale; os sabores alimentam as recomendações.
 - **Sincronização**: diário, humidor, higrómetro, favoritos, desejos e notas de amigos num Gist privado do utilizador (token guardado só no browser); a reposição junta sem apagar nada.
 - **Guias**: também calculadora de Boveda (regra do fabricante) e glossário pesquisável.
 - **Inglês**: botão EN/PT para a interface (menus, títulos, botões); os dados mantêm a língua de origem.
-- **Navegação**: 4 grupos (Descobrir, Comprar, O meu, Aprender) e pesquisa global no topo (fichas, marcas, preços oficiais FR/ES, glossário, secções).
+- **Navegação**: 4 grupos (Descobrir, Comprar, O meu, Aprender), título e descrição em cada página, endereço por página (`#wishlist`, `#frcat`, `#marca=Cohiba`…) com o botão "voltar" a funcionar, botão "Limpar filtros (n)" e pesquisa global no topo.
 - **Páginas de marca**: fichas, referências e intervalos de preço em França e Espanha, variação de preço, comparação FR/ES, Wikipédia e Wikidata.
 - **Livro**: "Do Zero ao Expert" em PDF (`site/docs/`), roteiro de aprendizagem com progresso, vinhos portugueses (Porto, Madeira, Moscatel) e mapa de sabores por origem. É conteúdo editorial do projeto, não fonte de verificação.
 - **Lojas**: filtro de especialistas em charutos no mapa (identificados pelo nome no OpenStreetMap).

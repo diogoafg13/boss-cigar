@@ -1,6 +1,11 @@
 /* Boss Cigar — English interface (menus, headings, buttons, fields).
    Data texts (notes, catalogue names, sources) stay in their original language. */
 window.BC_EN = {
+  "Mapa de origens": "Origins map", "Comparar fichas": "Compare cigars", "França vs Espanha": "France vs Spain", "Lojas em Portugal": "Shops in Portugal",
+  "Recomendações": "Recommendations", "Sincronizar": "Sync", "Descobrir": "Discover", "Comprar": "Buy", "O meu": "Mine", "Aprender": "Learn",
+  "Plano de compra": "Purchase plan", "Onde comprar": "Where to buy", "Sem filtros ativos": "No active filters", "Partida": "Starting point",
+  "Regras: o que é permitido": "Rules: what is allowed", "Quantas": "How many", "embalagens": "packs", "Total": "Total",
+  "Lista de desejos e plano de compra": "Wishlist and purchase plan",
   "Base de dados de charutos com fontes abertas · terroir · produção por país · onde comprar · humidor · diário de provas": "Open-data cigar database · terroir · production by country · where to buy · humidor · tasting journal",
   "Catálogo": "Catalogue", "Para mim": "For me", "Mapa": "Map", "Preços oficiais": "Official prices", "Marcas": "Brands",
   "Países produtores": "Producing countries", "Onde comprar": "Where to buy", "Harmonizador": "Pairing", "Comparador": "Compare",

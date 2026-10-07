@@ -342,3 +342,19 @@ def test_history_keeps_each_seen_edition(tmp_path, monkeypatch):
     dec = {"edition": "Arrêté du 1 novembre 2026, applicable au 1er décembre 2026", "items": dec_items}
     snaps, _ = douane_fr.price_history(dec)
     assert [s["date"] for s in snaps] == ["2026-11-01", "2026-12-01"]  # novembro não se perde
+
+
+def test_border_estancos_parse():
+    from bosscigar.sources import cmt_estancos as c
+    text = ("﻿Listado de expendedurías activas a 07 de octubre de 2026\n"
+            "Estanco;Municipio;Localidad;Dirección\n"
+            "360001;TUI;TUI;RUA AREAL 1\n"
+            "060004;BADAJOZ;BADAJOZ;AV. RICARDO CARAPETO 100\n"
+            "280001;MADRID;MADRID;GRAN VIA 1\n"
+            "320010;VERÍN;VERIN;PLAZA MAYOR 2\n")
+    d = c.parse(text)
+    assert d["total_spain"] == 4 and "07 de octubre" in d["as_of"]
+    by = {t["name"]: t for t in d["towns"]}
+    assert len(by["Tui"]["estancos"]) == 1 and by["Tui"]["estancos"][0]["address"] == "RUA AREAL 1"
+    assert len(by["Verín"]["estancos"]) == 1        # acentos no município
+    assert all(t["lat"] and t["crossing"] for t in d["towns"])
