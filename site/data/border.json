@@ -1,991 +1,991 @@
 {
- "as_of": "Listado de expendedurías activas a 07 de octubre de 2026 -  17:07:13",
+ "as_of": "Listado de expendedurías activas a 07 de octubre de 2026 -  17:21:26",
  "total_spain": 12483,
  "towns": [
   {
+   "municipality": "GUARDA (A)",
+   "name": "A Guarda",
+   "province": "Pontevedra",
+   "lat": 41.901,
+   "lng": -8.874,
    "crossing": "Caminha (ferry)",
    "estancos": [
     {
-     "address": "CALLE BRASILINO ALVAREZ 18",
      "code": "360132",
-     "locality": "Guarda (A)"
+     "locality": "Guarda (A)",
+     "address": "CALLE BRASILINO ALVAREZ 18"
     },
     {
-     "address": "CALLE SAN BERNARDO 45",
      "code": "360135",
-     "locality": "Guarda (A)"
+     "locality": "Guarda (A)",
+     "address": "CALLE SAN BERNARDO 45"
     },
     {
-     "address": "CAMPOSANCOS 0",
      "code": "360130",
-     "locality": "Outeiro"
+     "locality": "Outeiro",
+     "address": "CAMPOSANCOS 0"
     },
     {
-     "address": "PB PASAJE-CAMPOSANCOS.   0",
      "code": "360131",
-     "locality": "Pasaje"
+     "locality": "Pasaje",
+     "address": "PB PASAJE-CAMPOSANCOS.   0"
     },
     {
-     "address": "RUA DE GALICIA 44",
      "code": "360134",
-     "locality": "Guarda (A)"
+     "locality": "Guarda (A)",
+     "address": "RUA DE GALICIA 44"
     },
     {
-     "address": "RUA DO PORTO 12",
      "code": "360133",
-     "locality": "Guarda (A)"
+     "locality": "Guarda (A)",
+     "address": "RUA DO PORTO 12"
     }
-   ],
-   "lat": 41.901,
-   "lng": -8.874,
-   "municipality": "GUARDA (A)",
-   "name": "A Guarda",
-   "province": "Pontevedra"
+   ]
   },
   {
+   "municipality": "TUI",
+   "name": "Tui",
+   "province": "Pontevedra",
+   "lat": 42.047,
+   "lng": -8.645,
    "crossing": "Valença",
    "estancos": [
     {
-     "address": "CALLE CALVO SOTELO 18",
      "code": "360323",
-     "locality": "Tui"
+     "locality": "Tui",
+     "address": "CALLE CALVO SOTELO 18"
     },
     {
-     "address": "CALLE CALVO SOTELO 37",
      "code": "360327",
-     "locality": "Tui"
+     "locality": "Tui",
+     "address": "CALLE CALVO SOTELO 37"
     },
     {
-     "address": "CALLE ORENSE 2",
      "code": "360324",
-     "locality": "Tui"
+     "locality": "Tui",
+     "address": "CALLE ORENSE 2"
     },
     {
-     "address": "CONCORDIA. 104",
      "code": "360326",
-     "locality": "Tui"
+     "locality": "Tui",
+     "address": "CONCORDIA. 104"
     },
     {
-     "address": "PB CRUCERO-RANDUFE.   0",
      "code": "360322",
-     "locality": "Crucero"
+     "locality": "Crucero",
+     "address": "PB CRUCERO-RANDUFE.   0"
     },
     {
-     "address": "PB GANDARA-GUILLAREY.   0",
      "code": "360321",
-     "locality": "Gandara"
+     "locality": "Gandara",
+     "address": "PB GANDARA-GUILLAREY.   0"
     },
     {
-     "address": "PB PTE.INTERN.PORTUGAL.  27",
      "code": "360325",
-     "locality": "Tui"
+     "locality": "Tui",
+     "address": "PB PTE.INTERN.PORTUGAL.  27"
     }
-   ],
-   "lat": 42.047,
-   "lng": -8.645,
-   "municipality": "TUI",
-   "name": "Tui",
-   "province": "Pontevedra"
+   ]
   },
   {
+   "municipality": "TOMINO",
+   "name": "Tomiño",
+   "province": "Pontevedra",
+   "lat": 41.988,
+   "lng": -8.741,
    "crossing": "Vila Nova de Cerveira",
    "estancos": [
     {
-     "address": "AVENIDA DE GONDOMAR 49",
      "code": "360317",
-     "locality": "Seijo"
+     "locality": "Seijo",
+     "address": "AVENIDA DE GONDOMAR 49"
     },
     {
-     "address": "AVENIDA ORDOÑEZ 22",
      "code": "360312",
-     "locality": "Centinela"
+     "locality": "Centinela",
+     "address": "AVENIDA ORDOÑEZ 22"
     },
     {
-     "address": "AVENIDA ORDOÑEZ 64",
      "code": "360313",
-     "locality": "Avenida Ordoñez"
+     "locality": "Avenida Ordoñez",
+     "address": "AVENIDA ORDOÑEZ 64"
     },
     {
-     "address": "FORCADELA. 19",
      "code": "360318",
-     "locality": "Vilardemato"
+     "locality": "Vilardemato",
+     "address": "FORCADELA. 19"
     },
     {
-     "address": "LG CASAL. 13",
      "code": "360315",
-     "locality": "Casal"
+     "locality": "Casal",
+     "address": "LG CASAL. 13"
     },
     {
-     "address": "LG IGREXA (A) - TEBRA 12",
      "code": "360316",
-     "locality": "Ponteciña (A)"
+     "locality": "Ponteciña (A)",
+     "address": "LG IGREXA (A) - TEBRA 12"
     },
     {
-     "address": "PB TORRON SOBRADA. 25",
      "code": "360314",
-     "locality": "Torron"
+     "locality": "Torron",
+     "address": "PB TORRON SOBRADA. 25"
     }
-   ],
-   "lat": 41.988,
-   "lng": -8.741,
-   "municipality": "TOMINO",
-   "name": "Tomiño",
-   "province": "Pontevedra"
+   ]
   },
   {
+   "municipality": "SALVATERRA DE MINO",
+   "name": "Salvaterra de Miño",
+   "province": "Pontevedra",
+   "lat": 42.084,
+   "lng": -8.501,
    "crossing": "Monção",
    "estancos": [
     {
-     "address": "BARRIO DE RIAL 10-B",
      "code": "360283",
-     "locality": "Rial (O) E Arcade"
+     "locality": "Rial (O) E Arcade",
+     "address": "BARRIO DE RIAL 10-B"
     },
     {
-     "address": "Bº DE SAN ROQUE 69",
      "code": "360282",
-     "locality": "San Roque"
+     "locality": "San Roque",
+     "address": "Bº DE SAN ROQUE 69"
     },
     {
-     "address": "LUGAR FRAGUIÑAS 18",
      "code": "360281",
-     "locality": "Fraguiñas (As)"
+     "locality": "Fraguiñas (As)",
+     "address": "LUGAR FRAGUIÑAS 18"
     },
     {
-     "address": "PB AGRELA.  35",
      "code": "360279",
-     "locality": "Agrela"
+     "locality": "Agrela",
+     "address": "PB AGRELA.  35"
     },
     {
-     "address": "PB IGLESIA-ALJAN.   0",
      "code": "360278",
-     "locality": "Iglesia (A)"
+     "locality": "Iglesia (A)",
+     "address": "PB IGLESIA-ALJAN.   0"
     },
     {
-     "address": "RUA MARQUES DE VIANA 4",
      "code": "360285",
-     "locality": "Castillo (O)"
+     "locality": "Castillo (O)",
+     "address": "RUA MARQUES DE VIANA 4"
     }
-   ],
-   "lat": 42.084,
-   "lng": -8.501,
-   "municipality": "SALVATERRA DE MINO",
-   "name": "Salvaterra de Miño",
-   "province": "Pontevedra"
+   ]
   },
   {
+   "municipality": "VIGO",
+   "name": "Vigo",
+   "province": "Pontevedra",
+   "lat": 42.24,
+   "lng": -8.72,
    "crossing": "Valença (30 km)",
    "estancos": [
     {
-     "address": "AV. DE CASTRELOS 216",
      "code": "360349",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AV. DE CASTRELOS 216"
     },
     {
-     "address": "AV.GALICIA. 169",
      "code": "360345",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AV.GALICIA. 169"
     },
     {
-     "address": "AVD. DEL AEROPUERTO. 375 (*)",
      "code": "360390",
-     "locality": "Candean De Arriba"
+     "locality": "Candean De Arriba",
+     "address": "AVD. DEL AEROPUERTO. 375 (*)"
     },
     {
-     "address": "AVENIDA ALCALDE GREGORIO ESPINO 29",
      "code": "360353",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AVENIDA ALCALDE GREGORIO ESPINO 29"
     },
     {
-     "address": "AVENIDA ALCALDE GREGORIO ESPINO 47",
      "code": "360357",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AVENIDA ALCALDE GREGORIO ESPINO 47"
     },
     {
-     "address": "AVENIDA CASTRELOS 54",
      "code": "360364",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AVENIDA CASTRELOS 54"
     },
     {
-     "address": "AVENIDA FLORIDA 10",
      "code": "360380",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AVENIDA FLORIDA 10"
     },
     {
-     "address": "AVENIDA GARCIA BARBON 125",
      "code": "360377",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AVENIDA GARCIA BARBON 125"
     },
     {
-     "address": "AVENIDA GRAN VIA 152",
      "code": "360346",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AVENIDA GRAN VIA 152"
     },
     {
-     "address": "AVENIDA RAMON NIETO 485",
      "code": "360335",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "AVENIDA RAMON NIETO 485"
     },
     {
-     "address": "BARCELONA. 81",
      "code": "360356",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "BARCELONA. 81"
     },
     {
-     "address": "CALLE DE ARAGÓN 147",
      "code": "360386",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "CALLE DE ARAGÓN 147"
     },
     {
-     "address": "CALLE RAMON NIETO 187",
      "code": "360391",
-     "locality": "Fonte Escura"
+     "locality": "Fonte Escura",
+     "address": "CALLE RAMON NIETO 187"
     },
     {
-     "address": "CALLE TRAVESIA DE VIGO 26",
      "code": "360351",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "CALLE TRAVESIA DE VIGO 26"
     },
     {
-     "address": "CAMELIAS.  84 (ESTANCO)",
      "code": "360344",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "CAMELIAS.  84 (ESTANCO)"
     },
     {
-     "address": "CAMILO VEIGA 48",
      "code": "360374",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "CAMILO VEIGA 48"
     },
     {
-     "address": "CARRETERA BAO 82",
      "code": "360393",
-     "locality": "Combro"
+     "locality": "Combro",
+     "address": "CARRETERA BAO 82"
     },
     {
-     "address": "CARRETERA VALADARES 192",
      "code": "360401",
-     "locality": "Igrexa"
+     "locality": "Igrexa",
+     "address": "CARRETERA VALADARES 192"
     },
     {
-     "address": "CASTELAO 41",
      "code": "360365",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "CASTELAO 41"
     },
     {
-     "address": "CEBOLEIRA. 58",
      "code": "360395",
-     "locality": "Ceboleira"
+     "locality": "Ceboleira",
+     "address": "CEBOLEIRA. 58"
     },
     {
-     "address": "CONDE TORRECEDEIRA 46",
      "code": "360336",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "CONDE TORRECEDEIRA 46"
     },
     {
-     "address": "COUTO DE SAN HONORATO. 103",
      "code": "360348",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "COUTO DE SAN HONORATO. 103"
     },
     {
-     "address": "CRTRA MATAMÁ-PAZO 114",
      "code": "360392",
-     "locality": "Igrexa"
+     "locality": "Igrexa",
+     "address": "CRTRA MATAMÁ-PAZO 114"
     },
     {
-     "address": "CTRA. VALLADARES 410",
      "code": "360400",
-     "locality": "Garrida"
+     "locality": "Garrida",
+     "address": "CTRA. VALLADARES 410"
     },
     {
-     "address": "ELDUAYEN 45",
      "code": "360340",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "ELDUAYEN 45"
     },
     {
-     "address": "ENRIQUE LORENZO 70",
      "code": "360379",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "ENRIQUE LORENZO 70"
     },
     {
-     "address": "FRAGOSO.  46",
      "code": "360358",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "FRAGOSO.  46"
     },
     {
-     "address": "GRAN VIA.  25",
      "code": "360383",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "GRAN VIA.  25"
     },
     {
-     "address": "MANUEL DE CASTRO 1",
      "code": "360368",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "MANUEL DE CASTRO 1"
     },
     {
-     "address": "MARIA BERDIALES.   4",
      "code": "360341",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "MARIA BERDIALES.   4"
     },
     {
-     "address": "MEXICO.  64",
      "code": "360354",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "MEXICO.  64"
     },
     {
-     "address": "PB COUTADA-BEADE.   0",
      "code": "360387",
-     "locality": "Coutada"
+     "locality": "Coutada",
+     "address": "PB COUTADA-BEADE.   0"
     },
     {
-     "address": "PB IGREXA-MOSTEIRO-BEMB.",
      "code": "360388",
-     "locality": "Mosteiro"
+     "locality": "Mosteiro",
+     "address": "PB IGREXA-MOSTEIRO-BEMB."
     },
     {
-     "address": "RAMON NIETO. 375",
      "code": "360338",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RAMON NIETO. 375"
     },
     {
-     "address": "RUA AREAL 90",
      "code": "360337",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA AREAL 90"
     },
     {
-     "address": "RUA CANIDO 227",
      "code": "360398",
-     "locality": "Oia"
+     "locality": "Oia",
+     "address": "RUA CANIDO 227"
     },
     {
-     "address": "RUA CATALUÑA 6",
      "code": "360362",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA CATALUÑA 6"
     },
     {
-     "address": "RUA COLON 23",
      "code": "360343",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA COLON 23"
     },
     {
-     "address": "RUA ECUADOR 50",
      "code": "360347",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA ECUADOR 50"
     },
     {
-     "address": "RUA EDUARDO IGLESIAS 9",
      "code": "360332",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA EDUARDO IGLESIAS 9"
     },
     {
-     "address": "RUA EMILIA PARDO BAZAN 19",
      "code": "360350",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA EMILIA PARDO BAZAN 19"
     },
     {
-     "address": "RUA HERNAN CORTES 3",
      "code": "360384",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA HERNAN CORTES 3"
     },
     {
-     "address": "RUA LOPEZ MORA 96",
      "code": "360375",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA LOPEZ MORA 96"
     },
     {
-     "address": "RUA PI Y MARGALL 8",
      "code": "360339",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA PI Y MARGALL 8"
     },
     {
-     "address": "RUA PIZARRO 51",
      "code": "360360",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA PIZARRO 51"
     },
     {
-     "address": "RUA ROSALIA DE CASTRO 18",
      "code": "360376",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA ROSALIA DE CASTRO 18"
     },
     {
-     "address": "RUA ROSALIA DE CASTRO 50",
      "code": "360372",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA ROSALIA DE CASTRO 50"
     },
     {
-     "address": "RUA SANJURJO BADIA 107",
      "code": "360363",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA SANJURJO BADIA 107"
     },
     {
-     "address": "RUA SANJURJO BADIA 137",
      "code": "360381",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA SANJURJO BADIA 137"
     },
     {
-     "address": "RUA SANJURJO BADIA 270",
      "code": "360373",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA SANJURJO BADIA 270"
     },
     {
-     "address": "RUA SANTA TEGRA 43",
      "code": "360342",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA SANTA TEGRA 43"
     },
     {
-     "address": "RUA TOMAS A. ALONSO 138",
      "code": "360385",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA TOMAS A. ALONSO 138"
     },
     {
-     "address": "RUA URZAIZ 184",
      "code": "360371",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA URZAIZ 184"
     },
     {
-     "address": "RUA VENEZUELA 10-12",
      "code": "360333",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA VENEZUELA 10-12"
     },
     {
-     "address": "RUA ZAMORA 76",
      "code": "360369",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "RUA ZAMORA 76"
     },
     {
-     "address": "SAN PELAYO DE NAVIA. 194",
      "code": "360397",
-     "locality": "Devesa"
+     "locality": "Devesa",
+     "address": "SAN PELAYO DE NAVIA. 194"
     },
     {
-     "address": "STA. MARIA DE OYA.   0",
      "code": "360359",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "STA. MARIA DE OYA.   0"
     },
     {
-     "address": "STA. MARINA-CABRAL. 326",
      "code": "360389",
-     "locality": "Carballal"
+     "locality": "Carballal",
+     "address": "STA. MARINA-CABRAL. 326"
     },
     {
-     "address": "TEIXUGUEIRAS 19",
      "code": "360370",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "TEIXUGUEIRAS 19"
     },
     {
-     "address": "TRAVESIA DA PONTE ROMANO 3",
      "code": "360367",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "TRAVESIA DA PONTE ROMANO 3"
     },
     {
-     "address": "TRAVESIA DE VIGO. 164",
      "code": "360355",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "TRAVESIA DE VIGO. 164"
     },
     {
-     "address": "URZAIZ 66",
      "code": "360334",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "URZAIZ 66"
     },
     {
-     "address": "URZAIZ. 114",
      "code": "360361",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "URZAIZ. 114"
     },
     {
-     "address": "VIGO 105",
      "code": "360378",
-     "locality": "Vigo"
+     "locality": "Vigo",
+     "address": "VIGO 105"
     }
-   ],
-   "lat": 42.24,
-   "lng": -8.72,
-   "municipality": "VIGO",
-   "name": "Vigo",
-   "province": "Pontevedra"
+   ]
   },
   {
+   "municipality": "VERIN",
+   "name": "Verín",
+   "province": "Ourense",
+   "lat": 41.941,
+   "lng": -7.436,
    "crossing": "Chaves",
    "estancos": [
     {
-     "address": "AV. DE OURENSE 68",
      "code": "320355",
-     "locality": "Pazos"
+     "locality": "Pazos",
+     "address": "AV. DE OURENSE 68"
     },
     {
-     "address": "AVENIDA DE SOUSAS 84",
      "code": "320352",
-     "locality": "Verin"
+     "locality": "Verin",
+     "address": "AVENIDA DE SOUSAS 84"
     },
     {
-     "address": "CALLE LUIS ESPADA 55",
      "code": "320357",
-     "locality": "Verin"
+     "locality": "Verin",
+     "address": "CALLE LUIS ESPADA 55"
     },
     {
-     "address": "GARCIA BARBON 3",
      "code": "320358",
-     "locality": "Verin"
+     "locality": "Verin",
+     "address": "GARCIA BARBON 3"
     },
     {
-     "address": "PB FECES DE ABAJO.IDEM.   0",
      "code": "320354",
-     "locality": "Feces De Abaixo"
+     "locality": "Feces De Abaixo",
+     "address": "PB FECES DE ABAJO.IDEM.   0"
     }
-   ],
-   "lat": 41.941,
-   "lng": -7.436,
-   "municipality": "VERIN",
-   "name": "Verín",
-   "province": "Ourense"
+   ]
   },
   {
+   "municipality": "ALCANICES",
+   "name": "Alcañices",
+   "province": "Zamora",
+   "lat": 41.7,
+   "lng": -6.347,
    "crossing": "Quintanilha / Bragança",
    "estancos": [
     {
-     "address": "CALLE SAN FRANCISCO 11",
      "code": "490022",
-     "locality": "Alcañices"
+     "locality": "Alcañices",
+     "address": "CALLE SAN FRANCISCO 11"
     }
-   ],
-   "lat": 41.7,
-   "lng": -6.347,
-   "municipality": "ALCANICES",
-   "name": "Alcañices",
-   "province": "Zamora"
+   ]
   },
   {
+   "municipality": "FUENTES DE ONORO",
+   "name": "Fuentes de Oñoro",
+   "province": "Salamanca",
+   "lat": 40.589,
+   "lng": -6.812,
    "crossing": "Vilar Formoso",
    "estancos": [
     {
-     "address": "DE ESPAÑA. 6",
      "code": "370126",
-     "locality": "Fuentes De Oñoro"
+     "locality": "Fuentes De Oñoro",
+     "address": "DE ESPAÑA. 6"
     },
     {
-     "address": "DEL MEDIO. 16",
      "code": "370125",
-     "locality": "Fuentes De Oñoro"
+     "locality": "Fuentes De Oñoro",
+     "address": "DEL MEDIO. 16"
     }
-   ],
-   "lat": 40.589,
-   "lng": -6.812,
-   "municipality": "FUENTES DE ONORO",
-   "name": "Fuentes de Oñoro",
-   "province": "Salamanca"
+   ]
   },
   {
+   "municipality": "CIUDAD RODRIGO",
+   "name": "Ciudad Rodrigo",
+   "province": "Salamanca",
+   "lat": 40.6,
+   "lng": -6.533,
    "crossing": "Vilar Formoso (27 km)",
    "estancos": [
     {
-     "address": "ALAMO GRANDE. 4",
      "code": "370105",
-     "locality": "Ciudad Rodrigo"
+     "locality": "Ciudad Rodrigo",
+     "address": "ALAMO GRANDE. 4"
     },
     {
-     "address": "CALLE RUA DEL SOL 15",
      "code": "370104",
-     "locality": "Ciudad Rodrigo"
+     "locality": "Ciudad Rodrigo",
+     "address": "CALLE RUA DEL SOL 15"
     },
     {
-     "address": "CALLE SAN FERNANDO 8-10",
      "code": "370106",
-     "locality": "Ciudad Rodrigo"
+     "locality": "Ciudad Rodrigo",
+     "address": "CALLE SAN FERNANDO 8-10"
     },
     {
-     "address": "DE ESPAÑA 35",
      "code": "370103",
-     "locality": "Ciudad Rodrigo"
+     "locality": "Ciudad Rodrigo",
+     "address": "DE ESPAÑA 35"
     },
     {
-     "address": "PLAZA MAYOR 8",
      "code": "370102",
-     "locality": "Ciudad Rodrigo"
+     "locality": "Ciudad Rodrigo",
+     "address": "PLAZA MAYOR 8"
     }
-   ],
-   "lat": 40.6,
-   "lng": -6.533,
-   "municipality": "CIUDAD RODRIGO",
-   "name": "Ciudad Rodrigo",
-   "province": "Salamanca"
+   ]
   },
   {
+   "municipality": "VALENCIA DE ALCANTARA",
+   "name": "Valencia de Alcántara",
+   "province": "Cáceres",
+   "lat": 39.413,
+   "lng": -7.244,
    "crossing": "Marvão / Castelo de Vide",
    "estancos": [
     {
-     "address": "CALLE DUQUESA DE LA VICTORIA 10",
      "code": "100259",
-     "locality": "Valencia De Alcantara"
+     "locality": "Valencia De Alcantara",
+     "address": "CALLE DUQUESA DE LA VICTORIA 10"
     },
     {
-     "address": "RAMON Y CAJAL 44",
      "code": "100262",
-     "locality": "Valencia De Alcantara"
+     "locality": "Valencia De Alcantara",
+     "address": "RAMON Y CAJAL 44"
     }
-   ],
-   "lat": 39.413,
-   "lng": -7.244,
-   "municipality": "VALENCIA DE ALCANTARA",
-   "name": "Valencia de Alcántara",
-   "province": "Cáceres"
+   ]
   },
   {
+   "municipality": "ALBURQUERQUE",
+   "name": "Alburquerque",
+   "province": "Badajoz",
+   "lat": 39.217,
+   "lng": -6.993,
    "crossing": "Campo Maior",
    "estancos": [
     {
-     "address": "ALAMEDA. 5",
      "code": "060049",
-     "locality": "Alburquerque"
+     "locality": "Alburquerque",
+     "address": "ALAMEDA. 5"
     },
     {
-     "address": "SAN MATEO 10",
      "code": "060048",
-     "locality": "Alburquerque"
+     "locality": "Alburquerque",
+     "address": "SAN MATEO 10"
     }
-   ],
-   "lat": 39.217,
-   "lng": -6.993,
-   "municipality": "ALBURQUERQUE",
-   "name": "Alburquerque",
-   "province": "Badajoz"
+   ]
   },
   {
+   "municipality": "BADAJOZ",
+   "name": "Badajoz",
+   "province": "Badajoz",
+   "lat": 38.878,
+   "lng": -6.97,
    "crossing": "Elvas / Caia",
    "estancos": [
     {
-     "address": "ARGÜELLO CARVAJAL. 39",
      "code": "060039",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "ARGÜELLO CARVAJAL. 39"
     },
     {
-     "address": "AV. RICARDO CARAPETO ZAMBRANO 100",
      "code": "060004",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AV. RICARDO CARAPETO ZAMBRANO 100"
     },
     {
-     "address": "AV. SINFORIANO MADROÑERO 33, L-B",
      "code": "060018",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AV. SINFORIANO MADROÑERO 33, L-B"
     },
     {
-     "address": "AV. SINFORIANO MADROÑERO, 7",
      "code": "060016",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AV. SINFORIANO MADROÑERO, 7"
     },
     {
-     "address": "AVENIDA CAROLINA CORONADO 6",
      "code": "060031",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA CAROLINA CORONADO 6"
     },
     {
-     "address": "AVENIDA DE PARDALERAS 30",
      "code": "060021",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA DE PARDALERAS 30"
     },
     {
-     "address": "AVENIDA ELVAS 6 (L-21)",
      "code": "060006",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA ELVAS 6 (L-21)"
     },
     {
-     "address": "AVENIDA JOSE MARIA ALCARAZ Y ALENDA 10",
      "code": "060017",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA JOSE MARIA ALCARAZ Y ALENDA 10"
     },
     {
-     "address": "AVENIDA JUAN SEBASTIAN ELCANO 25",
      "code": "060030",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA JUAN SEBASTIAN ELCANO 25"
     },
     {
-     "address": "AVENIDA JUAN SEBASTIAN ELCANO 49",
      "code": "060034",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA JUAN SEBASTIAN ELCANO 49"
     },
     {
-     "address": "AVENIDA RICARDO CARAPETO ZAMBRANO 54",
      "code": "060028",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA RICARDO CARAPETO ZAMBRANO 54"
     },
     {
-     "address": "AVENIDA SINFORIANO MADROÑERO 18",
      "code": "060003",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "AVENIDA SINFORIANO MADROÑERO 18"
     },
     {
-     "address": "C/ CORTE DE PELEAS 74",
      "code": "060027",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "C/ CORTE DE PELEAS 74"
     },
     {
-     "address": "C/ DON BENITO, 15 G",
      "code": "060336",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "C/ DON BENITO, 15 G"
     },
     {
-     "address": "CALLE CORTE DE PELEAS 21",
      "code": "060029",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE CORTE DE PELEAS 21"
     },
     {
-     "address": "CALLE DOLORES GIMENEZ BAZAN 1",
      "code": "060079",
-     "locality": "Valdebotoa"
+     "locality": "Valdebotoa",
+     "address": "CALLE DOLORES GIMENEZ BAZAN 1"
     },
     {
-     "address": "CALLE ENRIQUE SEGURA OTAÑO 12",
      "code": "060012",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE ENRIQUE SEGURA OTAÑO 12"
     },
     {
-     "address": "CALLE GENERAL MANUEL SAAVEDRA PALMEIRO 10",
      "code": "060019",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE GENERAL MANUEL SAAVEDRA PALMEIRO 10"
     },
     {
-     "address": "CALLE GODOFREDO ORTEGA Y MUÑOZ 24",
      "code": "060022",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE GODOFREDO ORTEGA Y MUÑOZ 24"
     },
     {
-     "address": "CALLE GUADALUPE 13",
      "code": "060074",
-     "locality": "Gevora Del Caudillo"
+     "locality": "Gevora Del Caudillo",
+     "address": "CALLE GUADALUPE 13"
     },
     {
-     "address": "CALLE JOSE REBOLLO LOPEZ 2",
      "code": "060040",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE JOSE REBOLLO LOPEZ 2"
     },
     {
-     "address": "CALLE LOS ANGELES 16",
      "code": "060080",
-     "locality": "Villafranco Del Guadiana"
+     "locality": "Villafranco Del Guadiana",
+     "address": "CALLE LOS ANGELES 16"
     },
     {
-     "address": "CALLE NAVIDAD 1",
      "code": "060025",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE NAVIDAD 1"
     },
     {
-     "address": "CALLE SALESIANOS 1",
      "code": "060010",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE SALESIANOS 1"
     },
     {
-     "address": "CALLE ZURBARAN 33",
      "code": "060008",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CALLE ZURBARAN 33"
     },
     {
-     "address": "CAROLINA CORONADO 18",
      "code": "060007",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "CAROLINA CORONADO 18"
     },
     {
-     "address": "DAMIÁN TÉLLEZ LAFUENTE. 20",
      "code": "060023",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "DAMIÁN TÉLLEZ LAFUENTE. 20"
     },
     {
-     "address": "DE EUROPA 6",
      "code": "060035",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "DE EUROPA 6"
     },
     {
-     "address": "DE OLIVENZA. S/N",
      "code": "060038",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "DE OLIVENZA. S/N"
     },
     {
-     "address": "EL PINO, 11",
      "code": "060072",
-     "locality": "Alvarado - La Risca"
+     "locality": "Alvarado - La Risca",
+     "address": "EL PINO, 11"
     },
     {
-     "address": "ESPAÑA 18",
      "code": "060015",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "ESPAÑA 18"
     },
     {
-     "address": "FERNANDO CALZADILLA 14",
      "code": "060002",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "FERNANDO CALZADILLA 14"
     },
     {
-     "address": "LAS NIEVES, 2 A",
      "code": "060073",
-     "locality": "Balboa"
+     "locality": "Balboa",
+     "address": "LAS NIEVES, 2 A"
     },
     {
-     "address": "MARIA AUXILIADORA 13",
      "code": "060014",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "MARIA AUXILIADORA 13"
     },
     {
-     "address": "PROGRESO. 7",
      "code": "060013",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "PROGRESO. 7"
     },
     {
-     "address": "RAFAEL LUCENQUI 22",
      "code": "060037",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "RAFAEL LUCENQUI 22"
     },
     {
-     "address": "SANTA MARINA 23",
      "code": "060005",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "SANTA MARINA 23"
     },
     {
-     "address": "SANTA MARINA 44 B",
      "code": "060009",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "SANTA MARINA 44 B"
     },
     {
-     "address": "SANTA MARINA. 12A",
      "code": "060032",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "SANTA MARINA. 12A"
     },
     {
-     "address": "SANTIAGO 7",
      "code": "060077",
-     "locality": "Sagrajas"
+     "locality": "Sagrajas",
+     "address": "SANTIAGO 7"
     },
     {
-     "address": "VASCO NUÑEZ, 12",
      "code": "060011",
-     "locality": "Badajoz"
+     "locality": "Badajoz",
+     "address": "VASCO NUÑEZ, 12"
     }
-   ],
-   "lat": 38.878,
-   "lng": -6.97,
-   "municipality": "BADAJOZ",
-   "name": "Badajoz",
-   "province": "Badajoz"
+   ]
   },
   {
+   "municipality": "OLIVENZA",
+   "name": "Olivenza",
+   "province": "Badajoz",
+   "lat": 38.682,
+   "lng": -7.1,
    "crossing": "Elvas (ponte da Ajuda)",
    "estancos": [
     {
-     "address": "AV. RAMON Y CAJAL 30",
      "code": "060232",
-     "locality": "Olivenza"
+     "locality": "Olivenza",
+     "address": "AV. RAMON Y CAJAL 30"
     },
     {
-     "address": "AVENIDA PORTUGAL 2",
      "code": "060231",
-     "locality": "Olivenza"
+     "locality": "Olivenza",
+     "address": "AVENIDA PORTUGAL 2"
     },
     {
-     "address": "PLAZA CONSTITUCION (SAN JORGE DE ALOR) 6",
      "code": "060235",
-     "locality": "San Jorge De Alor"
+     "locality": "San Jorge De Alor",
+     "address": "PLAZA CONSTITUCION (SAN JORGE DE ALOR) 6"
     },
     {
-     "address": "PLAZA ESCUELAS 1",
      "code": "060234",
-     "locality": "San Francisco De Olivenza"
+     "locality": "San Francisco De Olivenza",
+     "address": "PLAZA ESCUELAS 1"
     }
-   ],
-   "lat": 38.682,
-   "lng": -7.1,
-   "municipality": "OLIVENZA",
-   "name": "Olivenza",
-   "province": "Badajoz"
+   ]
   },
   {
+   "municipality": "ROSAL DE LA FRONTERA",
+   "name": "Rosal de la Frontera",
+   "province": "Huelva",
+   "lat": 37.966,
+   "lng": -7.218,
    "crossing": "Vila Verde de Ficalho",
    "estancos": [
     {
-     "address": "CALLE AURORA 27",
      "code": "210173",
-     "locality": "Rosal De La Frontera"
+     "locality": "Rosal De La Frontera",
+     "address": "CALLE AURORA 27"
     }
-   ],
-   "lat": 37.966,
-   "lng": -7.218,
-   "municipality": "ROSAL DE LA FRONTERA",
-   "name": "Rosal de la Frontera",
-   "province": "Huelva"
+   ]
   },
   {
+   "municipality": "AYAMONTE",
+   "name": "Ayamonte",
+   "province": "Huelva",
+   "lat": 37.213,
+   "lng": -7.407,
    "crossing": "Vila Real de Santo António",
    "estancos": [
     {
-     "address": "AV. ALCALDE NARCISO MARTIN NAVARRO. 63. LOCAL",
      "code": "210071",
-     "locality": "Isla De Canela"
+     "locality": "Isla De Canela",
+     "address": "AV. ALCALDE NARCISO MARTIN NAVARRO. 63. LOCAL"
     },
     {
-     "address": "AVENIDA ANDALUCIA 19",
      "code": "210069",
-     "locality": "Ayamonte"
+     "locality": "Ayamonte",
+     "address": "AVENIDA ANDALUCIA 19"
     },
     {
-     "address": "AVENIDA PALMERA (LA) 23",
      "code": "210072",
-     "locality": "Isla Del Moral"
+     "locality": "Isla Del Moral",
+     "address": "AVENIDA PALMERA (LA) 23"
     },
     {
-     "address": "C/ BENAVENTE 24",
      "code": "210070",
-     "locality": "Ayamonte"
+     "locality": "Ayamonte",
+     "address": "C/ BENAVENTE 24"
     },
     {
-     "address": "CALLE ANGUSTIAS 2",
      "code": "210068",
-     "locality": "Ayamonte"
+     "locality": "Ayamonte",
+     "address": "CALLE ANGUSTIAS 2"
     },
     {
-     "address": "CARRETERA ISLA CRISTINA 35",
      "code": "210073",
-     "locality": "Pozo Del Camino"
+     "locality": "Pozo Del Camino",
+     "address": "CARRETERA ISLA CRISTINA 35"
     }
-   ],
-   "lat": 37.213,
-   "lng": -7.407,
-   "municipality": "AYAMONTE",
-   "name": "Ayamonte",
-   "province": "Huelva"
+   ]
   },
   {
+   "municipality": "ISLA CRISTINA",
+   "name": "Isla Cristina",
+   "province": "Huelva",
+   "lat": 37.199,
+   "lng": -7.32,
    "crossing": "Vila Real de Santo António (15 km)",
    "estancos": [
     {
-     "address": "ANGEL PEREZ. 16",
      "code": "210122",
-     "locality": "Isla-Cristina"
+     "locality": "Isla-Cristina",
+     "address": "ANGEL PEREZ. 16"
     },
     {
-     "address": "AVENIDA ROQUE BARCIA 21",
      "code": "210123",
-     "locality": "Isla-Cristina"
+     "locality": "Isla-Cristina",
+     "address": "AVENIDA ROQUE BARCIA 21"
     },
     {
-     "address": "CALLE GRAN VIA 27",
      "code": "210124",
-     "locality": "Isla-Cristina"
+     "locality": "Isla-Cristina",
+     "address": "CALLE GRAN VIA 27"
     },
     {
-     "address": "FEDERICO SILVA MUÑOZ (EDIFICIO LEVANTE) 9 (LOCAL B",
      "code": "210120",
-     "locality": "Isla-Cristina"
+     "locality": "Isla-Cristina",
+     "address": "FEDERICO SILVA MUÑOZ (EDIFICIO LEVANTE) 9 (LOCAL B"
     },
     {
-     "address": "MIGUEL DE CERVANTES 10",
      "code": "210125",
-     "locality": "Redondela (La)"
+     "locality": "Redondela (La)",
+     "address": "MIGUEL DE CERVANTES 10"
     },
     {
-     "address": "PLAZA SAN FRANCISCO 4",
      "code": "210121",
-     "locality": "Isla-Cristina"
+     "locality": "Isla-Cristina",
+     "address": "PLAZA SAN FRANCISCO 4"
     }
-   ],
-   "lat": 37.199,
-   "lng": -7.32,
-   "municipality": "ISLA CRISTINA",
-   "name": "Isla Cristina",
-   "province": "Huelva"
+   ]
   }
  ],
  "source": "Origem dos dados: Ministerio de Hacienda (CMT) — Red de Expendedurías",

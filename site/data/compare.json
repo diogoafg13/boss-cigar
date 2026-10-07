@@ -1,6 +1,6 @@
 {
  "fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
- "es_fetched": "2026-10-06",
+ "es_fetched": "2026-10-07",
  "n": 371,
  "median_diff_pct": -26.2,
  "es_cheaper": 350,
@@ -378,7 +378,7 @@
    "label": "Bolivar Belicosos Finos",
    "fr_label": "Bolivar Belicosos Finos",
    "es_label": "Bolivar Belicosos Finos",
-   "brand": "Bolívar",
+   "brand": "Bolivar",
    "fr": 22.3,
    "es": 18.2,
    "diff_pct": -18.4
@@ -387,7 +387,7 @@
    "label": "Bolivar Petit Coronas",
    "fr_label": "Bolivar Petit Coronas",
    "es_label": "Bolivar Petit Coronas",
-   "brand": "Bolívar",
+   "brand": "Bolivar",
    "fr": 13.5,
    "es": 10.6,
    "diff_pct": -21.5
@@ -396,7 +396,7 @@
    "label": "Bolivar Royal Coronas",
    "fr_label": "Bolivar Royal Coronas",
    "es_label": "Bolivar Royal Coronas",
-   "brand": "Bolívar",
+   "brand": "Bolivar",
    "fr": 19.2,
    "es": 19.6,
    "diff_pct": 2.1
@@ -2835,7 +2835,7 @@
    "label": "San Cristobal de la Habana El Principe",
    "fr_label": "San Cristobal de la Habana El Principe",
    "es_label": "San Cristobal de la Habana El Principe",
-   "brand": "San Cristóbal de la Habana",
+   "brand": "San Cristobal de la Habana",
    "fr": 11.1,
    "es": 7.25,
    "diff_pct": -34.7
@@ -2844,7 +2844,7 @@
    "label": "San Cristobal de la Habana La Fuerza",
    "fr_label": "San Cristobal de la Habana La Fuerza",
    "es_label": "San Cristobal de la Habana La Fuerza",
-   "brand": "San Cristóbal de la Habana",
+   "brand": "San Cristobal de la Habana",
    "fr": 22.0,
    "es": 12.3,
    "diff_pct": -44.1

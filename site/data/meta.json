@@ -1,18 +1,18 @@
 {
- "built_at": "2026-10-07T15:14:16+00:00",
+ "built_at": "2026-10-07T15:24:45+00:00",
  "version": "0.1.0",
- "mode": "cache",
+ "mode": "auto",
  "sources": {
   "seed": "ok",
-  "wikipedia": "CACHE",
+  "wikipedia": "ok",
   "wikidata": "CACHE",
-  "nasa_power": "CACHE",
-  "faostat": "CACHE",
+  "nasa_power": "ok",
+  "faostat": "ok",
   "openstreetmap": "CACHE",
-  "douane_fr": "CACHE",
-  "douane_fr_historico": "CACHE",
-  "cmt_espanha": "CACHE",
-  "cmt_estancos": "CACHE"
+  "douane_fr": "ok",
+  "douane_fr_historico": "ok",
+  "cmt_espanha": "ok",
+  "cmt_estancos": "ok"
  },
  "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
  "counts": {
@@ -23,7 +23,7 @@
   "fr_references": 3720,
   "es_references": 4798
  },
- "cmt_es_fetched": "2026-10-06",
+ "cmt_es_fetched": "2026-10-07",
  "quality": {
   "verified_share": 0.977,
   "cigars_with_verified_fields": 43

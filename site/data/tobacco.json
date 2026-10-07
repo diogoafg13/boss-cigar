@@ -1,701 +1,180 @@
 {
- "latest_by_country": {
-  "Albania": {
-   "production_t": 1860.9,
-   "year": 2024
-  },
-  "Algeria": {
-   "production_t": 11181.93,
-   "year": 2024
-  },
-  "Angola": {
-   "production_t": 2784.29,
-   "year": 2024
-  },
-  "Argentina": {
-   "production_t": 80786.0,
-   "year": 2024
-  },
-  "Armenia": {
-   "production_t": 1019.5,
-   "year": 2024
-  },
-  "Australia": {
-   "production_t": 3605.0,
-   "year": 2005
-  },
-  "Austria": {
-   "production_t": 107.84,
-   "year": 2017
-  },
-  "Azerbaijan": {
-   "production_t": 7777.32,
-   "year": 2024
-  },
-  "Bangladesh": {
-   "production_t": 97814.0,
-   "year": 2024
-  },
-  "Belgium": {
-   "production_t": 129.29,
-   "year": 2017
-  },
-  "Benin": {
-   "production_t": 3.17,
-   "year": 2024
-  },
-  "Bhutan": {
-   "production_t": 218.83,
-   "year": 2024
-  },
-  "Bolivia (Plurinational State of)": {
-   "production_t": 1206.62,
-   "year": 2024
-  },
-  "Bosnia and Herzegovina": {
-   "production_t": 377.0,
-   "year": 2024
-  },
-  "Brazil": {
-   "production_t": 637749.0,
-   "year": 2024
-  },
-  "Bulgaria": {
-   "production_t": 3380.0,
-   "year": 2024
-  },
-  "Burkina Faso": {
-   "production_t": 754.22,
-   "year": 2024
-  },
-  "Burundi": {
-   "production_t": 1277.0,
-   "year": 2024
-  },
-  "Cambodia": {
-   "production_t": 12410.4,
-   "year": 2024
-  },
-  "Cameroon": {
-   "production_t": 6437.37,
-   "year": 2024
-  },
-  "Canada": {
-   "production_t": 27780.24,
-   "year": 2024
-  },
-  "Central African Republic": {
-   "production_t": 480.29,
-   "year": 2024
-  },
-  "Chad": {
-   "production_t": 178.02,
-   "year": 2024
-  },
-  "Chile": {
-   "production_t": 3030.52,
-   "year": 2024
-  },
-  "China, Taiwan Province of": {
-   "production_t": 1393.41,
-   "year": 2024
-  },
-  "China, mainland": {
-   "production_t": 2256400.0,
-   "year": 2024
-  },
-  "Colombia": {
-   "production_t": 3305.14,
-   "year": 2024
-  },
-  "Congo": {
-   "production_t": 494.25,
-   "year": 2024
-  },
-  "Costa Rica": {
-   "production_t": 17.27,
-   "year": 2024
-  },
-  "Croatia": {
-   "production_t": 6180.0,
-   "year": 2024
-  },
-  "Cuba": {
-   "production_t": 12481.53,
-   "year": 2024
-  },
-  "Cyprus": {
-   "production_t": 112.5,
-   "year": 2017
-  },
-  "Côte d'Ivoire": {
-   "production_t": 8086.72,
-   "year": 2024
-  },
-  "Democratic People's Republic of Korea": {
-   "production_t": 88035.75,
-   "year": 2024
-  },
-  "Democratic Republic of the Congo": {
-   "production_t": 3516.61,
-   "year": 2024
-  },
-  "Dominican Republic": {
-   "production_t": 14651.0,
-   "year": 2024
-  },
-  "Ecuador": {
-   "production_t": 9552.74,
-   "year": 2024
-  },
-  "El Salvador": {
-   "production_t": 1819.38,
-   "year": 2024
-  },
-  "Eswatini": {
-   "production_t": 161.97,
-   "year": 2024
-  },
-  "Ethiopia": {
-   "production_t": 2176.37,
-   "year": 2024
-  },
-  "Fiji": {
-   "production_t": 259.71,
-   "year": 2024
-  },
-  "France": {
-   "production_t": 2650.0,
-   "year": 2024
-  },
-  "Georgia": {
-   "production_t": 272.34,
-   "year": 2024
-  },
-  "Germany": {
-   "production_t": 6217.59,
-   "year": 2017
-  },
-  "Ghana": {
-   "production_t": 2560.24,
-   "year": 2024
-  },
-  "Greece": {
-   "production_t": 10210.0,
-   "year": 2024
-  },
-  "Guatemala": {
-   "production_t": 30621.4,
-   "year": 2024
-  },
-  "Guinea": {
-   "production_t": 2399.14,
-   "year": 2024
-  },
-  "Guyana": {
-   "production_t": 100.94,
-   "year": 2024
-  },
-  "Haiti": {
-   "production_t": 557.74,
-   "year": 2024
-  },
-  "Honduras": {
-   "production_t": 5856.16,
-   "year": 2024
-  },
-  "Hungary": {
-   "production_t": 4730.0,
-   "year": 2024
-  },
-  "India": {
-   "production_t": 727202.88,
-   "year": 2024
-  },
-  "Indonesia": {
-   "production_t": 353386.0,
-   "year": 2024
-  },
-  "Iran (Islamic Republic of)": {
-   "production_t": 20947.72,
-   "year": 2024
-  },
-  "Iraq": {
-   "production_t": 2340.25,
-   "year": 2024
-  },
-  "Israel": {
-   "production_t": 4.47,
-   "year": 2024
-  },
-  "Italy": {
-   "production_t": 33900.0,
-   "year": 2024
-  },
-  "Jamaica": {
-   "production_t": 1659.9,
-   "year": 2024
-  },
-  "Japan": {
-   "production_t": 8336.0,
-   "year": 2024
-  },
-  "Jordan": {
-   "production_t": 314.0,
-   "year": 2024
-  },
-  "Kazakhstan": {
-   "production_t": 128.96,
-   "year": 2024
-  },
-  "Kenya": {
-   "production_t": 12446.0,
-   "year": 2024
-  },
-  "Kyrgyzstan": {
-   "production_t": 972.0,
-   "year": 2024
-  },
-  "Lao People's Democratic Republic": {
-   "production_t": 19300.0,
-   "year": 2024
-  },
-  "Lebanon": {
-   "production_t": 10522.13,
-   "year": 2024
-  },
-  "Libya": {
-   "production_t": 1225.64,
-   "year": 2024
-  },
-  "Madagascar": {
-   "production_t": 919.05,
-   "year": 2024
-  },
-  "Malawi": {
-   "production_t": 119957.29,
-   "year": 2024
-  },
-  "Malaysia": {
-   "production_t": 80.0,
-   "year": 2024
-  },
-  "Mali": {
-   "production_t": 1709.99,
-   "year": 2024
-  },
-  "Mauritius": {
-   "production_t": 89.78,
-   "year": 2019
-  },
-  "Mexico": {
-   "production_t": 18578.96,
-   "year": 2024
-  },
-  "Montenegro": {
-   "production_t": 233.79,
-   "year": 2024
-  },
-  "Morocco": {
-   "production_t": 1269.84,
-   "year": 2024
-  },
-  "Mozambique": {
-   "production_t": 92343.0,
-   "year": 2024
-  },
-  "Myanmar": {
-   "production_t": 26643.57,
-   "year": 2024
-  },
-  "Nepal": {
-   "production_t": 1379.97,
-   "year": 2024
-  },
-  "Nicaragua": {
-   "production_t": 7785.54,
-   "year": 2023
-  },
-  "Niger": {
-   "production_t": 1082.96,
-   "year": 2024
-  },
-  "Nigeria": {
-   "production_t": 5577.52,
-   "year": 2024
-  },
-  "North Macedonia": {
-   "production_t": 24116.0,
-   "year": 2024
-  },
-  "Oman": {
-   "production_t": 1114.57,
-   "year": 2024
-  },
-  "Pakistan": {
-   "production_t": 184982.0,
-   "year": 2024
-  },
-  "Palestine": {
-   "production_t": 1405.92,
-   "year": 2022
-  },
-  "Panama": {
-   "production_t": 2753.89,
-   "year": 2024
-  },
-  "Paraguay": {
-   "production_t": 2296.0,
-   "year": 2024
-  },
-  "Peru": {
-   "production_t": 3278.0,
-   "year": 2024
-  },
-  "Philippines": {
-   "production_t": 55345.86,
-   "year": 2024
-  },
-  "Poland": {
-   "production_t": 19200.0,
-   "year": 2024
-  },
-  "Portugal": {
-   "production_t": 90.0,
-   "year": 2018
-  },
-  "Puerto Rico": {
-   "production_t": 0.92,
-   "year": 2024
-  },
-  "Republic of Korea": {
-   "production_t": 27947.91,
-   "year": 2024
-  },
-  "Republic of Moldova": {
-   "production_t": 564.0,
-   "year": 2024
-  },
-  "Romania": {
-   "production_t": 430.0,
-   "year": 2024
-  },
-  "Russian Federation": {
-   "production_t": 13.9,
-   "year": 2024
-  },
-  "Rwanda": {
-   "production_t": 4684.49,
-   "year": 2024
-  },
-  "Réunion": {
-   "production_t": 22.0,
-   "year": 2006
-  },
-  "Saint Vincent and the Grenadines": {
-   "production_t": 103.73,
-   "year": 2024
-  },
-  "Samoa": {
-   "production_t": 252.32,
-   "year": 2024
-  },
-  "Serbia": {
-   "production_t": 7005.43,
-   "year": 2024
-  },
-  "Serbia and Montenegro": {
-   "production_t": 11752.0,
-   "year": 2005
-  },
-  "Sierra Leone": {
-   "production_t": 47.85,
-   "year": 2024
-  },
-  "Slovakia": {
-   "production_t": 5.0,
-   "year": 2017
-  },
-  "Solomon Islands": {
-   "production_t": 114.52,
-   "year": 2024
-  },
-  "Somalia": {
-   "production_t": 145.64,
-   "year": 2024
-  },
-  "South Africa": {
-   "production_t": 11230.96,
-   "year": 2024
-  },
-  "Spain": {
-   "production_t": 19410.0,
-   "year": 2024
-  },
-  "Sri Lanka": {
-   "production_t": 8514.0,
-   "year": 2024
-  },
-  "Switzerland": {
-   "production_t": 756.04,
-   "year": 2024
-  },
-  "Syrian Arab Republic": {
-   "production_t": 8430.0,
-   "year": 2024
-  },
-  "Tajikistan": {
-   "production_t": 379.22,
-   "year": 2024
-  },
-  "Thailand": {
-   "production_t": 66285.29,
-   "year": 2024
-  },
-  "Togo": {
-   "production_t": 1959.34,
-   "year": 2024
-  },
-  "Trinidad and Tobago": {
-   "production_t": 190.16,
-   "year": 2024
-  },
-  "Tunisia": {
-   "production_t": 2215.69,
-   "year": 2024
-  },
-  "Turkmenistan": {
-   "production_t": 3333.51,
-   "year": 2024
-  },
-  "Türkiye": {
-   "production_t": 108000.0,
-   "year": 2024
-  },
-  "Uganda": {
-   "production_t": 32091.75,
-   "year": 2024
-  },
-  "Ukraine": {
-   "production_t": 2250.0,
-   "year": 2024
-  },
-  "United Arab Emirates": {
-   "production_t": 229.29,
-   "year": 2024
-  },
-  "United Republic of Tanzania": {
-   "production_t": 117464.0,
-   "year": 2024
-  },
-  "United States of America": {
-   "production_t": 147520.0,
-   "year": 2024
-  },
-  "Uruguay": {
-   "production_t": 3350.24,
-   "year": 2024
-  },
-  "Uzbekistan": {
-   "production_t": 1411.72,
-   "year": 2024
-  },
-  "Venezuela (Bolivarian Republic of)": {
-   "production_t": 2952.46,
-   "year": 2024
-  },
-  "Viet Nam": {
-   "production_t": 48313.0,
-   "year": 2024
-  },
-  "Yemen": {
-   "production_t": 31682.04,
-   "year": 2024
-  },
-  "Zambia": {
-   "production_t": 20768.03,
-   "year": 2024
-  },
-  "Zimbabwe": {
-   "production_t": 236815.0,
-   "year": 2024
-  }
- },
  "latest_year": 2024,
+ "world_t": 6039407.09,
  "ranking": [
   {
-   "area_ha": 1026429.0,
    "country": "China, mainland",
    "m49": "156",
    "production_t": 2256400.0,
+   "area_ha": 1026429.0,
    "share": 0.3736
   },
   {
-   "area_ha": 414334.0,
    "country": "India",
    "m49": "356",
    "production_t": 727202.88,
+   "area_ha": 414334.0,
    "share": 0.1204
   },
   {
-   "area_ha": 331730.0,
    "country": "Brazil",
    "m49": "076",
    "production_t": 637749.0,
+   "area_ha": 331730.0,
    "share": 0.1056
   },
   {
-   "area_ha": 253333.0,
    "country": "Indonesia",
    "m49": "360",
    "production_t": 353386.0,
+   "area_ha": 253333.0,
    "share": 0.0585
   },
   {
-   "area_ha": 136126.0,
    "country": "Zimbabwe",
    "m49": "716",
    "production_t": 236815.0,
+   "area_ha": 136126.0,
    "share": 0.0392
   },
   {
-   "area_ha": 54603.0,
    "country": "Pakistan",
    "m49": "586",
    "production_t": 184982.0,
+   "area_ha": 54603.0,
    "share": 0.0306
   },
   {
-   "area_ha": 67770.0,
    "country": "United States of America",
    "m49": "840",
    "production_t": 147520.0,
+   "area_ha": 67770.0,
    "share": 0.0244
   },
   {
-   "area_ha": 114292.0,
    "country": "Malawi",
    "m49": "454",
    "production_t": 119957.29,
+   "area_ha": 114292.0,
    "share": 0.0199
   },
   {
-   "area_ha": 157664.0,
    "country": "United Republic of Tanzania",
    "m49": "834",
    "production_t": 117464.0,
+   "area_ha": 157664.0,
    "share": 0.0194
   },
   {
-   "area_ha": 78033.0,
    "country": "Türkiye",
    "m49": "792",
    "production_t": 108000.0,
+   "area_ha": 78033.0,
    "share": 0.0179
   },
   {
-   "area_ha": 40915.0,
    "country": "Bangladesh",
    "m49": "050",
    "production_t": 97814.0,
+   "area_ha": 40915.0,
    "share": 0.0162
   },
   {
-   "area_ha": 69856.0,
    "country": "Mozambique",
    "m49": "508",
    "production_t": 92343.0,
+   "area_ha": 69856.0,
    "share": 0.0153
   },
   {
-   "area_ha": 59294.0,
    "country": "Democratic People's Republic of Korea",
    "m49": "408",
    "production_t": 88035.75,
+   "area_ha": 59294.0,
    "share": 0.0146
   },
   {
-   "area_ha": 54743.0,
    "country": "Argentina",
    "m49": "032",
    "production_t": 80786.0,
+   "area_ha": 54743.0,
    "share": 0.0134
   },
   {
-   "area_ha": 19859.0,
    "country": "Thailand",
    "m49": "764",
    "production_t": 66285.29,
+   "area_ha": 19859.0,
    "share": 0.011
   },
   {
-   "area_ha": 31325.0,
    "country": "Philippines",
    "m49": "608",
    "production_t": 55345.86,
+   "area_ha": 31325.0,
    "share": 0.0092
   },
   {
-   "area_ha": 17931.0,
    "country": "Viet Nam",
    "m49": "704",
    "production_t": 48313.0,
+   "area_ha": 17931.0,
    "share": 0.008
   },
   {
-   "area_ha": 11360.0,
    "country": "Italy",
    "m49": "380",
    "production_t": 33900.0,
+   "area_ha": 11360.0,
    "share": 0.0056
   },
   {
-   "area_ha": 23274.0,
    "country": "Uganda",
    "m49": "800",
    "production_t": 32091.75,
+   "area_ha": 23274.0,
    "share": 0.0053
   },
   {
-   "area_ha": 9084.0,
    "country": "Yemen",
    "m49": "887",
    "production_t": 31682.04,
+   "area_ha": 9084.0,
    "share": 0.0052
   },
   {
-   "area_ha": 14618.0,
    "country": "Guatemala",
    "m49": "320",
    "production_t": 30621.4,
+   "area_ha": 14618.0,
    "share": 0.0051
   },
   {
-   "area_ha": 11613.0,
    "country": "Republic of Korea",
    "m49": "410",
    "production_t": 27947.91,
+   "area_ha": 11613.0,
    "share": 0.0046
   },
   {
-   "area_ha": 9795.0,
    "country": "Canada",
    "m49": "124",
    "production_t": 27780.24,
+   "area_ha": 9795.0,
    "share": 0.0046
   },
   {
-   "area_ha": 14605.0,
    "country": "Myanmar",
    "m49": "104",
    "production_t": 26643.57,
+   "area_ha": 14605.0,
    "share": 0.0044
   },
   {
-   "area_ha": 14873.0,
    "country": "North Macedonia",
    "m49": "807",
    "production_t": 24116.0,
+   "area_ha": 14873.0,
    "share": 0.004
   }
  ],
@@ -1322,33 +801,6 @@
    "2023": 1718.0,
    "2024": 3030.52
   },
-  "China, Taiwan Province of": {
-   "2000": 11510.0,
-   "2001": 9215.0,
-   "2002": 7578.0,
-   "2003": 5243.0,
-   "2004": 5490.0,
-   "2005": 2743.0,
-   "2006": 2193.0,
-   "2007": 1672.0,
-   "2008": 1725.0,
-   "2009": 1928.0,
-   "2010": 1928.0,
-   "2011": 1737.0,
-   "2012": 1642.0,
-   "2013": 1700.0,
-   "2014": 1650.0,
-   "2015": 1604.0,
-   "2016": 1371.0,
-   "2017": 1335.0,
-   "2018": 1436.67,
-   "2019": 1380.89,
-   "2020": 1384.19,
-   "2021": 1400.58,
-   "2022": 1388.55,
-   "2023": 1391.11,
-   "2024": 1393.41
-  },
   "China, mainland": {
    "2000": 2552344.0,
    "2001": 2349627.0,
@@ -1375,6 +827,33 @@
    "2022": 2188100.0,
    "2023": 2296700.0,
    "2024": 2256400.0
+  },
+  "China, Taiwan Province of": {
+   "2000": 11510.0,
+   "2001": 9215.0,
+   "2002": 7578.0,
+   "2003": 5243.0,
+   "2004": 5490.0,
+   "2005": 2743.0,
+   "2006": 2193.0,
+   "2007": 1672.0,
+   "2008": 1725.0,
+   "2009": 1928.0,
+   "2010": 1928.0,
+   "2011": 1737.0,
+   "2012": 1642.0,
+   "2013": 1700.0,
+   "2014": 1650.0,
+   "2015": 1604.0,
+   "2016": 1371.0,
+   "2017": 1335.0,
+   "2018": 1436.67,
+   "2019": 1380.89,
+   "2020": 1384.19,
+   "2021": 1400.58,
+   "2022": 1388.55,
+   "2023": 1391.11,
+   "2024": 1393.41
   },
   "Colombia": {
    "2000": 27767.0,
@@ -1456,6 +935,33 @@
    "2022": 17.09,
    "2023": 17.9,
    "2024": 17.27
+  },
+  "Côte d'Ivoire": {
+   "2000": 10200.0,
+   "2001": 10200.0,
+   "2002": 10200.0,
+   "2003": 10206.32,
+   "2004": 10200.0,
+   "2005": 10352.22,
+   "2006": 10500.0,
+   "2007": 10627.5,
+   "2008": 10040.68,
+   "2009": 9671.3,
+   "2010": 9526.91,
+   "2011": 9382.52,
+   "2012": 9238.13,
+   "2013": 9093.74,
+   "2014": 8793.73,
+   "2015": 7251.28,
+   "2016": 8379.58,
+   "2017": 8456.57,
+   "2018": 8029.14,
+   "2019": 8288.43,
+   "2020": 8425.99,
+   "2021": 8275.26,
+   "2022": 8196.81,
+   "2023": 8141.76,
+   "2024": 8086.72
   },
   "Croatia": {
    "2000": 9714.0,
@@ -1544,33 +1050,6 @@
    "2022": 0.0,
    "2023": 0.0,
    "2024": 0.0
-  },
-  "Côte d'Ivoire": {
-   "2000": 10200.0,
-   "2001": 10200.0,
-   "2002": 10200.0,
-   "2003": 10206.32,
-   "2004": 10200.0,
-   "2005": 10352.22,
-   "2006": 10500.0,
-   "2007": 10627.5,
-   "2008": 10040.68,
-   "2009": 9671.3,
-   "2010": 9526.91,
-   "2011": 9382.52,
-   "2012": 9238.13,
-   "2013": 9093.74,
-   "2014": 8793.73,
-   "2015": 7251.28,
-   "2016": 8379.58,
-   "2017": 8456.57,
-   "2018": 8029.14,
-   "2019": 8288.43,
-   "2020": 8425.99,
-   "2021": 8275.26,
-   "2022": 8196.81,
-   "2023": 8141.76,
-   "2024": 8086.72
   },
   "Democratic People's Republic of Korea": {
    "2000": 63000.0,
@@ -3278,6 +2757,15 @@
    "2023": 293.0,
    "2024": 564.0
   },
+  "Réunion": {
+   "2000": 20.0,
+   "2001": 20.0,
+   "2002": 20.0,
+   "2003": 20.0,
+   "2004": 20.0,
+   "2005": 22.0,
+   "2006": 22.0
+  },
   "Romania": {
    "2000": 10869.0,
    "2001": 10088.0,
@@ -3358,15 +2846,6 @@
    "2022": 4701.48,
    "2023": 4688.75,
    "2024": 4684.49
-  },
-  "Réunion": {
-   "2000": 20.0,
-   "2001": 20.0,
-   "2002": 20.0,
-   "2003": 20.0,
-   "2004": 20.0,
-   "2005": 22.0,
-   "2006": 22.0
   },
   "Saint Vincent and the Grenadines": {
    "2000": 75.0,
@@ -3839,33 +3318,6 @@
    "2023": 2187.01,
    "2024": 2215.69
   },
-  "Turkmenistan": {
-   "2000": 3220.0,
-   "2001": 3220.0,
-   "2002": 3000.0,
-   "2003": 3000.0,
-   "2004": 3000.0,
-   "2005": 3100.0,
-   "2006": 3500.0,
-   "2007": 3100.0,
-   "2008": 3000.0,
-   "2009": 3000.0,
-   "2010": 3068.77,
-   "2011": 3185.24,
-   "2012": 3144.78,
-   "2013": 3160.62,
-   "2014": 3207.68,
-   "2015": 3249.47,
-   "2016": 3281.2,
-   "2017": 3299.19,
-   "2018": 3313.64,
-   "2019": 3322.45,
-   "2020": 3334.31,
-   "2021": 3346.98,
-   "2022": 3313.18,
-   "2023": 3323.34,
-   "2024": 3333.51
-  },
   "Türkiye": {
    "2000": 200280.0,
    "2001": 144786.0,
@@ -3892,6 +3344,33 @@
    "2022": 87725.0,
    "2023": 85510.0,
    "2024": 108000.0
+  },
+  "Turkmenistan": {
+   "2000": 3220.0,
+   "2001": 3220.0,
+   "2002": 3000.0,
+   "2003": 3000.0,
+   "2004": 3000.0,
+   "2005": 3100.0,
+   "2006": 3500.0,
+   "2007": 3100.0,
+   "2008": 3000.0,
+   "2009": 3000.0,
+   "2010": 3068.77,
+   "2011": 3185.24,
+   "2012": 3144.78,
+   "2013": 3160.62,
+   "2014": 3207.68,
+   "2015": 3249.47,
+   "2016": 3281.2,
+   "2017": 3299.19,
+   "2018": 3313.64,
+   "2019": 3322.45,
+   "2020": 3334.31,
+   "2021": 3346.98,
+   "2022": 3313.18,
+   "2023": 3323.34,
+   "2024": 3333.51
   },
   "Uganda": {
    "2000": 22837.0,
@@ -4218,6 +3697,527 @@
    "2024": 236815.0
   }
  },
- "source": "FAOSTAT (CC BY 4.0)",
- "world_t": 6039407.09
+ "latest_by_country": {
+  "Albania": {
+   "year": 2024,
+   "production_t": 1860.9
+  },
+  "Algeria": {
+   "year": 2024,
+   "production_t": 11181.93
+  },
+  "Angola": {
+   "year": 2024,
+   "production_t": 2784.29
+  },
+  "Argentina": {
+   "year": 2024,
+   "production_t": 80786.0
+  },
+  "Armenia": {
+   "year": 2024,
+   "production_t": 1019.5
+  },
+  "Australia": {
+   "year": 2005,
+   "production_t": 3605.0
+  },
+  "Austria": {
+   "year": 2017,
+   "production_t": 107.84
+  },
+  "Azerbaijan": {
+   "year": 2024,
+   "production_t": 7777.32
+  },
+  "Bangladesh": {
+   "year": 2024,
+   "production_t": 97814.0
+  },
+  "Belgium": {
+   "year": 2017,
+   "production_t": 129.29
+  },
+  "Benin": {
+   "year": 2024,
+   "production_t": 3.17
+  },
+  "Bhutan": {
+   "year": 2024,
+   "production_t": 218.83
+  },
+  "Bolivia (Plurinational State of)": {
+   "year": 2024,
+   "production_t": 1206.62
+  },
+  "Bosnia and Herzegovina": {
+   "year": 2024,
+   "production_t": 377.0
+  },
+  "Brazil": {
+   "year": 2024,
+   "production_t": 637749.0
+  },
+  "Bulgaria": {
+   "year": 2024,
+   "production_t": 3380.0
+  },
+  "Burkina Faso": {
+   "year": 2024,
+   "production_t": 754.22
+  },
+  "Burundi": {
+   "year": 2024,
+   "production_t": 1277.0
+  },
+  "Cambodia": {
+   "year": 2024,
+   "production_t": 12410.4
+  },
+  "Cameroon": {
+   "year": 2024,
+   "production_t": 6437.37
+  },
+  "Canada": {
+   "year": 2024,
+   "production_t": 27780.24
+  },
+  "Central African Republic": {
+   "year": 2024,
+   "production_t": 480.29
+  },
+  "Chad": {
+   "year": 2024,
+   "production_t": 178.02
+  },
+  "Chile": {
+   "year": 2024,
+   "production_t": 3030.52
+  },
+  "China, mainland": {
+   "year": 2024,
+   "production_t": 2256400.0
+  },
+  "China, Taiwan Province of": {
+   "year": 2024,
+   "production_t": 1393.41
+  },
+  "Colombia": {
+   "year": 2024,
+   "production_t": 3305.14
+  },
+  "Congo": {
+   "year": 2024,
+   "production_t": 494.25
+  },
+  "Costa Rica": {
+   "year": 2024,
+   "production_t": 17.27
+  },
+  "Côte d'Ivoire": {
+   "year": 2024,
+   "production_t": 8086.72
+  },
+  "Croatia": {
+   "year": 2024,
+   "production_t": 6180.0
+  },
+  "Cuba": {
+   "year": 2024,
+   "production_t": 12481.53
+  },
+  "Cyprus": {
+   "year": 2017,
+   "production_t": 112.5
+  },
+  "Democratic People's Republic of Korea": {
+   "year": 2024,
+   "production_t": 88035.75
+  },
+  "Democratic Republic of the Congo": {
+   "year": 2024,
+   "production_t": 3516.61
+  },
+  "Dominican Republic": {
+   "year": 2024,
+   "production_t": 14651.0
+  },
+  "Ecuador": {
+   "year": 2024,
+   "production_t": 9552.74
+  },
+  "El Salvador": {
+   "year": 2024,
+   "production_t": 1819.38
+  },
+  "Eswatini": {
+   "year": 2024,
+   "production_t": 161.97
+  },
+  "Ethiopia": {
+   "year": 2024,
+   "production_t": 2176.37
+  },
+  "Fiji": {
+   "year": 2024,
+   "production_t": 259.71
+  },
+  "France": {
+   "year": 2024,
+   "production_t": 2650.0
+  },
+  "Georgia": {
+   "year": 2024,
+   "production_t": 272.34
+  },
+  "Germany": {
+   "year": 2017,
+   "production_t": 6217.59
+  },
+  "Ghana": {
+   "year": 2024,
+   "production_t": 2560.24
+  },
+  "Greece": {
+   "year": 2024,
+   "production_t": 10210.0
+  },
+  "Guatemala": {
+   "year": 2024,
+   "production_t": 30621.4
+  },
+  "Guinea": {
+   "year": 2024,
+   "production_t": 2399.14
+  },
+  "Guyana": {
+   "year": 2024,
+   "production_t": 100.94
+  },
+  "Haiti": {
+   "year": 2024,
+   "production_t": 557.74
+  },
+  "Honduras": {
+   "year": 2024,
+   "production_t": 5856.16
+  },
+  "Hungary": {
+   "year": 2024,
+   "production_t": 4730.0
+  },
+  "India": {
+   "year": 2024,
+   "production_t": 727202.88
+  },
+  "Indonesia": {
+   "year": 2024,
+   "production_t": 353386.0
+  },
+  "Iran (Islamic Republic of)": {
+   "year": 2024,
+   "production_t": 20947.72
+  },
+  "Iraq": {
+   "year": 2024,
+   "production_t": 2340.25
+  },
+  "Israel": {
+   "year": 2024,
+   "production_t": 4.47
+  },
+  "Italy": {
+   "year": 2024,
+   "production_t": 33900.0
+  },
+  "Jamaica": {
+   "year": 2024,
+   "production_t": 1659.9
+  },
+  "Japan": {
+   "year": 2024,
+   "production_t": 8336.0
+  },
+  "Jordan": {
+   "year": 2024,
+   "production_t": 314.0
+  },
+  "Kazakhstan": {
+   "year": 2024,
+   "production_t": 128.96
+  },
+  "Kenya": {
+   "year": 2024,
+   "production_t": 12446.0
+  },
+  "Kyrgyzstan": {
+   "year": 2024,
+   "production_t": 972.0
+  },
+  "Lao People's Democratic Republic": {
+   "year": 2024,
+   "production_t": 19300.0
+  },
+  "Lebanon": {
+   "year": 2024,
+   "production_t": 10522.13
+  },
+  "Libya": {
+   "year": 2024,
+   "production_t": 1225.64
+  },
+  "Madagascar": {
+   "year": 2024,
+   "production_t": 919.05
+  },
+  "Malawi": {
+   "year": 2024,
+   "production_t": 119957.29
+  },
+  "Malaysia": {
+   "year": 2024,
+   "production_t": 80.0
+  },
+  "Mali": {
+   "year": 2024,
+   "production_t": 1709.99
+  },
+  "Mauritius": {
+   "year": 2019,
+   "production_t": 89.78
+  },
+  "Mexico": {
+   "year": 2024,
+   "production_t": 18578.96
+  },
+  "Montenegro": {
+   "year": 2024,
+   "production_t": 233.79
+  },
+  "Morocco": {
+   "year": 2024,
+   "production_t": 1269.84
+  },
+  "Mozambique": {
+   "year": 2024,
+   "production_t": 92343.0
+  },
+  "Myanmar": {
+   "year": 2024,
+   "production_t": 26643.57
+  },
+  "Nepal": {
+   "year": 2024,
+   "production_t": 1379.97
+  },
+  "Nicaragua": {
+   "year": 2023,
+   "production_t": 7785.54
+  },
+  "Niger": {
+   "year": 2024,
+   "production_t": 1082.96
+  },
+  "Nigeria": {
+   "year": 2024,
+   "production_t": 5577.52
+  },
+  "North Macedonia": {
+   "year": 2024,
+   "production_t": 24116.0
+  },
+  "Oman": {
+   "year": 2024,
+   "production_t": 1114.57
+  },
+  "Pakistan": {
+   "year": 2024,
+   "production_t": 184982.0
+  },
+  "Palestine": {
+   "year": 2022,
+   "production_t": 1405.92
+  },
+  "Panama": {
+   "year": 2024,
+   "production_t": 2753.89
+  },
+  "Paraguay": {
+   "year": 2024,
+   "production_t": 2296.0
+  },
+  "Peru": {
+   "year": 2024,
+   "production_t": 3278.0
+  },
+  "Philippines": {
+   "year": 2024,
+   "production_t": 55345.86
+  },
+  "Poland": {
+   "year": 2024,
+   "production_t": 19200.0
+  },
+  "Portugal": {
+   "year": 2018,
+   "production_t": 90.0
+  },
+  "Puerto Rico": {
+   "year": 2024,
+   "production_t": 0.92
+  },
+  "Republic of Korea": {
+   "year": 2024,
+   "production_t": 27947.91
+  },
+  "Republic of Moldova": {
+   "year": 2024,
+   "production_t": 564.0
+  },
+  "Réunion": {
+   "year": 2006,
+   "production_t": 22.0
+  },
+  "Romania": {
+   "year": 2024,
+   "production_t": 430.0
+  },
+  "Russian Federation": {
+   "year": 2024,
+   "production_t": 13.9
+  },
+  "Rwanda": {
+   "year": 2024,
+   "production_t": 4684.49
+  },
+  "Saint Vincent and the Grenadines": {
+   "year": 2024,
+   "production_t": 103.73
+  },
+  "Samoa": {
+   "year": 2024,
+   "production_t": 252.32
+  },
+  "Serbia": {
+   "year": 2024,
+   "production_t": 7005.43
+  },
+  "Serbia and Montenegro": {
+   "year": 2005,
+   "production_t": 11752.0
+  },
+  "Sierra Leone": {
+   "year": 2024,
+   "production_t": 47.85
+  },
+  "Slovakia": {
+   "year": 2017,
+   "production_t": 5.0
+  },
+  "Solomon Islands": {
+   "year": 2024,
+   "production_t": 114.52
+  },
+  "Somalia": {
+   "year": 2024,
+   "production_t": 145.64
+  },
+  "South Africa": {
+   "year": 2024,
+   "production_t": 11230.96
+  },
+  "Spain": {
+   "year": 2024,
+   "production_t": 19410.0
+  },
+  "Sri Lanka": {
+   "year": 2024,
+   "production_t": 8514.0
+  },
+  "Switzerland": {
+   "year": 2024,
+   "production_t": 756.04
+  },
+  "Syrian Arab Republic": {
+   "year": 2024,
+   "production_t": 8430.0
+  },
+  "Tajikistan": {
+   "year": 2024,
+   "production_t": 379.22
+  },
+  "Thailand": {
+   "year": 2024,
+   "production_t": 66285.29
+  },
+  "Togo": {
+   "year": 2024,
+   "production_t": 1959.34
+  },
+  "Trinidad and Tobago": {
+   "year": 2024,
+   "production_t": 190.16
+  },
+  "Tunisia": {
+   "year": 2024,
+   "production_t": 2215.69
+  },
+  "Türkiye": {
+   "year": 2024,
+   "production_t": 108000.0
+  },
+  "Turkmenistan": {
+   "year": 2024,
+   "production_t": 3333.51
+  },
+  "Uganda": {
+   "year": 2024,
+   "production_t": 32091.75
+  },
+  "Ukraine": {
+   "year": 2024,
+   "production_t": 2250.0
+  },
+  "United Arab Emirates": {
+   "year": 2024,
+   "production_t": 229.29
+  },
+  "United Republic of Tanzania": {
+   "year": 2024,
+   "production_t": 117464.0
+  },
+  "United States of America": {
+   "year": 2024,
+   "production_t": 147520.0
+  },
+  "Uruguay": {
+   "year": 2024,
+   "production_t": 3350.24
+  },
+  "Uzbekistan": {
+   "year": 2024,
+   "production_t": 1411.72
+  },
+  "Venezuela (Bolivarian Republic of)": {
+   "year": 2024,
+   "production_t": 2952.46
+  },
+  "Viet Nam": {
+   "year": 2024,
+   "production_t": 48313.0
+  },
+  "Yemen": {
+   "year": 2024,
+   "production_t": 31682.04
+  },
+  "Zambia": {
+   "year": 2024,
+   "production_t": 20768.03
+  },
+  "Zimbabwe": {
+   "year": 2024,
+   "production_t": 236815.0
+  }
+ },
+ "source": "FAOSTAT (CC BY 4.0)"
 }
