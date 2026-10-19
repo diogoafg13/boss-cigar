@@ -1,7 +1,7 @@
 {
  "source": "https://en.wikipedia.org/wiki/List_of_cigar_brands",
  "license": "CC BY-SA 4.0",
- "revid": 1370242949,
+ "revid": 1380540671,
  "brands": [
   {
    "brand": "57",
@@ -835,12 +835,16 @@
    }
   },
   {
-   "brand": "Juan López (cigar brand)|Juan López",
+   "brand": "Juan López",
    "manufacturer": "",
    "notes": "",
    "countries": [],
    "inDb": false,
-   "fr": null
+   "fr": {
+    "n": 3,
+    "min": 17.3,
+    "max": 33.5
+   }
   },
   {
    "brand": "King Edward The Seventh (cigar brand)|King Edward the Seventh",
