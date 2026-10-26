@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-19",
+ "fetched": "2026-10-26",
  "items": [
   {
    "brand": "3 Reynas",
@@ -22803,6 +22803,22 @@
    "supplier": null,
    "surcharge_eur": 2.9,
    "unit_eur": 0.15,
+   "vitola": null
+  },
+  {
+   "brand": "Denim",
+   "brand_source": "oficial",
+   "cigarillo": true,
+   "label": "Denim Blue Filter Cigar",
+   "name": "DENIM Denim Blue Filter Cigar (El envase de 17)",
+   "new": false,
+   "pack_eur": 2.4,
+   "pack_size": 17,
+   "sampler": false,
+   "special": null,
+   "supplier": null,
+   "surcharge_eur": 2.75,
+   "unit_eur": 0.14,
    "vitola": null
   },
   {
@@ -58409,6 +58425,22 @@
    "supplier": null,
    "surcharge_eur": 59.8,
    "unit_eur": 52.0,
+   "vitola": null
+  },
+  {
+   "brand": "Partagas",
+   "brand_source": "oficial",
+   "cigarillo": false,
+   "label": "Partagas Serie D Nº 4 50 Aniversario",
+   "name": "PARTAGAS Partagas Serie D Nº 4 50 Aniversario (15)",
+   "new": false,
+   "pack_eur": 525.0,
+   "pack_size": 15,
+   "sampler": false,
+   "special": "Aniversário / comemorativa",
+   "supplier": null,
+   "surcharge_eur": 40.25,
+   "unit_eur": 35.0,
    "vitola": null
   },
   {

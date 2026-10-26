@@ -1,6 +1,6 @@
 {
- "as_of": "Listado de expendedurías activas a 19 de octubre de 2026 -  15:24:15",
- "total_spain": 12483,
+ "as_of": "Listado de expendedurías activas a 26 de octubre de 2026 -  14:10:10",
+ "total_spain": 12436,
  "towns": [
   {
    "municipality": "GUARDA (A)",
@@ -104,11 +104,6 @@
      "code": "360312",
      "locality": "Centinela",
      "address": "AVENIDA ORDOÑEZ 22"
-    },
-    {
-     "code": "360313",
-     "locality": "Avenida Ordoñez",
-     "address": "AVENIDA ORDOÑEZ 64"
     },
     {
      "code": "360318",

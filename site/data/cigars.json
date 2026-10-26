@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-10-19T13:24:58+00:00",
+  "built_at": "2026-10-26T13:13:18+00:00",
   "version": "0.1.0",
   "mode": "auto",
   "sources": {
@@ -9,7 +9,7 @@
    "wikidata": "ok",
    "nasa_power": "ok",
    "faostat": "ok",
-   "openstreetmap": "ok",
+   "openstreetmap": "CACHE",
    "douane_fr": "ok",
    "douane_fr_historico": "ok",
    "cmt_espanha": "ok",
@@ -22,9 +22,9 @@
    "brands_catalog": 159,
    "shops": 149,
    "fr_references": 3720,
-   "es_references": 4800
+   "es_references": 4802
   },
-  "cmt_es_fetched": "2026-10-19",
+  "cmt_es_fetched": "2026-10-26",
   "quality": {
    "verified_share": 0.977,
    "cigars_with_verified_fields": 43
@@ -859,7 +859,7 @@
    "priceES": {
     "min": 110.2,
     "max": 112.2,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Cohiba Siglo VI",
@@ -987,7 +987,7 @@
    "priceES": {
     "min": 25.8,
     "max": 35.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Montecristo Nº 2",
@@ -1109,6 +1109,18 @@
      }
     ]
    },
+   "priceES": {
+    "min": 35.0,
+    "max": 35.0,
+    "fetched": "2026-10-26",
+    "refs": [
+     {
+      "label": "Partagas Serie D Nº 4 50 Aniversario",
+      "pack_size": 15,
+      "unit_eur": 35.0
+     }
+    ]
+   },
    "wikipedia": {
     "manufacturer": "1. Habanos S.A.; 2. General Cigar Company",
     "notes": "Dueling Cuban and non-Cuban brands; non Cuban made in the Dominican Republic",
@@ -1221,7 +1233,7 @@
    "priceES": {
     "min": 29.3,
     "max": 30.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Romeo y Julieta Churchills",
@@ -1357,7 +1369,7 @@
    "priceES": {
     "min": 23.1,
     "max": 25.1,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "H.Upmann Magnum 50",
@@ -1615,7 +1627,7 @@
    "priceES": {
     "min": 7.1,
     "max": 13.9,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Arturo Fuente Hemingway Short Story",
@@ -1768,7 +1780,7 @@
    "priceES": {
     "min": 14.9,
     "max": 62.6,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Arturo Fuente Opus X Perfecxion nº 5",
@@ -1915,7 +1927,7 @@
    "priceES": {
     "min": 15.4,
     "max": 15.4,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Davidoff Signature 2000 Tubos",
@@ -2191,7 +2203,7 @@
    "priceES": {
     "min": 15.0,
     "max": 27.5,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Oliva Serie V Melanio Petit Corona 4-1/2x46",
@@ -2394,7 +2406,7 @@
    "priceES": {
     "min": 2.75,
     "max": 24.6,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Liga Privada nº 9 Coronets",
@@ -2688,7 +2700,7 @@
    "priceES": {
     "min": 5.0,
     "max": 9.2,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Camacho Connecticut Corona",
@@ -2931,7 +2943,7 @@
    "priceES": {
     "min": 80.5,
     "max": 425.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Cohiba Robustos",
@@ -3050,7 +3062,7 @@
    "priceES": {
     "min": 19.6,
     "max": 24.8,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Bolivar Royal Coronas",
@@ -3175,7 +3187,7 @@
    "priceES": {
     "min": 21.2,
     "max": 21.9,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Hoyo de Monterrey Epicure Nº 2",
@@ -3287,7 +3299,7 @@
    "priceES": {
     "min": 67.0,
     "max": 67.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Trinidad Fundadores",
@@ -3362,7 +3374,7 @@
    "priceES": {
     "min": 19.0,
     "max": 19.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Ramon Allones Specially Selected",
@@ -3466,7 +3478,7 @@
    "priceES": {
     "min": 20.6,
     "max": 20.6,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Diplomáticos Nº 2",
@@ -3566,7 +3578,7 @@
    "priceES": {
     "min": 15.6,
     "max": 15.6,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Sancho Panza Belicosos",
@@ -3667,7 +3679,7 @@
    "priceES": {
     "min": 39.2,
     "max": 41.2,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Cohiba Siglo II",
@@ -3864,7 +3876,7 @@
    "priceES": {
     "min": 32.2,
     "max": 32.2,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Partagas Lusitanias",
@@ -3969,7 +3981,7 @@
    "priceES": {
     "min": 27.5,
     "max": 28.9,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Partagas Serie P Nº 2 Serie Sevilla",
@@ -4096,7 +4108,7 @@
    "priceES": {
     "min": 21.2,
     "max": 21.9,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Romeo y Julieta Short Churchills",
@@ -4222,7 +4234,7 @@
    "priceES": {
     "min": 23.4,
     "max": 55.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Romeo y Julieta Wide Churchill",
@@ -4330,7 +4342,7 @@
    "priceES": {
     "min": 6.7,
     "max": 7.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "H.Upmann Half Corona",
@@ -4434,7 +4446,7 @@
    "priceES": {
     "min": 19.0,
     "max": 19.7,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "H.Upmann Magnum 46",
@@ -4596,7 +4608,7 @@
    "priceES": {
     "min": 18.2,
     "max": 113.3,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Bolivar Belicosos Finos",
@@ -4757,7 +4769,7 @@
    "priceES": {
     "min": 21.2,
     "max": 21.2,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Hoyo de Monterrey Epicure Nº 1",
@@ -4861,7 +4873,7 @@
    "priceES": {
     "min": 22.6,
     "max": 23.3,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Hoyo de Monterrey Epicure Especial Caja",
@@ -4975,7 +4987,7 @@
    "priceES": {
     "min": 32.2,
     "max": 32.2,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Hoyo de Monterrey Double Coronas",
@@ -5069,7 +5081,7 @@
    "priceES": {
     "min": 34.0,
     "max": 34.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Trinidad Reyes",
@@ -5157,7 +5169,7 @@
    "priceES": {
     "min": 49.0,
     "max": 49.0,
-    "fetched": "2026-10-19",
+    "fetched": "2026-10-26",
     "refs": [
      {
       "label": "Trinidad Coloniales",

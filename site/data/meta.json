@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-19T13:24:58+00:00",
+ "built_at": "2026-10-26T13:13:18+00:00",
  "version": "0.1.0",
  "mode": "auto",
  "sources": {
@@ -8,7 +8,7 @@
   "wikidata": "ok",
   "nasa_power": "ok",
   "faostat": "ok",
-  "openstreetmap": "ok",
+  "openstreetmap": "CACHE",
   "douane_fr": "ok",
   "douane_fr_historico": "ok",
   "cmt_espanha": "ok",
@@ -21,9 +21,9 @@
   "brands_catalog": 159,
   "shops": 149,
   "fr_references": 3720,
-  "es_references": 4800
+  "es_references": 4802
  },
- "cmt_es_fetched": "2026-10-19",
+ "cmt_es_fetched": "2026-10-26",
  "quality": {
   "verified_share": 0.977,
   "cigars_with_verified_fields": 43
