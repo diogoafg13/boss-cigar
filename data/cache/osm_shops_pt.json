@@ -1476,6 +1476,17 @@
  {
   "city": null,
   "kind": "tobacco",
+  "lat": 38.69789,
+  "lng": -9.420696,
+  "name": "Tabacaria Triunfo",
+  "opening_hours": null,
+  "osm": "https://www.openstreetmap.org/node/14110803989",
+  "street": null,
+  "website": null
+ },
+ {
+  "city": null,
+  "kind": "tobacco",
   "lat": 37.017067,
   "lng": -7.935676,
   "name": "Tabacaria da Baixa",

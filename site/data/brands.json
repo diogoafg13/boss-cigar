@@ -1,7 +1,7 @@
 {
  "source": "https://en.wikipedia.org/wiki/List_of_cigar_brands",
  "license": "CC BY-SA 4.0",
- "revid": 1380540671,
+ "revid": 1382116979,
  "brands": [
   {
    "brand": "57",
@@ -1499,6 +1499,14 @@
    "brand": "T4",
    "manufacturer": "ITC",
    "notes": "",
+   "countries": [],
+   "inDb": false,
+   "fr": null
+  },
+  {
+   "brand": "Vamma Del Sol",
+   "manufacturer": "Konstantinedes Bros",
+   "notes": "Founded in 2011 in Krya Vrisi Pella Greece",
    "countries": [],
    "inDb": false,
    "fr": null

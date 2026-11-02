@@ -1,14 +1,14 @@
 {
- "built_at": "2026-10-26T13:13:18+00:00",
+ "built_at": "2026-11-02T16:03:37+00:00",
  "version": "0.1.0",
  "mode": "auto",
  "sources": {
   "seed": "ok",
   "wikipedia": "ok",
-  "wikidata": "ok",
+  "wikidata": "CACHE",
   "nasa_power": "ok",
   "faostat": "ok",
-  "openstreetmap": "CACHE",
+  "openstreetmap": "ok",
   "douane_fr": "ok",
   "douane_fr_historico": "ok",
   "cmt_espanha": "ok",
@@ -18,12 +18,12 @@
  "counts": {
   "cigars": 44,
   "regions": 12,
-  "brands_catalog": 159,
-  "shops": 149,
+  "brands_catalog": 160,
+  "shops": 150,
   "fr_references": 3720,
-  "es_references": 4802
+  "es_references": 4821
  },
- "cmt_es_fetched": "2026-10-26",
+ "cmt_es_fetched": "2026-11-02",
  "quality": {
   "verified_share": 0.977,
   "cigars_with_verified_fields": 43

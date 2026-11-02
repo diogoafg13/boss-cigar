@@ -1,6 +1,6 @@
 {
- "as_of": "Listado de expendedurías activas a 26 de octubre de 2026 -  14:10:10",
- "total_spain": 12436,
+ "as_of": "Listado de expendedurías activas a 02 de noviembre de 2026 -  17:02:34",
+ "total_spain": 12432,
  "towns": [
   {
    "municipality": "GUARDA (A)",
@@ -214,11 +214,6 @@
      "code": "360377",
      "locality": "Vigo",
      "address": "AVENIDA GARCIA BARBON 125"
-    },
-    {
-     "code": "360346",
-     "locality": "Vigo",
-     "address": "AVENIDA GRAN VIA 152"
     },
     {
      "code": "360335",
@@ -464,6 +459,11 @@
      "code": "360389",
      "locality": "Carballal",
      "address": "STA. MARINA-CABRAL. 326"
+    },
+    {
+     "code": "360346",
+     "locality": "Vigo",
+     "address": "SUAREZ LLANOS 6"
     },
     {
      "code": "360370",
