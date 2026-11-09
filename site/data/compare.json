@@ -2430,7 +2430,7 @@
    "label": "Partagas Lusitanias",
    "fr_label": "Partagas Lusitanias",
    "es_label": "Partagas Lusitanias",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 35.6,
    "es": 32.2,
    "diff_pct": -9.6
@@ -2439,7 +2439,7 @@
    "label": "Partagas Maduro N°1",
    "fr_label": "Partagas Maduro N°1",
    "es_label": "Partagas Maduro Nº 1",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 25.7,
    "es": 23.0,
    "diff_pct": -10.5
@@ -2448,7 +2448,7 @@
    "label": "Partagas Maduro N°2",
    "fr_label": "Partagas Maduro N°2",
    "es_label": "Partagas Maduro nº 2",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 26.4,
    "es": 23.2,
    "diff_pct": -12.1
@@ -2457,7 +2457,7 @@
    "label": "Partagás Cedros Año Chino",
    "fr_label": "Partagas Cedros (año chino)",
    "es_label": "Partagás Cedros Año Chino",
-   "brand": "Partagas",
+   "brand": "Partagás",
    "fr": 81.0,
    "es": 64.0,
    "diff_pct": -21.0
@@ -2862,7 +2862,7 @@
    "label": "San Cristobal de la Habana El Principe",
    "fr_label": "San Cristobal de la Habana El Principe",
    "es_label": "San Cristobal de la Habana El Principe",
-   "brand": "San Cristobal de la Habana",
+   "brand": "San Cristóbal de la Habana",
    "fr": 11.1,
    "es": 7.25,
    "diff_pct": -34.7
@@ -2871,7 +2871,7 @@
    "label": "San Cristobal de la Habana La Fuerza",
    "fr_label": "San Cristobal de la Habana La Fuerza",
    "es_label": "San Cristobal de la Habana La Fuerza",
-   "brand": "San Cristobal de la Habana",
+   "brand": "San Cristóbal de la Habana",
    "fr": 22.0,
    "es": 12.3,
    "diff_pct": -44.1

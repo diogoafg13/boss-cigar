@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-02T16:03:37+00:00",
+ "built_at": "2026-11-09T16:29:39+00:00",
  "version": "0.1.0",
  "mode": "auto",
  "sources": {
@@ -11,7 +11,7 @@
   "openstreetmap": "ok",
   "douane_fr": "ok",
   "douane_fr_historico": "ok",
-  "cmt_espanha": "ok",
+  "cmt_espanha": "CACHE",
   "cmt_estancos": "ok"
  },
  "douane_fr_edition": "Arrêté du 29 septembre 2026, applicable au 1er novembre 2026",
@@ -20,7 +20,7 @@
   "regions": 12,
   "brands_catalog": 160,
   "shops": 150,
-  "fr_references": 3720,
+  "fr_references": 3721,
   "es_references": 4821
  },
  "cmt_es_fetched": "2026-11-02",

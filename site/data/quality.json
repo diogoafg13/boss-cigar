@@ -1,10 +1,10 @@
 {
  "cigars": 44,
- "fr_references": 3720,
- "fr_cigars_excluding_cigarillos": 3382,
+ "fr_references": 3721,
+ "fr_cigars_excluding_cigarillos": 3383,
  "fr_brand_from_catalog": 2232,
- "fr_brand_inferred": 1039,
- "fr_price_inconsistencies": 25,
+ "fr_brand_inferred": 1040,
+ "fr_price_inconsistencies": 6,
  "brands_in_open_catalog": 160,
  "brands_not_in_wikipedia_list": [
   "Drew Estate",
