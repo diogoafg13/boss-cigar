@@ -65,20 +65,6 @@
  ],
  "country_mismatch_vs_wikidata": [
   {
-   "id": "davidoff-signature-2000",
-   "seed": "República Dominicana",
-   "wikidata": [
-    "Suíça"
-   ]
-  },
-  {
-   "id": "davidoff-primeros",
-   "seed": "República Dominicana",
-   "wikidata": [
-    "Suíça"
-   ]
-  },
-  {
    "id": "dannemann-moods",
    "seed": "Brasil",
    "wikidata": [

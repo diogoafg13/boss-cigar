@@ -1,11 +1,9 @@
 {
- "countries": [
-  "Suíça"
- ],
- "description": "Swiss brand of cigars, cigarettes and smoker's accessories and of perfumes",
+ "countries": [],
+ "description": "Cigar Brand of Oettiger Davidoff Group",
  "found": true,
- "inception_year": 1875,
- "label": "Davidoff",
- "qid": "Q501422",
- "url": "https://www.wikidata.org/wiki/Q501422"
+ "inception_year": null,
+ "label": null,
+ "qid": "Q135659654",
+ "url": "https://www.wikidata.org/wiki/Q135659654"
 }
