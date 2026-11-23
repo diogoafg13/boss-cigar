@@ -34,6 +34,7 @@
  "regions_without_climate": [],
  "brands_without_wikidata": [
   "Bolívar",
+  "Dannemann",
   "Don Pepín García",
   "Drew Estate",
   "H. Upmann",
@@ -63,15 +64,7 @@
   "trinidad-coloniales",
   "trinidad-reyes"
  ],
- "country_mismatch_vs_wikidata": [
-  {
-   "id": "dannemann-moods",
-   "seed": "Brasil",
-   "wikidata": [
-    "Alemanha"
-   ]
-  }
- ],
+ "country_mismatch_vs_wikidata": [],
  "unverified_cigars": [
   "dannemann-moods"
  ]
